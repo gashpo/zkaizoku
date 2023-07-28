@@ -1,0 +1,74 @@
+/* -- Animation.scss -- */
+
+// fade in fade out
+@keyframes breath {
+    5% {
+        box-shadow: 0 0 20px transparent;
+    }
+
+    30% {
+        box-shadow: 0 0 20px rgba(color(gray), .12);
+    }
+
+    70% {
+        box-shadow: 0 0 20px rgba(color(gray), .12);
+    }
+
+    95% {
+        box-shadow: 0 0 20px transparent;
+    }
+}
+
+// fade in fade out (faster)
+@keyframes breath-f {
+    5% {
+        box-shadow: 0 0 20px transparent;
+    }
+
+    20% {
+        box-shadow: 0 0 20px rgba(color(gray), .12);
+    }
+
+    80% {
+        box-shadow: 0 0 20px rgba(color(gray), .12);
+    }
+
+    95% {
+        box-shadow: 0 0 20px transparent;
+    }
+}
+
+// 360deg rotate
+@keyframes deco-round {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    100% {
+        transform: rotate(359deg);
+        transform-origin: center;
+    }
+}
+
+// marquee right to left
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 2.75rem));
+    }
+}
+
+// marquee left to right
+@keyframes rscroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(+100% + 2.75rem));
+    }
+}

@@ -1,0 +1,71 @@
+button,
+input[type=button],
+input[type=submit],
+a.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: size(8);
+    cursor: pointer;
+    background-color: color(primary);
+    color: white;
+    border-radius: size(10);
+    @include font(18);
+    padding: size(10) size(24);
+    transition-property: background-color;
+
+    &:hover {
+        background-color: color(primary-6);
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        background-color: color(gray-8);
+        color: color(gray-6);
+    }
+
+    &.btn-s {
+        @include font(15);
+    }
+
+    // 深色按鈕
+    &.secondary {
+        background-color: black;
+
+        &:hover {
+            background-color: color(gray-9);
+        }
+
+        &:focus {
+            border: size(2) solid #c4c4c4;
+        }
+
+        &[disabled] {
+            color: color(gray-6);
+            background-color: color(gray-8);
+        }
+    }
+
+    // 透明按鈕
+    &.tertiary,
+    &.rounded {
+        border: size(1) solid white;
+        background-color: transparent;
+
+        &:hover {
+            background-color: rgba(white, .15);
+        }
+
+        &[disabled] {
+            border-color: color(gray-6);
+            color: color(gray-6);
+            background-color: transparent;
+        }
+    }
+
+    // 圓形按鈕
+    &.rounded {
+        border-radius: size(100);
+        padding: size(12);
+    }
+}

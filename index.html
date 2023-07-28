@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+
+	<link rel="icon" type="image/png" href="img/favicon.png">
+
+	<!-- SEO -->
+	<meta name="keyword"
+		content="ZKaizoku,zkSync Era,Layer 2,空投,區塊鏈,區塊鏈平台,加密貨幣,token,鏈遊,遊戲,邊玩邊賺,P2E,GAMEFi,NFT,dNFT,web3 gaming" />
+	<meta name="description"
+		content="ZKaizoku為一式發行於zkSync Era上的一站式互動平台，旨在透過區塊鏈及dNFT技術串聯多款經典及原創遊戲，創造一個用戶透過玩遊戲累積交互積分、共同賺取更多空投的共榮生態圈！" />
+
+	<!-- share info -->
+	<meta property="og:locale" content="en" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://gashpo.github.io/zkaizokuimg/og-image.png" />
+	<link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
+
+	<!-- AOS 套件 -->
+	<link href="vendor/aos/aos.css" rel="stylesheet">
+
+	<!-- Slick 套件 -->
+	<link rel="stylesheet" href="vendor/slick/slick.css" />
+	<link rel="stylesheet" href="vendor/slick/slick-theme.css">
+
+	<!-- Swiper 套件 -->
+	<link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+
+	<!-- Custom Icons -->
+	<link rel="stylesheet" href="vendor/icomoon/style.css">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="css/styleA.css">
+
+	<title>ZKaizoku 一站式互動平台</title>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KVQME3HX35"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-KVQME3HX35');
+	</script>
+
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-NR4MV2JF');</script>
+	<!-- End Google Tag Manager -->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR4MV2JF" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="app">
+		<header>
+			<a class="main-logo" href="javascript:void(0)"><img src="img/logo.svg"></a>
+			<div class="options">
+				<button class="menu"><img src="img/icon/menu.svg"></button>
+				<div class="nav">
+					<button class="close"><img src="img/icon/close.svg"></button>
+					<ul>
+						<li for="shop">商城</li>
+						<li for="game">Game</li>
+						<li for="nft">NFT</li>
+						<li for="tutorial">教學</li>
+						<li for="zkz">$ZKZ</li>
+						<li for="bridge">Bridge</li>
+					</ul>
+				</div>
+				<div class="language">
+					<div><span>繁體中文</span></div>
+					<ul>
+						<li class="active">繁體中文</li>
+						<li>English</li>
+						<li>日本語</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="wallet"><button class="secondary">連接錢包</button></div>
+		</header>
+
+		<main>
+			<section id="keyvision">
+				<div class="slick">
+					<div><img src="img/banner01.jpg"></div>
+					<div><img src="img/banner02.jpg"></div>
+					<div><img src="img/banner03.jpg"></div>
+				</div>
+				<div class="captions">
+					<div class="active">
+						<p class="title-xl">FROM THE GARDEN TO THE ALLEY</p>
+						<p class="text-l">A small species that sprout from the dirt in the garden. While they're
+							earnestly driven by
+							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
+							alley...</p>
+					</div>
+					<div>
+						<p class="title-xl">HAVE A GOOD TIME!</p>
+						<p class="text-l">A small species that sprout from the dirt in the garden. While they're
+							earnestly driven by
+							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
+							alley...</p>
+					</div>
+					<div>
+						<p class="title-xl">DARE TO CHALLENGE</p>
+						<p class="text-l">A small species that sprout from the dirt in the garden. While they're
+							earnestly driven by
+							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
+							alley...</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="game" data-aos="fade-up">
+				<div class="container">
+					<div class="desc">
+						<p class="title-xl">Game</p>
+						<p class="text-l">Description description description description description.</p>
+						<button class="secondary">View All Games</button>
+					</div>
+					<div class="slick dark">
+						<div>
+							<img src="img/game/game01.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game02.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game03.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game04.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game05.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game06.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game07.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game08.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game09.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+						<div>
+							<img src="img/game/game10.jpg">
+							<div class="hover">
+								<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+								<ul class="tags">
+									<li>tag</li>
+									<li>tag</li>
+									<li>tag</li>
+								</ul>
+								<button class="tertiary">View Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="nft" data-aos="fade-up">
+				<div class="container">
+					<!-- <div class="slick">
+						<div style="background-image: url(img/nft/nft-bg-01.jpg);">
+							<div class="content">
+								<img src="img/nft/nft-01.jpg">
+								<div class="caption">
+									<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+									<p>Base64 Encode Basic authentication's onl</p>
+									<ul class="tags">
+										<li>Female</li>
+										<li>Teenager</li>
+									</ul>
+									<button class="tertiary btn-s">View Details</button>
+								</div>
+							</div>
+						</div>
+						<div style="background-image: url(img/nft/nft-bg-02.jpg);">
+							<div class="content">
+								<img src="img/nft/nft-02.jpg">
+								<div class="caption">
+									<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+									<p>Base64 Encode Basic authentication's onl</p>
+									<ul class="tags">
+										<li>Female</li>
+										<li>Teenager</li>
+									</ul>
+									<button class="tertiary btn-s">View Details</button>
+								</div>
+							</div>
+						</div>
+						<div style="background-image: url(img/nft/nft-bg-03.jpg);">
+							<div class="content">
+								<img src="img/nft/nft-03.jpg">
+								<div class="caption">
+									<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+									<p>Base64 Encode Basic authentication's onl</p>
+									<ul class="tags">
+										<li>Female</li>
+										<li>Teenager</li>
+									</ul>
+									<button class="tertiary btn-s">View Details</button>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<div class="carousel">
+						<div dir="rtl" class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-01.jpg);">
+									<div class="content">
+										<img src="img/nft/nft-01.jpg">
+										<div class="caption">
+											<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+											<p>Base64 Encode Basic authentication's onl</p>
+											<ul class="tags">
+												<li>Female</li>
+												<li>Teenager</li>
+											</ul>
+											<button class="tertiary btn-s">View Details</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-02.jpg);">
+									<div class="content">
+										<img src="img/nft/nft-02.jpg">
+										<div class="caption">
+											<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+											<p>Base64 Encode Basic authentication's onl</p>
+											<ul class="tags">
+												<li>Female</li>
+												<li>Teenager</li>
+											</ul>
+											<button class="tertiary btn-s">View Details</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-03.jpg);">
+									<div class="content">
+										<img src="img/nft/nft-03.jpg">
+										<div class="caption">
+											<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+											<p>Base64 Encode Basic authentication's onl</p>
+											<ul class="tags">
+												<li>Female</li>
+												<li>Teenager</li>
+											</ul>
+											<button class="tertiary btn-s">View Details</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="desc">
+						<p class="title-xl">NFT</p>
+						<p class="text-l">
+							Description description description description description description description
+							description.
+						</p>
+						<button>View All NFT</button>
+					</div>
+				</div>
+			</section>
+
+			<section id="tutorial" data-aos="fade-up">
+				<div class="container">
+					<div class="title">
+						<p class="title-xl">教學</p>
+						<p class="text-l">
+							Description description description description description description description.
+						</p>
+					</div>
+					<div class="content">
+						<ul class="tab">
+							<li class="active"><span>1</span>Step 1</li>
+							<li><span>2</span>Step 2</li>
+							<li><span>3</span>Step 3</li>
+							<li><span>4</span>Step 4</li>
+							<li><span>5</span>Step 5</li>
+						</ul>
+						<ul class="tab-content">
+							<li class="active">
+								<div>
+									<h2>Connect your cryptocurrency wallet</h2>
+									<p class="text-l">
+										Please scroll to the top of this page, and click the buttom in the upper right
+										to
+										connect your cryptocurrency wallet.
+									</p>
+									<button>Connect Wallet</button>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h2>Mint the ZKaizoku License(dNFT)</h2>
+									<p class="text-l">
+										Go to the marketplace to mint the "ZKaizoku License"(dNFT) to receive an unique
+										avatar and the qualification of earning $ZKZ(the circulating utility tokens on
+										this platform).(If you do not mint "ZKaizoku License", you can still play games
+										on ZKaizoku platform and accumulate your own interaction counts on zkSync Era.
+										However, you will NOT be able to amass $ZKZ. Consequently, this means you will
+										not be eligible to receive our airdrops in the future.)
+									</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="img/step3.png">
+									<h2>Earn $ZKZ through the interaction</h2>
+									<p class="text-l">
+										Play the games on ZKaizoku platform, and you will earn $ZKZ through the
+										interaction of the smart contract.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
+									<p class="text-l">
+										Utilize your accumulated $ZKZ to upgrade ZKaizoku License to make the total
+										amount of your $ZKZ increased through the additional multiplier effects from
+										your ZKaizoku License upgraded.
+									</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h2>Settle the zkSync Era airdrop allocation</h2>
+									<p class="text-l">
+										The result of multiplying your $ZKZ and ZKaizoku License will be divided by the
+										total sum of $ZKZ held by all participants, determining your share on ZKaizoku
+										platform.After zkSync Era official airdrop, we will send you your portion of
+										TOKEN from the allocation designated for developers. <br>
+										For detailed information of airdrop allocation of ZKaizoku, please refer to
+										here.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section id="zkz" data-aos="fade-up">
+				<div class="container">
+					<img src="img/PieChart.png">
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<ul class="sns">
+				<li>
+					<button class="rounded"><i class="icon-Twitter"></i></button>
+				</li>
+				<li>
+					<button class="rounded"><i class="icon-Telegram"></i></button>
+				</li>
+			</ul>
+		</footer>
+	</div>
+
+
+
+
+	<!-- jQuery -->
+	<script src="vendor/jquery.min.js"></script>
+
+	<!-- Custom settings -->
+	<script src="js/navigation.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/tab.js"></script>
+
+	<!-- AOS 套件 -->
+	<script src="vendor/aos/aos.js"></script>
+	<script type="text/javascript">
+		AOS.init({
+			once: false,
+			duration: 500,
+			offset: -800,
+		});
+	</script>
+
+	<!-- Slick 套件 -->
+	<script src="vendor/slick/slick.min.js"></script>
+	<script src="js/slick-custom.js"></script>
+
+	<!-- Swiper 套件 -->
+	<script src="vendor/swiper/swiper-bundle.min.js"></script>
+	<script type="text/javascript">
+		var isComingSoon = $('.swiper').hasClass('coming-soon');
+
+		var swiperNFT = new Swiper('.swiper', {
+			effect: "coverflow",
+			spaceBetween: -150,
+			slidesPerView: 2.5,
+			loop: true,
+			allowSlideNext: !isComingSoon,
+			allowSlidePrev: !isComingSoon,
+			coverflowEffect: {
+				rotate: 0,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: false,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: !isComingSoon,
+			},
+			on: {
+				touchMove: function (e) {
+					e.preventDefault();
+				},
+			},
+		});
+
+		if (isComingSoon) {
+			$('.swiper-button-prev, .swiper-button-next').addClass('swiper-button-disabled');
+		}
+	</script>
+</body>
+
+</html>

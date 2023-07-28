@@ -1,0 +1,125 @@
+.slick {
+    .slick-track {
+        transition-duration: 0s;
+    }
+
+    .slick-arrow {
+        width: size(60);
+        height: size(60);
+        top: auto;
+        bottom: size(20);
+        transform: none;
+        padding: size(9);
+        z-index: 2;
+        border-radius: size(100);
+
+        &:hover {
+            background-color: rgba(white, .15);
+        }
+
+        &[disabled],
+        &.slick-disabled {
+            color: color(gray-8);
+            cursor: default;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        &::before {
+            font-family: 'icomoon';
+            font-size: size(40);
+        }
+
+        &.slick-prev {
+            left: auto;
+            right: size(120);
+
+            &::before {
+                content: '\e904';
+            }
+        }
+
+        &.slick-next {
+            right: size(40);
+
+            &::before {
+                content: '\e905';
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: auto;
+        top: 50%;
+        right: size(40);
+        transform: translate(50%, 0) rotate(90deg);
+
+        li {
+            width: size(6);
+            height: size(6);
+            margin: 0 size(6);
+            transition-property: width;
+
+            button {
+                width: size(6);
+                height: size(6);
+                border-radius: size(100);
+                padding: 0;
+                background-color: color(gray-6);
+                opacity: 1;
+                transition-property: width;
+
+                &::before {
+                    content: '';
+                }
+            }
+
+            &.slick-active {
+                width: size(56);
+
+                button {
+                    width: size(56);
+                    background-color: white;
+                }
+            }
+        }
+    }
+
+    &.dark {
+        .slick-arrow {
+            &::before {
+                color: black;
+            }
+
+            &:hover {
+                background-color: rgba(black, .1);
+            }
+
+            &[disabled],
+            &.slick-disabled {
+                color: color(primary-6);
+                cursor: default;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .slick-dots {
+            li {
+                button {
+                    background-color: rgba(black, .3);
+                }
+
+                &.slick-active {
+                    button {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}

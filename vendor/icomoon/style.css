@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?4mbcei');
+  src:  url('fonts/icomoon.eot?4mbcei#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4mbcei') format('truetype'),
+    url('fonts/icomoon.woff?4mbcei') format('woff'),
+    url('fonts/icomoon.svg?4mbcei#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-AngleDown:before {
+  content: "\e900";
+}
+.icon-AngleLeft:before {
+  content: "\e901";
+}
+.icon-AngleRight:before {
+  content: "\e902";
+}
+.icon-AngleUp:before {
+  content: "\e903";
+}
+.icon-ArrowLeft:before {
+  content: "\e904";
+}
+.icon-ArrowRight:before {
+  content: "\e905";
+}
+.icon-Change:before {
+  content: "\e906";
+}
+.icon-Close:before {
+  content: "\e907";
+}
+.icon-Copy:before {
+  content: "\e908";
+}
+.icon-Discord:before {
+  content: "\e909";
+}
+.icon-Earth:before {
+  content: "\e90a";
+}
+.icon-Ethereum:before {
+  content: "\e90b";
+}
+.icon-InfoCircle:before {
+  content: "\e90c";
+}
+.icon-List:before {
+  content: "\e90d";
+}
+.icon-Minus:before {
+  content: "\e90e";
+}
+.icon-Plus:before {
+  content: "\e90f";
+}
+.icon-Search:before {
+  content: "\e910";
+}
+.icon-Shop:before {
+  content: "\e911";
+}
+.icon-Telegram:before {
+  content: "\e912";
+}
+.icon-Twitter:before {
+  content: "\e913";
+}

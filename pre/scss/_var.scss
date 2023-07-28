@@ -1,0 +1,132 @@
+// RWD 斷點
+$breakpoints: (
+    pc: 1440px,
+    small-pc: 1280px,
+    pad: 768px,
+    phone: 516px,
+    small-phone: 320px,
+);
+
+@mixin max-to($bp) {
+
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $bp) {
+
+        // Prints a media query based on the value
+        @media (max-width: map-get($breakpoints, $bp)) {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$bp}`. "
+        +"Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+// 用法：
+// @include max-to(pad) {
+//     ...
+//     <= 768px 的樣式內容
+// }
+
+
+
+
+
+// 字重
+$font-weight: (
+    Thin: 100,
+    // ↑ Sans Only
+    ExLight: 200,
+    // ↑ Serif Only
+    Light: 300,
+    Regular: 400,
+    Medium: 500,
+    SemiBold: 600,
+    // ↑ Serif Only
+    Bold: 700,
+    ExBold: 900,
+);
+
+// 用法：font-weight: weight(Thin);
+
+
+@function weight($key) {
+    @return map-get($font-weight, $key);
+}
+
+// 尺寸
+@function size($key) {
+    @return calc($key / 16 * 1rem);
+}
+
+// 用法：margin: size(20) size(16);
+
+@function svw($key) {
+    @return calc($key / 1440 * 100)svw;
+}
+
+// 用法：margin: svw(20) svw(16);
+
+
+// 字級+字重
+@mixin font($size: 16, $weight: Medium) {
+    font-size: calc($size / 16 * 1rem);
+    font-weight: map-get($font-weight, $weight);
+}
+
+// 用法：@include font(18, Bold);
+
+
+
+
+
+// 色彩定義
+$colors: (
+    primary: #871B1F,
+    gray: #929292,
+);
+
+@function color($key) {
+    @return map-get($colors, $key);
+}
+
+$colors: map-merge($colors, (primary-1: mix(#F6D3D5, color(primary), 80%),
+            primary-2: mix(#F6D3D5, color(primary), 60%),
+            primary-3: mix(#F6D3D5, color(primary), 40%),
+            primary-4: mix(#F6D3D5, color(primary), 20%),
+            primary-6: mix(black, color(primary), 20%),
+            primary-7: mix(black, color(primary), 40%),
+            primary-8: mix(black, color(primary), 60%),
+            primary-9: mix(black, color(primary), 80%),
+        ));
+
+$colors: map-merge($colors, (gray-1: mix(white, color(gray), 80%),
+            gray-2: mix(white, color(gray), 60%),
+            gray-3: mix(white, color(gray), 40%),
+            gray-4: mix(white, color(gray), 20%),
+            gray-6: mix(black, color(gray), 20%),
+            gray-7: mix(black, color(gray), 40%),
+            gray-8: mix(black, color(gray), 60%),
+            gray-9: mix(black, color(gray), 80%),
+        ));
+
+// 用法：
+//     color: color(primary);
+//     background-color: color(gray-8);
+
+
+// 超連結顏色
+@mixin a-color($default: color(primary), $hover: lighten($default, 5%)) {
+    color: $default;
+    transition-property: color;
+    text-decoration: none;
+
+    &:hover {
+        color: $hover;
+    }
+}
+
+// 用法：@include a-color(gray, primary-8);

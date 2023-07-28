@@ -1,0 +1,60 @@
+/* -- Global.scss -- */
+/* 反白選取樣式 */
+::-moz-selection {
+    background-color: color(gray-1);
+    color: rgba(color(primary-6), 1);
+}
+
+::selection {
+    background-color: color(gray-1);
+    color: rgba(color(primary-6), 1);
+}
+
+::-webkit-scrollbar {
+    width: size(8);
+    background-color: color(primary-7);
+}
+
+::-webkit-scrollbar-thumb {
+    width: size(8);
+    background-color: color(primary-4);
+    border-radius: size(4);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+TC:wght@500;700;900&display=swap');
+
+* {
+    transition-duration: .2s;
+}
+
+body {
+    line-height: 1.5;
+    @include font(15, Medium);
+    font-family: 'Inter', 'Noto Sans TC', cursive;
+    overflow-x: hidden;
+    color: white;
+    background-color: color(primary);
+
+    @include max-to(pad) {
+        @include font(13);
+    }
+}
+
+#app {
+    background-color: black;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    &+p {
+        margin-top: size(16);
+    }
+}
