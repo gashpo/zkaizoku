@@ -1,8 +1,9 @@
 // RWD 斷點
 $breakpoints: (
     pc: 1440px,
-    small-pc: 1280px,
-    pad: 768px,
+    laptop: 1280px,
+    pad: 1024px,
+    small-pad: 768px,
     phone: 516px,
     small-phone: 320px,
 );
@@ -65,7 +66,7 @@ $font-weight: (
 // 用法：margin: size(20) size(16);
 
 @function svw($key) {
-    @return calc($key / 1440 * 100)svw;
+    @return calc($key / 1440 * 100)+svw;
 }
 
 // 用法：margin: svw(20) svw(16);

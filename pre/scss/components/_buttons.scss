@@ -10,9 +10,9 @@ a.button {
     background-color: color(primary);
     color: white;
     border-radius: size(10);
-    @include font(18);
     padding: size(10) size(24);
     transition-property: background-color;
+    @extend %body-2;
 
     &:hover {
         background-color: color(primary-6);
@@ -25,12 +25,13 @@ a.button {
     }
 
     &.btn-s {
-        @include font(15);
+        padding: size(9.5) size(20);
     }
 
     // 深色按鈕
-    &.secondary {
+    &.btn-secondary {
         background-color: black;
+        border: size(2) solid transparent;
 
         &:hover {
             background-color: color(gray-9);
@@ -47,8 +48,8 @@ a.button {
     }
 
     // 透明按鈕
-    &.tertiary,
-    &.rounded {
+    &.btn-tertiary,
+    &.btn-rounded {
         border: size(1) solid white;
         background-color: transparent;
 
@@ -64,8 +65,46 @@ a.button {
     }
 
     // 圓形按鈕
-    &.rounded {
+    &.btn-rounded {
         border-radius: size(100);
         padding: size(12);
     }
+}
+
+
+%btn-secondary {
+    background-color: black;
+    border: size(2) solid transparent;
+
+    &:hover {
+        background-color: color(gray-9);
+    }
+
+    &:focus {
+        border: size(2) solid #c4c4c4;
+    }
+
+    &[disabled] {
+        color: color(gray-6);
+        background-color: color(gray-8);
+    }
+}
+
+%btn-tertiary {
+    border: size(1) solid white;
+    background-color: transparent;
+
+    &:hover {
+        background-color: rgba(white, .15);
+    }
+
+    &[disabled] {
+        border-color: color(gray-6);
+        color: color(gray-6);
+        background-color: transparent;
+    }
+}
+
+%btn-s {
+    padding: size(9.5) size(20);
 }

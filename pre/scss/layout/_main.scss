@@ -1,97 +1,3 @@
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: size(20) size(60);
-    background-color: color(primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: size(20);
-    z-index: 9;
-
-    .main-logo {
-        flex: size(180);
-        max-width: size(180);
-    }
-
-    .options {
-        display: flex;
-        flex-grow: 1;
-        gap: size(20);
-        justify-content: flex-end;
-        align-items: center;
-
-        .nav {
-            ul {
-                display: flex;
-                gap: size(20);
-
-                li {
-                    padding: size(10) size(24);
-                    cursor: pointer;
-                    border-radius: size(10);
-                    transition-property: background-color;
-
-                    &:hover {
-                        background-color: rgba(white, .15);
-                    }
-                }
-            }
-        }
-
-        .language {
-            div {
-                display: flex;
-                align-items: center;
-                gap: size(8);
-                cursor: pointer;
-                border-radius: size(10);
-                transition-property: background-color;
-                padding: size(10) size(24);
-
-                &:hover {
-                    background-color: rgba(white, .15);
-                }
-
-                &::before,
-                &::after {
-                    font-family: 'Icomoon';
-                }
-
-                &::before {
-                    content: '\e90a';
-                }
-
-                &::after {
-                    content: '\e900';
-                }
-            }
-
-            ul {
-                display: none;
-            }
-        }
-
-
-        button {
-
-            &.menu,
-            &.close {
-                display: none;
-            }
-        }
-    }
-
-    &.fixed {
-        border-radius: size(100);
-        top: size(20);
-        left: size(70);
-        right: size(70);
-    }
-}
-
 main {
     background-color: color(primary);
     border-bottom-left-radius: size(30);
@@ -103,6 +9,13 @@ main {
         .container {
             max-width: size(1440);
             margin: 0 auto;
+        }
+    }
+
+    // PC ~ 1440
+    @include max-to(pc) {
+        section {
+            padding: size(20) size(20);
         }
     }
 }
@@ -117,23 +30,49 @@ main {
         border-radius: size(30) size(30) size(30) 0;
         overflow: hidden;
         position: relative;
+    }
+
+    .mask {
+        position: absolute;
+        left: calc(size(20) + size(60) - size(2));
+        bottom: size(-1);
+        right: size(300);
+        height: size(90);
+        background-color: color(primary);
+        transform: translateY(size(30));
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 0;
+            height: size(90);
+            transform: translateY(size(-30));
+        }
+
+        &::before {
+            right: calc(100% - size(1));
+            background-image: url(../img/kv-mask-before.svg);
+            background-position: bottom left;
+            width: size(60);
+        }
 
         &::after {
-            content: url(../img/Carousel-Mask.svg);
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: size(-7);
-            z-index: 1;
+            left: calc(100% - size(1));
+            background-image: url(../img/kv-mask-after.svg);
+            background-position: bottom right;
+            width: size(80);
         }
     }
 
     .captions {
         position: absolute;
-        left: size(40);
+        left: size(72);
         bottom: size(-20);
         width: size(650);
-        height: size(400);
+        // height: size(400);
         padding: size(32);
         display: flex;
         flex-wrap: wrap;
@@ -142,6 +81,8 @@ main {
 
         div {
             position: absolute;
+            left: size(32);
+            right: size(32);
             bottom: size(32);
             opacity: 0;
             transition-property: opacity;
@@ -151,19 +92,45 @@ main {
             }
 
             &.active {
+                position: initial;
                 opacity: 1;
                 transition-duration: 1.5s;
                 animation: cap-move 1s;
 
                 @keyframes cap-move {
                     0% {
-                        bottom: size(64);
+                        transform: translateY(size(32));
                     }
 
                     100% {
-                        bottom: size(32);
+                        transform: translateY(0);
                     }
                 }
+            }
+        }
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        margin: size(60) auto 0;
+        padding: 0 size(16);
+
+        .mask {
+            left: calc(size(16) + size(60) - size(2));
+            bottom: auto;
+            top: calc(((100svw - size(32)) * .47) - size(90) + size(1));
+        }
+
+        .captions {
+            position: initial;
+            width: 100%;
+            padding: 0 0 size(90);
+
+            div {
+                bottom: auto;
+                left: size(16);
+                right: size(16);
             }
         }
     }
@@ -173,7 +140,6 @@ main {
     background-image: url(../img/game-bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-
 
     .container {
         height: 50svw;
@@ -193,7 +159,7 @@ main {
                 margin-bottom: size(8);
             }
 
-            &.text-l {
+            &.body-1 {
                 margin-top: 0;
                 margin-bottom: size(40);
             }
@@ -211,6 +177,10 @@ main {
             border-radius: size(30);
             cursor: pointer;
             position: relative;
+
+            img {
+                border-radius: size(30);
+            }
 
             .hover {
                 position: absolute;
@@ -251,6 +221,75 @@ main {
         .slick-arrow {
             top: calc(100% + size(40));
             bottom: auto;
+        }
+    }
+
+
+    // PC ~ 1440
+    @include max-to(pc) {
+        .container {
+            padding: svw(150) svw(60) svw(50);
+        }
+
+        .desc {
+            min-width: svw(300);
+        }
+
+        .slick {
+            .slick-slide {
+                &:hover {
+                    &::before {
+                        left: size(-12);
+                        right: size(-12);
+                    }
+                }
+            }
+        }
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        .container {
+            flex-wrap: wrap;
+            height: auto;
+            gap: size(60);
+        }
+
+        .desc,
+        .slick {
+            flex: 100%;
+            max-width: 100%;
+        }
+
+        .slick {
+            padding-right: size(24);
+            margin-bottom: size(20);
+
+            .slick-slide {
+                border-radius: size(0);
+
+                .hover {
+                    position: initial;
+                    transform: none;
+                    opacity: 1;
+                    padding: size(8) 0;
+                }
+            }
+
+            .slick-dots {
+                right: 0;
+            }
+        }
+    }
+
+
+    // mobile ~ 768
+    @include max-to(mobile) {
+        background-image: url(../img/game-bg-m.jpg);
+
+        .container {
+            height: 200svw;
         }
     }
 }
@@ -343,6 +382,7 @@ main {
 
                         p {
                             margin-top: size(8);
+                            @extend %body-2;
                         }
 
                         .tags {
@@ -402,7 +442,7 @@ main {
         padding-right: size(58);
 
         p {
-            &.text-l {
+            &.body-1 {
                 margin: size(8) 0 size(40);
             }
         }
@@ -421,6 +461,11 @@ main {
         background-size: 100%;
         background-repeat: no-repeat;
         clip-path: polygon(0 size(100), 100% size(230), 100% 100%, 0% 100%);
+    }
+
+    // PC ~ 1440
+    @include max-to(pc) {
+        padding: svw(60) svw(60) svw(840) 0;
     }
 }
 
@@ -459,6 +504,7 @@ main {
 
                 p {
                     margin: size(8) auto size(32);
+                    @extend %body-1;
                 }
 
                 button {
@@ -475,6 +521,29 @@ main {
             transform: rotateX(180deg);
         }
     }
+
+    // PC ~ 1440
+    @include max-to(pc) {
+        margin: svw(-660) auto 0;
+        padding: svw(60);
+
+        .content {
+            margin-top: svw(40);
+            padding: svw(112) svw(112) 0;
+
+            .tab-content {
+                li {
+                    img {
+                        margin-bottom: svw(32);
+                    }
+
+                    p {
+                        margin: svw(8) auto svw(32);
+                    }
+                }
+            }
+        }
+    }
 }
 
 #zkz {
@@ -488,28 +557,9 @@ main {
         align-items: center;
         justify-content: center;
     }
-}
 
-footer {
-    background-color: black;
-    background-image: url(../img/Rounded-Mask.svg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    height: 9svw;
-
-    .sns {
-        width: 100svw;
-        padding: 0 size(30);
-        display: flex;
-        justify-content: flex-end;
-        gap: size(20);
-
-        li {
-            button {
-                // font-size: size(20);
-                font-size: 1.4svw;
-                padding: .8svw;
-            }
-        }
+    // PC ~ 1440
+    @include max-to(pc) {
+        height: 55svw;
     }
 }

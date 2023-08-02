@@ -16,6 +16,7 @@ $(document).ready(function () {
         }
     });
 
+
     /* 遊戲 */
     $('#game .slick').slick({
         infinite: false,
@@ -23,6 +24,7 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 3,
     });
+
 
     /* NFT */
     $('#nft .slick').slick({

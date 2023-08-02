@@ -1,0 +1,23 @@
+footer {
+    background-color: black;
+    background-image: url(../img/Rounded-Mask.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 9svw;
+
+    .sns {
+        width: 100svw;
+        padding: 0 size(30);
+        display: flex;
+        justify-content: flex-end;
+        gap: size(20);
+
+        li {
+            button {
+                // font-size: size(20);
+                font-size: 1.4svw;
+                padding: .8svw;
+            }
+        }
+    }
+}

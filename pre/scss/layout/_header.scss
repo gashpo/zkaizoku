@@ -1,0 +1,225 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: size(20) size(52);
+    background-color: color(primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: size(20);
+    z-index: 9;
+    @extend %body-2;
+
+    .main-logo {
+        flex: size(180);
+        max-width: size(180);
+    }
+
+    .options {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .menu {
+            display: none;
+            width: size(36);
+            height: size(36);
+            background-color: black;
+            @include font(16);
+            padding: size(10);
+            border-radius: size(100);
+            position: relative;
+
+            &:hover {
+                background-color: color(gray-9);
+            }
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Icomoon';
+                content: '\e90d';
+            }
+        }
+
+        .nav {
+            >ul {
+                display: flex;
+                gap: size(20);
+
+                >li {
+                    padding: size(10) size(24);
+                    cursor: pointer;
+                    border-radius: size(10);
+                    transition-property: background-color;
+
+                    &:hover {
+                        background-color: rgba(white, .15);
+                    }
+
+                    &.language {
+                        width: size(156);
+                        padding: 0;
+                        cursor: default;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+
+                        button {
+                            &::before {
+                                font-family: 'Icomoon';
+                                content: '\e90a';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .menu {
+                &::before {
+                    content: '\e907';
+                }
+            }
+        }
+    }
+
+    .login {
+        button {
+            @extend %btn-secondary;
+            @extend %body-2;
+        }
+
+        .admin {
+            button {
+                &::after {
+                    font-family: 'Icomoon';
+                    content: '\e900';
+                }
+            }
+
+            &.active {
+                button {
+                    &::after {
+                        font-family: 'Icomoon';
+                        content: '\e903';
+                    }
+                }
+            }
+        }
+    }
+
+    &.fixed {
+        border-radius: size(100);
+        top: size(20);
+        left: size(60);
+        right: size(60);
+    }
+
+
+    // pc ~ 1440
+    @include max-to(pc) {
+        padding: svw(20) svw(52);
+        gap: svw(20);
+
+        .main-logo {
+            flex: svw(180);
+            max-width: svw(180);
+            min-width: size(160);
+        }
+
+        .options {
+            gap: svw(20);
+        }
+
+        .nav {
+            >ul {
+                gap: svw(12);
+
+                >li {
+                    padding: svw(10) svw(20);
+                    cursor: pointer;
+                    border-radius: svw(10);
+                }
+            }
+        }
+    }
+
+
+    // laptop ~ 1280
+    @include max-to(laptop) {
+        padding: size(12) size(16);
+
+        .options {
+            order: 3;
+            flex-grow: 0;
+
+            .menu {
+                display: flex;
+            }
+
+            .nav {
+                position: fixed;
+                top: size(66);
+                left: 0;
+                width: 100dvw;
+                padding: 0 size(16);
+                height: auto;
+                max-height: 0;
+                overflow: hidden;
+                background-color: color(primary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                >ul {
+                    display: flex;
+                    width: calc(100svw - size(32));
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    gap: size(20);
+                    transform: translate(0, size(-100));
+
+                    >li {
+                        flex: 100%;
+                        text-align: center;
+                    }
+                }
+
+                .language {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.active {
+                .nav {
+                    max-height: 100lvh;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .login {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            button {
+                padding: size(10) size(20);
+                border: none !important;
+                line-height: 1 !important;
+            }
+        }
+    }
+}

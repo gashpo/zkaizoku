@@ -3,11 +3,17 @@
 @import "animation";
 
 @import "global";
-@import "layout";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/main";
 
 @import "components/font";
 @import "components/buttons";
+@import "components/dropdown";
+@import "components/fulldown";
 @import "components/tags";
 @import "components/tab";
+@import "components/popUp";
 @import "components/slick-custom";
 @import "components/swiper-custom";

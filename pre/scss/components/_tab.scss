@@ -10,11 +10,13 @@
         background-color: transparent;
         color: color(gray-9);
         border-radius: size(100);
-        padding: size(24) size(64);
+        padding: size(24);
         display: flex;
         align-items: center;
         justify-content: center;
         gap: size(8);
+        transition-property: color;
+        transition-delay: 0s;
 
         span {
             width: size(26);
@@ -24,8 +26,11 @@
             justify-content: center;
             background-color: color(gray-9);
             color: color(primary-6);
-            @include font(18, Bold);
+            @extend %body-1;
+            font-weight: weight(Bold);
             border-radius: size(100);
+            transition-property: background-color;
+            transition-delay: .15s;
         }
 
         &:hover {
@@ -94,5 +99,37 @@
         background: linear-gradient(321deg, rgba(white, .1) 0%, rgba(white, 0) 50%, rgba(white, .1) 100%);
         transform: rotate(-45deg);
         z-index: 1;
+    }
+}
+
+
+
+// PC ~ 1440
+@include max-to(pc) {
+    .tab {
+        border-radius: svw(100);
+        margin-bottom: svw(16);
+
+        li {
+            border-radius: svw(100);
+            padding: svw(24);
+            gap: svw(8);
+        }
+    }
+
+    .tab-content {
+        border-radius: svw(30);
+        height: svw(460);
+
+        li {
+            padding: svw(28);
+        }
+
+        &::before {
+            top: svw(-20);
+            left: svw(-100);
+            right: svw(-100);
+            bottom: svw(-20);
+        }
     }
 }

@@ -1,0 +1,48 @@
+.fulldown {
+    @include max-to(laptop) {
+        .fulldown-content {
+            position: fixed;
+            top: size(66);
+            left: 0;
+            width: 100dvw;
+            padding: 0 size(16);
+            height: auto;
+            max-height: 0;
+            overflow: hidden;
+            background-color: color(primary);
+            transform: none;
+            border-radius: 0;
+
+            >ul {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: size(20);
+
+                >li {
+                    flex: 100%;
+                    text-align: center;
+                    padding: size(10) size(24);
+                    cursor: pointer;
+                    border-radius: size(10);
+                    transition-property: background-color;
+
+                    &:hover,
+                    &.active {
+                        background-color: color(primary-4);
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .fulldown-content {
+                max-height: 100lvh;
+                bottom: 0;
+                padding: size(44) size(16) size(16);
+            }
+        }
+    }
+}

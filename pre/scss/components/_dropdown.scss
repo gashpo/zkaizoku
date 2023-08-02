@@ -1,0 +1,104 @@
+.dropdown {
+    position: relative;
+
+    button {
+        display: flex;
+        align-items: center;
+        gap: size(8);
+        border-radius: size(10);
+        transition-property: background-color;
+        padding: size(10) size(24);
+        @extend %body-2;
+
+        &:hover {
+            background-color: rgba(white, .15);
+        }
+
+        &::after {
+            font-family: 'Icomoon';
+            content: '\e900';
+        }
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: calc(100% + size(28));
+        left: 50%;
+        transform: translateX(-50%);
+        width: size(160);
+        padding: 0 size(20);
+        border-radius: size(20);
+        box-shadow: 0 0 size(20) 0 rgba(black, .25);
+        background-color: color(primary);
+        @extend %body-2;
+        overflow: hidden;
+        height: auto;
+        max-height: 0;
+        opacity: 0;
+        transition-property: max-height, padding, opacity;
+
+        >ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: size(8);
+
+            >li {
+                flex: 100%;
+                text-align: center;
+                cursor: pointer;
+                border-radius: size(10);
+                transition-property: background-color;
+                padding: size(8) size(24);
+
+                &:hover,
+                &.active {
+                    background-color: color(primary-4);
+                }
+            }
+        }
+    }
+
+    &.active {
+        button {
+            &::after {
+                content: '\e903';
+            }
+        }
+
+        .dropdown-content {
+            padding: size(28) size(20);
+            max-height: size(300);
+            opacity: 1;
+        }
+    }
+
+    @include max-to(laptop) {
+        .dropdown-content {
+            width: 100%;
+            top: 100%;
+            padding: 0 size(8);
+            box-shadow: none;
+            background-color: color(primary-4);
+
+            ul {
+                gap: size(8);
+
+                li {
+                    padding: size(8) size(24) !important;
+
+                    &:hover,
+                    &.active {
+                        background-color: color(primary-3);
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .dropdown-content {
+                padding: size(8);
+            }
+        }
+    }
+}

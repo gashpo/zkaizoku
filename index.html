@@ -71,9 +71,8 @@
 		<header>
 			<a class="main-logo" href="javascript:void(0)"><img src="img/logo.svg"></a>
 			<div class="options">
-				<button class="menu"><img src="img/icon/menu.svg"></button>
+				<button class="menu"></button>
 				<div class="nav">
-					<button class="close"><img src="img/icon/close.svg"></button>
 					<ul>
 						<li for="shop">商城</li>
 						<li for="game">Game</li>
@@ -81,19 +80,32 @@
 						<li for="tutorial">教學</li>
 						<li for="zkz">$ZKZ</li>
 						<li for="bridge">Bridge</li>
-					</ul>
-				</div>
-				<div class="language">
-					<div><span>繁體中文</span></div>
-					<ul>
-						<li class="active">繁體中文</li>
-						<li>English</li>
-						<li>日本語</li>
+						<li for="language" class="language dropdown">
+							<button>繁體中文</button>
+							<div class="dropdown-content">
+								<ul>
+									<li class="active">繁體中文</li>
+									<li>English</li>
+									<li>日本語</li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
 
-			<div class="wallet"><button class="secondary">連接錢包</button></div>
+			<div class="login">
+				<button class="wallet popUp--open" for="login">連接錢包</button>
+				<div class="admin dropdown" style="display: none;">
+					<button>0x130...123DxA</button>
+					<div class="dropdown-content">
+						<ul>
+							<li>個人資訊</li>
+							<li>登出</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</header>
 
 		<main>
@@ -103,24 +115,25 @@
 					<div><img src="img/banner02.jpg"></div>
 					<div><img src="img/banner03.jpg"></div>
 				</div>
+				<div class="mask"></div>
 				<div class="captions">
 					<div class="active">
 						<p class="title-xl">FROM THE GARDEN TO THE ALLEY</p>
-						<p class="text-l">A small species that sprout from the dirt in the garden. While they're
+						<p class="body-1">A small species that sprout from the dirt in the garden. While they're
 							earnestly driven by
 							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
 							alley...</p>
 					</div>
 					<div>
 						<p class="title-xl">HAVE A GOOD TIME!</p>
-						<p class="text-l">A small species that sprout from the dirt in the garden. While they're
+						<p class="body-1">A small species that sprout from the dirt in the garden. While they're
 							earnestly driven by
 							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
 							alley...</p>
 					</div>
 					<div>
 						<p class="title-xl">DARE TO CHALLENGE</p>
-						<p class="text-l">A small species that sprout from the dirt in the garden. While they're
+						<p class="body-1">A small species that sprout from the dirt in the garden. While they're
 							earnestly driven by
 							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
 							alley...</p>
@@ -132,8 +145,8 @@
 				<div class="container">
 					<div class="desc">
 						<p class="title-xl">Game</p>
-						<p class="text-l">Description description description description description.</p>
-						<button class="secondary">View All Games</button>
+						<p class="body-1">Description description description description description.</p>
+						<button class="btn-secondary">View All Games</button>
 					</div>
 					<div class="slick dark">
 						<div>
@@ -145,7 +158,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -157,7 +170,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -169,7 +182,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -181,7 +194,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -193,7 +206,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -205,7 +218,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -217,7 +230,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -229,7 +242,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -241,7 +254,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 						<div>
@@ -253,7 +266,7 @@
 									<li>tag</li>
 									<li>tag</li>
 								</ul>
-								<button class="tertiary">View Details</button>
+								<button class="btn-tertiary">View Details</button>
 							</div>
 						</div>
 					</div>
@@ -273,7 +286,7 @@
 										<li>Female</li>
 										<li>Teenager</li>
 									</ul>
-									<button class="tertiary btn-s">View Details</button>
+									<button class="btn-tertiary btn-s">View Details</button>
 								</div>
 							</div>
 						</div>
@@ -287,7 +300,7 @@
 										<li>Female</li>
 										<li>Teenager</li>
 									</ul>
-									<button class="tertiary btn-s">View Details</button>
+									<button class="btn-tertiary btn-s">View Details</button>
 								</div>
 							</div>
 						</div>
@@ -301,7 +314,7 @@
 										<li>Female</li>
 										<li>Teenager</li>
 									</ul>
-									<button class="tertiary btn-s">View Details</button>
+									<button class="btn-tertiary btn-s">View Details</button>
 								</div>
 							</div>
 						</div>
@@ -319,7 +332,7 @@
 												<li>Female</li>
 												<li>Teenager</li>
 											</ul>
-											<button class="tertiary btn-s">View Details</button>
+											<button class="btn-tertiary btn-s">View Details</button>
 										</div>
 									</div>
 								</div>
@@ -333,7 +346,7 @@
 												<li>Female</li>
 												<li>Teenager</li>
 											</ul>
-											<button class="tertiary btn-s">View Details</button>
+											<button class="btn-tertiary btn-s">View Details</button>
 										</div>
 									</div>
 								</div>
@@ -347,7 +360,7 @@
 												<li>Female</li>
 												<li>Teenager</li>
 											</ul>
-											<button class="tertiary btn-s">View Details</button>
+											<button class="btn-tertiary btn-s">View Details</button>
 										</div>
 									</div>
 								</div>
@@ -359,7 +372,7 @@
 					</div>
 					<div class="desc">
 						<p class="title-xl">NFT</p>
-						<p class="text-l">
+						<p class="body-1">
 							Description description description description description description description
 							description.
 						</p>
@@ -372,23 +385,38 @@
 				<div class="container">
 					<div class="title">
 						<p class="title-xl">教學</p>
-						<p class="text-l">
+						<p class="body-1">
 							Description description description description description description description.
 						</p>
 					</div>
 					<div class="content">
 						<ul class="tab">
-							<li class="active"><span>1</span>Step 1</li>
-							<li><span>2</span>Step 2</li>
-							<li><span>3</span>Step 3</li>
-							<li><span>4</span>Step 4</li>
-							<li><span>5</span>Step 5</li>
+							<li class="active">
+								<span>1</span>
+								<h4>Step 1</h4>
+							</li>
+							<li>
+								<span>2</span>
+								<h4>Step 2</h4>
+							</li>
+							<li>
+								<span>3</span>
+								<h4>Step 3</h4>
+							</li>
+							<li>
+								<span>4</span>
+								<h4>Step 4</h4>
+							</li>
+							<li>
+								<span>5</span>
+								<h4>Step 5</h4>
+							</li>
 						</ul>
 						<ul class="tab-content">
 							<li class="active">
 								<div>
 									<h2>Connect your cryptocurrency wallet</h2>
-									<p class="text-l">
+									<p>
 										Please scroll to the top of this page, and click the buttom in the upper right
 										to
 										connect your cryptocurrency wallet.
@@ -399,7 +427,7 @@
 							<li>
 								<div>
 									<h2>Mint the ZKaizoku License(dNFT)</h2>
-									<p class="text-l">
+									<p>
 										Go to the marketplace to mint the "ZKaizoku License"(dNFT) to receive an unique
 										avatar and the qualification of earning $ZKZ(the circulating utility tokens on
 										this platform).(If you do not mint "ZKaizoku License", you can still play games
@@ -413,7 +441,7 @@
 								<div>
 									<img src="img/step3.png">
 									<h2>Earn $ZKZ through the interaction</h2>
-									<p class="text-l">
+									<p>
 										Play the games on ZKaizoku platform, and you will earn $ZKZ through the
 										interaction of the smart contract.
 									</p>
@@ -422,7 +450,7 @@
 							<li>
 								<div>
 									<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
-									<p class="text-l">
+									<p>
 										Utilize your accumulated $ZKZ to upgrade ZKaizoku License to make the total
 										amount of your $ZKZ increased through the additional multiplier effects from
 										your ZKaizoku License upgraded.
@@ -432,7 +460,7 @@
 							<li>
 								<div>
 									<h2>Settle the zkSync Era airdrop allocation</h2>
-									<p class="text-l">
+									<p>
 										The result of multiplying your $ZKZ and ZKaizoku License will be divided by the
 										total sum of $ZKZ held by all participants, determining your share on ZKaizoku
 										platform.After zkSync Era official airdrop, we will send you your portion of
@@ -457,13 +485,42 @@
 		<footer>
 			<ul class="sns">
 				<li>
-					<button class="rounded"><i class="icon-Twitter"></i></button>
+					<button class="btn-rounded"><i class="icon-Twitter"></i></button>
 				</li>
 				<li>
-					<button class="rounded"><i class="icon-Telegram"></i></button>
+					<button class="btn-rounded"><i class="icon-Telegram"></i></button>
 				</li>
 			</ul>
 		</footer>
+
+
+
+
+		<!-- pop up 連接錢包 -->
+		<div id="login" class="popUp">
+			<div class="popUp--container">
+				<button class="popUp--close"><i class="icon-Close"></i></button>
+				<h3>Connect Your Wallet</h3>
+				<div class="popUp--content">
+					<ul>
+						<li>
+							<img src="img/fox-icon.png">
+							<span>Metamask</span>
+							<i class="icon-ArrowRightS"></i>
+						</li>
+						<li>
+							<img src="img/wallet-icon.png">
+							<span>Wallet Connect</span>
+							<i class="icon-ArrowRightS"></i>
+						</li>
+					</ul>
+				</div>
+				<!-- <div class="popUp--btns">
+					<button class="btn-tertiary">取消</button>
+					<button class="submit">確認</button>
+				</div> -->
+			</div>
+		</div>
 	</div>
 
 
@@ -475,7 +532,11 @@
 	<!-- Custom settings -->
 	<script src="js/navigation.js"></script>
 	<script src="js/menu.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/fulldown.js"></script>
 	<script src="js/tab.js"></script>
+	<script src="js/popUp.js"></script>
+	<script src="js/connect-wallet.js"></script>
 
 	<!-- AOS 套件 -->
 	<script src="vendor/aos/aos.js"></script>
@@ -498,7 +559,7 @@
 
 		var swiperNFT = new Swiper('.swiper', {
 			effect: "coverflow",
-			spaceBetween: -150,
+			spaceBetween: -130,
 			slidesPerView: 2.5,
 			loop: true,
 			allowSlideNext: !isComingSoon,
@@ -521,6 +582,13 @@
 			on: {
 				touchMove: function (e) {
 					e.preventDefault();
+				},
+			},
+			breakpoints: {
+				769: {
+				},
+				1281: {
+					spaceBetween: -150,
 				},
 			},
 		});

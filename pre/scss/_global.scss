@@ -33,16 +33,11 @@ html {
 }
 
 body {
-    line-height: 1.5;
-    @include font(15, Medium);
     font-family: 'Inter', 'Noto Sans TC', cursive;
     overflow-x: hidden;
     color: white;
     background-color: color(primary);
-
-    @include max-to(pad) {
-        @include font(13);
-    }
+    @extend %body-1;
 }
 
 #app {

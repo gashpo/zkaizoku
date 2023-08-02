@@ -1,0 +1,102 @@
+.popUp {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(black, .8);
+    z-index: 10;
+
+    .popUp--container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: black;
+        border-radius: size(20);
+        padding: size(28);
+        width: size(510);
+        max-height: 80svh;
+        box-shadow: 0 0 size(40) 0 rgba(color(primary-4), 0.56);
+
+        .popUp--close {
+            position: absolute;
+            top: size(20);
+            right: size(20);
+            background-color: color(gray-9);
+            height: size(36);
+            width: size(36);
+            padding: size(10);
+            border-radius: size(100);
+            text-align: center;
+            transition-property: background-color;
+
+            &:hover {
+                background-color: color(gray-8);
+            }
+        }
+
+        h3 {
+            text-align: center;
+            padding: 0 size(56);
+        }
+
+        .popUp--content {
+            overflow-y: auto;
+            margin: size(28) size(-24) size(28) 0;
+            padding-right: size(24);
+            max-height: calc(80svh - size(116));
+            min-height: max-content;
+        }
+
+        &:has(.popUp--btns) {
+            .popUp--content {
+                max-height: calc(80svh - size(186));
+            }
+        }
+
+        .popUp--btns {
+            display: flex;
+            gap: size(20);
+
+            button {
+                flex: 1;
+            }
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+#login {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: size(16);
+
+        li {
+            flex: 100%;
+            display: flex;
+            gap: size(16);
+            align-items: center;
+            justify-content: space-between;
+            background-color: color(gray-9);
+            border-radius: size(10);
+            padding: size(12) size(24);
+            @extend %body-1;
+            cursor: pointer;
+            transition-property: background-color;
+
+            span {
+                flex-grow: 1;
+            }
+
+            &:hover {
+                background-color: color(gray-8);
+            }
+        }
+    }
+}
