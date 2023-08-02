@@ -3,6 +3,8 @@ $(document).ready(function () {
     /* 主視覺 */
     $('#keyvision .slick').slick({
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
     });
 
     $('#keyvision .slick').on('afterChange', function (event, slick, currentSlide) {

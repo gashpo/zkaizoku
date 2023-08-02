@@ -125,8 +125,10 @@ $colors: map-merge($colors, (gray-1: mix(white, color(gray), 80%),
     transition-property: color;
     text-decoration: none;
 
-    &:hover {
-        color: $hover;
+    @media (hover: hover) {
+        &:hover {
+            color: $hover;
+        }
     }
 }
 

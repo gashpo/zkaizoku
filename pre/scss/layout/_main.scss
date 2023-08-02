@@ -72,8 +72,8 @@ main {
         left: size(72);
         bottom: size(-20);
         width: size(650);
-        // height: size(400);
-        padding: size(32);
+        height: size(400);
+        // padding: size(32);
         display: flex;
         flex-wrap: wrap;
         gap: size(20);
@@ -92,7 +92,7 @@ main {
             }
 
             &.active {
-                position: initial;
+                // position: initial;
                 opacity: 1;
                 transition-duration: 1.5s;
                 animation: cap-move 1s;
@@ -125,6 +125,7 @@ main {
         .captions {
             position: initial;
             width: 100%;
+            height: size(300);
             padding: 0 0 size(90);
 
             div {
@@ -137,16 +138,19 @@ main {
 }
 
 #game {
-    background-image: url(../img/game-bg.jpg);
-    background-size: 100%;
+    background-image: url(../img/bg/game-bg.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 
     .container {
-        height: 50svw;
+        min-height: 50svw;
         padding: size(150) size(60) size(50);
         display: flex;
         gap: size(20);
         align-items: flex-start;
+        position: inherit;
+        z-index: 2;
     }
 
     .desc {
@@ -192,6 +196,7 @@ main {
                 opacity: 0;
                 transition-duration: .3s;
                 transition-delay: .1s;
+                z-index: 1;
             }
 
             &::before {
@@ -205,15 +210,17 @@ main {
                 transition: background-color .2s, left .3s, right .3s;
             }
 
-            &:hover {
-                .hover {
-                    opacity: 1;
-                }
+            @media (hover: hover) {
+                &:hover {
+                    .hover {
+                        opacity: 1;
+                    }
 
-                &::before {
-                    left: 0;
-                    right: 0;
-                    background-color: black;
+                    &::before {
+                        left: 0;
+                        right: 0;
+                        background-color: black;
+                    }
                 }
             }
         }
@@ -222,6 +229,23 @@ main {
             top: calc(100% + size(40));
             bottom: auto;
         }
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    &::before {
+        content: url(../img/bg/game-mask-top.png);
+        top: 0;
+    }
+
+    &::after {
+        content: url(../img/bg/game-mask-bottom.png);
+        bottom: size(-8);
     }
 
 
@@ -268,12 +292,23 @@ main {
 
             .slick-slide {
                 border-radius: size(0);
+                cursor: default;
 
                 .hover {
                     position: initial;
                     transform: none;
                     opacity: 1;
                     padding: size(8) 0;
+
+                    button {
+                        padding: size(9.5) size(20);
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        background-color: transparent;
+                    }
                 }
             }
 
@@ -306,53 +341,6 @@ main {
         position: relative;
     }
 
-    /*
-    .slick {
-        z-index: 1;
-        flex: 1;
-        max-width: size(720);
-
-        .slick-slide {
-            border-radius: size(30);
-            overflow: hidden;
-            background-repeat: no-repeat;
-            position: relative;
-            transform: scale(.75);
-            transition-property: transform;
-
-            .content {
-                opacity: 0;
-                transition-property: opacity;
-                background-color: color(gray-9);
-
-                .caption {
-                    padding: size(20) size(20) size(30);
-
-                    p {
-                        margin-top: size(8);
-                    }
-
-                    .tags {
-                        margin-top: size(16);
-                    }
-
-                    button {
-                        width: 100%;
-                    }
-                }
-            }
-
-            &.slick-current {
-                transform: scale(1);
-
-                .content {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    */
-
     .carousel {
         flex: 1;
         overflow: hidden;
@@ -361,7 +349,7 @@ main {
         .swiper {
             overflow: visible;
 
-            .swiper-slide {
+            &-slide {
                 border-radius: size(30);
                 overflow: hidden;
                 background-color: color(gray-9);
@@ -456,16 +444,63 @@ main {
         right: size(-100);
         bottom: 0;
         z-index: 0;
-        background-image: url(../img/nft-bg.jpg);
-        background-position: top center;
-        background-size: 100%;
+        background-color: black;
+        background-image: url(../img/bg/nft-bg.jpg);
+        background-position: bottom center;
+        background-size: cover;
         background-repeat: no-repeat;
         clip-path: polygon(0 size(100), 100% size(230), 100% 100%, 0% 100%);
     }
 
+
     // PC ~ 1440
     @include max-to(pc) {
         padding: svw(60) svw(60) svw(840) 0;
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        padding: size(60) size(16) size(60) 0;
+
+        .container {
+            flex-wrap: wrap;
+        }
+
+        .carousel,
+        .desc {
+            flex: 100%;
+        }
+
+        .carousel {
+            order: 2;
+            padding: 0 0 size(60);
+            position: relative;
+
+            .swiper {
+                margin-right: size(36);
+                padding: size(28) 0;
+                overflow: hidden;
+
+                &-button {
+                    &-prev {
+                        right: size(80);
+                    }
+
+                    &-next {
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        .desc {
+            padding-left: size(16);
+        }
+
+        &::before {
+            clip-path: polygon(0 0, 100% size(130), 100% 100%, 0% 100%);
+        }
     }
 }
 
@@ -544,10 +579,15 @@ main {
             }
         }
     }
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        margin-top: 0;
+    }
 }
 
 #zkz {
-    background-image: url(../img/zkz-bg.jpg);
+    background-image: url(../img/bg/zkz-bg.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 45svw;

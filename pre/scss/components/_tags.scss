@@ -9,4 +9,10 @@
         border-radius: size(4);
         @extend %capital;
     }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        margin: size(8) 0 size(20);
+    }
 }
