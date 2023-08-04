@@ -137,16 +137,16 @@ header {
 
         .options {
             gap: svw(20);
-        }
 
-        .nav {
-            >ul {
-                gap: svw(12);
+            .nav {
+                >ul {
+                    gap: svw(12);
 
-                >li {
-                    padding: svw(10) svw(20);
-                    cursor: pointer;
-                    border-radius: svw(10);
+                    >li {
+                        padding: svw(10) svw(20);
+                        cursor: pointer;
+                        border-radius: svw(10);
+                    }
                 }
             }
         }

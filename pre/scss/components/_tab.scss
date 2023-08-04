@@ -33,11 +33,13 @@
             transition-delay: .15s;
         }
 
-        &:hover {
-            color: color(primary-4);
+        @media (hover: hover) {
+            &:hover {
+                color: color(primary-4);
 
-            span {
-                background-color: color(primary-4);
+                span {
+                    background-color: color(primary-4);
+                }
             }
         }
 
@@ -130,6 +132,42 @@
             left: svw(-100);
             right: svw(-100);
             bottom: svw(-20);
+        }
+    }
+}
+
+
+
+// pad ~ 1024
+@include max-to(pad) {
+    .tab-content {
+        height: svw(600);
+    }
+}
+
+
+// small-pad ~ 768
+@include max-to(small-pad) {
+    .tab {
+        li {
+            h4 {
+                display: none;
+            }
+        }
+    }
+
+    .tab-content {
+        height: size(510);
+
+        li {
+            padding: size(32);
+        }
+
+        &::before {
+            top: size(120);
+            left: size(-120);
+            right: size(-120);
+            bottom: size(120);
         }
     }
 }

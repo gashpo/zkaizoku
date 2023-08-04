@@ -4,8 +4,8 @@ $breakpoints: (
     laptop: 1280px,
     pad: 1024px,
     small-pad: 768px,
-    phone: 516px,
-    small-phone: 320px,
+    mobile: 516px,
+    small-mobile: 320px,
 );
 
 @mixin max-to($bp) {

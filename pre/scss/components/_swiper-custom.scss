@@ -71,3 +71,25 @@
         }
     }
 }
+
+.carousel.dark {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: black;
+
+        &:hover {
+            background-color: rgba(black, .1);
+        }
+    }
+
+    .swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+            background-color: rgba(black, .3);
+
+            &.swiper-pagination-bullet-active {
+                background-color: black;
+            }
+        }
+    }
+}
