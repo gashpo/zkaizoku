@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- SEO -->
+    <meta name="keyword"
+        content="ZKaizoku,zkSync Era,Layer 2,空投,區塊鏈,區塊鏈平台,加密貨幣,token,鏈遊,遊戲,邊玩邊賺,P2E,GAMEFi,NFT,dNFT,web3 gaming" />
+    <meta name="description"
+        content="ZKaizoku為一式發行於zkSync Era上的一站式互動平台，旨在透過區塊鏈及dNFT技術串聯多款經典及原創遊戲，創造一個用戶透過玩遊戲累積交互積分、共同賺取更多空投的共榮生態圈！" />
+
+    <!-- share info -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gashpo.github.io/zkaizokuimg/og-image.png" />
+    <link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
+
+    <!-- Swiper 套件 -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom Icons -->
+    <link rel="stylesheet" href="vendor/icomoon/style.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>ZKaizoku 一站式互動平台</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVQME3HX35"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KVQME3HX35');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NR4MV2JF');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR4MV2JF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="app">
+        <header>
+            <a class="main-logo" href="index.html"><img src="img/logo.svg"></a>
+            <div class="options">
+                <button class="menu"></button>
+                <div class="nav">
+                    <ul>
+                        <li>商城</li>
+                        <li onclick="location='game.html'">Game</li>
+                        <li onclick="location='index.html#nft'">NFT</li>
+                        <li onclick="location='index.html#tutorial'">教學</li>
+                        <li onclick="location='index.html#zkz'">$ZKZ</li>
+                        <li onclick="location='bridge.html'">Bridge</li>
+                        <li for="language" class="language dropdown">
+                            <button>繁體中文</button>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li class="active">繁體中文</li>
+                                    <li>English</li>
+                                    <li>日本語</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="login">
+                <button class="wallet popUp--open" for="login">連接錢包</button>
+                <div class="admin dropdown" style="display: none;">
+                    <button>0x130...123DxA</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li onclick="location='personal.html'">個人資訊</li>
+                            <li>登出</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="shop">
+                <div class="container">
+                    <ul class="progress step1">
+                        <li>
+                            <h5>1</h5>
+                            <span>商品明細</span>
+                        </li>
+                        <li>
+                            <h5>2</h5>
+                            <span>購買確認</span>
+                        </li>
+                        <li>
+                            <h5>3</h5>
+                            <span>購買完成</span>
+                        </li>
+                    </ul>
+                    <!-- 步驟一 -->
+                    <div class="product-detail step1">
+                        <div class="img"><img src="img/product01.jpg"></div>
+                        <div class="content">
+                            <h3>白單 dNFT</h3>
+                            <div class="desc">
+                                <p>商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品</p>
+                                <p>注意事項</p>
+                                <ol>
+                                    <li>
+                                        說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明
+                                    </li>
+                                    <li>
+                                        說明說明說明說明 <a href="">點我連結</a>
+                                    </li>
+                                    <li>
+                                        說明說明說明說明說明說明
+                                    </li>
+                                    <li>
+                                        說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="purchase">
+                                <div class="input-group">
+                                    <label for="referral-code">推薦碼 <i class="icon-InfoCircle"></i></label>
+                                    <input name="referral-code" type="text" placeholder="Placeholder">
+                                </div>
+                                <div class="price">
+                                    <img src="img/Ethereum.svg">
+                                    <div>
+                                        <h2>80</h2>
+                                        <span>ETH</span>
+                                    </div>
+                                </div>
+                                <button>購買</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 步驟二 -->
+                    <div class="product-detail step2">
+                        <h3 class="title">購買確認</h3>
+                        <div class="img"><img src="img/product01.jpg"></div>
+                        <div class="content">
+                            <ul class="statement">
+                                <li>
+                                    <span>購買項目</span>
+                                    <span>白單 dNFT</span>
+                                </li>
+                                <li>
+                                    <span>購買金額</span>
+                                    <span>80 ETH</span>
+                                </li>
+                                <li>
+                                    <span>推薦碼</span>
+                                    <span>zkgoodgood</span>
+                                </li>
+                            </ul>
+                            <div class="desc">
+                                <p>商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品</p>
+                                <p>注意事項</p>
+                                <ol>
+                                    <li>
+                                        說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明
+                                    </li>
+                                    <li>
+                                        說明說明說明說明 <a href="">點我連結</a>
+                                    </li>
+                                    <li>
+                                        說明說明說明說明說明說明
+                                    </li>
+                                    <li>
+                                        說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="purchase">
+                                <div class="price">
+                                    <img src="img/Ethereum.svg">
+                                    <div>
+                                        <h2>80</h2>
+                                        <span>ETH</span>
+                                    </div>
+                                </div>
+                                <button class="popUp--open" for="failed">購買</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 步驟三 -->
+                    <div class="product-detail step3">
+                        <h3 class="title">購買確認</h3>
+                        <div class="img"><img src="img/product01.jpg"></div>
+                        <div class="content">
+                            <ul class="statement">
+                                <li>
+                                    <span>購買項目</span>
+                                    <span>白單 dNFT</span>
+                                </li>
+                                <li>
+                                    <span>購買金額</span>
+                                    <span>80 ETH</span>
+                                </li>
+                                <li>
+                                    <span>我的推薦碼</span>
+                                    <a href="personal.html">請至個人資訊查看 Token ID</a>
+                                </li>
+                            </ul>
+                            <div class="desc">
+                                <p>商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品</p>
+                                <p>注意事項</p>
+                                <ol>
+                                    <li>
+                                        說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明
+                                    </li>
+                                    <li>
+                                        說明說明說明說明 <a href="">點我連結</a>
+                                    </li>
+                                    <li>
+                                        說明說明說明說明說明說明
+                                    </li>
+                                    <li>
+                                        說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明說明
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="purchase">
+                                <div class="price">
+                                    <img src="img/Ethereum.svg">
+                                    <div>
+                                        <h2>80</h2>
+                                        <span>ETH</span>
+                                    </div>
+                                </div>
+                                <button class="btn-tertiary" onclick="location='personal.html'">查看訂單記錄</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="mask"></div>
+            <ul class="sns">
+                <li>
+                    <button class="btn-rounded"><i class="icon-Twitter"></i></button>
+                </li>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul>
+        </footer>
+
+
+
+
+        <!-- pop up 系統通知 -->
+        <div id="failed" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>系統通知</h3>
+                <div class="popUp--content">
+                    <p>糟糕，購買發生異常，請確認以下可能狀況：</p>
+                    <ol>
+                        <li>當前是否為商品銷售時間</li>
+                        <li>錢包內是否有充足餘額</li>
+                        <li>錢包是否設定為zkSync主網</li>
+                        <li>其他問題</li>
+                    </ol>
+                    <p>如持續發生異常，請與我們聯繫，謝謝您！</p>
+                </div>
+                <div class="popUp--btns">
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- pop up 連接錢包 -->
+        <div id="login" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>Connect Your Wallet</h3>
+                <div class="popUp--content">
+                    <ul>
+                        <li>
+                            <img src="img/fox-icon.png">
+                            <span>Metamask</span>
+                            <i class="icon-ArrowRightS"></i>
+                        </li>
+                        <li>
+                            <img src="img/wallet-icon.png">
+                            <span>Wallet Connect</span>
+                            <i class="icon-ArrowRightS"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="popUp--btns">
+					<button class="btn-tertiary">取消</button>
+					<button class="submit">確認</button>
+				</div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery.min.js"></script>
+
+    <!-- Custom settings -->
+    <script src="js/navigation.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/fulldown.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/popUp.js"></script>
+    <script src="js/connect-wallet.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+
+</html>

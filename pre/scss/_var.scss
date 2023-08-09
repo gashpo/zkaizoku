@@ -88,6 +88,8 @@ $font-weight: (
 $colors: (
     primary: #871B1F,
     gray: #929292,
+    success: #4D9D40,
+    warning: #D49519,
 );
 
 @function color($key) {

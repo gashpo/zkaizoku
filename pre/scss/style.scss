@@ -1,0 +1,26 @@
+@import "reset";
+@import "var";
+@import "animation";
+
+@import "components/font";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/fulldown";
+@import "components/card";
+@import "components/tags";
+@import "components/tab";
+@import "components/tables";
+@import "components/popUp";
+@import "components/form";
+@import "components/swiper-custom";
+
+@import "global";
+
+@import "layout/header";
+@import "layout/breadcrumb";
+@import "layout/main";
+@import "layout/footer";
+
+@import "pages/shop";
+@import "pages/game";
+@import "pages/personal";

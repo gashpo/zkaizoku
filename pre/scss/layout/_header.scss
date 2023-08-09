@@ -10,7 +10,7 @@ header {
     align-items: center;
     gap: size(20);
     z-index: 9;
-    @extend %body-2;
+    @include body-2;
 
     .main-logo {
         flex: size(180);
@@ -94,7 +94,7 @@ header {
     .login {
         button {
             @extend %btn-secondary;
-            @extend %body-2;
+            @include body-2;
         }
 
         .admin {
@@ -166,45 +166,19 @@ header {
             }
 
             .nav {
-                position: fixed;
-                top: size(66);
-                left: 0;
-                width: 100dvw;
-                padding: 0 size(16);
-                height: auto;
-                max-height: 0;
-                overflow: hidden;
-                background-color: color(primary);
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
                 >ul {
-                    display: flex;
                     width: calc(100svw - size(32));
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: center;
-                    gap: size(20);
                     transform: translate(0, size(-100));
-
-                    >li {
-                        flex: 100%;
-                        text-align: center;
-                    }
                 }
 
                 .language {
                     button {
                         width: 100%;
                     }
-                }
-            }
-
-            &.active {
-                .nav {
-                    max-height: 100lvh;
-                    bottom: 0;
                 }
             }
         }

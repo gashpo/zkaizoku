@@ -1,4 +1,6 @@
 .fulldown {
+
+    // laptop ~ 1280
     @include max-to(laptop) {
         .fulldown-content {
             position: fixed;
@@ -14,8 +16,8 @@
             border-radius: 0;
 
             >ul {
-                display: flex;
                 width: 100%;
+                display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
@@ -43,6 +45,13 @@
                 bottom: 0;
                 padding: size(44) size(16) size(16);
             }
+        }
+    }
+
+    // small-pad ~ 768
+    @include max-to(small-pad) {
+        .fulldown-content {
+            top: size(60);
         }
     }
 }

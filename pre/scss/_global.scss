@@ -37,7 +37,7 @@ body {
     overflow-x: hidden;
     color: white;
     background-color: color(primary);
-    @extend %body-1;
+    @include body-1;
 }
 
 #app {
@@ -51,5 +51,30 @@ img {
 p {
     &+p {
         margin-top: size(16);
+    }
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: size(28);
+}
+
+i {
+    &.icon-InfoCircle {
+        cursor: pointer;
+        @include a-color(color(gray-6));
+        margin-left: size(8);
+    }
+
+    &.success {
+        color: color(success);
+    }
+
+    &.warning {
+        color: color(warning);
+    }
+
+    &.error {
+        color: color(primary-4);
     }
 }

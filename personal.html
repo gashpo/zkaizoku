@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- SEO -->
+    <meta name="keyword"
+        content="ZKaizoku,zkSync Era,Layer 2,空投,區塊鏈,區塊鏈平台,加密貨幣,token,鏈遊,遊戲,邊玩邊賺,P2E,GAMEFi,NFT,dNFT,web3 gaming" />
+    <meta name="description"
+        content="ZKaizoku為一式發行於zkSync Era上的一站式互動平台，旨在透過區塊鏈及dNFT技術串聯多款經典及原創遊戲，創造一個用戶透過玩遊戲累積交互積分、共同賺取更多空投的共榮生態圈！" />
+
+    <!-- share info -->
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://gashpo.github.io/zkaizokuimg/og-image.png" />
+    <link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
+
+    <!-- Swiper 套件 -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom Icons -->
+    <link rel="stylesheet" href="vendor/icomoon/style.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>ZKaizoku 一站式互動平台</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVQME3HX35"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KVQME3HX35');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NR4MV2JF');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR4MV2JF" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="app">
+        <header>
+            <a class="main-logo" href="index.html"><img src="img/logo.svg"></a>
+            <div class="options">
+                <button class="menu"></button>
+                <div class="nav">
+                    <ul>
+                        <li onclick="location='shop.html'">商城</li>
+                        <li onclick="location='game.html'">Game</li>
+                        <li onclick="location='index.html#nft'">NFT</li>
+                        <li onclick="location='index.html#tutorial'">教學</li>
+                        <li onclick="location='index.html#zkz'">$ZKZ</li>
+                        <li onclick="location='bridge.html'">Bridge</li>
+                        <li for="language" class="language dropdown">
+                            <button>繁體中文</button>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li class="active">繁體中文</li>
+                                    <li>English</li>
+                                    <li>日本語</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="login">
+                <button class="wallet popUp--open" for="login">連接錢包</button>
+                <div class="admin dropdown" style="display: none;">
+                    <button>0x130...123DxA</button>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li>個人資訊</li>
+                            <li>登出</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="personal">
+                <div class="container">
+                    <h3>個人資訊</h3>
+                    <div class="linense card">
+                        <div class="card-content">
+                            <h3>My Zkaizoku Linense</h3>
+                            <div class="carousel">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="img/linense/linense01.png">
+                                                <button><i class="icon-Search"></i></button>
+                                            </div>
+                                            <div class="desc">
+                                                <div class="input-group">
+                                                    <label for="tokenId">Token ID</label>
+                                                    <input name="tokenId" type="text" value="100" disabled>
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <label for="referralCode">我的邀請碼</label>
+                                                    <div class="input-btn">
+                                                        <input name="referralCode" type="text" value="zkgoodgood"
+                                                            disabled>
+                                                        <button><i class="icon-Copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="number">累積邀請人數</label>
+                                                    <input name="number" type="text" value="51" disabled>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="proportion">累積加成比例 <i
+                                                            class="icon-InfoCircle"></i></label>
+                                                    <input name="proportion" type="text" value="200%" disabled>
+                                                </div>
+                                                <button>升級</button>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="img/linense/linense02.png">
+                                                <button><i class="icon-Search"></i></button>
+                                            </div>
+                                            <div class="desc">
+                                                <div class="input-group">
+                                                    <label for="tokenId">Token ID</label>
+                                                    <input name="tokenId" type="text" value="100" disabled>
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <label for="referralCode">我的邀請碼</label>
+                                                    <div class="input-btn">
+                                                        <input name="referralCode" type="text" value="zkgoodgood"
+                                                            disabled>
+                                                        <button><i class="icon-Copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="number">累積邀請人數</label>
+                                                    <input name="number" type="text" value="51" disabled>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="proportion">累積加成比例 <i
+                                                            class="icon-InfoCircle"></i></label>
+                                                    <input name="proportion" type="text" value="200%" disabled>
+                                                </div>
+                                                <button disabled>升級</button>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img">
+                                                <img src="img/linense/linense03.png">
+                                                <button><i class="icon-Search"></i></button>
+                                            </div>
+                                            <div class="desc">
+                                                <div class="input-group">
+                                                    <label for="tokenId">Token ID</label>
+                                                    <input name="tokenId" type="text" value="100" disabled>
+                                                </div>
+                                                <div class="input-wrap">
+                                                    <label for="referralCode">我的邀請碼</label>
+                                                    <div class="input-btn">
+                                                        <input name="referralCode" type="text" value="zkgoodgood"
+                                                            disabled>
+                                                        <button><i class="icon-Copy"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="number">累積邀請人數</label>
+                                                    <input name="number" type="text" value="51" disabled>
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="proportion">累積加成比例 <i
+                                                            class="icon-InfoCircle"></i></label>
+                                                    <input name="proportion" type="text" value="200%" disabled>
+                                                </div>
+                                                <button>升級</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zkz card">
+                        <div class="card-content">
+                            <h3>積分幣資訊 <i class="icon-InfoCircle"></i></h3>
+                            <button class="btn-tertiary btn-s">加入$ZKZ</button>
+                            <div class="now">
+                                <h6>當前<br>積分幣數量</h6>
+                                <div class="value">230</div>
+                            </div>
+                            <div class="accumulation">
+                                <h6>待領取<br>積分幣數量</h6>
+                                <div class="value">100</div>
+                                <button>領取積分幣</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="record card">
+                        <div class="card-content">
+                            <h3>歷史紀錄頁</h3>
+                            <ul class="record-tab">
+                                <li id="record-tab-1" class="active">交易紀錄</li>
+                                <li id="record-tab-2">積分幣紀錄</li>
+                            </ul>
+                            <div class="no-record" style="display: none;">
+                                <div>
+                                    <p class="title">沒有紀錄</p>
+                                    <p class="desc">快前往商城兌換入場券或道具，一起邊玩邊轉吧！</p>
+                                    <button class="btn-gradient">前往商城</button>
+                                </div>
+                            </div>
+                            <div class="record-content">
+                                <!-- <div class="filter">
+                                <div class="days">
+                                    篩選
+                                    <button>30天 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
+                                    <div class="items">
+                                        <ul>
+                                            <li>30天</li>
+                                            <li>3個月</li>
+                                            <li>6個月</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pages">
+                                    頁數
+                                    <button>1 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
+                                    <div class="items">
+                                        <ul>
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                            <li>7</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    狀態 <a id="status--open-4" href="javascript:void(0)"><img
+                                            src="images/icon/icon-info.svg"></a>
+                                </div>
+                            </div> -->
+                                <table id="content-table-1" class="active">
+                                    <thead>
+                                        <tr>
+                                            <th>時間</th>
+                                            <th>訂單編號</th>
+                                            <th>提領金額</th>
+                                            <th>狀態 <i class="icon-InfoCircle"></i></th>
+                                            <th>鏈上資訊</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">0xa4c99bd...1365</td>
+                                            <td class="record-price">100</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000,000</td>
+                                            <td class="record-status"><span><i class="warning">•</i>進行中進行中進行中進行中</span>
+                                            </td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="error">•</i>失敗</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="warning">•</i>進行中</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000 TWD</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000 TWD</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000 TWD</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000 TWD</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="record-time">2020-03-03 23:55</td>
+                                            <td class="record-trackno">TOR20221214361430000016</td>
+                                            <td class="record-price">300,000.123456</td>
+                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
+                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="mask"></div>
+            <ul class="sns">
+                <li>
+                    <button class="btn-rounded"><i class="icon-Twitter"></i></button>
+                </li>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul>
+        </footer>
+
+
+
+
+
+        <!-- pop up 連接錢包 -->
+        <div id="login" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>Connect Your Wallet</h3>
+                <div class="popUp--content">
+                    <ul>
+                        <li>
+                            <img src="img/fox-icon.png">
+                            <span>Metamask</span>
+                            <i class="icon-ArrowRightS"></i>
+                        </li>
+                        <li>
+                            <img src="img/wallet-icon.png">
+                            <span>Wallet Connect</span>
+                            <i class="icon-ArrowRightS"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="popUp--btns">
+					<button class="btn-tertiary">取消</button>
+					<button class="submit">確認</button>
+				</div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery.min.js"></script>
+
+    <!-- Custom settings -->
+    <script src="js/navigation.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/fulldown.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/popUp.js"></script>
+    <script src="js/connect-wallet.js"></script>
+    <script src="js/progress.js"></script>
+
+    <!-- Swiper 套件 -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+        // Linense 輪播
+        var swiperLinense = new Swiper('.linense .swiper', {
+            loop: true,
+            slidesPerView: 1,
+            centeredSlides: true,
+            navigation: {
+                nextEl: ".linense .swiper-button-next",
+                prevEl: ".linense .swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

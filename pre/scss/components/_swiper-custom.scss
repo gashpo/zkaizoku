@@ -50,6 +50,7 @@
     }
 
     &-pagination-bullets {
+        z-index: 3 !important;
         bottom: auto !important;
         top: 50%;
         right: size(40);

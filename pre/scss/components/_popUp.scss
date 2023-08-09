@@ -48,6 +48,7 @@
             padding-right: size(24);
             max-height: calc(80svh - size(116));
             min-height: max-content;
+            color: color(gray-2);
         }
 
         &:has(.popUp--btns) {
@@ -69,6 +70,14 @@
     &.active {
         display: block;
     }
+
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        .popUp--container {
+            max-width: calc(100svw - size(32));
+        }
+    }
 }
 
 #login {
@@ -76,6 +85,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: size(16);
+        color: white;
 
         li {
             flex: 100%;
@@ -86,7 +96,7 @@
             background-color: color(gray-9);
             border-radius: size(10);
             padding: size(12) size(24);
-            @extend %body-1;
+            @include body-1;
             cursor: pointer;
             transition-property: background-color;
 

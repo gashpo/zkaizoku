@@ -1,0 +1,111 @@
+#game {
+    background-image: url(../img/bg/inner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 45svw;
+    padding: 0 size(60);
+
+    .container {
+        position: inherit;
+        z-index: 1;
+    }
+
+    .game-list {
+        margin-top: size(20);
+        display: flex;
+        flex-wrap: wrap;
+        gap: size(36) 0;
+        align-items: stretch;
+
+        >li {
+            flex: 25%;
+            max-width: 25%;
+            padding: size(28);
+            border-radius: size(30);
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .img {
+                margin-bottom: size(20);
+
+                img {
+                    border-radius: size(30);
+                }
+            }
+
+            h4 {
+                flex-grow: 1;
+            }
+
+            .tags {
+                margin: size(16) 0 size(40);
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    &::before {
+        content: url(../img/bg/inner-mask-top.png);
+        top: 0;
+    }
+
+    &::after {
+        content: url(../img/bg/inner-mask-bottom.png);
+        bottom: size(-8);
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        .game-list {
+            >li {
+                flex: 33.33%;
+                max-width: 33.33%;
+            }
+        }
+    }
+
+
+    // small-pad ~ 768
+    @include max-to(small-pad) {
+        margin-top: size(-16);
+        padding: 0 size(16);
+
+        .game-list {
+            gap: size(32) size(16);
+
+            >li {
+                flex: calc(50% - size(8));
+                max-width: calc(50% - size(8));
+                padding: 0;
+                border-radius: 0;
+                align-items: stretch;
+
+                .img {
+                    margin-bottom: size(16);
+                }
+
+                .tags {
+                    margin: size(8) 0 size(20);
+                }
+            }
+        }
+    }
+}

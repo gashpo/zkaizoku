@@ -54,4 +54,12 @@ footer {
             }
         }
     }
+
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        .mask {
+            left: calc(100svw - svw(500));
+        }
+    }
 }

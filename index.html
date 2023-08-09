@@ -21,13 +21,6 @@
 	<meta property="og:image" content="https://gashpo.github.io/zkaizokuimg/og-image.png" />
 	<link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
 
-	<!-- AOS 套件 -->
-	<link href="vendor/aos/aos.css" rel="stylesheet">
-
-	<!-- Slick 套件
-	<link rel="stylesheet" href="vendor/slick/slick.css" />
-	<link rel="stylesheet" href="vendor/slick/slick-theme.css"> -->
-
 	<!-- Swiper 套件 -->
 	<link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
 
@@ -35,7 +28,7 @@
 	<link rel="stylesheet" href="vendor/icomoon/style.css">
 
 	<!-- Custom Styles -->
-	<link rel="stylesheet" href="css/styleA.css">
+	<link rel="stylesheet" href="css/style.css">
 
 	<title>ZKaizoku 一站式互動平台</title>
 
@@ -100,7 +93,7 @@
 					<button>0x130...123DxA</button>
 					<div class="dropdown-content">
 						<ul>
-							<li>個人資訊</li>
+							<li onclick="location='personal.html'">個人資訊</li>
 							<li>登出</li>
 						</ul>
 					</div>
@@ -152,12 +145,12 @@
 				</div>
 			</section>
 
-			<section id="game">
+			<section id="game-idx">
 				<div class="container">
 					<div class="desc">
 						<p class="title-xl">Game</p>
 						<p class="body-1">Description description description description description.</p>
-						<button class="btn-secondary">View All Games</button>
+						<button class="btn-secondary" onclick="location='game.html'">View All Games</button>
 					</div>
 					<div class="carousel dark">
 						<div class="swiper">
@@ -506,26 +499,13 @@
 
 	<!-- Custom settings -->
 	<script src="js/navigation.js"></script>
+	<script src="js/index-nav.js"></script>
 	<script src="js/menu.js"></script>
 	<script src="js/dropdown.js"></script>
 	<script src="js/fulldown.js"></script>
 	<script src="js/tab.js"></script>
 	<script src="js/popUp.js"></script>
 	<script src="js/connect-wallet.js"></script>
-
-	<!-- AOS 套件 -->
-	<script src="vendor/aos/aos.js"></script>
-	<script type="text/javascript">
-		AOS.init({
-			once: false,
-			duration: 500,
-			offset: -800,
-		});
-	</script>
-
-	<!-- Slick 套件
-	<script src="vendor/slick/slick.min.js"></script>
-	<script src="js/slick-custom.js"></script> -->
 
 	<!-- Swiper 套件 -->
 	<script src="vendor/swiper/swiper-bundle.min.js"></script>
@@ -558,16 +538,16 @@
 		});
 
 		// Game 輪播
-		var swiperKV = new Swiper('#game .swiper', {
+		var swiperKV = new Swiper('#game-idx .swiper', {
 			spaceBetween: 20,
 			slidesPerView: 2,
 			slidesPerGroup: 2,
 			navigation: {
-				nextEl: "#game .swiper-button-next",
-				prevEl: "#game .swiper-button-prev",
+				nextEl: "#game-idx .swiper-button-next",
+				prevEl: "#game-idx .swiper-button-prev",
 			},
 			pagination: {
-				el: "#game .swiper-pagination",
+				el: "#game-idx .swiper-pagination",
 				clickable: true,
 			},
 			breakpoints: {

@@ -1,0 +1,27 @@
+.breadcrumb {
+    margin-bottom: size(40);
+    padding: 0 size(60);
+    background-color: color(primary);
+
+    li {
+        display: inline-block;
+        cursor: default;
+        @include capital;
+        color: color(primary-2);
+
+        &:not(:last-child) {
+            cursor: pointer;
+
+            &::after {
+                font-family: 'Icomoon';
+                content: '\e902';
+                padding-left: size(4);
+            }
+        }
+    }
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        padding: size(20) size(16) size(16);
+    }
+}
