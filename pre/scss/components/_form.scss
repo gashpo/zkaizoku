@@ -1,11 +1,12 @@
 form {}
 
-input {
+input,
+textarea {
     background-color: color(gray-9);
     border-radius: size(10);
     padding: size(10) size(24);
-    color: white;
     @include body-2;
+    color: white;
     border: none;
 
     &::placeholder {
@@ -31,6 +32,16 @@ input {
     label,
     input {
         flex: 1;
+    }
+
+    label {
+        word-break: keep-all;
+    }
+
+    &+.helper {
+        display: block;
+        @include capital;
+        color: color(gray-6);
     }
 }
 

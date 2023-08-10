@@ -87,6 +87,10 @@
                                 max-width: size(108);
                                 text-align: center;
                                 padding: size(10);
+
+                                &[disabled] {
+                                    color: white;
+                                }
                             }
                         }
 

@@ -21,7 +21,6 @@
     border-radius: size(4);
 }
 
-
 html {
     scroll-behavior: smooth;
 }
@@ -77,5 +76,51 @@ i {
 
     &.error {
         color: color(primary-4);
+    }
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+
+    video {
+        width: 100%;
+
+        &.bg-mobile {
+            display: none;
+        }
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: size(-8);
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        video {
+            &.bg-desktop {
+                display: none;
+            }
+
+            &.bg-mobile {
+                display: block;
+            }
+        }
     }
 }

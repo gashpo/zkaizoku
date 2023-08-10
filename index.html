@@ -146,6 +146,16 @@
 			</section>
 
 			<section id="game-idx">
+				<div class="bg">
+					<video class="bg-desktop" autoplay muted loop poster="img/bg/game-bg.jpg">
+						<source src="img/bg/game-bg.mp4" type="video/mp4">
+						<source src="img/bg/game-bg.webm" type="video/webm">
+					</video>
+					<video class="bg-mobile" autoplay muted loop poster="img/bg/game-bg-m.jpg">
+						<source src="img/bg/game-bg-m.mp4" type="video/mp4">
+						<source src="img/bg/game-bg-m.webm" type="video/webm">
+					</video>
+				</div>
 				<div class="container">
 					<div class="desc">
 						<p class="title-xl">Game</p>
@@ -287,7 +297,7 @@
 			<section id="nft">
 				<div class="container">
 					<div class="carousel">
-						<div dir="rtl" class="swiper">
+						<div dir="rtl" class="swiper coming-soon">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-01.jpg);">
 									<div class="content">
@@ -343,7 +353,7 @@
 							Description description description description description description description
 							description.
 						</p>
-						<button>View All NFT</button>
+						<button disabled>Coming Soon</button>
 					</div>
 				</div>
 			</section>
@@ -443,6 +453,16 @@
 			</section>
 
 			<section id="zkz">
+				<div class="bg">
+					<video autoplay muted loop poster="img/bg/zkz-bg.jpg">
+						<source src="img/bg/zkz-bg.mp4" type="video/mp4">
+						<source src="img/bg/zkz-bg.webm" type="video/webm">
+					</video>
+					<!-- <video class="bg-mobile" autoplay muted loop poster="img/bg/zkz-bg-m.jpg">
+						<source src="img/bg/zkz-bg-m.mp4" type="video/mp4">
+						<source src="img/bg/zkz-bg-m.webm" type="video/webm">
+					</video> -->
+				</div>
 				<div class="container">
 					<img src="img/PieChart.png">
 				</div>
@@ -453,11 +473,13 @@
 			<div class="mask"></div>
 			<ul class="sns">
 				<li>
-					<button class="btn-rounded"><i class="icon-Twitter"></i></button>
+					<button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+						<i class="icon-Twitter"></i>
+					</button>
 				</li>
-				<li>
+				<!-- <li>
 					<button class="btn-rounded"><i class="icon-Telegram"></i></button>
-				</li>
+				</li> -->
 			</ul>
 		</footer>
 
@@ -515,6 +537,10 @@
 			loop: true,
 			slidesPerView: 0.5,
 			centeredSlides: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			navigation: {
 				nextEl: "#keyvision .swiper-button-next",
 				prevEl: "#keyvision .swiper-button-prev",
@@ -593,6 +619,7 @@
 					slidesPerView: 2.5,
 				},
 				1281: {
+					slidesPerView: 2.5,
 					spaceBetween: -150,
 				},
 			},

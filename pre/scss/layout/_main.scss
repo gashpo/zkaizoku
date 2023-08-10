@@ -195,10 +195,20 @@ main {
 }
 
 #game-idx {
-    background-image: url(../img/bg/game-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url(../img/bg/game-bg.jpg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
     position: relative;
+
+    .bg {
+        &::before {
+            content: url(../img/bg/game-mask-top.png);
+        }
+
+        &::after {
+            content: url(../img/bg/game-mask-bottom.png);
+        }
+    }
 
     .container {
         min-height: 50svw;
@@ -299,23 +309,6 @@ main {
                 }
             }
         }
-    }
-
-    &::before,
-    &::after {
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-
-    &::before {
-        content: url(../img/bg/game-mask-top.png);
-        top: 0;
-    }
-
-    &::after {
-        content: url(../img/bg/game-mask-bottom.png);
-        bottom: size(-8);
     }
 
 
@@ -640,12 +633,24 @@ main {
         }
 
         &::before {
-            content: url(../img/Rounded-Mask.svg);
+            content: '';
+            width: size(68);
+            height: size(60);
             position: absolute;
+            background-color: color(primary);
             bottom: calc(100% - size(1));
             right: 0;
             transform: rotateX(180deg);
-            z-index: -1;
+            z-index: 0;
+        }
+
+        &::after {
+            content: url(../img/maskbar-after.svg);
+            position: absolute;
+            height: size(60);
+            transform: rotateY(180deg);
+            bottom: calc(100% - size(1));
+            right: size(67);
         }
     }
 
@@ -678,15 +683,12 @@ main {
 
         .title {
             padding: 0 size(16);
+            width: calc(100svw - size(128));
         }
 
         .content {
             border-radius: 0;
             padding: size(32) size(16);
-
-            &::before {
-                right: size(-260);
-            }
         }
     }
 
@@ -696,13 +698,25 @@ main {
 }
 
 #zkz {
-    background-image: url(../img/bg/zkz-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 45svw;
+    // background-image: url(../img/bg/zkz-bg.jpg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    height: 46svw;
     position: relative;
+    padding: size(20);
+
+    .bg {
+        &::before {
+            content: url(../img/bg/zkz-mask-top.png);
+        }
+
+        &::after {
+            content: url(../img/bg/zkz-mask-bottom.png);
+        }
+    }
 
     .container {
+        max-width: none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -710,26 +724,21 @@ main {
         z-index: 1;
     }
 
-    &::before,
-    &::after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 0;
+    img {
+        max-height: 46svw;
     }
 
-    &::before {
-        content: url(../img/bg/zkz-mask-top.png);
-        top: 0;
-    }
 
-    &::after {
-        content: url(../img/bg/zkz-mask-bottom.png);
-        bottom: 0;
-    }
+    // small-pad ~ 768
+    @include max-to(small-pad) {
+        .bg {
+            &::before {
+                height: size(100);
+            }
 
-    // PC ~ 1440
-    @include max-to(pc) {
-        height: 55svw;
+            &::after {
+                height: size(140);
+            }
+        }
     }
 }

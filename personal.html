@@ -134,8 +134,10 @@
                                                     <input name="number" type="text" value="51" disabled>
                                                 </div>
                                                 <div class="input-group">
-                                                    <label for="proportion">累積加成比例 <i
-                                                            class="icon-InfoCircle"></i></label>
+                                                    <label for="proportion">
+                                                        累積加成比例
+                                                        <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                                    </label>
                                                     <input name="proportion" type="text" value="200%" disabled>
                                                 </div>
                                                 <button>升級</button>
@@ -164,8 +166,10 @@
                                                     <input name="number" type="text" value="51" disabled>
                                                 </div>
                                                 <div class="input-group">
-                                                    <label for="proportion">累積加成比例 <i
-                                                            class="icon-InfoCircle"></i></label>
+                                                    <label for="proportion">
+                                                        累積加成比例
+                                                        <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                                    </label>
                                                     <input name="proportion" type="text" value="200%" disabled>
                                                 </div>
                                                 <button disabled>升級</button>
@@ -194,8 +198,10 @@
                                                     <input name="number" type="text" value="51" disabled>
                                                 </div>
                                                 <div class="input-group">
-                                                    <label for="proportion">累積加成比例 <i
-                                                            class="icon-InfoCircle"></i></label>
+                                                    <label for="proportion">
+                                                        累積加成比例
+                                                        <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                                    </label>
                                                     <input name="proportion" type="text" value="200%" disabled>
                                                 </div>
                                                 <button>升級</button>
@@ -210,7 +216,10 @@
                     </div>
                     <div class="zkz card">
                         <div class="card-content">
-                            <h3>積分幣資訊 <i class="icon-InfoCircle"></i></h3>
+                            <h3>
+                                積分幣資訊
+                                <i class="icon-InfoCircle popUp--open" for="info"></i>
+                            </h3>
                             <button class="btn-tertiary btn-s">加入$ZKZ</button>
                             <div class="now">
                                 <h6>當前<br>積分幣數量</h6>
@@ -219,7 +228,7 @@
                             <div class="accumulation">
                                 <h6>待領取<br>積分幣數量</h6>
                                 <div class="value">100</div>
-                                <button>領取積分幣</button>
+                                <button class="popUp--open" for="withdraw">領取積分幣</button>
                             </div>
                         </div>
                     </div>
@@ -276,7 +285,10 @@
                                             <th>時間</th>
                                             <th>訂單編號</th>
                                             <th>提領金額</th>
-                                            <th>狀態 <i class="icon-InfoCircle"></i></th>
+                                            <th>
+                                                狀態
+                                                <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                            </th>
                                             <th>鏈上資訊</th>
                                         </tr>
                                     </thead>
@@ -403,17 +415,33 @@
                 <li>
                     <button class="btn-rounded"><i class="icon-Twitter"></i></button>
                 </li>
-                <li>
-                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
-                </li>
             </ul>
         </footer>
 
 
 
+        <!-- pop up -->
+        <!-- 預設彈窗 -->
+        <div id="info" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>這是一個預設彈窗</h3>
+                <div class="popUp--content">
+                    <p>彈窗的內文放這裡</p>
+                    <ol>
+                        <li>也可以條列式</li>
+                        <li>放置內文</li>
+                        <li>或是<a href="">超連結</a></li>
+                    </ol>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary">取消</button>
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
 
-
-        <!-- pop up 連接錢包 -->
+        <!-- 連接錢包 -->
         <div id="login" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
@@ -436,6 +464,36 @@
 					<button class="btn-tertiary">取消</button>
 					<button class="submit">確認</button>
 				</div> -->
+            </div>
+        </div>
+
+        <!-- 領取積分幣 -->
+        <div id="withdraw" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>領取積分幣</h3>
+                <div class="popUp--content">
+                    <div class="img"><img src="img/withdraw.jpg"></div>
+                    <div class="content">
+                        <div class="input-wrap">
+                            <label for="price">欲提領的積分幣數量</label>
+                            <div class="input-group">
+                                <input name="price" type="text" value="200">
+                                <label>/ 100</label>
+                            </div>
+                            <span class="helper">當前積分幣不足！</span>
+                        </div>
+                        <div class="input-wrap">
+                            <label for="address">提領至地址</label>
+                            <textarea name="address" rows="3"
+                                disabled>0x130jfq52McakyQlxu11g80sjfq52McakyQlx123D</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary">取消</button>
+                    <button class="submit" disabled>領取</button>
+                </div>
             </div>
         </div>
     </div>
@@ -467,6 +525,11 @@
             navigation: {
                 nextEl: ".linense .swiper-button-next",
                 prevEl: ".linense .swiper-button-prev",
+            },
+            on: {
+                touchMove: function (e) {
+                    e.preventDefault();
+                },
             },
         });
     </script>

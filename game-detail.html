@@ -127,7 +127,10 @@
                                     </p>
                                 </div>
                                 <div class="input-group">
-                                    <label for="odds">Odds <i class="icon-InfoCircle"></i></label>
+                                    <label for="odds">
+                                        Odds
+                                        <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                    </label>
                                     <input name="odds" type="text" value="xN.NN" disabled>
                                 </div>
                                 <div class="input-group">
@@ -149,9 +152,6 @@
             <ul class="sns">
                 <li>
                     <button class="btn-rounded"><i class="icon-Twitter"></i></button>
-                </li>
-                <li>
-                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
                 </li>
             </ul>
         </footer>
@@ -181,6 +181,7 @@
         </div>
 
 
+
         <!-- pop up 連接錢包 -->
         <div id="login" class="popUp">
             <div class="popUp--container">
@@ -204,6 +205,26 @@
 					<button class="btn-tertiary">取消</button>
 					<button class="submit">確認</button>
 				</div> -->
+            </div>
+        </div>
+
+        <!-- 預設 pop up -->
+        <div id="info" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>這是一個預設彈窗</h3>
+                <div class="popUp--content">
+                    <p>彈窗的內文放這裡</p>
+                    <ol>
+                        <li>也可以條列式</li>
+                        <li>放置內文</li>
+                        <li>或是<a href="">超連結</a></li>
+                    </ol>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary">取消</button>
+                    <button class="submit">確認</button>
+                </div>
             </div>
         </div>
     </div>

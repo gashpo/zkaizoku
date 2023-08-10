@@ -15,8 +15,7 @@
         align-items: center;
         justify-content: center;
         gap: size(8);
-        transition-property: color;
-        transition-delay: 0s;
+        transition: none;
 
         h5 {
             width: size(26);
@@ -29,15 +28,13 @@
             @include body-1;
             font-weight: weight(Bold);
             border-radius: size(100);
-            transition-property: background-color;
-            transition-delay: .15s;
         }
 
         @media (hover: hover) {
             &:hover {
                 color: color(primary-4);
 
-                span {
+                h5 {
                     background-color: color(primary-4);
                 }
             }
