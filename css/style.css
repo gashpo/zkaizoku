@@ -626,7 +626,7 @@ header .login button[disabled] {
   transition-property: color;
   transition-delay: 0s;
 }
-.tab li span {
+.tab li h5 {
   width: 1.625rem;
   height: 1.625rem;
   display: flex;
@@ -642,7 +642,7 @@ header .login button[disabled] {
   transition-delay: 0.15s;
 }
 @media (max-width: 1280px) {
-  .tab li span {
+  .tab li h5 {
     font-size: 0.9375rem;
     line-height: 1.3;
   }
@@ -660,7 +660,7 @@ header .login button[disabled] {
   color: white;
   cursor: default;
 }
-.tab li.active span {
+.tab li.active h5 {
   background-color: white;
   color: black;
 }
@@ -738,6 +738,16 @@ header .login button[disabled] {
   }
 }
 @media (max-width: 768px) {
+  .tab {
+    margin-bottom: 1rem;
+  }
+  .tab li {
+    padding: 0.75rem;
+  }
+  .tab li h5 {
+    width: 1.3125rem;
+    height: 1.3125rem;
+  }
   .tab li h4 {
     display: none;
   }
@@ -941,6 +951,9 @@ input + .helper {
     font-size: 0.75rem;
   }
 }
+input[disabled] {
+  color: #585858;
+}
 
 .input-group {
   display: flex;
@@ -1083,6 +1096,7 @@ html {
 
 * {
   transition-duration: 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -1334,7 +1348,7 @@ header.fixed {
 }
 
 main {
-  margin-top: 5.3125rem;
+  margin-top: 5.25rem;
   background-color: #871B1F;
   border-bottom-left-radius: 1.875rem;
   padding: 2.5rem 0;
@@ -1349,12 +1363,13 @@ main section .container {
 }
 @media (max-width: 1440px) {
   main section {
-    padding: 1.25rem 1.25rem;
+    padding: 1.25rem;
   }
 }
 @media (max-width: 516px) {
   main {
     margin-top: 3.75rem;
+    padding-top: 0;
   }
 }
 
@@ -1477,6 +1492,12 @@ main section .container {
   }
 }
 @media (max-width: 516px) {
+  #keyvision .swiper-button-next {
+    right: 1rem;
+  }
+  #keyvision .swiper-button-prev {
+    right: 6rem;
+  }
   #keyvision .mask {
     top: calc((100svw - 2rem) * 0.949 - 3.75rem + 0.0625rem);
   }
@@ -1640,6 +1661,14 @@ main section .container {
   }
   #game-idx .swiper {
     border-radius: 1.875rem 1.875rem 0 0;
+  }
+}
+@media (max-width: 516px) {
+  #game-idx {
+    padding: 1rem;
+  }
+  #game-idx .container {
+    padding: 0;
   }
 }
 
@@ -2395,6 +2424,38 @@ footer .sns li button {
     background-color: black;
   }
 }
+#game .game-detail .card-content {
+  display: flex;
+  gap: 2.5rem;
+}
+#game .game-detail .img {
+  flex: 60%;
+  max-width: 60%;
+}
+#game .game-detail .img img {
+  border-radius: 1.875rem;
+}
+#game .game-detail .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+#game .game-detail .content .desc {
+  flex: 100%;
+  padding: 1rem;
+  background-color: #1d1d1d;
+  color: #a8a8a8;
+  border-radius: 0.625rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+@media (max-width: 1280px) {
+  #game .game-detail .content .desc {
+    font-size: 0.9375rem;
+    line-height: 1.3;
+  }
+}
 #game::before, #game::after {
   position: absolute;
   left: 0;
@@ -2417,6 +2478,7 @@ footer .sns li button {
 }
 @media (max-width: 768px) {
   #game {
+    background-image: url(../img/bg/inner-bg-m.jpg);
     margin-top: -1rem;
     padding: 0 1rem;
   }
@@ -2435,6 +2497,20 @@ footer .sns li button {
   }
   #game .game-list > li .tags {
     margin: 0.5rem 0 1.25rem;
+  }
+  #game .game-detail {
+    padding: 2rem 1rem;
+  }
+  #game .game-detail .card-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #game .game-detail .img {
+    flex: 100%;
+    max-width: 100%;
+  }
+  #game .game-detail .content .desc {
+    order: 2;
   }
 }
 
@@ -2688,19 +2764,43 @@ footer .sns li button {
     height: auto;
     padding: 0.25rem 0;
   }
-  #personal .record-content table tbody tr td.record-time, #personal .record-content table tbody tr td.record-trackno, #personal .record-content table tbody tr td.record-price, #personal .record-content table tbody tr td.record-status {
+  #personal .record-content table tbody tr td.record-time, #personal .record-content table tbody tr td.record-trackno, #personal .record-content table tbody tr td.record-price {
     flex: calc((100% - 1.25rem) / 2);
   }
+  #personal .record-content table tbody tr td.record-time span, #personal .record-content table tbody tr td.record-trackno span, #personal .record-content table tbody tr td.record-price span {
+    margin-right: 0.5rem;
+    color: #929292;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 1024px) and (max-width: 1280px) {
+  #personal .record-content table tbody tr td.record-time span, #personal .record-content table tbody tr td.record-trackno span, #personal .record-content table tbody tr td.record-price span {
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 1024px) {
+  #personal .record-content table tbody tr td.record-time {
+    flex-shrink: 0;
+  }
+  #personal .record-content table tbody tr td.record-trackno, #personal .record-content table tbody tr td.record-price {
+    order: 3;
+  }
   #personal .record-content table tbody tr td.record-status {
+    flex: calc((100% - 1.25rem) / 2);
+    align-self: flex-start;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    order: 2;
   }
   #personal .record-content table tbody tr td.record-view {
     flex: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    order: 3;
   }
   #personal .record-content table tbody tr td.record-view button {
     flex: 100%;
@@ -2708,6 +2808,7 @@ footer .sns li button {
 }
 @media (max-width: 768px) {
   #personal {
+    background-image: url(../img/bg/inner-bg-m.jpg);
     padding: 0 1rem;
   }
   #personal .linense .carousel {
@@ -2746,7 +2847,16 @@ footer .sns li button {
     width: 3rem;
     height: 3rem;
   }
-  #personal .record-content table tbody tr td.record-time, #personal .record-content table tbody tr td.record-trackno {
+  #personal .record-content table tbody tr {
+    gap: 0.25rem 0.75rem;
+  }
+  #personal .record-content table tbody tr td.record-time, #personal .record-content table tbody tr td.record-trackno, #personal .record-content table tbody tr td.record-status {
     flex: 100%;
+  }
+  #personal .record-content table tbody tr td.record-time {
+    order: 2;
+  }
+  #personal .record-content table tbody tr td.record-status {
+    order: 1;
   }
 }

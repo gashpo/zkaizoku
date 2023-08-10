@@ -68,7 +68,7 @@
                 <div class="nav">
                     <ul>
                         <li onclick="location='shop.html'">商城</li>
-                        <li>Game</li>
+                        <li onclick="location='game.html'">Game</li>
                         <li onclick="location='index.html#nft'">NFT</li>
                         <li onclick="location='index.html#tutorial'">教學</li>
                         <li onclick="location='index.html#zkz'">$ZKZ</li>
@@ -103,135 +103,43 @@
 
         <main>
             <ul class="breadcrumb">
-                <li>首頁</li>
-                <li>Game</li>
+                <li onclick="location='index.html'">首頁</li>
+                <li onclick="location='game.html'">Game</li>
+                <li>《決勝時刻®：現代戰爭® II 2022》</li>
             </ul>
 
             <section id="game">
                 <div class="container">
-                    <h3>Game</h3>
-                    <ul class="game-list">
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-01.jpg">
+                    <div class="game-detail card">
+                        <div class="card-content">
+                            <div class="img"><img src="img/game/game01.jpg"></div>
+                            <div class="content">
+                                <h3>Coin Matching</h3>
+                                <div class="desc">
+                                    <p>
+                                        This is a probability game akin to flipping a coin. Should your coin face match
+                                        that
+                                        of the computer's, you shall be entitled to rewards corresponding to your wager
+                                        and
+                                        the prevailing odds. However, if your coin face differs from that of the
+                                        computer's,
+                                        the system shall confiscate your wager.
+                                    </p>
+                                </div>
+                                <div class="input-group">
+                                    <label for="odds">Odds <i class="icon-InfoCircle"></i></label>
+                                    <input name="odds" type="text" value="xN.NN" disabled>
+                                </div>
+                                <div class="input-group">
+                                    <label for="bets">Bets</label>
+                                    <input name="bets" type="text" value="1">
+                                </div>
+                                <div>
+                                    <i class="icon-Change"></i> 累積交互次數：5 次
+                                </div>
                             </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-02.jpg">
-                            </div>
-                            <h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-03.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-04.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-05.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-06.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-07.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-08.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-09.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-thumb-10.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <button class="btn-tertiary">View Details</button>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

@@ -53,6 +53,38 @@
         }
     }
 
+    .game-detail {
+        .card-content {
+            display: flex;
+            gap: size(40);
+        }
+
+        .img {
+            flex: 60%;
+            max-width: 60%;
+
+            img {
+                border-radius: size(30);
+            }
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: size(20);
+
+            .desc {
+                flex: 100%;
+                padding: size(16);
+                background-color: color(gray-9);
+                color: color(gray-4);
+                border-radius: size(10);
+                @include body-1;
+            }
+        }
+    }
+
     &::before,
     &::after {
         position: absolute;
@@ -85,6 +117,7 @@
 
     // small-pad ~ 768
     @include max-to(small-pad) {
+        background-image: url(../img/bg/inner-bg-m.jpg);
         margin-top: size(-16);
         padding: 0 size(16);
 
@@ -104,6 +137,26 @@
 
                 .tags {
                     margin: size(8) 0 size(20);
+                }
+            }
+        }
+
+        .game-detail {
+            padding: size(32) size(16);
+
+            .card-content {
+                flex-wrap: wrap;
+                gap: size(16);
+            }
+
+            .img {
+                flex: 100%;
+                max-width: 100%;
+            }
+
+            .content {
+                .desc {
+                    order: 2;
                 }
             }
         }

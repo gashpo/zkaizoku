@@ -294,15 +294,32 @@
 
                                     &time,
                                     &trackno,
-                                    &price,
-                                    &status {
+                                    &price {
                                         flex: calc((100% - size(20))/2);
+
+                                        span {
+                                            margin-right: size(8);
+                                            color: color(gray);
+                                            @include body-2;
+                                        }
+                                    }
+
+                                    &time {
+                                        flex-shrink: 0;
+                                    }
+
+                                    &trackno,
+                                    &price {
+                                        order: 3;
                                     }
 
                                     &status {
+                                        flex: calc((100% - size(20))/2);
+                                        align-self: flex-start;
                                         display: flex;
                                         align-items: center;
                                         justify-content: flex-end;
+                                        order: 2;
                                     }
 
                                     &view {
@@ -310,6 +327,7 @@
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
+                                        order: 3;
 
                                         button {
                                             flex: 100%;
@@ -327,6 +345,7 @@
 
     // small-pad ~ 768
     @include max-to(small-pad) {
+        background-image: url(../img/bg/inner-bg-m.jpg);
         padding: 0 size(16);
 
         .linense {
@@ -399,12 +418,23 @@
                 table {
                     tbody {
                         tr {
+                            gap: size(4) size(12);
+
                             td {
                                 &.record- {
 
                                     &time,
-                                    &trackno {
+                                    &trackno,
+                                    &status {
                                         flex: 100%;
+                                    }
+
+                                    &time {
+                                        order: 2;
+                                    }
+
+                                    &status {
+                                        order: 1;
                                     }
                                 }
                             }

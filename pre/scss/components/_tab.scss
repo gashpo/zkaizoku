@@ -18,7 +18,7 @@
         transition-property: color;
         transition-delay: 0s;
 
-        span {
+        h5 {
             width: size(26);
             height: size(26);
             display: flex;
@@ -48,7 +48,7 @@
             color: white;
             cursor: default;
 
-            span {
+            h5 {
                 background-color: white;
                 color: black;
             }
@@ -149,7 +149,16 @@
 // small-pad ~ 768
 @include max-to(small-pad) {
     .tab {
+        margin-bottom: size(16);
+
         li {
+            padding: size(12);
+
+            h5 {
+                width: size(21);
+                height: size(21);
+            }
+
             h4 {
                 display: none;
             }

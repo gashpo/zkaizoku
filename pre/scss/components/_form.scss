@@ -17,6 +17,10 @@ input {
         @include capital;
         color: color(gray-6);
     }
+
+    &[disabled] {
+        color: color(gray-7);
+    }
 }
 
 .input-group {
