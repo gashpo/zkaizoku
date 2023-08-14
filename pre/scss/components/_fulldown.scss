@@ -4,7 +4,7 @@
     @include max-to(laptop) {
         .fulldown-content {
             position: fixed;
-            top: size(66);
+            top: size(60);
             left: 0;
             width: 100dvw;
             padding: 0 size(16);

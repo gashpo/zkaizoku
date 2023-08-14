@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="vendor/icomoon/style.css">
 
 	<!-- Custom Styles -->
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mainPage.css">
 
 	<title>ZKaizoku 一站式互動平台</title>
 
@@ -61,454 +61,489 @@
 	<!-- End Google Tag Manager (noscript) -->
 
 	<div id="app">
-		<header>
-			<a class="main-logo" href="javascript:void(0)"><img src="img/logo.svg"></a>
-			<div class="options">
-				<button class="menu"></button>
-				<div class="nav">
-					<ul>
-						<li for="shop">商城</li>
-						<li for="game">Game</li>
-						<li for="nft">NFT</li>
-						<li for="tutorial">教學</li>
-						<li for="zkz">$ZKZ</li>
-						<li for="bridge">Bridge</li>
-						<li for="language" class="language dropdown">
-							<button>繁體中文</button>
-							<div class="dropdown-content">
-								<ul>
-									<li class="active">繁體中文</li>
-									<li>English</li>
-									<li>日本語</li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="login">
-				<button class="wallet popUp--open" for="login">連接錢包</button>
-				<div class="admin dropdown" style="display: none;">
-					<button>0x130...123DxA</button>
-					<div class="dropdown-content">
+		<div id="mainPage">
+			<header>
+				<a class="main-logo" href="javascript:void(0)"><img src="img/logo.svg"></a>
+				<div class="options">
+					<button class="menu"></button>
+					<div class="nav">
 						<ul>
-							<li onclick="location='personal.html'">個人資訊</li>
-							<li>登出</li>
+							<li for="shop">商城</li>
+							<li for="game">Game</li>
+							<li for="nft-idx">NFT</li>
+							<li for="tutorial">教學</li>
+							<li for="zkz">$ZKZ</li>
+							<li for="bridge" class="dropdown">
+								<button>Bridge</button>
+								<div class="dropdown-content">
+									<ul>
+										<li>
+											<a href="https://cbridge.celer.network/1/56/USDC" target="_blank">Celer
+												Network</a>
+										</li>
+										<li>
+											<a href="https://router.via.exchange/zksync%20era/ETH/polygon/MATIC"
+												target="_blank">Via exchange</a>
+										</li>
+										<li>
+											<a href="https://www.orbiter.finance/?source=Ethereum&dest=Arbitrum"
+												target="_blank">Orbiter Finance</a>
+										</li>
+										<li>
+											<a href="https://bridge.poly.network/" target="_blank">Poly Network</a>
+										</li>
+										<li>
+											<a href="https://app.multichain.org/#/router" target="_blank">Multichain</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li for="language" class="language dropdown">
+								<button>繁體中文</button>
+								<div class="dropdown-content">
+									<ul>
+										<li class="active">繁體中文</li>
+										<li>English</li>
+										<li>日本語</li>
+									</ul>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
-			</div>
-		</header>
 
-		<main>
-			<section id="keyvision">
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="img/banner01.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/banner02.jpg">
-						</div>
-						<div class="swiper-slide">
-							<img src="img/banner03.jpg">
+				<div class="login">
+					<button class="wallet popUp--open" for="login">連接錢包</button>
+					<div class="admin dropdown" style="display: none;">
+						<button>0x130...123DxA</button>
+						<div class="dropdown-content">
+							<ul>
+								<li onclick="location='personal.html'">個人資訊</li>
+								<li>登出</li>
+							</ul>
 						</div>
 					</div>
-					<div class="swiper-button-next"></div>
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-pagination"></div>
 				</div>
+			</header>
+
+			<main>
+				<section id="keyvision">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/banner01.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/banner02.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img src="img/banner03.jpg">
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="mask"></div>
+					<div class="captions">
+						<div class="active">
+							<p class="title-xl">FROM THE GARDEN TO THE ALLEY</p>
+							<p class="body-1">A small species that sprout from the dirt in the garden. While they're
+								earnestly driven by
+								the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
+								alley...</p>
+						</div>
+						<div>
+							<p class="title-xl">HAVE A GOOD TIME!</p>
+							<p class="body-1">A small species that sprout from the dirt in the garden. While they're
+								earnestly driven by
+								the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
+								alley...</p>
+						</div>
+						<div>
+							<p class="title-xl">DARE TO CHALLENGE</p>
+							<p class="body-1">A small species that sprout from the dirt in the garden. While they're
+								earnestly driven by
+								the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
+								alley...</p>
+						</div>
+					</div>
+				</section>
+
+				<section id="game-idx">
+					<div class="bg">
+						<video class="bg-desktop" autoplay muted loop poster="img/bg/game-bg.jpg">
+							<source src="img/bg/game-bg.mp4" type="video/mp4">
+							<source src="img/bg/game-bg.webm" type="video/webm">
+						</video>
+						<video class="bg-mobile" autoplay muted loop poster="img/bg/game-bg-m.jpg">
+							<source src="img/bg/game-bg-m.mp4" type="video/mp4">
+							<source src="img/bg/game-bg-m.webm" type="video/webm">
+						</video>
+					</div>
+					<div class="container">
+						<div class="desc">
+							<p class="title-xl">Game</p>
+							<p class="body-1">Description description description description description.</p>
+							<button class="btn-secondary" onclick="location='game.html'">View All Games</button>
+						</div>
+						<div class="carousel dark">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-01.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-02.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-03.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-04.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-05.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-06.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-07.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-08.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-09.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+									<div class="swiper-slide" onclick="location='game-detail.html'">
+										<img src="img/game/game-thumb-10.jpg">
+										<div class="hover">
+											<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
+											<ul class="tags">
+												<li>tag</li>
+												<li>tag</li>
+												<li>tag</li>
+											</ul>
+											<button class="btn-tertiary">View Details</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+
+				<section id="nft-idx">
+					<div class="container">
+						<div class="carousel">
+							<div dir="rtl" class="swiper coming-soon">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-01.jpg);">
+										<div class="content">
+											<img src="img/nft/nft-01.jpg">
+											<div class="caption">
+												<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+												<p>Base64 Encode Basic authentication's onl</p>
+												<ul class="tags">
+													<li>Female</li>
+													<li>Teenager</li>
+												</ul>
+												<button class="btn-tertiary btn-s">View Details</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-02.jpg);">
+										<div class="content">
+											<img src="img/nft/nft-02.jpg">
+											<div class="caption">
+												<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+												<p>Base64 Encode Basic authentication's onl</p>
+												<ul class="tags">
+													<li>Female</li>
+													<li>Teenager</li>
+												</ul>
+												<button class="btn-tertiary btn-s">View Details</button>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-03.jpg);">
+										<div class="content">
+											<img src="img/nft/nft-03.jpg">
+											<div class="caption">
+												<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
+												<p>Base64 Encode Basic authentication's onl</p>
+												<ul class="tags">
+													<li>Female</li>
+													<li>Teenager</li>
+												</ul>
+												<button class="btn-tertiary btn-s">View Details</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="desc">
+							<p class="title-xl">NFT</p>
+							<p class="body-1">
+								Description description description description description description description
+								description.
+							</p>
+							<button disabled>Coming Soon</button>
+						</div>
+					</div>
+				</section>
+
+				<section id="tutorial">
+					<div class="container">
+						<div class="title">
+							<p class="title-xl">教學</p>
+							<p class="body-1">
+								Description description description description description description description.
+							</p>
+						</div>
+						<div class="content">
+							<div class="mask"></div>
+							<ul class="tab">
+								<li class="active">
+									<h5>1</h5>
+									<h4>Step 1</h4>
+								</li>
+								<li>
+									<h5>2</h5>
+									<h4>Step 2</h4>
+								</li>
+								<li>
+									<h5>3</h5>
+									<h4>Step 3</h4>
+								</li>
+								<li>
+									<h5>4</h5>
+									<h4>Step 4</h4>
+								</li>
+								<li>
+									<h5>5</h5>
+									<h4>Step 5</h4>
+								</li>
+							</ul>
+							<ul class="tab-content">
+								<li class="active">
+									<div>
+										<h2>Connect your cryptocurrency wallet</h2>
+										<p>
+											Please scroll to the top of this page, and click the buttom in the upper
+											right
+											to
+											connect your cryptocurrency wallet.
+										</p>
+										<button class="popUp--open" for="login">Connect Wallet</button>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h2>Mint the ZKaizoku License(dNFT)</h2>
+										<p>
+											Go to the marketplace to mint the "ZKaizoku License"(dNFT) to receive an
+											unique
+											avatar and the qualification of earning $ZKZ(the circulating utility tokens
+											on
+											this platform).(If you do not mint "ZKaizoku License", you can still play
+											games
+											on ZKaizoku platform and accumulate your own interaction counts on zkSync
+											Era.
+											However, you will NOT be able to amass $ZKZ. Consequently, this means you
+											will
+											not be eligible to receive our airdrops in the future.)
+										</p>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/step3.png">
+										<h2>Earn $ZKZ through the interaction</h2>
+										<p>
+											Play the games on ZKaizoku platform, and you will earn $ZKZ through the
+											interaction of the smart contract.
+										</p>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
+										<p>
+											Utilize your accumulated $ZKZ to upgrade ZKaizoku License to make the total
+											amount of your $ZKZ increased through the additional multiplier effects from
+											your ZKaizoku License upgraded.
+										</p>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h2>Settle the zkSync Era airdrop allocation</h2>
+										<p>
+											The result of multiplying your $ZKZ and ZKaizoku License will be divided by
+											the
+											total sum of $ZKZ held by all participants, determining your share on
+											ZKaizoku
+											platform.After zkSync Era official airdrop, we will send you your portion of
+											TOKEN from the allocation designated for developers. <br>
+											For detailed information of airdrop allocation of ZKaizoku, please refer to
+											here.
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section id="zkz">
+					<div class="bg">
+						<video autoplay muted loop poster="img/bg/zkz-bg.jpg">
+							<source src="img/bg/zkz-bg.mp4" type="video/mp4">
+							<source src="img/bg/zkz-bg.webm" type="video/webm">
+						</video>
+						<!-- <video class="bg-mobile" autoplay muted loop poster="img/bg/zkz-bg-m.jpg">
+							<source src="img/bg/zkz-bg-m.mp4" type="video/mp4">
+							<source src="img/bg/zkz-bg-m.webm" type="video/webm">
+						</video> -->
+					</div>
+					<div class="container">
+						<img src="img/PieChart.png">
+					</div>
+				</section>
+			</main>
+
+			<footer>
 				<div class="mask"></div>
-				<div class="captions">
-					<div class="active">
-						<p class="title-xl">FROM THE GARDEN TO THE ALLEY</p>
-						<p class="body-1">A small species that sprout from the dirt in the garden. While they're
-							earnestly driven by
-							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
-							alley...</p>
-					</div>
-					<div>
-						<p class="title-xl">HAVE A GOOD TIME!</p>
-						<p class="body-1">A small species that sprout from the dirt in the garden. While they're
-							earnestly driven by
-							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
-							alley...</p>
-					</div>
-					<div>
-						<p class="title-xl">DARE TO CHALLENGE</p>
-						<p class="body-1">A small species that sprout from the dirt in the garden. While they're
-							earnestly driven by
-							the desire to help their Azuki friends, some BEANZ simply can't resist the allure of the
-							alley...</p>
-					</div>
-				</div>
-			</section>
+				<ul class="sns">
+					<li>
+						<button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+							<i class="icon-Twitter"></i>
+						</button>
+					</li>
+					<!-- <li>
+						<button class="btn-rounded"><i class="icon-Telegram"></i></button>
+					</li> -->
+				</ul>
+			</footer>
 
-			<section id="game-idx">
-				<div class="bg">
-					<video class="bg-desktop" autoplay muted loop poster="img/bg/game-bg.jpg">
-						<source src="img/bg/game-bg.mp4" type="video/mp4">
-						<source src="img/bg/game-bg.webm" type="video/webm">
-					</video>
-					<video class="bg-mobile" autoplay muted loop poster="img/bg/game-bg-m.jpg">
-						<source src="img/bg/game-bg-m.mp4" type="video/mp4">
-						<source src="img/bg/game-bg-m.webm" type="video/webm">
-					</video>
-				</div>
-				<div class="container">
-					<div class="desc">
-						<p class="title-xl">Game</p>
-						<p class="body-1">Description description description description description.</p>
-						<button class="btn-secondary" onclick="location='game.html'">View All Games</button>
-					</div>
-					<div class="carousel dark">
-						<div class="swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-01.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-02.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-03.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-04.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-05.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-06.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-07.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-08.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-09.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-								<div class="swiper-slide" onclick="location='game-detail.html'">
-									<img src="img/game/game-thumb-10.jpg">
-									<div class="hover">
-										<h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-										<ul class="tags">
-											<li>tag</li>
-											<li>tag</li>
-											<li>tag</li>
-										</ul>
-										<button class="btn-tertiary">View Details</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-			</section>
 
-			<section id="nft">
-				<div class="container">
-					<div class="carousel">
-						<div dir="rtl" class="swiper coming-soon">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-01.jpg);">
-									<div class="content">
-										<img src="img/nft/nft-01.jpg">
-										<div class="caption">
-											<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
-											<p>Base64 Encode Basic authentication's onl</p>
-											<ul class="tags">
-												<li>Female</li>
-												<li>Teenager</li>
-											</ul>
-											<button class="btn-tertiary btn-s">View Details</button>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-02.jpg);">
-									<div class="content">
-										<img src="img/nft/nft-02.jpg">
-										<div class="caption">
-											<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
-											<p>Base64 Encode Basic authentication's onl</p>
-											<ul class="tags">
-												<li>Female</li>
-												<li>Teenager</li>
-											</ul>
-											<button class="btn-tertiary btn-s">View Details</button>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide" style="background-image: url(img/nft/nft-bg-03.jpg);">
-									<div class="content">
-										<img src="img/nft/nft-03.jpg">
-										<div class="caption">
-											<h4>1933 Goudey Russell Van Atta #215 PSA 8 NM-MT</h4>
-											<p>Base64 Encode Basic authentication's onl</p>
-											<ul class="tags">
-												<li>Female</li>
-												<li>Teenager</li>
-											</ul>
-											<button class="btn-tertiary btn-s">View Details</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-button-next"></div>
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-pagination"></div>
-					</div>
-					<div class="desc">
-						<p class="title-xl">NFT</p>
-						<p class="body-1">
-							Description description description description description description description
-							description.
-						</p>
-						<button disabled>Coming Soon</button>
-					</div>
-				</div>
-			</section>
 
-			<section id="tutorial">
-				<div class="container">
-					<div class="title">
-						<p class="title-xl">教學</p>
-						<p class="body-1">
-							Description description description description description description description.
-						</p>
-					</div>
-					<div class="content">
-						<ul class="tab">
-							<li class="active">
-								<h5>1</h5>
-								<h4>Step 1</h4>
+
+			<!-- pop up 連接錢包 -->
+			<div id="login" class="popUp">
+				<div class="popUp--container">
+					<button class="popUp--close"><i class="icon-Close"></i></button>
+					<h3>Connect Your Wallet</h3>
+					<div class="popUp--content">
+						<ul>
+							<li>
+								<img src="img/fox-icon.png">
+								<span>Metamask</span>
+								<i class="icon-ArrowRightS"></i>
 							</li>
 							<li>
-								<h5>2</h5>
-								<h4>Step 2</h4>
-							</li>
-							<li>
-								<h5>3</h5>
-								<h4>Step 3</h4>
-							</li>
-							<li>
-								<h5>4</h5>
-								<h4>Step 4</h4>
-							</li>
-							<li>
-								<h5>5</h5>
-								<h4>Step 5</h4>
-							</li>
-						</ul>
-						<ul class="tab-content">
-							<li class="active">
-								<div>
-									<h2>Connect your cryptocurrency wallet</h2>
-									<p>
-										Please scroll to the top of this page, and click the buttom in the upper right
-										to
-										connect your cryptocurrency wallet.
-									</p>
-									<button>Connect Wallet</button>
-								</div>
-							</li>
-							<li>
-								<div>
-									<h2>Mint the ZKaizoku License(dNFT)</h2>
-									<p>
-										Go to the marketplace to mint the "ZKaizoku License"(dNFT) to receive an unique
-										avatar and the qualification of earning $ZKZ(the circulating utility tokens on
-										this platform).(If you do not mint "ZKaizoku License", you can still play games
-										on ZKaizoku platform and accumulate your own interaction counts on zkSync Era.
-										However, you will NOT be able to amass $ZKZ. Consequently, this means you will
-										not be eligible to receive our airdrops in the future.)
-									</p>
-								</div>
-							</li>
-							<li>
-								<div>
-									<img src="img/step3.png">
-									<h2>Earn $ZKZ through the interaction</h2>
-									<p>
-										Play the games on ZKaizoku platform, and you will earn $ZKZ through the
-										interaction of the smart contract.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div>
-									<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
-									<p>
-										Utilize your accumulated $ZKZ to upgrade ZKaizoku License to make the total
-										amount of your $ZKZ increased through the additional multiplier effects from
-										your ZKaizoku License upgraded.
-									</p>
-								</div>
-							</li>
-							<li>
-								<div>
-									<h2>Settle the zkSync Era airdrop allocation</h2>
-									<p>
-										The result of multiplying your $ZKZ and ZKaizoku License will be divided by the
-										total sum of $ZKZ held by all participants, determining your share on ZKaizoku
-										platform.After zkSync Era official airdrop, we will send you your portion of
-										TOKEN from the allocation designated for developers. <br>
-										For detailed information of airdrop allocation of ZKaizoku, please refer to
-										here.
-									</p>
-								</div>
+								<img src="img/wallet-icon.png">
+								<span>Wallet Connect</span>
+								<i class="icon-ArrowRightS"></i>
 							</li>
 						</ul>
 					</div>
+					<!-- <div class="popUp--btns">
+						<button class="btn-tertiary">取消</button>
+						<button class="submit">確認</button>
+					</div> -->
 				</div>
-			</section>
-
-			<section id="zkz">
-				<div class="bg">
-					<video autoplay muted loop poster="img/bg/zkz-bg.jpg">
-						<source src="img/bg/zkz-bg.mp4" type="video/mp4">
-						<source src="img/bg/zkz-bg.webm" type="video/webm">
-					</video>
-					<!-- <video class="bg-mobile" autoplay muted loop poster="img/bg/zkz-bg-m.jpg">
-						<source src="img/bg/zkz-bg-m.mp4" type="video/mp4">
-						<source src="img/bg/zkz-bg-m.webm" type="video/webm">
-					</video> -->
-				</div>
-				<div class="container">
-					<img src="img/PieChart.png">
-				</div>
-			</section>
-		</main>
-
-		<footer>
-			<div class="mask"></div>
-			<ul class="sns">
-				<li>
-					<button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
-						<i class="icon-Twitter"></i>
-					</button>
-				</li>
-				<!-- <li>
-					<button class="btn-rounded"><i class="icon-Telegram"></i></button>
-				</li> -->
-			</ul>
-		</footer>
-
-
-
-
-		<!-- pop up 連接錢包 -->
-		<div id="login" class="popUp">
-			<div class="popUp--container">
-				<button class="popUp--close"><i class="icon-Close"></i></button>
-				<h3>Connect Your Wallet</h3>
-				<div class="popUp--content">
-					<ul>
-						<li>
-							<img src="img/fox-icon.png">
-							<span>Metamask</span>
-							<i class="icon-ArrowRightS"></i>
-						</li>
-						<li>
-							<img src="img/wallet-icon.png">
-							<span>Wallet Connect</span>
-							<i class="icon-ArrowRightS"></i>
-						</li>
-					</ul>
-				</div>
-				<!-- <div class="popUp--btns">
-					<button class="btn-tertiary">取消</button>
-					<button class="submit">確認</button>
-				</div> -->
 			</div>
 		</div>
 	</div>
@@ -585,9 +620,9 @@
 		});
 
 		// NFT 輪播
-		var isComingSoon = $('#nft .swiper').hasClass('coming-soon');
+		var isComingSoon = $('#nft-idx .swiper').hasClass('coming-soon');
 
-		var swiperNFT = new Swiper('#nft .swiper', {
+		var swiperNFT = new Swiper('#nft-idx .swiper', {
 			effect: "coverflow",
 			spaceBetween: -130,
 			slidesPerView: 1.3,
@@ -602,11 +637,11 @@
 				slideShadows: false,
 			},
 			navigation: {
-				nextEl: "#nft .swiper-button-next",
-				prevEl: "#nft .swiper-button-prev",
+				nextEl: "#nft-idx .swiper-button-next",
+				prevEl: "#nft-idx .swiper-button-prev",
 			},
 			pagination: {
-				el: "#nft .swiper-pagination",
+				el: "#nft-idx .swiper-pagination",
 				clickable: !isComingSoon,
 			},
 			on: {
@@ -626,7 +661,7 @@
 		});
 
 		if (isComingSoon) {
-			$('#nft .swiper-button-prev, #nft .swiper-button-next').addClass('swiper-button-disabled');
+			$('#nft-idx .swiper-button-prev, #nft-idx .swiper-button-next').addClass('swiper-button-disabled');
 		}
 	</script>
 </body>

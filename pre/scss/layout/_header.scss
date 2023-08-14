@@ -57,19 +57,37 @@ header {
                     cursor: pointer;
                     border-radius: size(10);
                     transition-property: background-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     &:hover {
                         background-color: rgba(white, .15);
                     }
 
-                    &.language {
-                        width: size(156);
+                    &.dropdown {
                         padding: 0;
                         cursor: default;
 
                         &:hover {
                             background-color: transparent;
                         }
+                    }
+
+                    &[for=bridge] {
+                        button {
+                            &::after {
+                                display: none;
+                            }
+                        }
+
+                        .dropdown-content {
+                            min-width: size(200);
+                        }
+                    }
+
+                    &[for=language] {
+                        // width: size(156);
 
                         button {
                             &::before {
@@ -175,9 +193,13 @@ header {
                     transform: translate(0, size(-100));
                 }
 
-                .language {
+                .dropdown {
                     button {
                         width: 100%;
+                    }
+
+                    .dropdown-content {
+                        z-index: 1;
                     }
                 }
             }

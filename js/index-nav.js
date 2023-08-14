@@ -12,15 +12,13 @@ $('.options .nav > ul > li').click(function () {
     }
     else {
         // 語系下拉
-        if (attr === 'language') {
-        } else {
+        if (attr != 'language' && attr != 'bridge') {
             location.href = attr + '.html'
         }
     }
 
     if (mediaLaptop.matches) {
-        if (attr === 'language') {
-        } else {
+        if (attr != 'language' && attr != 'bridge') {
             $('.options').removeClass('active')
             $('.options .menu i').removeClass('icon-Close')
             $('.options .menu i').addClass('icon-List')

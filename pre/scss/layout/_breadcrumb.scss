@@ -1,7 +1,8 @@
 .breadcrumb {
     margin-bottom: size(40);
     padding: 0 size(60);
-    background-color: color(primary);
+    position: inherit;
+    z-index: 1;
 
     li {
         display: inline-block;

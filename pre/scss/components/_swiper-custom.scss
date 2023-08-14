@@ -2,6 +2,7 @@
 
     &-button-prev,
     &-button-next {
+        position: absolute;
         width: size(60);
         height: size(60);
         bottom: 0;
@@ -49,12 +50,13 @@
         }
     }
 
+    &-pagination,
     &-pagination-bullets {
         z-index: 3 !important;
         bottom: auto !important;
         top: 50%;
         right: size(40);
-        transform: translate(50%, 0) rotate(90deg);
+        transform: translate(50%, 0) rotate(90deg) !important;
 
         .swiper-pagination-bullet {
             width: size(6);

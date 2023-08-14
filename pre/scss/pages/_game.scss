@@ -1,8 +1,4 @@
 #game {
-    background-image: url(../img/bg/inner-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
     min-height: 45svw;
     padding: 0 size(60);
 
@@ -83,24 +79,6 @@
                 @include body-1;
             }
         }
-    }
-
-    &::before,
-    &::after {
-        position: absolute;
-        left: 0;
-        right: 0;
-        z-index: 0;
-    }
-
-    &::before {
-        content: url(../img/bg/inner-mask-top.png);
-        top: 0;
-    }
-
-    &::after {
-        content: url(../img/bg/inner-mask-bottom.png);
-        bottom: size(-8);
     }
 
 

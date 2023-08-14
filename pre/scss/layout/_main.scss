@@ -1,8 +1,39 @@
 main {
-    margin-top: size(84);
+    margin-top: size(88);
     background-color: color(primary);
     border-bottom-left-radius: size(30);
     padding: size(40) 0;
+
+    &.innerPage {
+        background-image: url(../img/bg/inner-bg-gradient.jpg);
+        background-size: 100%;
+        background-position: top center;
+        background-attachment: fixed;
+        position: relative;
+
+        section {
+            position: inherit;
+            z-index: 1;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 0;
+        }
+
+        &::before {
+            content: url(../img/bg/inner-mask-top.png);
+            top: 0;
+        }
+
+        &::after {
+            content: url(../img/bg/inner-mask-bottom.png);
+            bottom: size(-8);
+        }
+    }
 
     section {
         overflow: hidden;
@@ -55,7 +86,7 @@ main {
 
     .mask {
         position: absolute;
-        left: calc(size(20) + size(60) - size(2));
+        left: calc(size(20) + size(60) - size(1));
         bottom: size(-1);
         right: size(300);
         height: size(60);
@@ -195,9 +226,9 @@ main {
 }
 
 #game-idx {
-    // background-image: url(../img/bg/game-bg.jpg);
-    // background-size: cover;
-    // background-repeat: no-repeat;
+    background-image: url(../img/bg/game-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 
     .bg {
@@ -285,6 +316,17 @@ main {
             }
 
             &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: transparent;
+                transition: background-color .2s;
+            }
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: size(-100);
@@ -302,6 +344,10 @@ main {
                     }
 
                     &::before {
+                        background-color: rgba(black, .2);
+                    }
+
+                    &::after {
                         left: 0;
                         right: 0;
                         background-color: black;
@@ -326,7 +372,7 @@ main {
             &-slide {
                 @media (hover: hover) {
                     &:hover {
-                        &::before {
+                        &::after {
                             left: size(-12);
                             right: size(-12);
                         }
@@ -374,7 +420,7 @@ main {
 
                 @media (hover: hover) {
                     &:hover {
-                        &::before {
+                        &::after {
                             background-color: transparent;
                         }
                     }
@@ -409,7 +455,7 @@ main {
     }
 }
 
-#nft {
+#nft-idx {
     position: relative;
     padding: size(60) size(60) size(60) 0;
     overflow: hidden;
@@ -631,26 +677,30 @@ main {
                 }
             }
         }
+    }
+
+    .mask {
+        position: absolute;
+        bottom: 100%;
+        right: size(31);
+        height: size(60);
+        width: size(375);
+        background-color: color(primary);
 
         &::before {
-            content: '';
-            width: size(68);
+            content: url(../img/maskbar-before-in.svg);
             height: size(60);
             position: absolute;
-            background-color: color(primary);
-            bottom: calc(100% - size(1));
-            right: 0;
+            left: calc(100% - size(1));
             transform: rotateX(180deg);
-            z-index: 0;
         }
 
         &::after {
             content: url(../img/maskbar-after.svg);
-            position: absolute;
             height: size(60);
+            position: absolute;
+            right: calc(100% - size(1));
             transform: rotateY(180deg);
-            bottom: calc(100% - size(1));
-            right: size(67);
         }
     }
 
@@ -683,18 +733,35 @@ main {
 
         .title {
             padding: 0 size(16);
-            width: calc(100svw - size(128));
+            width: calc(100svw - size(248));
         }
 
         .content {
             border-radius: 0;
             padding: size(32) size(16);
         }
+
+        .mask {
+            right: 0;
+            width: size(168);
+
+            &::before {
+                content: '';
+            }
+        }
+
+
+        // small-pad ~ 768
+        @include max-to(small-pad) {
+            .title {
+                width: calc(100svw - size(128));
+            }
+
+            .mask {
+                width: size(68);
+            }
+        }
     }
-
-
-    // small-pad ~ 768
-    @include max-to(small-pad) {}
 }
 
 #zkz {

@@ -29,7 +29,7 @@ $(document).ready(function () {
 
 
     /* NFT */
-    $('#nft .slick').slick({
+    $('#nft-idx .slick').slick({
         dots: true,
         slidesToShow: 2.3,
     });

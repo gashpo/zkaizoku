@@ -1,0 +1,75 @@
+@import "reset";
+@import "var";
+@import "animation";
+
+/* 反白選取樣式 */
+::-moz-selection {
+    background-color: color(gray-1);
+    color: rgba(color(primary-6), 1);
+}
+
+::selection {
+    background-color: color(gray-1);
+    color: rgba(color(primary-6), 1);
+}
+
+::-webkit-scrollbar {
+    width: size(8);
+    background-color: color(primary-7);
+}
+
+::-webkit-scrollbar-thumb {
+    width: size(8);
+    background-color: color(primary-4);
+    border-radius: size(4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+TC:wght@500;700;900&display=swap');
+
+* {
+    transition-duration: .2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans TC', cursive;
+    overflow-x: hidden;
+    color: white;
+    background-color: color(primary);
+    font-size: size(18);
+    line-height: 1.5;
+
+    @include max-to(laptop) {
+        font-size: size(15);
+        line-height: 1.3;
+    }
+}
+
+#mainPage {
+    @import "components/font";
+    @import "components/buttons";
+    @import "components/dropdown";
+    @import "components/fulldown";
+    @import "components/card";
+    @import "components/tags";
+    @import "components/tab";
+    @import "components/tables";
+    @import "components/popUp";
+    @import "components/form";
+    @import "components/swiper-custom";
+
+    @import "global";
+
+    @import "layout/header";
+    @import "layout/breadcrumb";
+    @import "layout/main";
+    @import "layout/footer";
+
+    @import "pages/shop";
+    @import "pages/game";
+    @import "pages/personal";
+}
