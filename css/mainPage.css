@@ -225,6 +225,7 @@ body {
 }
 
 #mainPage {
+  background-color: black;
   /* -- Global.scss -- */
 }
 #mainPage .title-xl,
@@ -759,6 +760,7 @@ body {
 }
 @media (max-width: 1024px) {
   #mainPage .tab-content {
+    border-radius: 1.875rem;
     height: 41.6666666667svw;
   }
 }
@@ -1304,8 +1306,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-#mainPage header .options .nav > ul > li:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+@media (hover: hover) {
+  #mainPage header .options .nav > ul > li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
 }
 #mainPage header .options .nav > ul > li.dropdown {
   padding: 0;
@@ -1392,6 +1396,10 @@ body {
   #mainPage header .options .nav > ul {
     width: calc(100svw - 2rem);
     transform: translate(0, -6.25rem);
+    gap: 1.25rem;
+  }
+  #mainPage header .options .nav > ul li {
+    padding: 0.625rem 1.5rem;
   }
   #mainPage header .options .nav .dropdown button {
     width: 100%;
@@ -1935,8 +1943,8 @@ body {
     padding-left: 1rem;
   }
   #mainPage #nft-idx::before {
-    -webkit-clip-path: polygon(0 0, 100% 8.125rem, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 8.125rem, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 2.125rem, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 2.125rem, 100% 100%, 0% 100%);
   }
 }
 #mainPage #tutorial {

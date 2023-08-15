@@ -138,6 +138,7 @@
 // pad ~ 1024
 @include max-to(pad) {
     .tab-content {
+        border-radius: size(30);
         height: svw(600);
     }
 }

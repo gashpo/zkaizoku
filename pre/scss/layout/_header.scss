@@ -61,8 +61,10 @@ header {
                     align-items: center;
                     justify-content: center;
 
-                    &:hover {
-                        background-color: rgba(white, .15);
+                    @media (hover: hover) {
+                        &:hover {
+                            background-color: rgba(white, .15);
+                        }
                     }
 
                     &.dropdown {
@@ -191,6 +193,11 @@ header {
                 >ul {
                     width: calc(100svw - size(32));
                     transform: translate(0, size(-100));
+                    gap: size(20);
+
+                    li {
+                        padding: size(10) size(24);
+                    }
                 }
 
                 .dropdown {

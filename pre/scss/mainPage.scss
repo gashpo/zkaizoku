@@ -50,6 +50,8 @@ body {
 }
 
 #mainPage {
+    background-color: black;
+
     @import "components/font";
     @import "components/buttons";
     @import "components/dropdown";
