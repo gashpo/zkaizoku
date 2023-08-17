@@ -11,6 +11,7 @@ header {
     gap: size(20);
     z-index: 9;
     @include body-2;
+    transition-property: border-radius, top, left, right;
 
     .main-logo {
         flex: size(180);
@@ -50,7 +51,7 @@ header {
         .nav {
             >ul {
                 display: flex;
-                gap: size(20);
+                gap: size(8);
 
                 >li {
                     padding: size(10) size(24);
@@ -60,6 +61,7 @@ header {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    gap: size(4);
 
                     @media (hover: hover) {
                         &:hover {
@@ -170,6 +172,12 @@ header {
                 }
             }
         }
+
+        &.fixed {
+            top: size(20);
+            left: size(40);
+            right: size(40);
+        }
     }
 
 
@@ -222,6 +230,35 @@ header {
                 padding: size(10) size(20);
                 border: none !important;
                 line-height: 1 !important;
+            }
+        }
+
+        .dropdown {
+            .dropdown-content {
+                width: 100%;
+                top: 100%;
+                padding: 0 size(8);
+                box-shadow: none;
+                background-color: color(primary-4);
+
+                ul {
+                    gap: size(8);
+
+                    li {
+                        padding: size(8) size(24) !important;
+
+                        &:hover,
+                        &.active {
+                            background-color: color(primary-3);
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                .dropdown-content {
+                    padding: size(8);
+                }
             }
         }
     }

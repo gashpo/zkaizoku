@@ -42,7 +42,7 @@
                         max-width: size(212);
                         position: relative;
 
-                        button {
+                        .button {
                             position: absolute;
                             left: size(20);
                             bottom: size(20);
@@ -127,6 +127,26 @@
                 }
             }
         }
+
+        &.coming-soon {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                background-color: rgba(black, .6);
+                background-image: url(../img/ribbon.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 3;
+
+            }
+        }
     }
 
     .zkz {
@@ -203,40 +223,117 @@
     .record {
         flex: 100%;
 
-        &-tab {
-            margin: size(40) 0;
-            width: 100%;
-            border-bottom: size(2) solid color(gray-6);
+        &-price {
+            div {
+                display: flex;
+                align-items: center;
+                gap: size(8);
 
-            li {
-                display: inline-block;
-                padding: size(10) size(32);
-                @include body-1;
-                color: color(gray-6);
-                cursor: pointer;
-                margin-bottom: size(-2);
-                border-bottom: size(2) solid transparent;
-
-                &.active {
-                    color: white;
-                    cursor: default;
-                    border-color: white;
+                img {
+                    width: size(20);
                 }
             }
         }
 
-        &-content {
-            .record- {
-                &status {
-                    span {
-                        display: flex;
-                        gap: 0 size(8);
+        &-status {
+            span {
+                display: flex;
+                gap: 0 size(8);
+            }
+        }
+
+        &-view {
+            min-width: size(124);
+        }
+
+        .filter {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: size(36);
+            @include body-2;
+            margin: size(16) 0;
+
+            .days,
+            .pages {
+                display: flex;
+                align-items: center;
+                gap: size(12);
+
+                span {
+                    color: color(gray-6);
+                }
+            }
+
+            .dropdown {
+                position: relative;
+
+                button {
+                    @include body-1;
+                    background-color: transparent;
+                    padding: 0;
+                    @include a-color(white, color(gray-2));
+                    transition-property: color;
+                }
+
+                .dropdown-content {
+                    top: calc(100% + size(8));
+                    left: auto;
+                    transform: none;
+                    right: size(-20);
+                    padding: 0 size(8) 0 size(16);
+                    border-radius: size(20);
+                    background-color: color(gray-9);
+                    box-shadow: 0 0 size(10) color(gray-7);
+
+                    ul {
+                        padding-right: size(8);
+
+                        li {
+                            &.active {
+                                background-color: color(gray-8);
+                            }
+
+                            @media (hover: hover) {
+                                &:hover {
+                                    background-color: color(gray-8);
+                                }
+                            }
+                        }
                     }
                 }
 
-                &view {
-                    min-width: size(124);
+                &.active {
+                    .dropdown-content {
+                        padding: size(16) size(8) size(16) size(16);
+
+                        ul {
+                            overflow-y: auto;
+                            max-height: size(200);
+
+                            &::-webkit-scrollbar {
+                                width: size(4);
+                                background-color: transparent;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background-color: color(gray-8);
+                            }
+                        }
+                    }
                 }
+            }
+        }
+
+        .no-record {
+            padding: size(20) 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            button {
+                margin: size(20) auto;
             }
         }
     }
@@ -273,69 +370,66 @@
     // pad ~ 1024
     @include max-to(pad) {
         .record {
-            &-content {
-                table {
-                    thead {
-                        display: none;
+            .filter {
+                justify-content: flex-start;
+                margin-bottom: size(32);
+
+                .dropdown {
+                    .dropdown-content {
+                        left: size(-40);
+                        right: auto;
                     }
+                }
+            }
 
-                    tbody {
-                        tr {
-                            background-color: color(gray-9);
-                            margin: 0 0 size(16);
-                            padding: size(12);
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: size(12) size(20);
-                            border-radius: size(12);
+            table {
+                tbody {
+                    tr {
+                        gap: size(16);
 
-                            td {
-                                align-items: center;
-                                height: auto;
-                                padding: size(4) 0;
+                        td {
+                            &.record- {
+                                &time {
+                                    flex: calc(60% - size(10));
+                                    color: color(gray-6);
+                                }
 
-                                &.record- {
+                                &status {
+                                    flex: calc(40% - size(10));
+                                    align-self: flex-start;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: flex-end;
+                                    order: 2;
+                                }
 
-                                    &time,
-                                    &trackno,
-                                    &price {
-                                        flex: calc((100% - size(20))/2);
+                                &trackno {
+                                    border-top: size(1) solid color(gray-8);
+                                    padding-top: size(16) !important;
+                                }
 
-                                        span {
-                                            margin-right: size(8);
-                                            color: color(gray);
-                                            @include body-2;
-                                        }
+                                &trackno,
+                                &price {
+                                    flex: 100%;
+                                    order: 3;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    span {
+                                        @include body-2;
                                     }
+                                }
 
-                                    &time {
-                                        flex-shrink: 0;
-                                    }
+                                &view {
+                                    flex: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    order: 3;
 
-                                    &trackno,
-                                    &price {
-                                        order: 3;
-                                    }
-
-                                    &status {
-                                        flex: calc((100% - size(20))/2);
-                                        align-self: flex-start;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: flex-end;
-                                        order: 2;
-                                    }
-
-                                    &view {
+                                    button {
                                         flex: 100%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        order: 3;
-
-                                        button {
-                                            flex: 100%;
-                                        }
                                     }
                                 }
                             }
@@ -380,6 +474,12 @@
                     }
                 }
             }
+
+            &.coming-soon {
+                &::after {
+                    background-size: 200%;
+                }
+            }
         }
     }
 
@@ -417,35 +517,31 @@
             }
         }
 
-        .record {
-            &-content {
-                table {
-                    tbody {
-                        tr {
-                            gap: size(4) size(12);
+        // .record {
+        //     table {
+        //         tbody {
+        //             tr {
+        //                 td {
+        //                     &.record- {
 
-                            td {
-                                &.record- {
+        //                         &time,
+        //                         &trackno,
+        //                         &status {
+        //                             flex: 100%;
+        //                         }
 
-                                    &time,
-                                    &trackno,
-                                    &status {
-                                        flex: 100%;
-                                    }
+        //                         &time {
+        //                             order: 2;
+        //                         }
 
-                                    &time {
-                                        order: 2;
-                                    }
-
-                                    &status {
-                                        order: 1;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                         &status {
+        //                             order: 1;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
     }
 }

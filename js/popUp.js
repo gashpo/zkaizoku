@@ -10,3 +10,9 @@ $('.popUp--close').click(function () {
     $('.popUp').hide()
     $('body').css('overflow-y', 'auto')
 })
+
+$('.popUp .close').click(function () {
+    $('.popUp').removeClass('active')
+    $('.popUp').hide()
+    $('body').css('overflow-y', 'auto')
+})

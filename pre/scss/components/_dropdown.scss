@@ -72,33 +72,4 @@
             opacity: 1;
         }
     }
-
-    @include max-to(laptop) {
-        .dropdown-content {
-            width: 100%;
-            top: 100%;
-            padding: 0 size(8);
-            box-shadow: none;
-            background-color: color(primary-4);
-
-            ul {
-                gap: size(8);
-
-                li {
-                    padding: size(8) size(24) !important;
-
-                    &:hover,
-                    &.active {
-                        background-color: color(primary-3);
-                    }
-                }
-            }
-        }
-
-        &.active {
-            .dropdown-content {
-                padding: size(8);
-            }
-        }
-    }
 }

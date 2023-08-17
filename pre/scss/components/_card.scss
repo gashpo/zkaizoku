@@ -8,10 +8,10 @@
     &::before {
         position: absolute;
         content: '';
-        top: 0;
+        top: 20%;
         left: -50%;
         right: -50%;
-        bottom: 0;
+        height: size(188);
         background: linear-gradient(321deg, rgba(white, .1) 0%, rgba(white, 0) 50%, rgba(white, .1) 100%);
         transform: rotate(-45deg);
         z-index: 1;
@@ -25,6 +25,7 @@
 
     // small-pad ~ 768
     @include max-to(small-pad) {
+        border-radius: size(15);
         padding: size(16);
     }
 }

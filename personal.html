@@ -21,6 +21,9 @@
     <meta property="og:image" content="https://gashpo.github.io/zkaizokuimg/og-image.png" />
     <link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
 
+    <!-- Fancybox 套件 -->
+    <link rel="stylesheet" href="vendor/fancybox/fancybox.css" />
+
     <!-- Swiper 套件 -->
     <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
 
@@ -28,6 +31,7 @@
     <link rel="stylesheet" href="vendor/icomoon/style.css">
 
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/bodySetting.css">
     <link rel="stylesheet" href="css/mainPage.css">
 
     <title>ZKaizoku 一站式互動平台</title>
@@ -72,7 +76,31 @@
                         <li onclick="location='index.html#nft-idx'">NFT</li>
                         <li onclick="location='index.html#tutorial'">教學</li>
                         <li onclick="location='index.html#zkz'">$ZKZ</li>
-                        <li onclick="location='bridge.html'">Bridge</li>
+                        <li for="bridge" class="dropdown">
+                            <button>Bridge</button>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li>
+                                        <a href="https://cbridge.celer.network/1/56/USDC" target="_blank">Celer
+                                            Network</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://router.via.exchange/zksync%20era/ETH/polygon/MATIC"
+                                            target="_blank">Via exchange</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.orbiter.finance/?source=Ethereum&dest=Arbitrum"
+                                            target="_blank">Orbiter Finance</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bridge.poly.network/" target="_blank">Poly Network</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.multichain.org/#/router" target="_blank">Multichain</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li for="language" class="language dropdown">
                             <button>繁體中文</button>
                             <div class="dropdown-content">
@@ -83,13 +111,16 @@
                                 </ul>
                             </div>
                         </li>
+                        <!-- <li onclick="window.open('https://twitter.com/ZKaizoku_')">
+                            <i class="icon-Twitter"></i> Twitter
+                        </li> -->
                     </ul>
                 </div>
             </div>
 
             <div class="login">
-                <button class="wallet popUp--open" for="login">連接錢包</button>
-                <div class="admin dropdown" style="display: none;">
+                <button class="wallet popUp--open" for="login" style="display: none;">連接錢包</button>
+                <div class="admin dropdown">
                     <button>0x130...123DxA</button>
                     <div class="dropdown-content">
                         <ul>
@@ -105,7 +136,7 @@
             <section id="personal">
                 <div class="container">
                     <h3>個人資訊</h3>
-                    <div class="linense card">
+                    <div class="linense card coming-soon">
                         <div class="card-content">
                             <h3>My Zkaizoku Linense</h3>
                             <div class="carousel">
@@ -114,7 +145,9 @@
                                         <div class="swiper-slide">
                                             <div class="img">
                                                 <img src="img/linense/linense01.png">
-                                                <button><i class="icon-Search"></i></button>
+                                                <a class="button" href="img/linense/linense01.png" data-fancybox>
+                                                    <i class="icon-Search"></i>
+                                                </a>
                                             </div>
                                             <div class="desc">
                                                 <div class="input-group">
@@ -126,7 +159,7 @@
                                                     <div class="input-btn">
                                                         <input name="referralCode" type="text" value="zkgoodgood"
                                                             disabled>
-                                                        <button><i class="icon-Copy"></i></button>
+                                                        <button class="btn-copy"><i class="icon-Copy"></i></button>
                                                     </div>
                                                 </div>
                                                 <div class="input-group">
@@ -140,13 +173,15 @@
                                                     </label>
                                                     <input name="proportion" type="text" value="200%" disabled>
                                                 </div>
-                                                <button>升級</button>
+                                                <button class="popUp--open" for="upgrade">升級</button>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img">
                                                 <img src="img/linense/linense02.png">
-                                                <button><i class="icon-Search"></i></button>
+                                                <a class="button" href="img/linense/linense02.png" data-fancybox>
+                                                    <i class="icon-Search"></i>
+                                                </a>
                                             </div>
                                             <div class="desc">
                                                 <div class="input-group">
@@ -172,13 +207,15 @@
                                                     </label>
                                                     <input name="proportion" type="text" value="200%" disabled>
                                                 </div>
-                                                <button disabled>升級</button>
+                                                <button class="popUp--open" for="upgrade" disabled>升級</button>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img">
                                                 <img src="img/linense/linense03.png">
-                                                <button><i class="icon-Search"></i></button>
+                                                <a class="button" href="img/linense/linense03.png" data-fancybox>
+                                                    <i class="icon-Search"></i>
+                                                </a>
                                             </div>
                                             <div class="desc">
                                                 <div class="input-group">
@@ -204,7 +241,7 @@
                                                     </label>
                                                     <input name="proportion" type="text" value="200%" disabled>
                                                 </div>
-                                                <button>升級</button>
+                                                <button class="popUp--open" for="upgrade">升級</button>
                                             </div>
                                         </div>
                                     </div>
@@ -235,174 +272,222 @@
                     <div class="record card">
                         <div class="card-content">
                             <h3>歷史紀錄頁</h3>
-                            <ul class="record-tab">
-                                <li id="record-tab-1" class="active">交易紀錄</li>
-                                <li id="record-tab-2">積分幣紀錄</li>
+                            <ul class="tab">
+                                <li class="active">積分幣紀錄</li>
+                                <li>交易紀錄</li>
                             </ul>
-                            <div class="no-record" style="display: none;">
-                                <div>
-                                    <p class="title">沒有紀錄</p>
-                                    <p class="desc">快前往商城兌換入場券或道具，一起邊玩邊轉吧！</p>
-                                    <button class="btn-gradient">前往商城</button>
-                                </div>
-                            </div>
-                            <div class="record-content">
-                                <!-- <div class="filter">
+
+                            <div class="filter">
                                 <div class="days">
-                                    篩選
-                                    <button>30天 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
-                                    <div class="items">
-                                        <ul>
-                                            <li>30天</li>
-                                            <li>3個月</li>
-                                            <li>6個月</li>
-                                        </ul>
+                                    <span>篩選</span>
+                                    <div class="dropdown">
+                                        <button>30天</button>
+                                        <div class="dropdown-content">
+                                            <ul>
+                                                <li class="active">30天</li>
+                                                <li>3個月</li>
+                                                <li>6個月</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="pages">
-                                    頁數
-                                    <button>1 <img src="images/icon/icon-arrow-bottom-7e97f0.svg"></button>
-                                    <div class="items">
-                                        <ul>
-                                            <li>1</li>
-                                            <li>2</li>
-                                            <li>3</li>
-                                            <li>4</li>
-                                            <li>5</li>
-                                            <li>6</li>
-                                            <li>7</li>
-                                        </ul>
+                                    <span>頁數</span>
+                                    <div class="dropdown">
+                                        <button>1</button>
+                                        <div class="dropdown-content">
+                                            <ul>
+                                                <li class="active">1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="status">
-                                    狀態 <a id="status--open-4" href="javascript:void(0)"><img
-                                            src="images/icon/icon-info.svg"></a>
-                                </div>
-                            </div> -->
-                                <table id="content-table-1" class="active">
-                                    <thead>
-                                        <tr>
-                                            <th>時間</th>
-                                            <th>訂單編號</th>
-                                            <th>提領金額</th>
-                                            <th>
-                                                狀態
-                                                <i class="icon-InfoCircle popUp--open" for="info"></i>
-                                            </th>
-                                            <th>鏈上資訊</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>0xa4c99bd...1365</td>
-                                            <td class="record-price"><span></span>100</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000,000</td>
-                                            <td class="record-status">
-                                                <span><i class="warning">•</i>Pemrosesan Pembelian</span>
-                                            </td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="error">•</i>失敗</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="warning">•</i>進行中</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000 TWD</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000 TWD</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000 TWD</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000 TWD</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="record-time"><span></span>2020-03-03 23:55</td>
-                                            <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                            <td class="record-price"><span></span>300,000.123456</td>
-                                            <td class="record-status"><span><i class="success">•</i>成功</span></td>
-                                            <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
+
+                            <ul class="tab-content">
+                                <li class="active">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>時間</th>
+                                                <th>訂單編號</th>
+                                                <th>提領金額</th>
+                                                <th>狀態</th>
+                                                <th>鏈上資訊</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>0xa4c99bd...1365</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">300,000</div>
+                                                </td>
+                                                <td class="record-status">
+                                                    <span><i class="warning">•</i> Pemrosesan Pembelian</span>
+                                                </td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">30,000.12345</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="error">•</i> 失敗</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">100</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="warning">•</i> 等待中</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">3,000</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="warning">•</i> 等待中</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">3,000</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="warning">•</i> 等待中</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">3,000</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="error">•</i> 失敗</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">3,000</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="error">•</i> 失敗</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">3,000</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="record-time">2020-03-03 23:55</td>
+                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
+                                                <td class="record-price">
+                                                    <span></span>
+                                                    <div><img src="img/coin.png">301,100.051831</div>
+                                                </td>
+                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
+                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <div class="no-record">
+                                        <div>
+                                            <h3>沒有紀錄</h3>
+                                            <p>快前往商城購買dNFT吧！</p>
+                                            <button onclick="location='shop.html'">前往商城</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -435,7 +520,7 @@
                     </ol>
                 </div>
                 <div class="popUp--btns">
-                    <button class="btn-tertiary">取消</button>
+                    <button class="btn-tertiary close">取消</button>
                     <button class="submit">確認</button>
                 </div>
             </div>
@@ -467,6 +552,21 @@
             </div>
         </div>
 
+        <!-- 升級 dNFT -->
+        <div id="upgrade" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>升級 dNFT</h3>
+                <div class="popUp--content">
+                    <p>升級 dNFT 功能暫不製作，保留此區塊</p>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary close">取消</button>
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
+
         <!-- 領取積分幣 -->
         <div id="withdraw" class="popUp">
             <div class="popUp--container">
@@ -478,7 +578,7 @@
                         <div class="input-wrap">
                             <label for="price">欲提領的積分幣數量</label>
                             <div class="input-group">
-                                <input name="price" type="text" value="200">
+                                <input name="price" type="text" value="100">
                                 <label>/ 100</label>
                             </div>
                             <span class="helper">當前積分幣不足！</span>
@@ -491,8 +591,8 @@
                     </div>
                 </div>
                 <div class="popUp--btns">
-                    <button class="btn-tertiary">取消</button>
-                    <button class="submit" disabled>領取</button>
+                    <button class="btn-tertiary close">取消</button>
+                    <button class="submit">領取</button>
                 </div>
             </div>
         </div>
@@ -503,16 +603,52 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery.min.js"></script>
+    <script type="text/javascript">
+        if ($('.linense').hasClass('coming-soon')) {
+            $('.linense button').attr('disabled', '')
+        }
+
+        $('#withdraw .submit').click(function () {
+            $(this).parent().siblings('h3').html('積分幣領取中')
+
+            $(this).parent().parent().find('[for=price]').html('本次提領的積分幣數量')
+
+            $(this).parent().parent().find('[name=price]').attr('disabled', '')
+
+            $(this).html('確認')
+            $(this).click(function () {
+                $('.popUp').removeClass('active')
+                $('.popUp').hide()
+                $('body').css('overflow-y', 'auto')
+            })
+
+            $(this).siblings('.close').html('領取紀錄')
+            $(this).siblings('.close').click(function () {
+                $('.popUp').removeClass('active')
+                $('.popUp').hide()
+                $('body').css('overflow-y', 'auto')
+
+                var recordOffset = $('.record').offset().top
+                $('html,body').animate({ scrollTop: recordOffset - 120 }, 100)
+            })
+        })
+    </script>
 
     <!-- Custom settings -->
     <script src="js/navigation.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/fulldown.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
     <script src="js/record.js"></script>
+    <script src="js/buttons.js"></script>
+
+    <!-- Fancybox 套件 -->
+    <script src="vendor/fancybox/fancybox.js"></script>
+    <script type="text/javascript">
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
 
     <!-- Swiper 套件 -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>

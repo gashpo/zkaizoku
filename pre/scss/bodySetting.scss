@@ -1,0 +1,27 @@
+@import "var";
+
+
+/* 反白選取樣式 */
+::-moz-selection {
+    background-color: color(gray-1);
+    color: rgba(color(primary-6), 1);
+}
+
+::selection {
+    background-color: color(gray-1);
+    color: rgba(color(primary-6), 1);
+}
+
+
+/* 捲軸樣式 */
+::-webkit-scrollbar {
+    width: size(8);
+    background-color: color(primary-7);
+    border-radius: size(4);
+}
+
+::-webkit-scrollbar-thumb {
+    width: size(8);
+    background-color: color(primary-4);
+    border-radius: size(4);
+}

@@ -24,26 +24,40 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            transition-property: background-color;
+            transition-duration: .3s;
 
             .img {
                 margin-bottom: size(20);
+                border-radius: size(30);
+                overflow: hidden;
 
                 img {
                     border-radius: size(30);
+                    transition-property: transform;
+                    transition-duration: .3s;
                 }
-            }
-
-            h4 {
-                flex-grow: 1;
             }
 
             .tags {
                 margin: size(16) 0 size(40);
             }
 
+            .btn {
+                flex-grow: 1;
+                display: flex;
+                align-items: flex-end;
+            }
+
             @media (hover: hover) {
                 &:hover {
                     background-color: black;
+
+                    .img {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
                 }
             }
         }
@@ -88,6 +102,10 @@
             >li {
                 flex: 33.33%;
                 max-width: 33.33%;
+
+                &:hover {
+                    background-color: transparent;
+                }
             }
         }
     }

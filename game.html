@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="vendor/icomoon/style.css">
 
     <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/bodySetting.css">
     <link rel="stylesheet" href="css/mainPage.css">
 
     <title>ZKaizoku 一站式互動平台</title>
@@ -72,7 +73,31 @@
                         <li onclick="location='index.html#nft-idx'">NFT</li>
                         <li onclick="location='index.html#tutorial'">教學</li>
                         <li onclick="location='index.html#zkz'">$ZKZ</li>
-                        <li onclick="location='bridge.html'">Bridge</li>
+                        <li for="bridge" class="dropdown">
+                            <button>Bridge</button>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li>
+                                        <a href="https://cbridge.celer.network/1/56/USDC" target="_blank">Celer
+                                            Network</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://router.via.exchange/zksync%20era/ETH/polygon/MATIC"
+                                            target="_blank">Via exchange</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.orbiter.finance/?source=Ethereum&dest=Arbitrum"
+                                            target="_blank">Orbiter Finance</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bridge.poly.network/" target="_blank">Poly Network</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://app.multichain.org/#/router" target="_blank">Multichain</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li for="language" class="language dropdown">
                             <button>繁體中文</button>
                             <div class="dropdown-content">
@@ -121,7 +146,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -133,7 +158,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -145,7 +170,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -157,11 +182,11 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
-                                <img src="img/game/game-thumb-05.jpg">
+                                <img src="img/game/game-coming-soon.jpg">
                             </div>
                             <h4>Coin Matching</h4>
                             <ul class="tags">
@@ -169,7 +194,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -181,7 +206,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -193,7 +218,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -205,7 +230,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -217,7 +242,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                         <li onclick="location='game-detail.html'">
                             <div class="img">
@@ -229,7 +254,7 @@
                                 <li>tag</li>
                                 <li>tag</li>
                             </ul>
-                            <button class="btn-tertiary">View Details</button>
+                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
                         </li>
                     </ul>
                 </div>
@@ -247,27 +272,6 @@
 
 
 
-
-        <!-- pop up 系統通知 -->
-        <div id="failed" class="popUp">
-            <div class="popUp--container">
-                <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>系統通知</h3>
-                <div class="popUp--content">
-                    <p>糟糕，購買發生異常，請確認以下可能狀況：</p>
-                    <ol>
-                        <li>當前是否為商品銷售時間</li>
-                        <li>錢包內是否有充足餘額</li>
-                        <li>錢包是否設定為zkSync主網</li>
-                        <li>其他問題</li>
-                    </ol>
-                    <p>如持續發生異常，請與我們聯繫，謝謝您！</p>
-                </div>
-                <div class="popUp--btns">
-                    <button class="submit">確認</button>
-                </div>
-            </div>
-        </div>
 
 
         <!-- pop up 連接錢包 -->

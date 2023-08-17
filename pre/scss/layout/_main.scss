@@ -10,6 +10,7 @@ main {
         background-position: top center;
         background-attachment: fixed;
         position: relative;
+        overflow: hidden;
 
         section {
             position: inherit;
@@ -655,13 +656,83 @@ main {
         border-top-left-radius: size(30);
         position: relative;
 
+        .tab {
+            display: flex;
+            background-color: color(primary-6);
+            border-radius: size(100);
+            border: none;
+            margin-bottom: size(16);
+
+            li {
+                flex: 1;
+                cursor: pointer;
+                background-color: transparent;
+                color: color(gray-9);
+                border-radius: size(100);
+                border: none;
+                padding: size(24);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: size(8);
+                transition: none;
+
+                h5 {
+                    width: size(26);
+                    height: size(26);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: color(gray-9);
+                    color: color(primary-6);
+                    @include body-1;
+                    font-weight: weight(Bold);
+                    border-radius: size(100);
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        color: color(primary-4);
+
+                        h5 {
+                            background-color: color(primary-4);
+                        }
+                    }
+                }
+
+                &.active {
+                    background-color: black;
+                    color: white;
+                    cursor: default;
+
+                    h5 {
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+
         .tab-content {
+            overflow: hidden;
+            border-radius: size(30);
+            background-color: black;
+            position: relative;
+            height: size(460);
+            position: relative;
+
             li {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: size(28);
 
                 img {
                     margin-bottom: size(32);
@@ -675,6 +746,18 @@ main {
                 button {
                     margin: 0 auto;
                 }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: size(-20);
+                left: size(-100);
+                right: size(-100);
+                bottom: size(-20);
+                background: linear-gradient(321deg, rgba(white, .1) 0%, rgba(white, 0) 50%, rgba(white, .1) 100%);
+                transform: rotate(-45deg);
+                z-index: 1;
             }
         }
     }
@@ -712,8 +795,24 @@ main {
         .content {
             padding: svw(112) svw(112) 0;
 
-            .tab-content {
+            .tab {
+                border-radius: svw(100);
+                margin-bottom: svw(16);
+
                 li {
+                    border-radius: svw(100);
+                    padding: svw(24);
+                    gap: svw(8);
+                }
+            }
+
+            .tab-content {
+                border-radius: svw(30);
+                height: svw(460);
+
+                li {
+                    padding: svw(28);
+
                     img {
                         margin-bottom: svw(32);
                     }
@@ -721,6 +820,13 @@ main {
                     p {
                         margin: svw(8) auto svw(32);
                     }
+                }
+
+                &::before {
+                    top: svw(-20);
+                    left: svw(-100);
+                    right: svw(-100);
+                    bottom: svw(-20);
                 }
             }
         }
@@ -739,6 +845,11 @@ main {
         .content {
             border-radius: 0;
             padding: size(32) size(16);
+
+            .tab-content {
+                border-radius: size(30);
+                height: svw(600);
+            }
         }
 
         .mask {
@@ -759,6 +870,44 @@ main {
 
             .mask {
                 width: size(68);
+            }
+        }
+    }
+
+
+    // mobile ~ 768
+    @include max-to(mobile) {
+        .content {
+            .tab {
+                margin-bottom: size(16);
+
+                li {
+                    padding: size(12);
+
+                    h5 {
+                        width: size(21);
+                        height: size(21);
+                    }
+
+                    h4 {
+                        display: none;
+                    }
+                }
+            }
+
+            .tab-content {
+                height: size(510);
+
+                li {
+                    padding: size(32);
+                }
+
+                &::before {
+                    top: size(120);
+                    left: size(-120);
+                    right: size(-120);
+                    bottom: size(120);
+                }
             }
         }
     }

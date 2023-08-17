@@ -49,4 +49,40 @@ table {
             }
         }
     }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        thead {
+            display: none;
+        }
+
+        tbody {
+            tr {
+                background-color: color(gray-9);
+                margin: 0 0 size(16);
+                padding: size(16);
+                display: flex;
+                flex-wrap: wrap;
+                gap: size(12) size(20);
+                border-radius: size(12);
+
+                td {
+                    align-items: center;
+                    height: auto;
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        tbody {
+            tr {
+                gap: size(4) size(12);
+            }
+        }
+    }
 }
