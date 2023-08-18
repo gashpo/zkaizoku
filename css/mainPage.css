@@ -839,7 +839,7 @@ body {
   flex: calc((100% - 1.25rem) / 2);
 }
 #mainPage #withdraw .popUp--container .popUp--content .img img {
-  border-radius: 1.875rem;
+  border-radius: 0.625rem;
 }
 #mainPage #withdraw .popUp--container .popUp--content .content {
   display: flex;
@@ -881,9 +881,6 @@ body {
   }
   #mainPage #withdraw .popUp--container .popUp--content .img {
     text-align: center;
-  }
-  #mainPage #withdraw .popUp--container .popUp--content .img img {
-    max-width: 9.375rem;
   }
   #mainPage #withdraw .popUp--container .popUp--content .content textarea {
     height: 3.3625rem;
@@ -1368,6 +1365,7 @@ body {
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
+  min-height: 45svw;
 }
 #mainPage main.innerPage section {
   position: inherit;
@@ -2553,7 +2551,6 @@ body {
   }
 }
 #mainPage #game {
-  min-height: 45svw;
   padding: 0 3.75rem;
 }
 #mainPage #game .container {
@@ -2685,11 +2682,6 @@ body {
   }
 }
 #mainPage #personal {
-  background-image: url(../img/bg/inner-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  min-height: 45svw;
   padding: 0 3.75rem;
 }
 #mainPage #personal .container {
@@ -2874,6 +2866,17 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
 }
+#mainPage #personal .zkz .card-content .now .value span,
+#mainPage #personal .zkz .card-content .accumulation .value span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#mainPage #personal .zkz .card-content .now .value span img,
+#mainPage #personal .zkz .card-content .accumulation .value span img {
+  width: 1.5rem;
+}
 #mainPage #personal .zkz .card-content .now {
   grid-column: 1/2;
 }
@@ -2973,7 +2976,7 @@ body {
 }
 #mainPage #personal .record .filter .dropdown.active .dropdown-content ul {
   overflow-y: auto;
-  max-height: 12.5rem;
+  max-height: 9.375rem;
 }
 #mainPage #personal .record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar {
   width: 0.25rem;

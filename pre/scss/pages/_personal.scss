@@ -1,9 +1,4 @@
 #personal {
-    background-image: url(../img/bg/inner-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    min-height: 45svw;
     padding: 0 size(60);
 
     .container {
@@ -206,6 +201,17 @@
                 .value {
                     padding: size(40) size(20);
                     @include font(40, Bold);
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: size(8);
+
+                        img {
+                            width: size(24);
+                        }
+                    }
                 }
 
             }
@@ -307,9 +313,10 @@
                     .dropdown-content {
                         padding: size(16) size(8) size(16) size(16);
 
+
                         ul {
                             overflow-y: auto;
-                            max-height: size(200);
+                            max-height: size(150);
 
                             &::-webkit-scrollbar {
                                 width: size(4);

@@ -125,7 +125,7 @@
 
             .img {
                 img {
-                    border-radius: size(30);
+                    border-radius: size(10);
                 }
             }
 
@@ -171,10 +171,6 @@
 
                 .img {
                     text-align: center;
-
-                    img {
-                        max-width: size(150);
-                    }
                 }
 
                 .content {
