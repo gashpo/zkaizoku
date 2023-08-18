@@ -487,12 +487,20 @@ body {
 #mainPage .dropdown .dropdown-content > ul > li {
   flex: 100%;
   text-align: center;
-  cursor: pointer;
+}
+#mainPage .dropdown .dropdown-content > ul > li > a {
+  display: block;
+  color: white;
   border-radius: 0.625rem;
   transition-property: background-color;
   padding: 0.5rem 1.5rem;
 }
-#mainPage .dropdown .dropdown-content > ul > li:hover, #mainPage .dropdown .dropdown-content > ul > li.active {
+@media (hover: hover) {
+  #mainPage .dropdown .dropdown-content > ul > li:hover > a {
+    background-color: #9d4043;
+  }
+}
+#mainPage .dropdown .dropdown-content > ul > li.active > a {
   background-color: #9d4043;
 }
 #mainPage .dropdown.active button::after {
@@ -516,6 +524,7 @@ body {
     background-color: #871B1F;
     transform: none;
     border-radius: 0;
+    transition-property: max-height;
   }
   #mainPage .fulldown .fulldown-content > ul {
     width: 100%;
@@ -528,12 +537,23 @@ body {
   #mainPage .fulldown .fulldown-content > ul > li {
     flex: 100%;
     text-align: center;
+  }
+  #mainPage .fulldown .fulldown-content > ul > li > a {
+    display: block;
     padding: 0.625rem 1.5rem;
     cursor: pointer;
     border-radius: 0.625rem;
     transition-property: background-color;
+    color: white;
   }
-  #mainPage .fulldown .fulldown-content > ul > li:hover, #mainPage .fulldown .fulldown-content > ul > li.active {
+}
+@media (max-width: 1280px) and (hover: hover) {
+  #mainPage .fulldown .fulldown-content > ul > li:hover > a {
+    background-color: #9d4043;
+  }
+}
+@media (max-width: 1280px) {
+  #mainPage .fulldown .fulldown-content > ul > li .active > a {
     background-color: #9d4043;
   }
   #mainPage .fulldown.active .fulldown-content {
@@ -691,9 +711,11 @@ body {
 }
 #mainPage table tbody tr td:first-child {
   padding-left: 2rem;
+  border-radius: 0.75rem 0 0 0.75rem;
 }
 #mainPage table tbody tr td:last-child {
   padding-right: 2rem;
+  border-radius: 0 0.75rem 0.75rem 0;
 }
 #mainPage table tbody tr:first-child td {
   padding-top: 2.25rem;
@@ -703,7 +725,6 @@ body {
     display: none;
   }
   #mainPage table tbody tr {
-    background-color: #1d1d1d;
     margin: 0 0 1rem;
     padding: 1rem;
     display: flex;
@@ -1174,9 +1195,9 @@ body {
   display: flex;
   gap: 0.5rem;
 }
-#mainPage header .options .nav > ul > li {
+#mainPage header .options .nav > ul > li > a {
   padding: 0.625rem 1.5rem;
-  cursor: pointer;
+  color: white;
   border-radius: 0.625rem;
   transition-property: background-color;
   display: flex;
@@ -1185,16 +1206,9 @@ body {
   gap: 0.25rem;
 }
 @media (hover: hover) {
-  #mainPage header .options .nav > ul > li:hover {
+  #mainPage header .options .nav > ul > li > a:hover {
     background-color: rgba(255, 255, 255, 0.15);
   }
-}
-#mainPage header .options .nav > ul > li.dropdown {
-  padding: 0;
-  cursor: default;
-}
-#mainPage header .options .nav > ul > li.dropdown:hover {
-  background-color: transparent;
 }
 #mainPage header .options .nav > ul > li[for=bridge] button::after {
   display: none;
@@ -1249,9 +1263,8 @@ body {
   #mainPage header .options .nav > ul {
     gap: 0.8333333333svw;
   }
-  #mainPage header .options .nav > ul > li {
+  #mainPage header .options .nav > ul > li > a {
     padding: 0.6944444444svw 1.3888888889svw;
-    cursor: pointer;
     border-radius: 0.6944444444svw;
   }
   #mainPage header.fixed {
@@ -1281,14 +1294,8 @@ body {
     transform: translate(0, -6.25rem);
     gap: 1.25rem;
   }
-  #mainPage header .options .nav > ul li {
+  #mainPage header .options .nav > ul > li > a {
     padding: 0.625rem 1.5rem;
-  }
-  #mainPage header .options .nav .dropdown button {
-    width: 100%;
-  }
-  #mainPage header .options .nav .dropdown .dropdown-content {
-    z-index: 1;
   }
   #mainPage header .login {
     flex-grow: 1;
@@ -1301,7 +1308,11 @@ body {
     border: none !important;
     line-height: 1 !important;
   }
+  #mainPage header .dropdown button {
+    width: 100%;
+  }
   #mainPage header .dropdown .dropdown-content {
+    z-index: 1;
     width: 100%;
     top: 100%;
     padding: 0 0.5rem;

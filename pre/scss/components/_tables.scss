@@ -35,10 +35,12 @@ table {
 
                 &:first-child {
                     padding-left: size(32);
+                    border-radius: size(12) 0 0 size(12);
                 }
 
                 &:last-child {
                     padding-right: size(32);
+                    border-radius: 0 size(12) size(12) 0;
                 }
             }
 
@@ -59,7 +61,6 @@ table {
 
         tbody {
             tr {
-                background-color: color(gray-9);
                 margin: 0 0 size(16);
                 padding: size(16);
                 display: flex;

@@ -10,10 +10,7 @@ $('.options .nav > ul > li').click(function () {
             $('html,body').animate({ scrollTop: targetOffset - 150 }, 100)
         }
     } else {
-        if (attr === 'twitter') {
-            console.log('twitter')
-            window.open('https://twitter.com/ZKaizoku_')
-        } else if (attr != 'language' && attr != 'bridge') { // Bridge & 語系下拉
+        if (attr != 'language' && attr != 'bridge' && attr != 'twitter') {
             location.href = attr + '.html'
         }
     }

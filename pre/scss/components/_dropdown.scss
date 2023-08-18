@@ -46,14 +46,27 @@
             >li {
                 flex: 100%;
                 text-align: center;
-                cursor: pointer;
-                border-radius: size(10);
-                transition-property: background-color;
-                padding: size(8) size(24);
 
-                &:hover,
+                >a {
+                    display: block;
+                    color: white;
+                    border-radius: size(10);
+                    transition-property: background-color;
+                    padding: size(8) size(24);
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        >a {
+                            background-color: color(primary-4);
+                        }
+                    }
+                }
+
                 &.active {
-                    background-color: color(primary-4);
+                    >a {
+                        background-color: color(primary-4);
+                    }
                 }
             }
         }

@@ -54,27 +54,20 @@ header {
                 gap: size(8);
 
                 >li {
-                    padding: size(10) size(24);
-                    cursor: pointer;
-                    border-radius: size(10);
-                    transition-property: background-color;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: size(4);
+                    >a {
+                        padding: size(10) size(24);
+                        color: white;
+                        border-radius: size(10);
+                        transition-property: background-color;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: size(4);
 
-                    @media (hover: hover) {
-                        &:hover {
-                            background-color: rgba(white, .15);
-                        }
-                    }
-
-                    &.dropdown {
-                        padding: 0;
-                        cursor: default;
-
-                        &:hover {
-                            background-color: transparent;
+                        @media (hover: hover) {
+                            &:hover {
+                                background-color: rgba(white, .15);
+                            }
                         }
                     }
 
@@ -165,9 +158,10 @@ header {
                     gap: svw(12);
 
                     >li {
-                        padding: svw(10) svw(20);
-                        cursor: pointer;
-                        border-radius: svw(10);
+                        >a {
+                            padding: svw(10) svw(20);
+                            border-radius: svw(10);
+                        }
                     }
                 }
             }
@@ -203,18 +197,10 @@ header {
                     transform: translate(0, size(-100));
                     gap: size(20);
 
-                    li {
-                        padding: size(10) size(24);
-                    }
-                }
-
-                .dropdown {
-                    button {
-                        width: 100%;
-                    }
-
-                    .dropdown-content {
-                        z-index: 1;
+                    >li {
+                        >a {
+                            padding: size(10) size(24);
+                        }
                     }
                 }
             }
@@ -234,7 +220,12 @@ header {
         }
 
         .dropdown {
+            button {
+                width: 100%;
+            }
+
             .dropdown-content {
+                z-index: 1;
                 width: 100%;
                 top: 100%;
                 padding: 0 size(8);
