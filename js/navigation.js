@@ -1,5 +1,3 @@
-var mediaLaptop = window.matchMedia('(max-width: 1280px)');
-
 // 捲軸向下滾動時 header 縮小
 if ($(window).width() > 1280) {
 	$(window).scroll(function () {

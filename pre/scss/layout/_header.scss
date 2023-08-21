@@ -146,7 +146,6 @@ header {
 
         .main-logo {
             flex: svw(180);
-            max-width: svw(180);
             min-width: size(160);
         }
 
@@ -235,12 +234,23 @@ header {
                 ul {
                     gap: size(8);
 
-                    li {
-                        padding: size(8) size(24) !important;
+                    >li {
+                        >a {
+                            padding: size(8) size(24) !important;
+                        }
 
-                        &:hover,
+                        @media (hover: hover) {
+                            &:hover {
+                                >a {
+                                    background-color: color(primary-3);
+                                }
+                            }
+                        }
+
                         &.active {
-                            background-color: color(primary-3);
+                            >a {
+                                background-color: color(primary-3);
+                            }
                         }
                     }
                 }
@@ -251,6 +261,15 @@ header {
                     padding: size(8);
                 }
             }
+        }
+    }
+
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        .main-logo {
+            max-width: size(140);
+            min-width: size(120);
         }
     }
 }

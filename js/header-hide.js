@@ -1,4 +1,4 @@
-if ($(window).width() > 1024) {
+if (mediaPad.matches) {
 	$(window).scroll(function () {
 		var scrollHeight = $(window).scrollTop();
 

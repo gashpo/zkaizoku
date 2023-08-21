@@ -44,9 +44,25 @@ table {
                 }
             }
 
+            @media (hover: hover) {
+                &:hover {
+                    td {
+                        background-color: color(gray-9);
+                    }
+                }
+            }
+
             &:first-child {
                 td {
-                    padding-top: size(36);
+                    padding: size(18);
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        td {
+                            background-color: transparent;
+                        }
+                    }
                 }
             }
         }

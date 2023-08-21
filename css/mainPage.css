@@ -717,8 +717,18 @@ body {
   padding-right: 2rem;
   border-radius: 0 0.75rem 0.75rem 0;
 }
+@media (hover: hover) {
+  #mainPage table tbody tr:hover td {
+    background-color: #1d1d1d;
+  }
+}
 #mainPage table tbody tr:first-child td {
-  padding-top: 2.25rem;
+  padding: 1.125rem;
+}
+@media (hover: hover) {
+  #mainPage table tbody tr:first-child:hover td {
+    background-color: transparent;
+  }
 }
 @media (max-width: 1024px) {
   #mainPage table thead {
@@ -1254,7 +1264,6 @@ body {
   }
   #mainPage header .main-logo {
     flex: 12.5svw;
-    max-width: 12.5svw;
     min-width: 10rem;
   }
   #mainPage header .options {
@@ -1322,14 +1331,27 @@ body {
   #mainPage header .dropdown .dropdown-content ul {
     gap: 0.5rem;
   }
-  #mainPage header .dropdown .dropdown-content ul li {
+  #mainPage header .dropdown .dropdown-content ul > li > a {
     padding: 0.5rem 1.5rem !important;
   }
-  #mainPage header .dropdown .dropdown-content ul li:hover, #mainPage header .dropdown .dropdown-content ul li.active {
+}
+@media (max-width: 1280px) and (hover: hover) {
+  #mainPage header .dropdown .dropdown-content ul > li:hover > a {
+    background-color: #b36568;
+  }
+}
+@media (max-width: 1280px) {
+  #mainPage header .dropdown .dropdown-content ul > li.active > a {
     background-color: #b36568;
   }
   #mainPage header .dropdown.active .dropdown-content {
     padding: 0.5rem;
+  }
+}
+@media (max-width: 516px) {
+  #mainPage header .main-logo {
+    max-width: 8.75rem;
+    min-width: 7.5rem;
   }
 }
 #mainPage .breadcrumb {
@@ -2706,28 +2728,28 @@ body {
   margin-bottom: 1.25rem;
   flex: 100%;
 }
-#mainPage #personal .linense {
+#mainPage #personal .license {
   flex: 55%;
   flex-grow: 0;
 }
-#mainPage #personal .linense h3 {
+#mainPage #personal .license h3 {
   margin-bottom: 2.5rem;
 }
-#mainPage #personal .linense .carousel {
+#mainPage #personal .license .carousel {
   padding: 0 4.5rem;
   position: relative;
 }
-#mainPage #personal .linense .carousel .swiper-slide {
+#mainPage #personal .license .carousel .swiper-slide {
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
 }
-#mainPage #personal .linense .carousel .swiper-slide .img {
+#mainPage #personal .license .carousel .swiper-slide .img {
   flex: 13.25rem;
   max-width: 13.25rem;
   position: relative;
 }
-#mainPage #personal .linense .carousel .swiper-slide .img .button {
+#mainPage #personal .license .carousel .swiper-slide .img .button {
   position: absolute;
   left: 1.25rem;
   bottom: 1.25rem;
@@ -2739,64 +2761,64 @@ body {
   padding: 0;
 }
 @media (hover: hover) {
-  #mainPage #personal .linense .carousel .swiper-slide .img .button:hover {
+  #mainPage #personal .license .carousel .swiper-slide .img .button:hover {
     color: white;
   }
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc {
+#mainPage #personal .license .carousel .swiper-slide .desc {
   flex: calc(100% - 1.25rem - 13.25rem);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   flex-grow: 0;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc label {
+#mainPage #personal .license .carousel .swiper-slide .desc label {
   display: flex;
   align-items: center;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-group {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-group {
   flex: 100%;
   width: 100%;
   justify-content: space-between;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-group label {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-group label {
   word-break: keep-all;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-group input {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-group input {
   flex: 6.75rem;
   max-width: 6.75rem;
   text-align: center;
   padding: 0.625rem;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-group input[disabled] {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-group input[disabled] {
   color: white;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-wrap {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-wrap {
   flex: 100%;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-wrap input[disabled] {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-wrap input[disabled] {
   color: #585858;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc .input-wrap .input-btn {
+#mainPage #personal .license .carousel .swiper-slide .desc .input-wrap .input-btn {
   flex: 100%;
 }
-#mainPage #personal .linense .carousel .swiper-slide .desc button {
+#mainPage #personal .license .carousel .swiper-slide .desc button {
   flex: 100%;
 }
-#mainPage #personal .linense .carousel .swiper-button-prev, #mainPage #personal .linense .carousel .swiper-button-next {
+#mainPage #personal .license .carousel .swiper-button-prev, #mainPage #personal .license .carousel .swiper-button-next {
   top: 50%;
   transform: translateY(-50%);
 }
-#mainPage #personal .linense .carousel .swiper-button-prev {
+#mainPage #personal .license .carousel .swiper-button-prev {
   left: 0;
 }
-#mainPage #personal .linense .carousel .swiper-button-next {
+#mainPage #personal .license .carousel .swiper-button-next {
   right: 0;
 }
-#mainPage #personal .linense.coming-soon {
+#mainPage #personal .license.coming-soon {
   position: relative;
 }
-#mainPage #personal .linense.coming-soon::after {
+#mainPage #personal .license.coming-soon::after {
   position: absolute;
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
@@ -2815,84 +2837,83 @@ body {
 }
 #mainPage #personal .zkz .card-content {
   height: 100%;
-  display: grid;
-  grid-template-rows: 2.5rem 2.5rem 1fr;
-  grid-template-columns: calc(50% - 0.625rem) 1.25rem calc(50% - 0.625rem - 7rem) 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-#mainPage #personal .zkz .card-content h3 {
-  grid-row: 1/2;
-  grid-column: 1/2;
+#mainPage #personal .zkz .card-content .title {
+  flex: 1;
+  display: flex;
+}
+#mainPage #personal .zkz .card-content .title h3 {
+  flex: 60%;
+  flex-grow: 1;
   display: flex;
   align-items: center;
 }
-#mainPage #personal .zkz .card-content h3 i {
+#mainPage #personal .zkz .card-content .title h3 i {
   font-size: 1.25rem;
 }
-#mainPage #personal .zkz .card-content button {
-  grid-row: 1/2;
-  grid-column: -1/-2;
+#mainPage #personal .zkz .card-content .title button {
+  flex: 1;
+  min-width: 7rem;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
 @media (max-width: 1280px) {
-  #mainPage #personal .zkz .card-content button {
+  #mainPage #personal .zkz .card-content .title button {
     font-size: 0.8125rem;
     line-height: 1.3;
   }
 }
-#mainPage #personal .zkz .card-content .now,
-#mainPage #personal .zkz .card-content .accumulation {
-  grid-row: -1/-2;
+#mainPage #personal .zkz .card-content .content {
+  flex: 100%;
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+#mainPage #personal .zkz .card-content .content .now,
+#mainPage #personal .zkz .card-content .content .accumulation {
+  flex: calc(50% - 1rem);
+  align-self: stretch;
   border-radius: 1.875rem;
   background-color: #1d1d1d;
-  padding: 1.25rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#mainPage #personal .zkz .card-content .now h6,
-#mainPage #personal .zkz .card-content .now .value,
-#mainPage #personal .zkz .card-content .now button,
-#mainPage #personal .zkz .card-content .accumulation h6,
-#mainPage #personal .zkz .card-content .accumulation .value,
-#mainPage #personal .zkz .card-content .accumulation button {
+#mainPage #personal .zkz .card-content .content .now h6,
+#mainPage #personal .zkz .card-content .content .accumulation h6 {
   flex: 1;
-}
-#mainPage #personal .zkz .card-content .now h6,
-#mainPage #personal .zkz .card-content .now button,
-#mainPage #personal .zkz .card-content .accumulation h6,
-#mainPage #personal .zkz .card-content .accumulation button {
   flex-grow: 0;
-}
-#mainPage #personal .zkz .card-content .now h6,
-#mainPage #personal .zkz .card-content .accumulation h6 {
-  padding: 0 1.25rem 1.25rem;
+  padding: 1.25rem;
   text-align: center;
   border-bottom: 0.125rem solid #3a3a3a;
   width: 100%;
 }
-#mainPage #personal .zkz .card-content .now .value,
-#mainPage #personal .zkz .card-content .accumulation .value {
-  padding: 2.5rem 1.25rem;
+#mainPage #personal .zkz .card-content .content .now .value,
+#mainPage #personal .zkz .card-content .content .accumulation .value {
+  flex: 1;
+  flex-grow: 1;
   font-size: 2.5rem;
   font-weight: 700;
-}
-#mainPage #personal .zkz .card-content .now .value span,
-#mainPage #personal .zkz .card-content .accumulation .value span {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  padding: 1.75rem 1.25rem;
 }
-#mainPage #personal .zkz .card-content .now .value span img,
-#mainPage #personal .zkz .card-content .accumulation .value span img {
+#mainPage #personal .zkz .card-content .content .now .value img,
+#mainPage #personal .zkz .card-content .content .accumulation .value img {
   width: 1.5rem;
 }
-#mainPage #personal .zkz .card-content .now {
-  grid-column: 1/2;
+#mainPage #personal .zkz .card-content .content .now .btn,
+#mainPage #personal .zkz .card-content .content .accumulation .btn {
+  min-height: 4rem;
 }
-#mainPage #personal .zkz .card-content .accumulation {
-  grid-column: 3/-1;
+#mainPage #personal .zkz .card-content .content .now .btn button,
+#mainPage #personal .zkz .card-content .content .accumulation .btn button {
+  margin-bottom: 1.25rem;
 }
 #mainPage #personal .record {
   flex: 100%;
@@ -2974,13 +2995,13 @@ body {
 #mainPage #personal .record .filter .dropdown .dropdown-content ul {
   padding-right: 0.5rem;
 }
-#mainPage #personal .record .filter .dropdown .dropdown-content ul li.active {
-  background-color: #3a3a3a;
-}
 @media (hover: hover) {
-  #mainPage #personal .record .filter .dropdown .dropdown-content ul li:hover {
+  #mainPage #personal .record .filter .dropdown .dropdown-content ul > li:hover > a {
     background-color: #3a3a3a;
   }
+}
+#mainPage #personal .record .filter .dropdown .dropdown-content ul > li.active > a {
+  background-color: #3a3a3a;
 }
 #mainPage #personal .record .filter .dropdown.active .dropdown-content {
   padding: 1rem 0.5rem 1rem 1rem;
@@ -3003,6 +3024,10 @@ body {
   justify-content: center;
   text-align: center;
 }
+#mainPage #personal .record .no-record img {
+  max-width: 12.5rem;
+  margin-bottom: 2rem;
+}
 #mainPage #personal .record .no-record button {
   margin: 1.25rem auto;
 }
@@ -3021,7 +3046,7 @@ body {
   bottom: -0.5rem;
 }
 @media (max-width: 1280px) {
-  #mainPage #personal .linense,
+  #mainPage #personal .license,
   #mainPage #personal .zkz {
     flex: 100%;
   }
@@ -3089,42 +3114,53 @@ body {
     background-image: url(../img/bg/inner-bg-m.jpg);
     padding: 0 1rem;
   }
-  #mainPage #personal .linense .carousel {
+  #mainPage #personal .license .carousel {
     padding: 0 4.25rem 1rem;
   }
-  #mainPage #personal .linense .carousel .swiper-slide {
+  #mainPage #personal .license .carousel .swiper-slide {
     flex-wrap: wrap;
   }
-  #mainPage #personal .linense .carousel .swiper-slide .img {
+  #mainPage #personal .license .carousel .swiper-slide .img {
     flex: 100%;
     max-width: 100%;
     text-align: center;
   }
-  #mainPage #personal .linense .carousel .swiper-slide .img img {
+  #mainPage #personal .license .carousel .swiper-slide .img img {
     max-width: 12.5rem;
   }
-  #mainPage #personal .linense .carousel .swiper-slide .img button {
+  #mainPage #personal .license .carousel .swiper-slide .img button {
     left: calc(50% - 6.25rem + 1.25rem);
   }
-  #mainPage #personal .linense .carousel .swiper-slide .desc {
+  #mainPage #personal .license .carousel .swiper-slide .desc {
     flex: 100%;
   }
-  #mainPage #personal .linense.coming-soon::after {
+  #mainPage #personal .license.coming-soon::after {
     background-size: 200%;
+  }
+  #mainPage #personal .zkz .card-content .content {
+    flex-wrap: wrap;
+  }
+  #mainPage #personal .zkz .card-content .content .now,
+  #mainPage #personal .zkz .card-content .content .accumulation {
+    flex: 100%;
+  }
+  #mainPage #personal .zkz .card-content .content .now .btn,
+  #mainPage #personal .zkz .card-content .content .accumulation .btn {
+    min-height: auto;
   }
 }
 @media (max-width: 516px) {
-  #mainPage #personal .linense .carousel {
+  #mainPage #personal .license .carousel {
     padding: 0 3.5rem 1rem;
   }
-  #mainPage #personal .linense .carousel .swiper-slide .img img {
+  #mainPage #personal .license .carousel .swiper-slide .img img {
     max-width: 9.375rem;
   }
-  #mainPage #personal .linense .carousel .swiper-slide .desc .input-group input {
+  #mainPage #personal .license .carousel .swiper-slide .desc .input-group input {
     flex: 4.5rem;
     max-width: 4.5rem;
   }
-  #mainPage #personal .linense .carousel .swiper-button-prev, #mainPage #personal .linense .carousel .swiper-button-next {
+  #mainPage #personal .license .carousel .swiper-button-prev, #mainPage #personal .license .carousel .swiper-button-next {
     width: 3rem;
     height: 3rem;
   }
