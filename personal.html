@@ -598,11 +598,12 @@
                     <div class="content">
                         <div class="input-wrap">
                             <label for="price">欲提領數量</label>
-                            <div class="input-group">
+                            <input name="price" type="text" value="500">
+                            <!-- <div class="input-group">
                                 <input name="price" type="text" value="100">
-                                <label>/ 100</label>
-                            </div>
-                            <span class="helper">超過本次可提領上限！</span>
+                                <label>/<span>3,000,000</span></label>
+                            </div> -->
+                            <span class="helper">待領取$ZKZ數量為 300</span>
                         </div>
                         <div class="input-wrap">
                             <label for="address">收款錢包</label>
@@ -613,9 +614,17 @@
                 </div>
                 <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>
-                    <button class="submit">確認</button>
+                    <button class="submit">提領</button>
                 </div>
             </div>
+        </div>
+
+
+
+        <!-- toast -->
+        <!-- 超過可提領額度 -->
+        <div id="overtake" class="toast">
+            餘額不足
         </div>
     </div>
 

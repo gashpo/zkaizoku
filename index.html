@@ -381,7 +381,7 @@
 								Description description description description description description description
 								description.
 							</p>
-							<button disabled>Coming Soon</button>
+							<button>View All NFT</button>
 						</div>
 					</div>
 				</section>
@@ -664,6 +664,8 @@
 
 		if (isComingSoon) {
 			$('#nft-idx .swiper-button-prev, #nft-idx .swiper-button-next').addClass('swiper-button-disabled');
+			$('#nft-idx .desc button').html('Coming Soon')
+			$('#nft-idx .desc button').attr('disabled', '')
 		}
 	</script>
 </body>

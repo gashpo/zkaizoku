@@ -1,0 +1,40 @@
+.toast {
+    display: none;
+    z-index: 9;
+    position: fixed;
+    top: size(150);
+    left: 50%;
+    @include capital;
+    color: color(primary-2);
+    align-items: center;
+    gap: size(8);
+    padding: size(8) size(16);
+    border-radius: size(8);
+    background-color: rgba(color(primary), .5);
+
+    &::before {
+        font-family: 'icomoon';
+        content: '\e918';
+    }
+
+    &.active {
+        display: flex;
+        animation: toast-show .5s forwards;
+    }
+
+    @keyframes toast-show {
+        0% {
+            transform: translate(-50%, size(20));
+        }
+
+        100% {
+            transform: translate(-50%, 0);
+        }
+    }
+
+
+    // smallpad ~ 768
+    @include max-to(small-pad) {
+        top: size(44);
+    }
+}

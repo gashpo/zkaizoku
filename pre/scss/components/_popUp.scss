@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     background-color: rgba(black, .8);
-    z-index: 10;
+    z-index: 8;
 
     .popUp--container {
         position: absolute;
@@ -16,7 +16,7 @@
         background-color: black;
         border-radius: size(20);
         padding: size(28);
-        width: size(510);
+        max-width: size(800);
         max-height: 80svh;
         box-shadow: 0 0 size(40) 0 rgba(color(primary-4), 0.56);
 
@@ -73,10 +73,10 @@
     }
 
 
-    // mobile ~ 516
-    @include max-to(mobile) {
+    // pad ~ 1024
+    @include max-to(pad) {
         .popUp--container {
-            max-width: calc(100svw - size(32));
+            width: calc(100svw - size(32));
         }
     }
 }
@@ -140,9 +140,12 @@
 
                     label {
                         text-align: right;
-                        min-width: size(48);
                         @include body-2;
                         color: color(gray-6);
+
+                        span {
+                            margin-left: size(4);
+                        }
                     }
                 }
 

@@ -12,28 +12,37 @@ $('.zkz .value span').each(function () {
 })
 
 $('#withdraw .submit').click(function () {
-    $(this).parent().siblings('h3').html('提領完成')
+    var inputPrice = $(this).parent().siblings('.popUp--content').find('[name=price]').val()
 
-    $(this).parent().parent().find('[for=price]').html('本次提領數量')
+    if (parseInt(inputPrice) > 300) {
+        $('#overtake').addClass('active')
+        setTimeout(() => {
+            $('#overtake').removeClass('active')
+        }, 5000);
+    } else {
+        $(this).parent().siblings('h3').html('提領完成')
 
-    $(this).parent().parent().find('[name=price]').attr('disabled', '')
+        $(this).parent().parent().find('[for=price]').html('本次提領數量')
 
-    $(this).html('確認')
-    $(this).click(function () {
-        $('.popUp').removeClass('active')
-        $('.popUp').hide()
-        $('body').css('overflow-y', 'auto')
-    })
+        $(this).parent().parent().find('[name=price]').attr('disabled', '')
 
-    $(this).siblings('.close').html('查看提領紀錄')
-    $(this).siblings('.close').click(function () {
-        $('.popUp').removeClass('active')
-        $('.popUp').hide()
-        $('body').css('overflow-y', 'auto')
+        $(this).html('確認')
+        $(this).click(function () {
+            $('.popUp').removeClass('active')
+            $('.popUp').hide()
+            $('body').css('overflow-y', 'auto')
+        })
 
-        var recordOffset = $('.record').offset().top
-        $('html,body').animate({ scrollTop: recordOffset - 120 }, 100)
-    })
+        $(this).siblings('.close').html('查看提領紀錄')
+        $(this).siblings('.close').click(function () {
+            $('.popUp').removeClass('active')
+            $('.popUp').hide()
+            $('body').css('overflow-y', 'auto')
+
+            var recordOffset = $('.record').offset().top
+            $('html,body').animate({ scrollTop: recordOffset - 120 }, 100)
+        })
+    }
 })
 
 
