@@ -54,6 +54,10 @@ header {
                 gap: size(8);
 
                 >li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
                     >a {
                         padding: size(10) size(24);
                         color: white;

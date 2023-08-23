@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            background-color: rgba(black, 0);
             transition-property: background-color;
             transition-duration: .3s;
 
@@ -32,6 +33,7 @@
                 overflow: hidden;
 
                 img {
+                    margin-bottom: size(-3);
                     border-radius: size(30);
                     transition-property: transform;
                     transition-duration: .3s;
@@ -50,7 +52,8 @@
 
             @media (hover: hover) {
                 &:hover {
-                    background-color: black;
+                    background-color: rgba(black, 1);
+                    transition-duration: .7s;
 
                     .img {
                         img {
@@ -66,15 +69,7 @@
         .card-content {
             display: flex;
             gap: size(40);
-        }
-
-        .img {
-            flex: 60%;
-            max-width: 60%;
-
-            img {
-                border-radius: size(30);
-            }
+            position: relative;
         }
 
         .content {
@@ -90,6 +85,14 @@
                 color: color(gray-4);
                 border-radius: size(10);
                 @include body-1;
+            }
+
+            .input-group {
+
+                >label,
+                >input {
+                    flex-grow: 1;
+                }
             }
         }
     }
@@ -112,7 +115,6 @@
 
     // small-pad ~ 768
     @include max-to(small-pad) {
-        background-image: url(../img/bg/inner-bg-m.jpg);
         margin-top: size(-16);
         padding: 0 size(16);
 

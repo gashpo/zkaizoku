@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* reset css */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+TC:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Noto+Sans+TC:wght@500;700;900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -190,7 +190,7 @@ html {
 
 /* body 設定 */
 body {
-  font-family: "Inter", "Noto Sans TC", cursive;
+  font-family: "Inter", "Noto Sans TC", "Noto Sans SC", cursive;
   background-color: #871B1F;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -599,6 +599,7 @@ body {
 #mainPage .tags {
   margin: 1.25rem 0 2.5rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
 #mainPage .tags li {
@@ -1014,6 +1015,8 @@ body {
 #mainPage .input-group > label {
   word-break: keep-all;
   flex-grow: 0;
+  display: flex;
+  align-items: center;
 }
 #mainPage .input-group + .helper {
   display: block;
@@ -1250,6 +1253,11 @@ body {
   display: flex;
   gap: 0.5rem;
 }
+#mainPage header .options .nav > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #mainPage header .options .nav > ul > li > a {
   padding: 0.625rem 1.5rem;
   color: white;
@@ -1474,6 +1482,11 @@ body {
 @media (max-width: 1440px) {
   #mainPage main section {
     padding: 1.25rem;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage main.innerPage {
+    background-image: url(../img/bg/inner-bg-m.jpg);
   }
 }
 @media (max-width: 516px) {
@@ -2652,6 +2665,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0);
   transition-property: background-color;
   transition-duration: 0.3s;
 }
@@ -2661,6 +2675,7 @@ body {
   overflow: hidden;
 }
 #mainPage #game .game-list > li .img img {
+  margin-bottom: -0.1875rem;
   border-radius: 1.875rem;
   transition-property: transform;
   transition-duration: 0.3s;
@@ -2676,6 +2691,7 @@ body {
 @media (hover: hover) {
   #mainPage #game .game-list > li:hover {
     background-color: black;
+    transition-duration: 0.7s;
   }
   #mainPage #game .game-list > li:hover .img img {
     transform: scale(1.1);
@@ -2684,13 +2700,7 @@ body {
 #mainPage #game .game-detail .card-content {
   display: flex;
   gap: 2.5rem;
-}
-#mainPage #game .game-detail .img {
-  flex: 60%;
-  max-width: 60%;
-}
-#mainPage #game .game-detail .img img {
-  border-radius: 1.875rem;
+  position: relative;
 }
 #mainPage #game .game-detail .content {
   flex: 1;
@@ -2713,6 +2723,10 @@ body {
     line-height: 1.3;
   }
 }
+#mainPage #game .game-detail .content .input-group > label,
+#mainPage #game .game-detail .content .input-group > input {
+  flex-grow: 1;
+}
 @media (max-width: 1024px) {
   #mainPage #game .game-list > li {
     flex: 33.33%;
@@ -2724,7 +2738,6 @@ body {
 }
 @media (max-width: 768px) {
   #mainPage #game {
-    background-image: url(../img/bg/inner-bg-m.jpg);
     margin-top: -1rem;
     padding: 0 1rem;
   }
@@ -2757,6 +2770,243 @@ body {
   }
   #mainPage #game .game-detail .content .desc {
     order: 2;
+  }
+}
+#mainPage .game-zone {
+  flex: 60%;
+  max-width: 60%;
+  border-radius: 1.875rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+#mainPage .game-zone .default {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#mainPage .game-zone .default::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 9.375rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: -1;
+}
+#mainPage .game-zone .play-game {
+  display: none;
+  opacity: 0;
+  position: inherit;
+  height: 100%;
+}
+#mainPage .game-zone .play-game video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 0;
+}
+#mainPage .game-zone .play-game .game-content {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+#mainPage .game-zone .play-game .game-content .result {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#mainPage .game-zone .play-game .game-content .result img {
+  max-width: 5rem;
+  animation: 3s infinite forwards;
+}
+#mainPage .game-zone .play-game .game-content .result img:nth-child(1) {
+  animation-name: float-1;
+  animation-timing-function: linear;
+}
+#mainPage .game-zone .play-game .game-content .result img:nth-child(2) {
+  animation-name: float-2;
+  animation-timing-function: linear;
+}
+#mainPage .game-zone .play-game .game-content .result img:nth-child(3) {
+  animation-name: float-3;
+}
+#mainPage .game-zone .play-game .game-content .result.dicing img {
+  animation-duration: 1s;
+}
+#mainPage .game-zone .play-game .game-content .result.show img {
+  animation-play-state: paused;
+}
+#mainPage .game-zone .play-game .game-content .selection {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+#mainPage .game-zone .play-game .game-content .selection div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+#mainPage .game-zone .play-game .game-content .selection div input {
+  display: none;
+}
+#mainPage .game-zone .play-game .game-content .selection div input[disabled] + label {
+  cursor: not-allowed;
+}
+#mainPage .game-zone .play-game .game-content .selection div label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mainPage .game-zone .play-game .game-content .selection div label img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#mainPage .game-zone .play-game .game-content .selection div.alert {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  animation: warning 1s forwards;
+}
+#mainPage .game-zone .play-game .game-content .selection button {
+  background-color: transparent;
+  padding: 0;
+  flex-grow: 0;
+}
+#mainPage .game-zone .play-game .game-content .selection button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#mainPage .game-zone .play-game::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 9.375rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+}
+#mainPage .game-zone.play .default {
+  display: none;
+}
+#mainPage .game-zone.play .play-game {
+  display: block;
+  animation: fade-in 1s forwards;
+}
+#mainPage .game-zone .popUp {
+  position: absolute;
+}
+#mainPage .game-zone .popUp .popUp--content {
+  text-align: center;
+}
+#mainPage .game-zone.guess-the-number .game-content .selection div label {
+  background-image: url(../img/game/guess-the-number/btn-bg.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 0.5rem;
+  filter: grayscale(100%);
+}
+#mainPage .game-zone.guess-the-number .game-content .selection div label img {
+  max-height: 3.5rem;
+  transition-property: transform;
+}
+#mainPage .game-zone.guess-the-number .game-content .selection div input:checked + label {
+  filter: grayscale(0);
+}
+#mainPage .game-zone.guess-the-number .game-content .selection div input:checked + label img {
+  transform: scale(1.1);
+}
+#mainPage .game-zone.guess-the-number .game-content .selection button img {
+  max-height: 3.5rem;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes float-1 {
+  0% {
+    transform: translate(0, 1.25rem);
+  }
+  50% {
+    transform: translate(0, -1.25rem);
+  }
+  100% {
+    transform: translate(0, 1.25rem);
+  }
+}
+@keyframes float-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -1.25rem);
+  }
+  75% {
+    transform: translate(0, 1.25rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes float-3 {
+  0% {
+    transform: translate(0, -1.25rem);
+  }
+  50% {
+    transform: translate(0, 1.25rem);
+  }
+  100% {
+    transform: translate(0, -1.25rem);
+  }
+}
+@keyframes warning {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 #mainPage #personal {

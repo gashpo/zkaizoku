@@ -131,135 +131,88 @@
 
         <main class="innerPage">
             <ul class="breadcrumb">
-                <li onclick="location='index.html'">首頁</li>
-                <li>Game</li>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li>Bet Big/Small</li>
             </ul>
 
             <section id="game">
                 <div class="container">
-                    <h3>Game</h3>
-                    <ul class="game-list">
-                        <li onclick="location='guess-the-number.html'">
-                            <div class="img">
-                                <img src="img/game/guess-the-number/thumb.jpg">
+                    <div class="game-detail card">
+                        <div class="card-content">
+                            <div class="game-zone bet-big-small"
+                                style="background-image: url(img/game/bet-big-small/cover.jpg);">
+                                <div class="default">
+                                    <h3>Bet Big/Small</h3>
+                                    <button>Start to play</button>
+                                </div>
+
+                                <div class="play-game">
+                                    <video autoplay muted loop poster="img/game/bet-big-small/bg.jpg">
+                                        <source src="img/game/bet-big-small/bg.mp4" type="video/mp4">
+                                        <source src="img/game/bet-big-small/bg.webm" type="video/webm">
+                                    </video>
+                                    <div class="game-content">
+                                        <div class="result">
+                                            <img src="img/game/dice/dice01.png">
+                                            <img src="img/game/dice/dice02.png">
+                                            <img src="img/game/dice/dice03.png">
+                                        </div>
+
+                                        <div class="selection">
+                                            <input id="dice01" type="radio" name="dice" value="dice01">
+                                            <label for="dice01"><img src="img/game/dice/dice01.png"></label>
+
+                                            <button class="play"><img src="img/game/btn-play.png"></button>
+
+                                            <input id="dice02" type="radio" name="dice" value="dice02">
+                                            <label for="dice02"><img src="img/game/dice/dice02.png"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="game-notice" class="popUp">
+                                    <div class="popUp--container">
+                                        <button class="popUp--close"><i class="icon-Close"></i></button>
+                                        <h3>Game Result</h3>
+                                        <div class="popUp--content">
+                                            <p>文字文字文字</p>
+                                        </div>
+                                        <div class="popUp--btns">
+                                            <button class="submit replay">Replay</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Guess the Number</h4>
-                            <ul class="tags">
-                                <li>fortune</li>
-                                <li>dice</li>
-                                <li>&lt; 3 minutes</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='bet-big-small.html'">
-                            <div class="img">
-                                <img src="img/game/bet-big-small/thumb.jpg">
+
+                            <div class="content">
+                                <h3>Bet Big/Small</h3>
+                                <div class="desc">
+                                    <p>
+                                        This is a probability game involving dice rolling. Should the number on your
+                                        rolled dice match that of the computer's, you will be able to receive the reward
+                                        amount, which is the result of multiplying your wager by the payout odds.
+                                        Conversely, if the number on your rolled dice differs from that of the
+                                        computer's, the system shall seize your wager.
+                                    </p>
+                                </div>
+                                <div class="input-group">
+                                    <label for="odds">
+                                        Odds
+                                        <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                    </label>
+                                    <input name="odds" type="text" value="xN.NN" disabled>
+                                </div>
+                                <div class="input-group">
+                                    <label for="bets">Bets</label>
+                                    <input name="bets" type="text" value="1">
+                                </div>
+                                <div>
+                                    <i class="icon-Change"></i> 累積交互次數：5 次
+                                </div>
                             </div>
-                            <h4>Bet Big/Small</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/odd-even-betting/thumb.jpg">
-                            </div>
-                            <h4>Odd/Even Betting</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/higher-number-wins/thumg.jpg">
-                            </div>
-                            <h4>Higher number wins</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-coming-soon.jpg">
-                            </div>
-                            <h4>《決勝時刻®：現代戰爭® II 2022》</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-coming-soon.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-coming-soon.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-coming-soon.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-coming-soon.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                        <li onclick="location='game-detail.html'">
-                            <div class="img">
-                                <img src="img/game/game-coming-soon.jpg">
-                            </div>
-                            <h4>Coin Matching</h4>
-                            <ul class="tags">
-                                <li>tag</li>
-                                <li>tag</li>
-                                <li>tag</li>
-                            </ul>
-                            <div class="btn"><button class="btn-tertiary">View Details</button></div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -302,6 +255,26 @@
 				</div> -->
             </div>
         </div>
+
+        <!-- 預設 pop up -->
+        <div id="info" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>這是一個預設彈窗</h3>
+                <div class="popUp--content">
+                    <p>彈窗的內文放這裡</p>
+                    <ol>
+                        <li>也可以條列式</li>
+                        <li>放置內文</li>
+                        <li>或是<a href="">超連結</a></li>
+                    </ol>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary close">取消</button>
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -319,13 +292,13 @@
     </script>
 
     <!-- Custom settings -->
-    <script src="js/navigation.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>å
     <script src="js/dropdown.js"></script>
     <script src="js/fulldown.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
+    <script src="js/game.js"></script>
 </body>
 
 </html>

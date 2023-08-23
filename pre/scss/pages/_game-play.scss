@@ -1,0 +1,310 @@
+.game-zone {
+    flex: 60%;
+    max-width: 60%;
+    border-radius: size(30);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .default {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: size(24);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: size(150);
+            background: linear-gradient(to bottom, rgba(black, 0) 0%, rgba(black, .8) 100%);
+            z-index: -1;
+        }
+    }
+
+    .play-game {
+        display: none;
+        opacity: 0;
+        position: inherit;
+        height: 100%;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 100%;
+            z-index: 0;
+        }
+
+        .game-content {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+
+            .result {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: size(8);
+
+                img {
+                    max-width: size(80);
+                    animation: 3s infinite forwards;
+
+                    &:nth-child(1) {
+                        animation-name: float-1;
+                        animation-timing-function: linear;
+                    }
+
+                    &:nth-child(2) {
+                        animation-name: float-2;
+                        animation-timing-function: linear;
+                    }
+
+                    &:nth-child(3) {
+                        animation-name: float-3;
+                    }
+                }
+
+                &.dicing {
+                    img {
+                        animation-duration: 1s;
+                    }
+                }
+
+                &.show {
+                    img {
+                        animation-play-state: paused;
+                    }
+                }
+            }
+
+            .selection {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: size(28) size(24);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: size(8);
+                z-index: 1;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: size(16);
+                    padding: size(8);
+
+                    input {
+                        display: none;
+
+                        &[disabled] {
+                            &+label {
+                                cursor: not-allowed;
+                            }
+                        }
+                    }
+
+                    label {
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    &.alert {
+                        border-radius: size(8);
+                        overflow: hidden;
+                        animation: warning 1s forwards;
+                    }
+                }
+
+                button {
+                    background-color: transparent;
+                    padding: 0;
+                    flex-grow: 0;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: size(150);
+            background: linear-gradient(to bottom, rgba(black, 0) 0%, rgba(black, .8) 100%);
+            z-index: 1;
+        }
+    }
+
+    &.play {
+        .default {
+            display: none;
+        }
+
+        .play-game {
+            display: block;
+            animation: fade-in 1s forwards;
+        }
+    }
+
+    .popUp {
+        position: absolute;
+
+        .popUp--content {
+            text-align: center;
+        }
+    }
+
+
+    &.guess-the-number {
+        .game-content {
+            .selection {
+                div {
+                    label {
+                        background-image: url(../img/game/guess-the-number/btn-bg.png);
+                        background-size: 100%;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        padding: 0 size(8);
+                        filter: grayscale(100%);
+
+                        img {
+                            max-height: size(56);
+                            transition-property: transform;
+                        }
+                    }
+
+                    input {
+                        &:checked {
+                            &+label {
+                                filter: grayscale(0);
+
+                                img {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    img {
+                        max-height: size(56);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// animation
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes float-1 {
+    0% {
+        transform: translate(0, size(20));
+    }
+
+    50% {
+        transform: translate(0, size(-20));
+    }
+
+    100% {
+        transform: translate(0, size(20));
+    }
+}
+
+@keyframes float-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(0, size(-20));
+    }
+
+    75% {
+        transform: translate(0, size(20));
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes float-3 {
+    0% {
+        transform: translate(0, size(-20));
+    }
+
+    50% {
+        transform: translate(0, size(20));
+    }
+
+    100% {
+        transform: translate(0, size(-20));
+    }
+}
+
+@keyframes warning {
+    0% {
+        background-color: rgba(white, 0);
+    }
+
+    25% {
+        background-color: rgba(white, .3);
+    }
+
+    50% {
+        background-color: rgba(white, 0);
+    }
+
+    75% {
+        background-color: rgba(white, .3);
+    }
+
+    100% {
+        background-color: rgba(white, 0);
+    }
+}

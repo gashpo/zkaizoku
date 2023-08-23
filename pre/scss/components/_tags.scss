@@ -1,6 +1,7 @@
 .tags {
     margin: size(20) 0 size(40);
     display: flex;
+    flex-wrap: wrap;
     gap: size(8);
 
     li {

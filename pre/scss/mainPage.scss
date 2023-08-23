@@ -14,10 +14,10 @@ html {
 
 
 /* body 設定 */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+TC:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Noto+Sans+TC:wght@500;700;900&display=swap');
 
 body {
-    font-family: 'Inter', 'Noto Sans TC', cursive;
+    font-family: 'Inter', 'Noto Sans TC', 'Noto Sans SC', cursive;
     background-color: color(primary);
     font-size: size(18);
     line-height: 1.5;
@@ -55,5 +55,6 @@ body {
 
     @import "pages/shop";
     @import "pages/game";
+    @import "pages/game-play";
     @import "pages/personal";
 }
