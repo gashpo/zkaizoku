@@ -16,48 +16,51 @@
         >li {
             flex: 25%;
             max-width: 25%;
-            padding: size(28);
-            border-radius: size(30);
+            @include radius;
             overflow: hidden;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            background-color: rgba(black, 0);
-            transition-property: background-color;
-            transition-duration: .3s;
 
-            .img {
-                margin-bottom: size(20);
-                border-radius: size(30);
-                overflow: hidden;
-
-                img {
-                    margin-bottom: size(-3);
-                    border-radius: size(30);
-                    transition-property: transform;
-                    transition-duration: .3s;
-                }
-            }
-
-            .tags {
-                margin: size(16) 0 size(40);
-            }
-
-            .btn {
-                flex-grow: 1;
+            >a {
+                padding: size(28);
+                height: 100%;
                 display: flex;
-                align-items: flex-end;
-            }
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: rgba(black, 0);
+                transition-property: background-color;
+                transition-duration: .3s;
 
-            @media (hover: hover) {
-                &:hover {
-                    background-color: rgba(black, 1);
-                    transition-duration: .7s;
+                .img {
+                    margin-bottom: size(20);
+                    @include radius;
+                    overflow: hidden;
 
-                    .img {
-                        img {
-                            transform: scale(1.1);
+                    img {
+                        margin-bottom: size(-3);
+                        @include radius;
+                        transition-property: transform;
+                        transition-duration: .3s;
+                    }
+                }
+
+                .tags {
+                    margin: size(16) 0 size(40);
+                }
+
+                .btn {
+                    flex-grow: 1;
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        background-color: rgba(black, 1);
+                        transition-duration: .7s;
+
+                        .img {
+                            img {
+                                transform: scale(1.1);
+                            }
                         }
                     }
                 }
@@ -88,6 +91,43 @@
             }
 
             .input-group {
+                input {
+                    &[name=bets] {
+                        border: size(1) solid transparent;
+                        transition-property: border-color;
+
+                        &.alert {
+                            animation: alert 1s forwards;
+                            border-color: color(primary-4);
+                        }
+                    }
+                }
+
+                @keyframes alert {
+                    0% {
+                        border-color: transparent;
+                    }
+
+                    20% {
+                        border-color: color(primary-4);
+                    }
+
+                    40% {
+                        border-color: transparent;
+                    }
+
+                    60% {
+                        border-color: color(primary-4);
+                    }
+
+                    80% {
+                        border-color: transparent;
+                    }
+
+                    100% {
+                        border-color: color(primary-4);
+                    }
+                }
 
                 >label,
                 >input {
@@ -105,8 +145,31 @@
                 flex: 33.33%;
                 max-width: 33.33%;
 
-                &:hover {
-                    background-color: transparent;
+                >a {
+                    padding: 0;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+
+        .game-detail {
+            .card-content {
+                flex-wrap: wrap;
+
+                .game-zone {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+
+                .content {
+                    flex: 100%;
+
+                    .desc {
+                        order: 2;
+                    }
                 }
             }
         }

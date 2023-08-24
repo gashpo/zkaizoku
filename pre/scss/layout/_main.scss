@@ -287,7 +287,7 @@ main {
     }
 
     .swiper {
-        border-radius: size(30);
+        @include radius;
 
         &-button-prev,
         &-button-next {
@@ -304,12 +304,12 @@ main {
 
         &-slide {
             overflow: hidden;
-            border-radius: size(30);
+            @include radius;
             cursor: pointer;
             position: relative;
 
             img {
-                border-radius: size(30);
+                @include radius;
                 margin-bottom: size(-8);
             }
 
@@ -451,7 +451,7 @@ main {
         }
 
         .swiper {
-            border-radius: size(30) size(30) 0 0;
+            border-radius: size(15) size(15) 0 0;
         }
     }
 
@@ -488,7 +488,7 @@ main {
             overflow: visible;
 
             &-slide {
-                border-radius: size(30);
+                @include radius;
                 overflow: hidden;
                 background-color: color(gray-9);
                 background-repeat: no-repeat;
@@ -725,7 +725,7 @@ main {
 
         .tab-content {
             overflow: hidden;
-            border-radius: size(30);
+            @include radius;
             background-color: black;
             position: relative;
             height: size(460);
@@ -857,7 +857,7 @@ main {
             padding: size(32) size(16);
 
             .tab-content {
-                border-radius: size(30);
+                @include radius;
                 height: svw(600);
             }
         }

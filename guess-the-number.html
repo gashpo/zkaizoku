@@ -63,7 +63,7 @@
 
     <div id="mainPage">
         <header>
-            <a class="main-logo" href="index.html"><img src="img/logo.svg"></a>
+            <a class="main-logo" href="index.html"><img src="img/logo_name.svg"></a>
             <div class="options">
                 <button class="menu"></button>
                 <div class="nav">
@@ -140,11 +140,13 @@
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone guess-the-number"
-                                style="background-image: url(img/game/guess-the-number/cover.jpg);">
+                            <div class="game-zone guess-the-number">
                                 <div class="default">
-                                    <h3>Guess the Number</h3>
-                                    <button>Start to play</button>
+                                    <img src="img/game/guess-the-number/cover.jpg">
+                                    <div class="game-title">
+                                        <h3>Guess the Number</h3>
+                                        <button>Start to play</button>
+                                    </div>
                                 </div>
 
                                 <div class="play-game">
@@ -162,22 +164,40 @@
                                         <div class="selection">
                                             <div>
                                                 <input id="dice01" type="radio" name="dice" value="dice01">
-                                                <label for="dice01"><img src="img/game/dice/dice01.png"></label>
+                                                <label for="dice01">
+                                                    <img class="bg" src="img/game/guess-the-number/btn-bg.png">
+                                                    <img class="item" src="img/game/dice/dice01.png">
+                                                </label>
 
                                                 <input id="dice02" type="radio" name="dice" value="dice02">
-                                                <label for="dice02"><img src="img/game/dice/dice02.png"></label>
+                                                <label for="dice02">
+                                                    <img class="bg" src="img/game/guess-the-number/btn-bg.png">
+                                                    <img class="item" src="img/game/dice/dice02.png">
+                                                </label>
 
                                                 <input id="dice03" type="radio" name="dice" value="dice03">
-                                                <label for="dice03"><img src="img/game/dice/dice03.png"></label>
+                                                <label for="dice03">
+                                                    <img class="bg" src="img/game/guess-the-number/btn-bg.png">
+                                                    <img class="item" src="img/game/dice/dice03.png">
+                                                </label>
 
                                                 <input id="dice04" type="radio" name="dice" value="dice04">
-                                                <label for="dice04"><img src="img/game/dice/dice04.png"></label>
+                                                <label for="dice04">
+                                                    <img class="bg" src="img/game/guess-the-number/btn-bg.png">
+                                                    <img class="item" src="img/game/dice/dice04.png">
+                                                </label>
 
                                                 <input id="dice05" type="radio" name="dice" value="dice05">
-                                                <label for="dice05"><img src="img/game/dice/dice05.png"></label>
+                                                <label for="dice05">
+                                                    <img class="bg" src="img/game/guess-the-number/btn-bg.png">
+                                                    <img class="item" src="img/game/dice/dice05.png">
+                                                </label>
 
                                                 <input id="dice06" type="radio" name="dice" value="dice06">
-                                                <label for="dice06"><img src="img/game/dice/dice06.png"></label>
+                                                <label for="dice06">
+                                                    <img class="bg" src="img/game/guess-the-number/btn-bg.png">
+                                                    <img class="item" src="img/game/dice/dice06.png">
+                                                </label>
                                             </div>
 
                                             <button class="play"><img src="img/game/btn-play.png"></button>
@@ -187,7 +207,6 @@
 
                                 <div id="game-notice" class="popUp">
                                     <div class="popUp--container">
-                                        <button class="popUp--close"><i class="icon-Close"></i></button>
                                         <h3>Game Result</h3>
                                         <div class="popUp--content">
                                             <p>文字文字文字</p>
@@ -219,7 +238,7 @@
                                 </div>
                                 <div class="input-group">
                                     <label for="bets">Bets</label>
-                                    <input name="bets" type="text" value="1">
+                                    <input name="bets" type="text" placeholder="enter your bets" required>
                                 </div>
                                 <div>
                                     <i class="icon-Change"></i> 累積交互次數：5 次
@@ -289,6 +308,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- 遊戲蓋版 -->
+        <div class="full-page"></div>
     </div>
 
 

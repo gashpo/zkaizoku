@@ -17,7 +17,7 @@
             flex: calc(50% - size(10));
             max-width: calc(50% - size(10));
             background-color: black;
-            border-radius: size(30);
+            @include radius;
             padding: size(40);
             display: flex;
             gap: size(40);
@@ -27,7 +27,7 @@
                 max-width: size(200);
 
                 img {
-                    border-radius: size(30);
+                    @include radius;
                 }
             }
 
@@ -45,7 +45,7 @@
                 }
 
                 button {
-                    @extend %btn-tertiary;
+                    @include btn-tertiary;
                     align-self: flex-end;
                 }
             }
@@ -66,7 +66,7 @@
             position: relative;
             width: size(30);
             height: size(30);
-            border-radius: size(30);
+            @include radius;
             background-color: color(primary-6);
             color: color(primary-4);
 
@@ -98,7 +98,7 @@
                 position: absolute;
                 width: size(30);
                 height: size(30);
-                border-radius: size(30);
+                @include radius;
                 background-color: rgba(white, .1);
                 z-index: -1;
             }
@@ -177,7 +177,7 @@
     .product-detail {
         margin-top: size(40);
         background-color: black;
-        border-radius: size(30);
+        @include radius;
         padding: size(40);
         display: flex;
         flex-wrap: wrap;
@@ -196,7 +196,7 @@
 
             img {
                 max-width: size(315);
-                border-radius: size(30);
+                @include radius;
             }
         }
 
@@ -348,7 +348,6 @@
 
                     img {
                         max-width: size(200);
-                        border-radius: size(15);
                     }
                 }
 
@@ -440,7 +439,6 @@
         .product-list {
             li {
                 padding: size(32) size(16);
-                border-radius: size(15);
             }
         }
 

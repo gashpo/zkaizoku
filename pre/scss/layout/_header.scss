@@ -112,7 +112,7 @@ header {
 
     .login {
         button {
-            @extend %btn-secondary;
+            @include btn-secondary;
             @include body-2;
         }
 

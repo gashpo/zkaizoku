@@ -63,7 +63,7 @@
 
     <div id="mainPage">
         <header>
-            <a class="main-logo" href="index.html"><img src="img/logo.svg"></a>
+            <a class="main-logo" href="index.html"><img src="img/logo_name.svg"></a>
             <div class="options">
                 <button class="menu"></button>
                 <div class="nav">
@@ -140,17 +140,18 @@
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone bet-big-small"
-                                style="background-image: url(img/game/bet-big-small/cover.jpg);">
+                            <div class="game-zone bet-big-small">
                                 <div class="default">
-                                    <h3>Bet Big/Small</h3>
-                                    <button>Start to play</button>
+                                    <img src="img/game/bet-big-small/cover.jpg">
+                                    <div class="game-title">
+                                        <h3>Bet Big/Small</h3>
+                                        <button>Start to play</button>
+                                    </div>
                                 </div>
 
                                 <div class="play-game">
                                     <video autoplay muted loop poster="img/game/bet-big-small/bg.jpg">
                                         <source src="img/game/bet-big-small/bg.mp4" type="video/mp4">
-                                        <source src="img/game/bet-big-small/bg.webm" type="video/webm">
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
@@ -160,20 +161,28 @@
                                         </div>
 
                                         <div class="selection">
-                                            <input id="dice01" type="radio" name="dice" value="dice01">
-                                            <label for="dice01"><img src="img/game/dice/dice01.png"></label>
+                                            <div>
+                                                <input id="big" type="radio" name="bet" value="big">
+                                                <label for="big">
+                                                    <img class="bg" src="img/game/bet-big-small/btn-bg.png">
+                                                    <img class="item" src="img/game/bet-big-small/item-big.png">
+                                                </label>
+                                            </div>
 
                                             <button class="play"><img src="img/game/btn-play.png"></button>
-
-                                            <input id="dice02" type="radio" name="dice" value="dice02">
-                                            <label for="dice02"><img src="img/game/dice/dice02.png"></label>
+                                            <div>
+                                                <input id="small" type="radio" name="bet" value="small">
+                                                <label for="small">
+                                                    <img class="bg" src="img/game/bet-big-small/btn-bg.png">
+                                                    <img class="item" src="img/game/bet-big-small/item-small.png">
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div id="game-notice" class="popUp">
                                     <div class="popUp--container">
-                                        <button class="popUp--close"><i class="icon-Close"></i></button>
                                         <h3>Game Result</h3>
                                         <div class="popUp--content">
                                             <p>文字文字文字</p>
@@ -205,7 +214,7 @@
                                 </div>
                                 <div class="input-group">
                                     <label for="bets">Bets</label>
-                                    <input name="bets" type="text" value="1">
+                                    <input name="bets" type="text" placeholder="enter your bets" required>
                                 </div>
                                 <div>
                                     <i class="icon-Change"></i> 累積交互次數：5 次
@@ -275,6 +284,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- 遊戲蓋版 -->
+        <div class="full-page"></div>
     </div>
 
 

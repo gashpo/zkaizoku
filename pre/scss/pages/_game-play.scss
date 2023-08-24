@@ -1,47 +1,49 @@
 .game-zone {
     flex: 60%;
     max-width: 60%;
-    border-radius: size(30);
+    @include radius;
     overflow: hidden;
     background-size: cover;
     background-position: center;
     position: relative;
 
     .default {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: size(24);
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        img {
+            margin-bottom: size(-8);
+        }
 
-        &::before {
-            content: '';
+        .game-title {
             position: absolute;
             left: 0;
             right: 0;
             bottom: 0;
-            height: size(150);
-            background: linear-gradient(to bottom, rgba(black, 0) 0%, rgba(black, .8) 100%);
-            z-index: -1;
+            padding: size(24);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: size(150);
+                background: linear-gradient(to bottom, rgba(black, 0) 0%, rgba(black, .8) 100%);
+                z-index: -1;
+            }
         }
     }
 
     .play-game {
+        margin-bottom: size(-8);
         display: none;
         opacity: 0;
         position: inherit;
         height: 100%;
 
         video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
             width: 100%;
             min-height: 100%;
             z-index: 0;
@@ -84,7 +86,7 @@
 
                 &.dicing {
                     img {
-                        animation-duration: 1s;
+                        animation-duration: .5s;
                     }
                 }
 
@@ -113,6 +115,8 @@
                     justify-content: center;
                     gap: size(16);
                     padding: size(8);
+                    border-radius: size(8);
+                    overflow: hidden;
 
                     input {
                         display: none;
@@ -125,6 +129,7 @@
                     }
 
                     label {
+                        position: relative;
                         cursor: pointer;
                         display: flex;
                         align-items: center;
@@ -133,12 +138,27 @@
                         img {
                             max-width: 100%;
                             max-height: 100%;
+
+                            &.bg {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                right: 0;
+                                bottom: 0;
+                                transform: translate(-50%, -50%);
+                                filter: grayscale(100%);
+                                z-index: -1;
+                                transition-property: filter;
+                            }
+
+                            &.item {
+                                max-height: size(56);
+                                transition-property: transform;
+                            }
                         }
                     }
 
                     &.alert {
-                        border-radius: size(8);
-                        overflow: hidden;
                         animation: warning 1s forwards;
                     }
                 }
@@ -150,7 +170,7 @@
 
                     img {
                         max-width: 100%;
-                        max-height: 100%;
+                        max-height: size(56);
                     }
                 }
             }
@@ -188,40 +208,142 @@
     }
 
 
-    &.guess-the-number {
-        .game-content {
-            .selection {
-                div {
-                    label {
-                        background-image: url(../img/game/guess-the-number/btn-bg.png);
-                        background-size: 100%;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        padding: 0 size(8);
-                        filter: grayscale(100%);
+    &.guess-the-number,
+    &.higher-number-wins {
+        .play-game {
+            .game-content {
+                .selection {
+                    div {
+                        label {
+                            padding: 0 size(8);
 
-                        img {
-                            max-height: size(56);
-                            transition-property: transform;
+                            img {
+                                &.bg {
+                                    filter: grayscale(100%);
+                                    transition-property: filter;
+                                }
+
+                                &.item {
+                                    transition-property: transform;
+                                }
+                            }
+                        }
+
+                        input {
+                            &:checked {
+                                &+label {
+                                    img {
+                                        &.bg {
+                                            filter: grayscale(0);
+                                        }
+
+                                        &.item {
+                                            transform: scale(1.1);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
 
-                    input {
-                        &:checked {
-                            &+label {
-                                filter: grayscale(0);
+                    button {
+                        img {
+                            max-height: size(56);
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-                                img {
-                                    transform: scale(1.1);
+    &.bet-big-small,
+    &.odd-even-betting {
+        .play-game {
+            .game-content {
+                .selection {
+                    div {
+                        label {
+                            img {
+                                &.bg {
+                                    opacity: .3;
+                                    transition-property: opacity;
+                                }
+                            }
+                        }
+
+                        input {
+                            &:checked {
+                                &+label {
+                                    img {
+                                        &.bg {
+                                            opacity: .7;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+
+    @include max-to(pad) {
+        .default {
+            .game-title {
+                padding: size(16);
 
                 button {
+                    @include btn-s;
+                }
+            }
+        }
+
+        .play-game {
+            .game-content {
+                .result {
+                    transform: translate(0, size(-10));
+
                     img {
-                        max-height: size(56);
+                        max-width: 15svw;
+                    }
+                }
+
+                .selection {
+                    padding: size(12) size(8);
+
+                    div {
+                        padding: size(4);
+                        border-radius: size(4);
+                    }
+                }
+            }
+        }
+
+        .popUp {
+            .popUp--container {
+                width: calc(100% - size(32));
+            }
+        }
+
+
+        &.guess-the-number,
+        &.higher-number-wins {
+            .play-game {
+                .game-content {
+                    .selection {
+                        div {
+                            gap: size(4);
+
+                            label {
+                                padding: 0;
+                            }
+                        }
+
+                        button {
+                            max-width: size(80);
+                        }
                     }
                 }
             }
@@ -306,5 +428,19 @@
 
     100% {
         background-color: rgba(white, 0);
+    }
+}
+
+.full-page {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+
+    &.active {
+        display: block;
     }
 }

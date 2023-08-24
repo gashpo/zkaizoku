@@ -71,8 +71,7 @@ a.button {
     }
 }
 
-
-%btn-secondary {
+@mixin btn-secondary {
     background-color: black;
     border: size(2) solid transparent;
 
@@ -90,7 +89,7 @@ a.button {
     }
 }
 
-%btn-tertiary {
+@mixin btn-tertiary {
     border: size(1) solid white;
     background-color: transparent;
 
@@ -105,6 +104,6 @@ a.button {
     }
 }
 
-%btn-s {
+@mixin btn-s {
     padding: size(9.5) size(20);
 }

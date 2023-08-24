@@ -43,7 +43,7 @@
                             bottom: size(20);
                             width: size(48);
                             height: size(48);
-                            border-radius: size(30);
+                            @include radius;
                             background-color: rgba(black, .6);
                             color: color(gray-3);
                             padding: 0;
@@ -185,7 +185,7 @@
                 .accumulation {
                     flex: calc(50% - size(16));
                     align-self: stretch;
-                    border-radius: size(30);
+                    @include radius;
                     background-color: color(gray-9);
                     display: flex;
                     flex-direction: column;
