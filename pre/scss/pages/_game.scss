@@ -95,37 +95,6 @@
                     &[name=bets] {
                         border: size(1) solid transparent;
                         transition-property: border-color;
-
-                        &.alert {
-                            animation: alert 1s forwards;
-                            border-color: color(primary-4);
-                        }
-                    }
-                }
-
-                @keyframes alert {
-                    0% {
-                        border-color: transparent;
-                    }
-
-                    20% {
-                        border-color: color(primary-4);
-                    }
-
-                    40% {
-                        border-color: transparent;
-                    }
-
-                    60% {
-                        border-color: color(primary-4);
-                    }
-
-                    80% {
-                        border-color: transparent;
-                    }
-
-                    100% {
-                        border-color: color(primary-4);
                     }
                 }
 

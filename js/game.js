@@ -1,5 +1,6 @@
 var gameSelection = $('.game-zone .play-game .selection')
 var gameResult = $('.game-zone .play-game .result')
+var betsInput = $('.content input[name="bets"]')
 
 // 開始遊玩
 $('.game-zone .default button').click(function () {
@@ -10,7 +11,6 @@ $('.game-zone .default button').click(function () {
 // 遊玩過程
 gameSelection.find('.play').click(function () {
     var selectedRadio = gameSelection.find('input[type=radio]:checked')
-    var betsInput = $('.content input[name="bets"]')
 
     if (selectedRadio.length > 0 && betsInput.val() != '') {
         // 骰子開始滾動
@@ -19,6 +19,7 @@ gameSelection.find('.play').click(function () {
         var newImagePath = imagePath.replace('png', 'gif')
         gameResult.find('img').attr('src', newImagePath)
         betsInput.removeClass('alert')
+        betsInput.attr('disabled', '')
 
         // 遊戲進行中禁用網頁所有操作
         $('.full-page').addClass('active')
@@ -46,13 +47,13 @@ gameSelection.find('.play').click(function () {
             gameResult.find('img').each(function (index) {
                 $(this).attr('src', selectedDicePaths[index])
             })
-        }, 2000);
+        }, 4000);
 
         // 彈窗顯示遊戲結果
         setTimeout(() => {
             $('#game-notice').addClass('active')
             $('.full-page').removeClass('active')
-        }, 4000);
+        }, 5500);
     } else {
         // 沒選賭注時跳提醒
         if (selectedRadio.length === 0) {
@@ -83,4 +84,5 @@ $('.replay').click(function () {
     gameResult.find('img:nth-child(1)').attr('src', 'img/game/dice/dice01.png')
     gameResult.find('img:nth-child(2)').attr('src', 'img/game/dice/dice02.png')
     gameResult.find('img:nth-child(3)').attr('src', 'img/game/dice/dice03.png')
+    betsInput.removeAttr('disabled')
 })

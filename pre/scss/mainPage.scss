@@ -1,6 +1,5 @@
 @import "reset";
 @import "var";
-@import "animation";
 
 * {
     transition-duration: .2s;
@@ -45,6 +44,7 @@ body {
     @import "components/toast";
     @import "components/form";
     @import "components/swiper-custom";
+    @import "components/loading";
 
     @import "global";
 

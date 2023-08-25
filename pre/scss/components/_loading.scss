@@ -1,0 +1,68 @@
+.loading {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(black, .8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+
+    &-container {
+        .loading-rotate {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .rotate {
+                background-image: url(../img/loading-bg.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                width: size(105);
+                height: size(105);
+
+                svg {
+                    fill: color(primary);
+                    animation: spin 1s infinite ease-in-out;
+                }
+
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(size(105)*.6);
+            }
+        }
+
+        .loading-title {
+            @include body-1;
+            text-align: center;
+            margin-top: size(8);
+        }
+    }
+
+    &.full {
+        position: fixed;
+    }
+
+    &.section {
+        position: absolute;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
