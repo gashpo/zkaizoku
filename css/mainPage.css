@@ -2817,6 +2817,7 @@ body {
   flex-direction: column;
   gap: 1.25rem;
   height: 31.14rem;
+  overflow: hidden;
 }
 #mainPage #game .game-detail .content .desc {
   flex: 100%;
@@ -2841,6 +2842,7 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 #mainPage #game .game-detail .content .awards {
+  flex: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -2905,6 +2907,7 @@ body {
   height: 1.625rem !important;
 }
 #mainPage #game .game-detail .content .odd-n-bet {
+  flex: 100%;
   display: flex;
   gap: 1.25rem;
 }
@@ -2978,6 +2981,7 @@ body {
   }
 }
 #mainPage #game .game-detail .content .count {
+  flex: 100%;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2988,13 +2992,10 @@ body {
 }
 @media (max-width: 1440px) {
   #mainPage #game .game-detail .content {
-    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6 + 1.25rem);
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6 + 2.5rem);
   }
 }
 @media (max-width: 1280px) {
-  #mainPage #game .game-detail .content {
-    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6 + 2.5rem);
-  }
   #mainPage #game .game-detail .content .awards .award-list {
     height: 3.75rem;
     min-height: 3.75rem;
@@ -3267,6 +3268,7 @@ body {
 }
 #mainPage .game-zone .popUp .popUp--content {
   text-align: center;
+  min-width: 25.95rem;
 }
 #mainPage .game-zone.guess-the-number .play-game .game-content .selection div label, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label {
   padding: 0 0.5rem;
@@ -3332,7 +3334,7 @@ body {
     padding: 0;
   }
   #mainPage .game-zone.guess-the-number .play-game .game-content .selection button, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection button {
-    max-width: 5rem;
+    max-width: 9rem;
   }
 }
 @keyframes fade-in {

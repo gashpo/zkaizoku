@@ -211,6 +211,8 @@
 
         .popUp--content {
             text-align: center;
+            min-width: calc((size(1440) - size(28)*2) * .6 * .5);
+            // (container - card padding) * game-zone flex * 50%
         }
     }
 
@@ -359,7 +361,7 @@
                         }
 
                         button {
-                            max-width: size(80);
+                            max-width: size(144);
                         }
                     }
                 }
