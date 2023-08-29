@@ -1431,7 +1431,6 @@ body {
 }
 #mainPage .breadcrumb li {
   display: inline-block;
-  cursor: default;
   font-size: 0.875rem;
   font-weight: 500;
   color: #ca898c;
@@ -1441,8 +1440,15 @@ body {
     font-size: 0.75rem;
   }
 }
-#mainPage .breadcrumb li:not(:last-child) {
-  cursor: pointer;
+#mainPage .breadcrumb li > a {
+  color: #ca898c;
+  transition-property: color;
+  text-decoration: none;
+}
+@media (hover: hover) {
+  #mainPage .breadcrumb li > a:hover {
+    color: #d29b9d;
+  }
 }
 #mainPage .breadcrumb li:not(:last-child)::after {
   font-family: "Icomoon";
@@ -2810,7 +2816,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  height: 34.254rem;
+  height: 31.14rem;
 }
 #mainPage #game .game-detail .content .desc {
   flex: 100%;
@@ -2982,7 +2988,7 @@ body {
 }
 @media (max-width: 1440px) {
   #mainPage #game .game-detail .content {
-    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.66);
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6);
   }
 }
 @media (max-width: 1280px) {
@@ -3087,6 +3093,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  height: 31.14rem;
 }
 @media (max-width: 768px) {
   #mainPage .game-zone {
@@ -3284,7 +3291,15 @@ body {
 #mainPage .game-zone.bet-big-small .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.odd-even-betting .play-game .game-content .selection div input:checked + label img.bg {
   opacity: 0.7;
 }
+@media (max-width: 1440px) {
+  #mainPage .game-zone {
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6);
+  }
+}
 @media (max-width: 1024px) {
+  #mainPage .game-zone {
+    height: auto;
+  }
   #mainPage .game-zone .default .game-title {
     padding: 1rem;
   }

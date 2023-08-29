@@ -6,13 +6,14 @@
 
     li {
         display: inline-block;
-        cursor: default;
         @include capital;
         color: color(primary-2);
 
-        &:not(:last-child) {
-            cursor: pointer;
+        >a {
+            @include a-color(color(primary-2));
+        }
 
+        &:not(:last-child) {
             &::after {
                 font-family: 'Icomoon';
                 content: '\e902';

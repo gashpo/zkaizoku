@@ -6,6 +6,8 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    height: calc((size(1440) - size(28)*2) * .6 * .6);
+    // (container - card padding) * game-zone flex * height ratio
 
     .default {
         img {
@@ -294,7 +296,17 @@
     }
 
 
+    // pc ~ 1440
+    @include max-to(pc) {
+        height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .6);
+        // (window width - section padding - card padding) * game-zone flex * height ratio
+    }
+
+
+    // pad ~ 1024
     @include max-to(pad) {
+        height: auto;
+
         .default {
             .game-title {
                 padding: size(16);
