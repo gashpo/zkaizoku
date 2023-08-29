@@ -10,9 +10,13 @@ $('.game-zone .default button').click(function () {
 
 // 遊玩過程
 gameSelection.find('.play').click(function () {
+    // 賭本必須為正整數
+    var isPositiveInteger = /^[1-9]\d*$/.test(betsInput.val())
     var selectedRadio = gameSelection.find('input[type=radio]:checked')
 
-    if (selectedRadio.length > 0 && betsInput.val() != '') {
+    if (selectedRadio.length > 0 && isPositiveInteger && parseInt(betsInput.val()) < 301) {
+        betsInput.parent().removeClass('alert')
+
         // 骰子開始滾動
         gameResult.addClass('dicing')
         var imagePath = gameResult.find('img').attr('src')
@@ -52,25 +56,53 @@ gameSelection.find('.play').click(function () {
         // 彈窗顯示遊戲結果
         setTimeout(() => {
             $('#game-notice').addClass('active')
+            $('#game-notice').show()
             $('.full-page').removeClass('active')
         }, 5500);
     } else {
         // 沒選賭注時跳提醒
         if (selectedRadio.length === 0) {
+            $('#no-select').addClass('active')
             $(this).siblings('div').addClass('alert');
             setTimeout(() => {
+                $('#no-select').removeClass('active')
                 $(this).siblings('div').removeClass('alert');
-            }, 1000);
+            }, 3000);
         }
 
         // 沒填賭本時跳提醒
         if (betsInput.val() === '') {
-            betsInput.removeClass('alert')
+            $('#no-value').addClass('active')
             setTimeout(() => {
-                betsInput.addClass('alert')
+                $('#no-value').removeClass('active')
+            }, 3000)
+
+            betsInput.parent().removeClass('alert')
+            setTimeout(() => {
+                betsInput.parent().addClass('alert')
             }, 1);
+        } else if (parseInt(betsInput.val()) > 300) {
+            $('#exceed').addClass('active')
+            setTimeout(() => {
+                $('#exceed').removeClass('active')
+            }, 3000)
+
+            betsInput.parent().removeClass('alert')
+            setTimeout(() => {
+                betsInput.parent().addClass('alert')
+            }, 1);
+        } else if (!isPositiveInteger) {
+            $('#wrong-value').addClass('active')
+            setTimeout(() => {
+                $('#wrong-value').removeClass('active')
+            }, 3000)
+
+            betsInput.parent().removeClass('alert')
+            setTimeout(() => {
+                betsInput.parent().addClass('alert')
+            }, 1)
         } else {
-            betsInput.removeClass('alert')
+            betsInput.parent().removeClass('alert')
         }
     }
 })

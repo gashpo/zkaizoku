@@ -80,6 +80,8 @@
             display: flex;
             flex-direction: column;
             gap: size(20);
+            height: calc((size(1440) - size(28)*2) * .6 * .66);
+            // (container - card padding) * game-zone flex * height ratio
 
             .desc {
                 flex: 100%;
@@ -88,19 +90,219 @@
                 color: color(gray-4);
                 border-radius: size(10);
                 @include body-1;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar {
+                    background-color: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: rgba(white, .3);
+                }
             }
 
-            .input-group {
-                input {
-                    &[name=bets] {
-                        border: size(1) solid transparent;
-                        transition-property: border-color;
+            .awards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: size(8);
+                color: color(primary-2);
+                @include capital;
+
+                .louder {
+                    flex: size(26);
+                    max-width: size(26);
+                    background-color: color(gray-9);
+                    border-radius: size(50);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: size(26);
+                    height: size(26);
+                    font-size: size(16);
+
+                    i {
+                        animation: shake 3.4s infinite linear;
+                    }
+
+                    @keyframes shake {
+                        0% {
+                            transform: rotate(-15deg);
+                        }
+
+                        5% {
+                            transform: rotate(-15deg);
+                        }
+
+                        20% {
+                            transform: rotate(10deg);
+                        }
+
+                        35% {
+                            transform: rotate(-15deg);
+                        }
+
+                        50% {
+                            transform: rotate(10deg);
+                        }
+
+                        65% {
+                            transform: rotate(-15deg);
+                        }
+
+                        100% {
+                            transform: rotate(-15deg);
+                        }
                     }
                 }
 
-                >label,
-                >input {
-                    flex-grow: 1;
+                .award-list {
+                    flex: calc(100% - size(26) - size(8));
+                    max-width: calc(100% - size(26) - size(8));
+                    height: size(94);
+                    min-height: size(94);
+                    overflow: hidden;
+
+                    .swiper-slide {
+                        background-color: color(gray-9);
+                        border-radius: size(50);
+                        padding: size(4) size(8);
+                        height: size(26) !important;
+                    }
+                }
+            }
+
+            .odd-n-bet {
+                display: flex;
+                gap: size(20);
+
+                .odds,
+                .bets {
+                    flex: calc(50% - size(10));
+                    max-width: calc(50% - size(10));
+                    padding: size(16);
+                    border-radius: size(10);
+                    border: size(3) solid transparent;
+                }
+
+                .odds {
+                    background-color: color(gray-9);
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        margin: size(24) 0;
+                        text-align: center;
+                    }
+                }
+
+                .bets {
+                    background-color: color(primary);
+
+                    label {
+                        display: block;
+                    }
+
+                    input {
+                        margin: size(18) 0 size(4) 0;
+                        @include body-2;
+                        padding: size(10) size(24);
+                        max-width: 100%;
+                        min-width: 100%;
+
+                        &::-webkit-inner-spin-button,
+                        &::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+                    }
+
+                    .helper {
+                        color: rgba(white, .3);
+                    }
+
+                    &.alert {
+                        animation: betsAlert 1s forwards;
+                    }
+
+                    @keyframes betsAlert {
+                        0% {
+                            border-color: rgba(white, 0);
+                        }
+
+                        25% {
+                            border-color: rgba(white, .3);
+                        }
+
+                        50% {
+                            border-color: rgba(white, 0);
+                        }
+
+                        75% {
+                            border-color: rgba(white, .3);
+                        }
+
+                        99% {
+                            border-color: rgba(white, 0);
+                        }
+
+                        100% {
+                            border-color: rgba(white, .3);
+                        }
+                    }
+                }
+            }
+
+            .count {
+                display: flex;
+                align-items: center;
+                gap: size(8);
+
+                button {
+                    padding: size(10);
+                    font-size: size(14);
+                }
+            }
+        }
+    }
+
+
+    // pc ~ 1440
+    @include max-to(pc) {
+        .game-detail {
+            .content {
+                height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .66);
+                // (window width - section padding - card padding) * game-zone flex * height ratio
+            }
+        }
+    }
+
+
+    // laptop ~ 1280
+    @include max-to(laptop) {
+        .game-detail {
+            .content {
+                .awards {
+                    .award-list {
+                        height: size(60);
+                        min-height: size(60);
+                    }
+                }
+
+                .odd-n-bet {
+                    .odds {
+                        h3 {
+                            margin: size(20) 0;
+                        }
+                    }
+
+                    .bets {
+                        input {
+                            margin: size(8) 0 size(4) 0;
+                        }
+                    }
                 }
             }
         }
@@ -115,7 +317,7 @@
                 max-width: 33.33%;
 
                 >a {
-                    padding: 0;
+                    padding: size(12);
 
                     &:hover {
                         background-color: transparent;
@@ -135,8 +337,37 @@
 
                 .content {
                     flex: 100%;
+                    height: auto;
 
                     .desc {
+                        order: 4;
+                        max-height: size(120);
+                    }
+
+                    .awards {
+                        order: 3;
+
+                        .award-list {
+                            height: size(94);
+                            min-height: size(94);
+                        }
+                    }
+
+                    .odd-n-bet {
+                        .odds {
+                            h3 {
+                                margin: size(24) 0;
+                            }
+                        }
+
+                        .bets {
+                            input {
+                                margin: size(18) 0 size(4) 0;
+                            }
+                        }
+                    }
+
+                    .count {
                         order: 2;
                     }
                 }
@@ -160,12 +391,16 @@
                 border-radius: 0;
                 align-items: stretch;
 
-                .img {
-                    margin-bottom: size(16);
-                }
+                >a {
+                    padding: 0;
 
-                .tags {
-                    margin: size(8) 0 size(20);
+                    .img {
+                        margin-bottom: size(16);
+                    }
+
+                    .tags {
+                        margin: size(8) 0 size(20);
+                    }
                 }
             }
         }

@@ -845,45 +845,63 @@ body {
     height: 3.3625rem;
   }
 }
-#mainPage .toast {
-  display: none;
+#mainPage .toast-container {
   z-index: 9;
   position: fixed;
-  top: 9.375rem;
+  top: 9rem;
   left: 50%;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #ca898c;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background-color: rgba(135, 27, 31, 0.5);
 }
 @media (max-width: 1280px) {
-  #mainPage .toast {
+  #mainPage .toast-container {
     font-size: 0.75rem;
   }
 }
-#mainPage .toast::before {
+#mainPage .toast-container .toast {
+  display: none;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0.25rem rgba(157, 64, 67, 0.4);
+}
+#mainPage .toast-container .toast::before {
   font-family: "icomoon";
+}
+#mainPage .toast-container .toast.warning {
+  background-color: rgba(135, 27, 31, 0.8);
+}
+#mainPage .toast-container .toast.warning::before {
   content: "\e918";
 }
-#mainPage .toast.active {
-  display: flex;
+#mainPage .toast-container .toast.success {
+  background-color: rgba(77, 157, 64, 0.8);
+}
+#mainPage .toast-container .toast.success::before {
+  content: "\e91a";
+}
+#mainPage .toast-container .toast.active {
+  display: table;
   animation: toast-show 0.5s forwards;
 }
 @keyframes toast-show {
   0% {
-    transform: translate(-50%, 1.25rem);
+    opacity: 0;
+    transform: translate(-50%, -1.25rem);
   }
   100% {
+    opacity: 1;
     transform: translate(-50%, 0);
   }
 }
 @media (max-width: 768px) {
-  #mainPage .toast {
-    top: 2.75rem;
+  #mainPage .toast-container {
+    top: 2.25rem;
   }
 }
 #mainPage input,
@@ -2792,6 +2810,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  height: 34.254rem;
 }
 #mainPage #game .game-detail .content .desc {
   flex: 100%;
@@ -2801,6 +2820,7 @@ body {
   border-radius: 0.625rem;
   font-size: 1.125rem;
   line-height: 1.5;
+  overflow-y: auto;
 }
 @media (max-width: 1280px) {
   #mainPage #game .game-detail .content .desc {
@@ -2808,13 +2828,174 @@ body {
     line-height: 1.3;
   }
 }
-#mainPage #game .game-detail .content .input-group input[name=bets] {
-  border: 0.0625rem solid transparent;
-  transition-property: border-color;
+#mainPage #game .game-detail .content .desc::-webkit-scrollbar {
+  background-color: transparent;
 }
-#mainPage #game .game-detail .content .input-group > label,
-#mainPage #game .game-detail .content .input-group > input {
-  flex-grow: 1;
+#mainPage #game .game-detail .content .desc::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#mainPage #game .game-detail .content .awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #ca898c;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+@media (max-width: 1280px) {
+  #mainPage #game .game-detail .content .awards {
+    font-size: 0.75rem;
+  }
+}
+#mainPage #game .game-detail .content .awards .louder {
+  flex: 1.625rem;
+  max-width: 1.625rem;
+  background-color: #1d1d1d;
+  border-radius: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  font-size: 1rem;
+}
+#mainPage #game .game-detail .content .awards .louder i {
+  animation: shake 3.4s infinite linear;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(-15deg);
+  }
+  5% {
+    transform: rotate(-15deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  35% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  65% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+#mainPage #game .game-detail .content .awards .award-list {
+  flex: calc(100% - 1.625rem - 0.5rem);
+  max-width: calc(100% - 1.625rem - 0.5rem);
+  height: 5.875rem;
+  min-height: 5.875rem;
+  overflow: hidden;
+}
+#mainPage #game .game-detail .content .awards .award-list .swiper-slide {
+  background-color: #1d1d1d;
+  border-radius: 3.125rem;
+  padding: 0.25rem 0.5rem;
+  height: 1.625rem !important;
+}
+#mainPage #game .game-detail .content .odd-n-bet {
+  display: flex;
+  gap: 1.25rem;
+}
+#mainPage #game .game-detail .content .odd-n-bet .odds,
+#mainPage #game .game-detail .content .odd-n-bet .bets {
+  flex: calc(50% - 0.625rem);
+  max-width: calc(50% - 0.625rem);
+  padding: 1rem;
+  border-radius: 0.625rem;
+  border: 0.1875rem solid transparent;
+}
+#mainPage #game .game-detail .content .odd-n-bet .odds {
+  background-color: #1d1d1d;
+}
+#mainPage #game .game-detail .content .odd-n-bet .odds label {
+  display: flex;
+  align-items: center;
+}
+#mainPage #game .game-detail .content .odd-n-bet .odds h3 {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+#mainPage #game .game-detail .content .odd-n-bet .bets {
+  background-color: #871B1F;
+}
+#mainPage #game .game-detail .content .odd-n-bet .bets label {
+  display: block;
+}
+#mainPage #game .game-detail .content .odd-n-bet .bets input {
+  margin: 1.125rem 0 0.25rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  padding: 0.625rem 1.5rem;
+  max-width: 100%;
+  min-width: 100%;
+}
+@media (max-width: 1280px) {
+  #mainPage #game .game-detail .content .odd-n-bet .bets input {
+    font-size: 0.8125rem;
+    line-height: 1.3;
+  }
+}
+#mainPage #game .game-detail .content .odd-n-bet .bets input::-webkit-inner-spin-button, #mainPage #game .game-detail .content .odd-n-bet .bets input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#mainPage #game .game-detail .content .odd-n-bet .bets .helper {
+  color: rgba(255, 255, 255, 0.3);
+}
+#mainPage #game .game-detail .content .odd-n-bet .bets.alert {
+  animation: betsAlert 1s forwards;
+}
+@keyframes betsAlert {
+  0% {
+    border-color: rgba(255, 255, 255, 0);
+  }
+  25% {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0);
+  }
+  75% {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  99% {
+    border-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+#mainPage #game .game-detail .content .count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#mainPage #game .game-detail .content .count button {
+  padding: 0.625rem;
+  font-size: 0.875rem;
+}
+@media (max-width: 1440px) {
+  #mainPage #game .game-detail .content {
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.66);
+  }
+}
+@media (max-width: 1280px) {
+  #mainPage #game .game-detail .content .awards .award-list {
+    height: 3.75rem;
+    min-height: 3.75rem;
+  }
+  #mainPage #game .game-detail .content .odd-n-bet .odds h3 {
+    margin: 1.25rem 0;
+  }
+  #mainPage #game .game-detail .content .odd-n-bet .bets input {
+    margin: 0.5rem 0 0.25rem 0;
+  }
 }
 @media (max-width: 1024px) {
   #mainPage #game .game-list > li {
@@ -2822,7 +3003,7 @@ body {
     max-width: 33.33%;
   }
   #mainPage #game .game-list > li > a {
-    padding: 0;
+    padding: 0.75rem;
   }
   #mainPage #game .game-list > li > a:hover {
     background-color: transparent;
@@ -2836,8 +3017,26 @@ body {
   }
   #mainPage #game .game-detail .card-content .content {
     flex: 100%;
+    height: auto;
   }
   #mainPage #game .game-detail .card-content .content .desc {
+    order: 4;
+    max-height: 7.5rem;
+  }
+  #mainPage #game .game-detail .card-content .content .awards {
+    order: 3;
+  }
+  #mainPage #game .game-detail .card-content .content .awards .award-list {
+    height: 5.875rem;
+    min-height: 5.875rem;
+  }
+  #mainPage #game .game-detail .card-content .content .odd-n-bet .odds h3 {
+    margin: 1.5rem 0;
+  }
+  #mainPage #game .game-detail .card-content .content .odd-n-bet .bets input {
+    margin: 1.125rem 0 0.25rem 0;
+  }
+  #mainPage #game .game-detail .card-content .content .count {
     order: 2;
   }
 }
@@ -2856,10 +3055,13 @@ body {
     border-radius: 0;
     align-items: stretch;
   }
-  #mainPage #game .game-list > li .img {
+  #mainPage #game .game-list > li > a {
+    padding: 0;
+  }
+  #mainPage #game .game-list > li > a .img {
     margin-bottom: 1rem;
   }
-  #mainPage #game .game-list > li .tags {
+  #mainPage #game .game-list > li > a .tags {
     margin: 0.5rem 0 1.25rem;
   }
   #mainPage #game .game-detail {
@@ -3038,6 +3240,10 @@ body {
   height: 9.375rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 1;
+}
+#mainPage .game-zone .play-game .toast-container {
+  position: absolute;
+  top: 1rem;
 }
 #mainPage .game-zone.play .default {
   display: none;

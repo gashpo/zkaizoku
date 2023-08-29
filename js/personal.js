@@ -18,7 +18,7 @@ $('#withdraw .submit').click(function () {
         $('#overtake').addClass('active')
         setTimeout(() => {
             $('#overtake').removeClass('active')
-        }, 5000);
+        }, 3000);
     } else {
         $(this).parent().siblings('h3').html('提領完成')
 
