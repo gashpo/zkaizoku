@@ -1473,7 +1473,7 @@ body {
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
-  min-height: 45svw;
+  min-height: calc(100svh - 5.5rem - 7.5rem);
 }
 #mainPage main.innerPage section {
   position: inherit;

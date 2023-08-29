@@ -11,7 +11,8 @@ main {
         background-attachment: fixed;
         position: relative;
         overflow: hidden;
-        min-height: 45svw;
+        min-height: calc(100svh - size(88) - size(120));
+        // 100svh - header - footer
 
         section {
             position: inherit;
