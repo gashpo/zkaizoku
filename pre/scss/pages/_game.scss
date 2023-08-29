@@ -273,8 +273,8 @@
     @include max-to(pc) {
         .game-detail {
             .content {
-                height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .6);
-                // (window width - section padding - card padding) * game-zone flex * height ratio
+                height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .6 + size(20));
+                // (window width - section padding - card padding) * game-zone flex * height ratio + 20px
             }
         }
     }
@@ -284,6 +284,9 @@
     @include max-to(laptop) {
         .game-detail {
             .content {
+                height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .6 + size(40));
+                // (window width - section padding - card padding) * game-zone flex * height ratio + 40px
+
                 .awards {
                     .award-list {
                         height: size(60);
