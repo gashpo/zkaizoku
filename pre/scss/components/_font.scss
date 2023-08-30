@@ -90,12 +90,10 @@ a {
 
     .body-1 {
         font-size: size(15);
-        line-height: 1.3;
     }
 
     .body-2 {
         font-size: size(13);
-        line-height: 1.3;
     }
 
     .capital {
@@ -110,7 +108,6 @@ a {
 
     @include max-to(pad) {
         font-size: size(15);
-        line-height: 1.3;
     }
 }
 
@@ -120,7 +117,6 @@ a {
 
     @include max-to(pad) {
         font-size: size(13);
-        line-height: 1.3;
     }
 }
 
