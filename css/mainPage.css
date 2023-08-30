@@ -204,6 +204,9 @@ body {
     color: lightgray;
   }
 }
+#mainPage .text-center {
+  text-align: center;
+}
 @media (max-width: 1280px) {
   #mainPage .title-xl {
     font-size: 1.875rem;
@@ -242,7 +245,7 @@ body {
 #mainPage input[type=button],
 #mainPage input[type=submit],
 #mainPage a.button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -250,6 +253,7 @@ body {
   background-color: #871B1F;
   color: white;
   border-radius: 0.625rem;
+  border: 0.0625rem solid transparent;
   padding: 0.625rem 1.5rem;
   transition-property: background-color;
   font-size: 0.9375rem;
@@ -458,6 +462,7 @@ body {
     text-align: center;
   }
   #mainPage .fulldown .fulldown-content > ul > li > a {
+    width: 100%;
     display: block;
     padding: 0.625rem 1.5rem;
     cursor: pointer;
@@ -696,6 +701,7 @@ body {
   background-color: black;
   border-radius: 1.25rem;
   padding: 1.75rem;
+  min-width: 31.875rem;
   max-width: 50rem;
   max-height: 80svh;
   box-shadow: 0 0 2.5rem 0 rgba(157, 64, 67, 0.56);
@@ -2091,6 +2097,13 @@ body {
 }
 #mainPage #tutorial .content .tab-content li img {
   margin-bottom: 2rem;
+  max-width: 15rem;
+  border-radius: 0.9375rem;
+}
+@media (max-width: 768px) {
+  #mainPage #tutorial .content .tab-content li img {
+    border-radius: 0.9375rem;
+  }
 }
 #mainPage #tutorial .content .tab-content li p {
   margin: 0.5rem auto 2rem;
@@ -2318,6 +2331,50 @@ body {
 #mainPage footer .sns li button {
   font-size: 1.25rem;
   padding: 0.6875rem;
+}
+#mainPage footer img {
+  position: fixed;
+  right: 2rem;
+  bottom: 4.25rem;
+  width: 9.375rem;
+  z-index: 6;
+  cursor: pointer;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  animation: btn-float 5s infinite;
+}
+@media (hover: hover) {
+  #mainPage footer img:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes btn-bounce {
+  40% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.05);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+@keyframes btn-float {
+  0% {
+    transform: translate(0, -0.25rem);
+  }
+  50% {
+    transform: translate(0, 0.25rem);
+  }
+  100% {
+    transform: translate(0, -0.25rem);
+  }
 }
 @media (max-width: 516px) {
   #mainPage footer .mask {
@@ -2601,6 +2658,11 @@ body {
 }
 #mainPage #shop .product-detail .content .purchase .price h2 {
   display: inline-block;
+}
+#mainPage #shop .product-detail .content .purchase .btns {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 #mainPage #shop .product-detail.step2, #mainPage #shop .product-detail.step3 {
   max-width: 55rem;

@@ -108,9 +108,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- <li>
-                            <a href="https://twitter.com/ZKaizoku_" target="_blank"><i class="icon-Twitter"></i> Twitter</a>
-                        </li> -->
+                        <li>
+                            <a href="https://twitter.com/ZKaizoku_" target="_blank">
+                                <i class="icon-Twitter"></i> Twitter
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -133,7 +135,7 @@
             <section id="shop">
                 <div class="container">
                     <!-- 進度切換到每個步驟時，.progress 增加相對應 .step1~3 -->
-                    <ul class="progress step2">
+                    <ul class="progress step1">
                         <li>
                             <h5>1</h5>
                             <span>商品明細</span>
@@ -176,7 +178,7 @@
                                         推薦碼
                                         <i class="icon-InfoCircle popUp--open" for="info"></i>
                                     </label>
-                                    <input name="referral-code" type="text" placeholder="Placeholder">
+                                    <input name="referral-code" type="text" placeholder="請輸入推薦碼">
                                 </div>
                                 <div class="price">
                                     <img src="img/Ethereum.svg">
@@ -185,12 +187,15 @@
                                         <span>ETH</span>
                                     </div>
                                 </div>
-                                <button>購買</button>
+                                <div class="btns">
+                                    <a class="button btn-tertiary" href="shop.html">返回</a>
+                                    <button class="submit">購買</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- 步驟二 -->
-                    <div class="product-detail step2">
+                    <div class="product-detail step2" style="display: none;">
                         <h3 class="title">購買確認</h3>
                         <div class="img"><img src="img/product01.jpg"></div>
                         <div class="content">
@@ -234,12 +239,15 @@
                                         <span>ETH</span>
                                     </div>
                                 </div>
-                                <button class="popUp--open" for="failed">購買</button>
+                                <div class="btns">
+                                    <button class="prev-step btn-tertiary">上一步</button>
+                                    <button class="popUp--open" for="failed">購買</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- 步驟三 -->
-                    <div class="product-detail step3">
+                    <div class="product-detail step3" style="display: none;">
                         <h3 class="title">購買確認</h3>
                         <div class="img"><img src="img/product01.jpg"></div>
                         <div class="content">
@@ -283,7 +291,7 @@
                                         <span>ETH</span>
                                     </div>
                                 </div>
-                                <button class="btn-tertiary" onclick="location='personal.html'">查看訂單記錄</button>
+                                <a class="button btn-tertiary" href="personal.html">查看訂單記錄</a>
                             </div>
                         </div>
                     </div>
@@ -293,15 +301,41 @@
 
         <footer>
             <div class="mask"></div>
-            <ul class="sns">
+            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
+            <!-- <ul class="sns">
                 <li>
-                    <button class="btn-rounded"><i class="icon-Twitter"></i></button>
+                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+                        <i class="icon-Twitter"></i>
+                    </button>
                 </li>
-            </ul>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul> -->
         </footer>
 
 
 
+
+        <!-- 預設 pop up -->
+        <div id="info" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>這是一個預設彈窗</h3>
+                <div class="popUp--content">
+                    <p>彈窗的內文放這裡</p>
+                    <ol>
+                        <li>也可以條列式</li>
+                        <li>放置內文</li>
+                        <li>或是<a href="">超連結</a></li>
+                    </ol>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary close">取消</button>
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
 
         <!-- pop up 系統通知 -->
         <div id="failed" class="popUp">
@@ -319,7 +353,7 @@
                     <p>如持續發生異常，請與我們聯繫，謝謝您！</p>
                 </div>
                 <div class="popUp--btns">
-                    <button class="submit">確認</button>
+                    <button class="submit close">確認</button>
                 </div>
             </div>
         </div>
@@ -357,16 +391,23 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery.min.js"></script>
+    <script type="text/javascript">
+        var mediaPC = window.matchMedia('(max-width: 1440px)')
+        var mediaLaptop = window.matchMedia('(max-width: 1280px)')
+        var mediaPad = window.matchMedia('(max-width: 1024px)')
+        var mediaSmallPad = window.matchMedia('(max-width: 768px)')
+        var mediaMobile = window.matchMedia('(max-width: 516px)')
+        var mediaSmallMobile = window.matchMedia('(max-width: 320px)')
+    </script>
 
     <!-- Custom settings -->
     <script src="js/navigation.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/fulldown.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
-    <script src="js/progress.js"></script>
+    <script src="js/shop.js"></script>
 </body>
 
 </html>

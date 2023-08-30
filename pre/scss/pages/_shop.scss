@@ -247,6 +247,12 @@
                         display: inline-block;
                     }
                 }
+
+                .btns {
+                    display: flex;
+                    align-items: center;
+                    gap: size(20);
+                }
             }
         }
 

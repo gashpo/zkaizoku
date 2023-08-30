@@ -409,57 +409,39 @@
 									<h5>3</h5>
 									<h4>Step 3</h4>
 								</li>
-								<li>
+								<!-- <li>
 									<h5>4</h5>
 									<h4>Step 4</h4>
 								</li>
 								<li>
 									<h5>5</h5>
 									<h4>Step 5</h4>
-								</li>
+								</li> -->
 							</ul>
 							<ul class="tab-content">
 								<li class="active">
 									<div>
-										<h2>Connect your cryptocurrency wallet</h2>
-										<p>
-											Please scroll to the top of this page, and click the buttom in the upper
-											right
-											to
-											connect your cryptocurrency wallet.
-										</p>
+										<h2>連結區塊鏈錢包</h2>
+										<p>請將頁面滑至首頁最上方，點選右上角連結你的加密貨幣錢包</p>
 										<button class="popUp--open" for="login">Connect Wallet</button>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h2>Mint the ZKaizoku License(dNFT)</h2>
-										<p>
-											Go to the marketplace to mint the "ZKaizoku License"(dNFT) to receive an
-											unique
-											avatar and the qualification of earning $ZKZ(the circulating utility tokens
-											on
-											this platform).(If you do not mint "ZKaizoku License", you can still play
-											games
-											on ZKaizoku platform and accumulate your own interaction counts on zkSync
-											Era.
-											However, you will NOT be able to amass $ZKZ. Consequently, this means you
-											will
-											not be eligible to receive our airdrops in the future.)
-										</p>
+										<h2>透過交互獲得$ZKZ</h2>
+										<p>遊玩平台上的遊戲，透過智能合約中的交互獲得$ZKZ。（待補一條公式）</p>
+										<a href="game.html" class="button">開始遊戲</a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<img src="img/step3.png">
-										<h2>Earn $ZKZ through the interaction</h2>
-										<p>
-											Play the games on ZKaizoku platform, and you will earn $ZKZ through the
-											interaction of the smart contract.
-										</p>
+										<img src="img/coin.gif">
+										<h2>累積$ZKZ迎接未來</h2>
+										<p>未來我們將開放使用$ZKZ升級dNFT，以此為依據進行來自開發者份額的$ZKS空投。空投份額規劃詳情請見此處。</p>
+										<button id="go-zkz">立刻查看</button>
 									</div>
 								</li>
-								<li>
+								<!-- <li>
 									<div>
 										<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
 										<p>
@@ -483,7 +465,7 @@
 											here.
 										</p>
 									</div>
-								</li>
+								</li> -->
 							</ul>
 						</div>
 					</div>
@@ -508,16 +490,17 @@
 
 			<footer>
 				<div class="mask"></div>
-				<ul class="sns">
+				<img class="popUp--open" for="mission" src="img/daily-mission.png">
+				<!-- <ul class="sns">
 					<li>
 						<button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
 							<i class="icon-Twitter"></i>
 						</button>
 					</li>
-					<!-- <li>
+					<li>
 						<button class="btn-rounded"><i class="icon-Telegram"></i></button>
-					</li> -->
-				</ul>
+					</li>
+				</ul> -->
 			</footer>
 
 
@@ -549,10 +532,25 @@
 				</div>
 			</div>
 
+			<!-- pop up 每日任務 -->
+			<div id="mission" class="popUp">
+				<div class="popUp--container">
+					<button class="popUp--close"><i class="icon-Close"></i></button>
+					<h3>領取成功</h3>
+					<div class="popUp--content">
+						<p class="text-center">24小時後可以再次領取</p>
+					</div>
+					<div class="popUp--btns">
+						<!-- <button class="btn-tertiary close">取消</button> -->
+						<button class="submit close">確認</button>
+					</div>
+				</div>
+			</div>
+
 
 
 			<!-- 滿版 Loading -->
-			<div class="loading full">
+			<!-- <div class="loading full">
 				<div class="loading-container">
 					<div class="loading-spinner">
 						<span></span>
@@ -560,7 +558,7 @@
 					</div>
 					<div class="loading-title">Loading...</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -576,6 +574,10 @@
 		var mediaSmallPad = window.matchMedia('(max-width: 768px)')
 		var mediaMobile = window.matchMedia('(max-width: 516px)')
 		var mediaSmallMobile = window.matchMedia('(max-width: 320px)')
+
+		$('#go-zkz').click(function () {
+			$('html,body').animate({ scrollTop: $('#zkz').offset().top - 50 }, 100)
+		})
 	</script>
 
 	<!-- Custom settings -->

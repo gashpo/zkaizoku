@@ -71,11 +71,11 @@
                 <button class="menu"></button>
                 <div class="nav">
                     <ul>
-                        <li onclick="location='shop.html'"><a href="javascript:void()">商城</a></li>
-                        <li onclick="location='game.html'"><a href="javascript:void()">Game</a></li>
-                        <li onclick="location='index.html#nft-idx'"><a href="javascript:void()">NFT</a></li>
-                        <li onclick="location='index.html#tutorial'"><a href="javascript:void()">教學</a></li>
-                        <li onclick="location='index.html#zkz'"><a href="javascript:void()">$ZKZ</a></li>
+                        <li><a href="shop.html">商城</a></li>
+                        <li><a href="game.html">Game</a></li>
+                        <li><a href="index.html#nft-idx">NFT</a></li>
+                        <li><a href="index.html#tutorial">教學</a></li>
+                        <li><a href="index.html#zkz">$ZKZ</a></li>
                         <li for="bridge" class="dropdown">
                             <button>Bridge</button>
                             <div class="dropdown-content">
@@ -111,9 +111,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- <li>
-                            <a href="https://twitter.com/ZKaizoku_" target="_blank"><i class="icon-Twitter"></i> Twitter</a>
-                        </li> -->
+                        <li>
+                            <a href="https://twitter.com/ZKaizoku_" target="_blank">
+                                <i class="icon-Twitter"></i> Twitter
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -124,7 +126,7 @@
                     <button>0x130...123DxA</button>
                     <div class="dropdown-content">
                         <ul>
-                            <li><a href="javascript:void()">個人資訊</a></li>
+                            <li><a href="personal.html">個人資訊</a></li>
                             <li><a href="javascript:void()">登出</a></li>
                         </ul>
                     </div>
@@ -291,7 +293,7 @@
                             </ul>
 
                             <div class="filter">
-                                <div class="days">
+                                <!-- <div class="days">
                                     <span>篩選</span>
                                     <div class="dropdown">
                                         <button>30天</button>
@@ -303,7 +305,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="pages">
                                     <span>頁數</span>
                                     <div class="dropdown">
@@ -325,6 +327,7 @@
 
                             <ul class="tab-content">
                                 <li class="active">
+                                    <!-- 一頁10筆資料 -->
                                     <table>
                                         <thead>
                                             <tr>
@@ -445,56 +448,6 @@
                                                 <td class="record-status"><span><i class="error">•</i> 失敗</span></td>
                                                 <td class="record-view"><button class="btn-tertiary">查看</button></td>
                                             </tr>
-                                            <tr>
-                                                <td class="record-time">2020-03-03 23:55</td>
-                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                                <td class="record-price">
-                                                    <span></span>
-                                                    <div><img src="img/coin.png">301,100.051831</div>
-                                                </td>
-                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
-                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="record-time">2020-03-03 23:55</td>
-                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                                <td class="record-price">
-                                                    <span></span>
-                                                    <div><img src="img/coin.png">301,100.051831</div>
-                                                </td>
-                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
-                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="record-time">2020-03-03 23:55</td>
-                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                                <td class="record-price">
-                                                    <span></span>
-                                                    <div><img src="img/coin.png">3,000</div>
-                                                </td>
-                                                <td class="record-status"><span><i class="error">•</i> 失敗</span></td>
-                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="record-time">2020-03-03 23:55</td>
-                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                                <td class="record-price">
-                                                    <span></span>
-                                                    <div><img src="img/coin.png">3,000</div>
-                                                </td>
-                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
-                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="record-time">2020-03-03 23:55</td>
-                                                <td class="record-trackno"><span></span>TOR20221214361430000016</td>
-                                                <td class="record-price">
-                                                    <span></span>
-                                                    <div><img src="img/coin.png">301,100.051831</div>
-                                                </td>
-                                                <td class="record-status"><span><i class="success">•</i> 已完成</span></td>
-                                                <td class="record-view"><button class="btn-tertiary">查看</button></td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </li>
@@ -517,11 +470,17 @@
 
         <footer>
             <div class="mask"></div>
-            <ul class="sns">
+            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
+            <!-- <ul class="sns">
                 <li>
-                    <button class="btn-rounded"><i class="icon-Twitter"></i></button>
+                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+                        <i class="icon-Twitter"></i>
+                    </button>
                 </li>
-            </ul>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul> -->
         </footer>
 
 

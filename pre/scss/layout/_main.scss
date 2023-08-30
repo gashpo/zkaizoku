@@ -747,6 +747,8 @@ main {
 
                 img {
                     margin-bottom: size(32);
+                    max-width: size(240);
+                    @include radius(15);
                 }
 
                 p {

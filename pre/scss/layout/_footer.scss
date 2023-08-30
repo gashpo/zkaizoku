@@ -55,6 +55,60 @@ footer {
         }
     }
 
+    img {
+        position: fixed;
+        right: size(32);
+        bottom: size(68);
+        width: size(150);
+        z-index: 6;
+        cursor: pointer;
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+        animation: btn-float 5s infinite;
+
+        @media (hover: hover) {
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    @keyframes btn-bounce {
+        40% {
+            transform: scale(1);
+        }
+
+        45% {
+            transform: scale(1.05);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+
+        55% {
+            transform: scale(1.05);
+        }
+
+        60% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes btn-float {
+        0% {
+            transform: translate(0, size(-4));
+        }
+
+        50% {
+            transform: translate(0, size(4));
+        }
+
+        100% {
+            transform: translate(0, size(-4));
+        }
+    }
+
 
     // mobile ~ 516
     @include max-to(mobile) {

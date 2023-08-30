@@ -2,7 +2,7 @@ button,
 input[type=button],
 input[type=submit],
 a.button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: size(8);
@@ -10,6 +10,7 @@ a.button {
     background-color: color(primary);
     color: white;
     border-radius: size(10);
+    border: size(1) solid transparent;
     padding: size(10) size(24);
     transition-property: background-color;
     @include body-2;

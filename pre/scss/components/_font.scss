@@ -55,6 +55,10 @@ a {
     @include a-color(white, color(gray-2));
 }
 
+.text-center {
+    text-align: center;
+}
+
 @include max-to(laptop) {
     .title-xl {
         font-size: size(30);
