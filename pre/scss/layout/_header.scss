@@ -61,7 +61,7 @@ header {
                     >a {
                         padding: size(10) size(24);
                         color: white;
-                        border-radius: size(10);
+                        @include radius(10, 10);
                         transition-property: background-color;
                         display: flex;
                         align-items: center;
@@ -163,7 +163,6 @@ header {
                     >li {
                         >a {
                             padding: svw(10) svw(20);
-                            border-radius: svw(10);
                         }
                     }
                 }

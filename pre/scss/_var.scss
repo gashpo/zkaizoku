@@ -140,6 +140,10 @@ $colors: map-merge($colors, (gray-1: mix(white, color(gray), 80%),
 @mixin radius($pc: 30, $m: 15) {
     border-radius: size($pc);
 
+    @include max-to(pc) {
+        border-radius: svw($pc);
+    }
+
     @include max-to(small-pad) {
         border-radius: size($m);
     }

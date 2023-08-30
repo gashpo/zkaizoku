@@ -73,28 +73,6 @@ footer {
         }
     }
 
-    @keyframes btn-bounce {
-        40% {
-            transform: scale(1);
-        }
-
-        45% {
-            transform: scale(1.05);
-        }
-
-        50% {
-            transform: scale(1);
-        }
-
-        55% {
-            transform: scale(1.05);
-        }
-
-        60% {
-            transform: scale(1);
-        }
-    }
-
     @keyframes btn-float {
         0% {
             transform: translate(0, size(-4));
@@ -110,10 +88,22 @@ footer {
     }
 
 
+    // small-pad ~768
+    @include max-to(small-pad) {
+        img {
+            right: size(20);
+        }
+    }
+
+
     // mobile ~ 516
     @include max-to(mobile) {
         .mask {
             left: calc(100svw - svw(500));
+        }
+
+        img {
+            width: size(120);
         }
     }
 }

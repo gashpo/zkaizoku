@@ -418,55 +418,57 @@
 									<h4>Step 5</h4>
 								</li> -->
 							</ul>
-							<ul class="tab-content">
-								<li class="active">
-									<div>
-										<h2>連結區塊鏈錢包</h2>
-										<p>請將頁面滑至首頁最上方，點選右上角連結你的加密貨幣錢包</p>
-										<button class="popUp--open" for="login">Connect Wallet</button>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h2>透過交互獲得$ZKZ</h2>
-										<p>遊玩平台上的遊戲，透過智能合約中的交互獲得$ZKZ。（待補一條公式）</p>
-										<a href="game.html" class="button">開始遊戲</a>
-									</div>
-								</li>
-								<li>
-									<div>
-										<img src="img/coin.gif">
-										<h2>累積$ZKZ迎接未來</h2>
-										<p>未來我們將開放使用$ZKZ升級dNFT，以此為依據進行來自開發者份額的$ZKS空投。空投份額規劃詳情請見此處。</p>
-										<button id="go-zkz">立刻查看</button>
-									</div>
-								</li>
-								<!-- <li>
-									<div>
-										<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
-										<p>
-											Utilize your accumulated $ZKZ to upgrade ZKaizoku License to make the total
-											amount of your $ZKZ increased through the additional multiplier effects from
-											your ZKaizoku License upgraded.
-										</p>
-									</div>
-								</li>
-								<li>
-									<div>
-										<h2>Settle the zkSync Era airdrop allocation</h2>
-										<p>
-											The result of multiplying your $ZKZ and ZKaizoku License will be divided by
-											the
-											total sum of $ZKZ held by all participants, determining your share on
-											ZKaizoku
-											platform.After zkSync Era official airdrop, we will send you your portion of
-											TOKEN from the allocation designated for developers. <br>
-											For detailed information of airdrop allocation of ZKaizoku, please refer to
-											here.
-										</p>
-									</div>
-								</li> -->
-							</ul>
+							<div class="tab-content">
+								<ul>
+									<li class="active">
+										<div>
+											<h2>連結區塊鏈錢包</h2>
+											<p>請將頁面滑至首頁最上方，點選右上角連結你的加密貨幣錢包</p>
+											<button class="popUp--open" for="login">Connect Wallet</button>
+										</div>
+									</li>
+									<li>
+										<div>
+											<h2>透過交互獲得$ZKZ</h2>
+											<p>遊玩平台上的遊戲，透過智能合約中的交互獲得$ZKZ。（待補一條公式）</p>
+											<a href="game.html" class="button">開始遊戲</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<img src="img/coin.gif">
+											<h2>累積$ZKZ迎接未來</h2>
+											<p>未來我們將開放使用$ZKZ升級dNFT，以此為依據進行來自開發者份額的$ZKS空投。空投份額規劃詳情請見此處。</p>
+											<button id="go-zkz">立刻查看</button>
+										</div>
+									</li>
+									<!-- <li>
+										<div>
+											<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
+											<p>
+												Utilize your accumulated $ZKZ to upgrade ZKaizoku License to make the total
+												amount of your $ZKZ increased through the additional multiplier effects from
+												your ZKaizoku License upgraded.
+											</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<h2>Settle the zkSync Era airdrop allocation</h2>
+											<p>
+												The result of multiplying your $ZKZ and ZKaizoku License will be divided by
+												the
+												total sum of $ZKZ held by all participants, determining your share on
+												ZKaizoku
+												platform.After zkSync Era official airdrop, we will send you your portion of
+												TOKEN from the allocation designated for developers. <br>
+												For detailed information of airdrop allocation of ZKaizoku, please refer to
+												here.
+											</p>
+										</div>
+									</li> -->
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -578,6 +580,19 @@
 		$('#go-zkz').click(function () {
 			$('html,body').animate({ scrollTop: $('#zkz').offset().top - 50 }, 100)
 		})
+
+		var tutorialTab = $('#tutorial .tab-content ul')
+		$('#tutorial .tab li').click(function () {
+			setTimeout(() => {
+				if (tutorialTab.find('li:nth-child(1)').hasClass('active')) {
+					tutorialTab.css('transform', 'translate(0,0)')
+				} else if (tutorialTab.find('li:nth-child(2)').hasClass('active')) {
+					tutorialTab.css('transform', 'translate(-33.33%,0)')
+				} else if (tutorialTab.find('li:nth-child(3)').hasClass('active')) {
+					tutorialTab.css('transform', 'translate(-66.66%,0)')
+				}
+			}, 1);
+		})
 	</script>
 
 	<!-- Custom settings -->
@@ -635,6 +650,11 @@
 			pagination: {
 				el: "#game-idx .swiper-pagination",
 				clickable: true,
+			},
+			on: {
+				touchMove: function (e) {
+					e.preventDefault();
+				},
 			},
 			breakpoints: {
 				769: {

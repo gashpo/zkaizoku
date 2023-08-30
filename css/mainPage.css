@@ -207,7 +207,7 @@ body {
 #mainPage .text-center {
   text-align: center;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .title-xl {
     font-size: 1.875rem;
   }
@@ -259,7 +259,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage button,
   #mainPage input[type=button],
   #mainPage input[type=submit],
@@ -364,7 +364,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .dropdown button {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -395,7 +395,7 @@ body {
   opacity: 0;
   transition-property: max-height, padding, opacity;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .dropdown .dropdown-content {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -499,6 +499,11 @@ body {
   overflow: hidden;
   position: relative;
 }
+@media (max-width: 1440px) {
+  #mainPage .card {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage .card {
     border-radius: 0.9375rem;
@@ -535,9 +540,8 @@ body {
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
-  font-weight: 500;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .tags li {
     font-size: 0.75rem;
   }
@@ -562,7 +566,7 @@ body {
   margin-bottom: -0.125rem;
   border-bottom: 0.125rem solid transparent;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .tab li {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -608,7 +612,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage table thead tr {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -630,7 +634,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage table tbody {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -736,7 +740,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .popUp .popUp--container .popUp--content {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -781,7 +785,7 @@ body {
   cursor: pointer;
   transition-property: background-color;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #login ul li {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -819,7 +823,7 @@ body {
   line-height: 1.5;
   color: #757575;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #withdraw .popUp--container .popUp--content .content .input-group label {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -857,9 +861,8 @@ body {
   top: 9rem;
   left: 50%;
   font-size: 0.875rem;
-  font-weight: 500;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .toast-container {
     font-size: 0.75rem;
   }
@@ -920,7 +923,7 @@ body {
   color: white;
   border: none;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage input,
   #mainPage textarea {
     font-size: 0.8125rem;
@@ -938,10 +941,9 @@ body {
 #mainPage textarea + .helper {
   display: block;
   font-size: 0.875rem;
-  font-weight: 500;
   color: #757575;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage input + .helper,
   #mainPage textarea + .helper {
     font-size: 0.75rem;
@@ -969,10 +971,9 @@ body {
 #mainPage .input-group + .helper {
   display: block;
   font-size: 0.875rem;
-  font-weight: 500;
   color: #757575;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .input-group + .helper {
     font-size: 0.75rem;
   }
@@ -1118,7 +1119,7 @@ body {
   text-align: center;
   margin-top: 0.5rem;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .loading-title {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -1221,7 +1222,7 @@ body {
   line-height: 1.5;
   transition-property: border-radius, top, left, right;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage header {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -1278,6 +1279,16 @@ body {
   justify-content: center;
   gap: 0.25rem;
 }
+@media (max-width: 1440px) {
+  #mainPage header .options .nav > ul > li > a {
+    border-radius: 0.6944444444svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage header .options .nav > ul > li > a {
+    border-radius: 0.625rem;
+  }
+}
 @media (hover: hover) {
   #mainPage header .options .nav > ul > li > a:hover {
     background-color: rgba(255, 255, 255, 0.15);
@@ -1312,7 +1323,7 @@ body {
   color: #757575;
   background-color: #3a3a3a;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage header .login button {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -1349,7 +1360,6 @@ body {
   }
   #mainPage header .options .nav > ul > li > a {
     padding: 0.6944444444svw 1.3888888889svw;
-    border-radius: 0.6944444444svw;
   }
   #mainPage header.fixed {
     top: 1.25rem;
@@ -1438,10 +1448,9 @@ body {
 #mainPage .breadcrumb li {
   display: inline-block;
   font-size: 0.875rem;
-  font-weight: 500;
   color: #ca898c;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage .breadcrumb li {
     font-size: 0.75rem;
   }
@@ -1635,7 +1644,7 @@ body {
     left: -1rem !important;
   }
   #mainPage #keyvision .mask {
-    top: calc((100svw - 2rem) * 0.936 - 3.75rem + 0.0625rem);
+    top: calc((100svw - 2rem) * 0.936 - 3.25rem + 0.0625rem);
   }
   #mainPage #keyvision .captions {
     height: 12.5rem;
@@ -1694,6 +1703,11 @@ body {
 #mainPage #game-idx .swiper {
   border-radius: 1.875rem;
 }
+@media (max-width: 1440px) {
+  #mainPage #game-idx .swiper {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #game-idx .swiper {
     border-radius: 0.9375rem;
@@ -1714,6 +1728,11 @@ body {
   cursor: pointer;
   position: relative;
 }
+@media (max-width: 1440px) {
+  #mainPage #game-idx .swiper-slide {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #game-idx .swiper-slide {
     border-radius: 0.9375rem;
@@ -1722,6 +1741,11 @@ body {
 #mainPage #game-idx .swiper-slide img {
   border-radius: 1.875rem;
   margin-bottom: -0.5rem;
+}
+@media (max-width: 1440px) {
+  #mainPage #game-idx .swiper-slide img {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #game-idx .swiper-slide img {
@@ -1804,20 +1828,31 @@ body {
   }
   #mainPage #game-idx .swiper-slide {
     border-radius: 0rem;
-    cursor: default;
   }
+}
+@media (max-width: 1024px) and (max-width: 1440px) {
+  #mainPage #game-idx .swiper-slide {
+    border-radius: 0svw;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  #mainPage #game-idx .swiper-slide {
+    border-radius: 0rem;
+  }
+}
+@media (max-width: 1024px) {
   #mainPage #game-idx .swiper-slide .hover {
     position: initial;
     transform: none;
     opacity: 1;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
   }
   #mainPage #game-idx .swiper-slide .hover button {
     padding: 0.59375rem 1.25rem;
   }
 }
 @media (max-width: 1024px) and (hover: hover) {
-  #mainPage #game-idx .swiper-slide:hover::after {
+  #mainPage #game-idx .swiper-slide:hover::before, #mainPage #game-idx .swiper-slide:hover::after {
     background-color: transparent;
   }
 }
@@ -1871,6 +1906,11 @@ body {
   position: relative;
   transform: scale(0.7) !important;
 }
+@media (max-width: 1440px) {
+  #mainPage #nft-idx .carousel .swiper-slide {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #nft-idx .carousel .swiper-slide {
     border-radius: 0.9375rem;
@@ -1890,7 +1930,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #nft-idx .carousel .swiper-slide .content .caption p {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -2019,6 +2059,16 @@ body {
   border: none;
   margin-bottom: 1rem;
 }
+@media (max-width: 1440px) {
+  #mainPage #tutorial .content .tab {
+    border-radius: 6.9444444444svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #tutorial .content .tab {
+    border-radius: 6.25rem;
+  }
+}
 #mainPage #tutorial .content .tab li {
   flex: 1;
   cursor: pointer;
@@ -2033,6 +2083,16 @@ body {
   gap: 0.5rem;
   transition: none;
 }
+@media (max-width: 1440px) {
+  #mainPage #tutorial .content .tab li {
+    border-radius: 6.9444444444svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #tutorial .content .tab li {
+    border-radius: 6.25rem;
+  }
+}
 #mainPage #tutorial .content .tab li h5 {
   width: 1.625rem;
   height: 1.625rem;
@@ -2046,10 +2106,20 @@ body {
   font-weight: 700;
   border-radius: 6.25rem;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #tutorial .content .tab li h5 {
     font-size: 0.9375rem;
     line-height: 1.3;
+  }
+}
+@media (max-width: 1440px) {
+  #mainPage #tutorial .content .tab li h5 {
+    border-radius: 6.9444444444svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #tutorial .content .tab li h5 {
+    border-radius: 6.25rem;
   }
 }
 @media (hover: hover) {
@@ -2074,50 +2144,61 @@ body {
   border-radius: 1.875rem;
   background-color: black;
   position: relative;
-  height: 28.75rem;
-  position: relative;
+}
+@media (max-width: 1440px) {
+  #mainPage #tutorial .content .tab-content {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 0.9375rem;
   }
 }
-#mainPage #tutorial .content .tab-content li {
+#mainPage #tutorial .content .tab-content ul {
+  width: 300%;
+  display: flex;
+}
+#mainPage #tutorial .content .tab-content ul li {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   padding: 1.75rem;
 }
-#mainPage #tutorial .content .tab-content li img {
+#mainPage #tutorial .content .tab-content ul li img {
   margin-bottom: 2rem;
   max-width: 15rem;
   border-radius: 0.9375rem;
 }
+@media (max-width: 1440px) {
+  #mainPage #tutorial .content .tab-content ul li img {
+    border-radius: 1.0416666667svw;
+  }
+}
 @media (max-width: 768px) {
-  #mainPage #tutorial .content .tab-content li img {
+  #mainPage #tutorial .content .tab-content ul li img {
     border-radius: 0.9375rem;
   }
 }
-#mainPage #tutorial .content .tab-content li p {
+#mainPage #tutorial .content .tab-content ul li p {
   margin: 0.5rem auto 2rem;
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
-  #mainPage #tutorial .content .tab-content li p {
+@media (max-width: 1024px) {
+  #mainPage #tutorial .content .tab-content ul li p {
     font-size: 0.9375rem;
     line-height: 1.3;
   }
 }
-#mainPage #tutorial .content .tab-content li button {
+#mainPage #tutorial .content .tab-content ul li button {
   margin: 0 auto;
+}
+#mainPage #tutorial .content .tab-content ul li.active {
+  display: flex;
 }
 #mainPage #tutorial .content .tab-content::before {
   position: absolute;
@@ -2160,25 +2241,19 @@ body {
     padding: 7.7777777778svw 7.7777777778svw 0;
   }
   #mainPage #tutorial .content .tab {
-    border-radius: 6.9444444444svw;
     margin-bottom: 1.1111111111svw;
   }
   #mainPage #tutorial .content .tab li {
-    border-radius: 6.9444444444svw;
     padding: 1.6666666667svw;
     gap: 0.5555555556svw;
   }
-  #mainPage #tutorial .content .tab-content {
-    border-radius: 2.0833333333svw;
-    height: 31.9444444444svw;
-  }
-  #mainPage #tutorial .content .tab-content li {
+  #mainPage #tutorial .content .tab-content ul li {
     padding: 1.9444444444svw;
   }
-  #mainPage #tutorial .content .tab-content li img {
+  #mainPage #tutorial .content .tab-content ul li img {
     margin-bottom: 2.2222222222svw;
   }
-  #mainPage #tutorial .content .tab-content li p {
+  #mainPage #tutorial .content .tab-content ul li p {
     margin: 0.5555555556svw auto 2.2222222222svw;
   }
   #mainPage #tutorial .content .tab-content::before {
@@ -2197,12 +2272,28 @@ body {
     width: calc(100svw - 15.5rem);
   }
   #mainPage #tutorial .content {
-    border-radius: 0;
+    border-radius: 0rem;
     padding: 2rem 1rem;
   }
+}
+@media (max-width: 1024px) and (max-width: 1440px) {
+  #mainPage #tutorial .content {
+    border-radius: 0svw;
+  }
+}
+@media (max-width: 1024px) and (max-width: 768px) {
+  #mainPage #tutorial .content {
+    border-radius: 0rem;
+  }
+}
+@media (max-width: 1024px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 1.875rem;
-    height: 41.6666666667svw;
+  }
+}
+@media (max-width: 1024px) and (max-width: 1440px) {
+  #mainPage #tutorial .content .tab-content {
+    border-radius: 2.0833333333svw;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
@@ -2227,7 +2318,7 @@ body {
     width: 4.25rem;
   }
 }
-@media (max-width: 516px) {
+@media (max-width: 768px) {
   #mainPage #tutorial .content .tab {
     margin-bottom: 1rem;
   }
@@ -2241,9 +2332,6 @@ body {
   #mainPage #tutorial .content .tab li h4 {
     display: none;
   }
-  #mainPage #tutorial .content .tab-content {
-    height: 31.875rem;
-  }
   #mainPage #tutorial .content .tab-content li {
     padding: 2rem;
   }
@@ -2252,6 +2340,11 @@ body {
     left: -7.5rem;
     right: -7.5rem;
     bottom: 7.5rem;
+  }
+}
+@media (max-width: 516px) {
+  #mainPage #tutorial .content .tab-content ul li img {
+    max-width: 100%;
   }
 }
 #mainPage #zkz {
@@ -2275,6 +2368,11 @@ body {
 }
 #mainPage #zkz img {
   max-height: 46svw;
+}
+@media (max-width: 1024px) {
+  #mainPage #zkz {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #zkz .bg::before {
@@ -2348,23 +2446,6 @@ body {
     animation-play-state: paused;
   }
 }
-@keyframes btn-bounce {
-  40% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.05);
-  }
-  50% {
-    transform: scale(1);
-  }
-  55% {
-    transform: scale(1.05);
-  }
-  60% {
-    transform: scale(1);
-  }
-}
 @keyframes btn-float {
   0% {
     transform: translate(0, -0.25rem);
@@ -2376,9 +2457,17 @@ body {
     transform: translate(0, -0.25rem);
   }
 }
+@media (max-width: 768px) {
+  #mainPage footer img {
+    right: 1.25rem;
+  }
+}
 @media (max-width: 516px) {
   #mainPage footer .mask {
     left: calc(100svw - 34.7222222222svw);
+  }
+  #mainPage footer img {
+    width: 7.5rem;
   }
 }
 #mainPage #shop {
@@ -2404,6 +2493,11 @@ body {
   display: flex;
   gap: 2.5rem;
 }
+@media (max-width: 1440px) {
+  #mainPage #shop .product-list li {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #shop .product-list li {
     border-radius: 0.9375rem;
@@ -2415,6 +2509,11 @@ body {
 }
 #mainPage #shop .product-list li .img img {
   border-radius: 1.875rem;
+}
+@media (max-width: 1440px) {
+  #mainPage #shop .product-list li .img img {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #shop .product-list li .img img {
@@ -2434,7 +2533,7 @@ body {
   color: #a8a8a8;
   flex-grow: 1;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #shop .product-list li .content p {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -2471,6 +2570,11 @@ body {
   background-color: #6c1619;
   color: #9d4043;
 }
+@media (max-width: 1440px) {
+  #mainPage #shop .progress li {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #shop .progress li {
     border-radius: 0.9375rem;
@@ -2484,7 +2588,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #shop .progress li span {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -2509,6 +2613,11 @@ body {
   border-radius: 1.875rem;
   background-color: rgba(255, 255, 255, 0.1);
   z-index: -1;
+}
+@media (max-width: 1440px) {
+  #mainPage #shop .progress li::after {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #shop .progress li::after {
@@ -2566,6 +2675,11 @@ body {
   flex-wrap: wrap;
   gap: 2.5rem;
 }
+@media (max-width: 1440px) {
+  #mainPage #shop .product-detail {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #shop .product-detail {
     border-radius: 0.9375rem;
@@ -2585,6 +2699,11 @@ body {
   max-width: 19.6875rem;
   border-radius: 1.875rem;
 }
+@media (max-width: 1440px) {
+  #mainPage #shop .product-detail .img img {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #shop .product-detail .img img {
     border-radius: 0.9375rem;
@@ -2600,7 +2719,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #shop .product-detail .content .statement {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -2631,7 +2750,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #shop .product-detail .content .desc {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -2644,7 +2763,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #shop .product-detail .content .purchase {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -2815,6 +2934,11 @@ body {
   border-radius: 1.875rem;
   overflow: hidden;
 }
+@media (max-width: 1440px) {
+  #mainPage #game .game-list > li {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #game .game-list > li {
     border-radius: 0.9375rem;
@@ -2835,6 +2959,11 @@ body {
   border-radius: 1.875rem;
   overflow: hidden;
 }
+@media (max-width: 1440px) {
+  #mainPage #game .game-list > li > a .img {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #game .game-list > li > a .img {
     border-radius: 0.9375rem;
@@ -2845,6 +2974,11 @@ body {
   border-radius: 1.875rem;
   transition-property: transform;
   transition-duration: 0.3s;
+}
+@media (max-width: 1440px) {
+  #mainPage #game .game-list > li > a .img img {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #game .game-list > li > a .img img {
@@ -2891,7 +3025,7 @@ body {
   line-height: 1.5;
   overflow-y: auto;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #game .game-detail .content .desc {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -2910,9 +3044,8 @@ body {
   gap: 0.5rem;
   color: #ca898c;
   font-size: 0.875rem;
-  font-weight: 500;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #game .game-detail .content .awards {
     font-size: 0.75rem;
   }
@@ -3006,7 +3139,7 @@ body {
   max-width: 100%;
   min-width: 100%;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #game .game-detail .content .odd-n-bet .bets input {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -3160,6 +3293,11 @@ body {
   background-position: center;
   position: relative;
   height: 31.14rem;
+}
+@media (max-width: 1440px) {
+  #mainPage .game-zone {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage .game-zone {
@@ -3519,6 +3657,11 @@ body {
   color: #bebebe;
   padding: 0;
 }
+@media (max-width: 1440px) {
+  #mainPage #personal .license .carousel .swiper-slide .img .button {
+    border-radius: 2.0833333333svw;
+  }
+}
 @media (max-width: 768px) {
   #mainPage #personal .license .carousel .swiper-slide .img .button {
     border-radius: 0.9375rem;
@@ -3624,7 +3767,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #personal .zkz .card-content .title button {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -3645,6 +3788,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1440px) {
+  #mainPage #personal .zkz .card-content .content .now,
+  #mainPage #personal .zkz .card-content .content .accumulation {
+    border-radius: 2.0833333333svw;
+  }
 }
 @media (max-width: 768px) {
   #mainPage #personal .zkz .card-content .content .now,
@@ -3712,7 +3861,7 @@ body {
   line-height: 1.5;
   margin: 1rem 0;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #personal .record .filter {
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -3741,7 +3890,7 @@ body {
   text-decoration: none;
   transition-property: color;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
   #mainPage #personal .record .filter .dropdown button {
     font-size: 0.9375rem;
     line-height: 1.3;
@@ -3861,7 +4010,7 @@ body {
     line-height: 1.5;
   }
 }
-@media (max-width: 1024px) and (max-width: 1280px) {
+@media (max-width: 1024px) and (max-width: 1024px) {
   #mainPage #personal .record table tbody tr td.record-trackno span, #mainPage #personal .record table tbody tr td.record-price span {
     font-size: 0.8125rem;
     line-height: 1.3;

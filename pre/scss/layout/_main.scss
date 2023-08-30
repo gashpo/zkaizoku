@@ -210,7 +210,7 @@ main {
         }
 
         .mask {
-            top: calc(((100svw - size(32)) * .936) - size(60) + size(1));
+            top: calc(((100svw - size(32)) * .936) - size(52) + size(1));
         }
 
         .captions {
@@ -416,14 +416,13 @@ main {
 
         .swiper {
             &-slide {
-                border-radius: size(0);
-                cursor: default;
+                @include radius(0, 0);
 
                 .hover {
                     position: initial;
                     transform: none;
                     opacity: 1;
-                    padding: size(8) 0;
+                    padding: size(16) 0;
 
                     button {
                         padding: size(9.5) size(20);
@@ -432,6 +431,8 @@ main {
 
                 @media (hover: hover) {
                     &:hover {
+
+                        &::before,
                         &::after {
                             background-color: transparent;
                         }
@@ -670,7 +671,7 @@ main {
         .tab {
             display: flex;
             background-color: color(primary-6);
-            border-radius: size(100);
+            @include radius(100, 100);
             border: none;
             margin-bottom: size(16);
 
@@ -679,7 +680,7 @@ main {
                 cursor: pointer;
                 background-color: transparent;
                 color: color(gray-9);
-                border-radius: size(100);
+                @include radius(100, 100);
                 border: none;
                 padding: size(24);
                 display: flex;
@@ -698,7 +699,7 @@ main {
                     color: color(primary-6);
                     @include body-1;
                     font-weight: weight(Bold);
-                    border-radius: size(100);
+                    @include radius(100, 100);
                 }
 
                 @media (hover: hover) {
@@ -729,35 +730,38 @@ main {
             @include radius;
             background-color: black;
             position: relative;
-            height: size(460);
-            position: relative;
 
-            li {
+            ul {
+                width: 300%;
                 display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                padding: size(28);
 
-                img {
-                    margin-bottom: size(32);
-                    max-width: size(240);
-                    @include radius(15);
-                }
+                li {
+                    flex: 1;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    padding: size(28);
 
-                p {
-                    margin: size(8) auto size(32);
-                    @include body-1;
-                }
+                    img {
+                        margin-bottom: size(32);
+                        max-width: size(240);
+                        @include radius(15);
+                    }
 
-                button {
-                    margin: 0 auto;
+                    p {
+                        margin: size(8) auto size(32);
+                        @include body-1;
+                    }
+
+                    button {
+                        margin: 0 auto;
+                    }
+
+                    &.active {
+                        display: flex;
+                    }
                 }
             }
 
@@ -809,29 +813,27 @@ main {
             padding: svw(112) svw(112) 0;
 
             .tab {
-                border-radius: svw(100);
                 margin-bottom: svw(16);
 
                 li {
-                    border-radius: svw(100);
                     padding: svw(24);
                     gap: svw(8);
                 }
             }
 
             .tab-content {
-                border-radius: svw(30);
-                height: svw(460);
+                ul {
 
-                li {
-                    padding: svw(28);
+                    li {
+                        padding: svw(28);
 
-                    img {
-                        margin-bottom: svw(32);
-                    }
+                        img {
+                            margin-bottom: svw(32);
+                        }
 
-                    p {
-                        margin: svw(8) auto svw(32);
+                        p {
+                            margin: svw(8) auto svw(32);
+                        }
                     }
                 }
 
@@ -856,12 +858,11 @@ main {
         }
 
         .content {
-            border-radius: 0;
+            @include radius(0, 0);
             padding: size(32) size(16);
 
             .tab-content {
                 @include radius;
-                height: svw(600);
             }
         }
 
@@ -888,8 +889,8 @@ main {
     }
 
 
-    // mobile ~ 768
-    @include max-to(mobile) {
+    // small-pad ~ 768
+    @include max-to(small-pad) {
         .content {
             .tab {
                 margin-bottom: size(16);
@@ -909,8 +910,6 @@ main {
             }
 
             .tab-content {
-                height: size(510);
-
                 li {
                     padding: size(32);
                 }
@@ -924,12 +923,24 @@ main {
             }
         }
     }
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        .content {
+            .tab-content {
+                ul {
+                    li {
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 #zkz {
-    // background-image: url(../img/bg/zkz-bg.jpg);
-    // background-size: cover;
-    // background-repeat: no-repeat;
     height: 46svw;
     position: relative;
     padding: size(20);
@@ -955,6 +966,12 @@ main {
 
     img {
         max-height: 46svw;
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        margin-bottom: size(32);
     }
 
 
