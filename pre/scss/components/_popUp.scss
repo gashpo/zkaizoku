@@ -78,6 +78,7 @@
     @include max-to(pad) {
         .popUp--container {
             width: calc(100svw - size(32));
+            min-width: auto;
         }
     }
 }

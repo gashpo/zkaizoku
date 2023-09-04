@@ -753,6 +753,7 @@ body {
 @media (max-width: 1024px) {
   #mainPage .popUp .popUp--container {
     width: calc(100svw - 2rem);
+    min-width: auto;
   }
 }
 #mainPage #login ul {
