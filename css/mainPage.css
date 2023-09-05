@@ -256,7 +256,6 @@ body {
   transition-property: background-color;
   font-size: 0.9375rem;
   line-height: 1.5;
-  width: 100%;
 }
 @media (max-width: 1024px) {
   #mainPage button,
@@ -1396,8 +1395,6 @@ body {
     padding: 0.625rem 1.25rem;
     border: none !important;
     line-height: 1 !important;
-    max-width: -moz-max-content;
-    max-width: max-content;
   }
   #mainPage header .dropdown button {
     width: 100%;

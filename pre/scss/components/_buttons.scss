@@ -14,7 +14,6 @@ a.button {
     padding: size(10) size(24);
     transition-property: background-color;
     @include body-2;
-    width: 100%;
 
     &:hover {
         background-color: color(primary-6);
