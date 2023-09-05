@@ -256,6 +256,7 @@ body {
   transition-property: background-color;
   font-size: 0.9375rem;
   line-height: 1.5;
+  width: 100%;
 }
 @media (max-width: 1024px) {
   #mainPage button,
@@ -666,12 +667,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem 1.25rem;
-    border-radius: 0.75rem;
+    background-color: #1d1d1d;
+    border-radius: 0.9375rem;
   }
   #mainPage table tbody tr td {
     align-items: center;
     height: auto;
     padding: 0 !important;
+  }
+  #mainPage table tbody tr:first-child {
+    padding: 0;
+    margin: 0;
   }
 }
 @media (max-width: 516px) {
@@ -753,6 +759,9 @@ body {
 @media (max-width: 1024px) {
   #mainPage .popUp .popUp--container {
     width: calc(100svw - 2rem);
+    min-width: auto;
+  }
+  #mainPage .popUp .popUp--container .popUp--content {
     min-width: auto;
   }
 }
@@ -1387,6 +1396,8 @@ body {
     padding: 0.625rem 1.25rem;
     border: none !important;
     line-height: 1 !important;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
   #mainPage header .dropdown button {
     width: 100%;
@@ -2139,49 +2150,48 @@ body {
     border-radius: 0.9375rem;
   }
 }
-#mainPage #tutorial .content .tab-content ul {
-  width: 300%;
-  display: flex;
-}
-#mainPage #tutorial .content .tab-content ul li {
-  flex: 1;
+#mainPage #tutorial .content .tab-content li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 1.75rem;
 }
-#mainPage #tutorial .content .tab-content ul li img {
+#mainPage #tutorial .content .tab-content li img {
   margin-bottom: 2rem;
   max-width: 15rem;
   border-radius: 0.9375rem;
 }
 @media (max-width: 1440px) {
-  #mainPage #tutorial .content .tab-content ul li img {
+  #mainPage #tutorial .content .tab-content li img {
     border-radius: 1.0416666667svw;
   }
 }
 @media (max-width: 768px) {
-  #mainPage #tutorial .content .tab-content ul li img {
+  #mainPage #tutorial .content .tab-content li img {
     border-radius: 0.9375rem;
   }
 }
-#mainPage #tutorial .content .tab-content ul li p {
+#mainPage #tutorial .content .tab-content li p {
   margin: 0.5rem auto 2rem;
   font-size: 1.125rem;
   line-height: 1.5;
 }
 @media (max-width: 1024px) {
-  #mainPage #tutorial .content .tab-content ul li p {
+  #mainPage #tutorial .content .tab-content li p {
     font-size: 0.9375rem;
   }
 }
-#mainPage #tutorial .content .tab-content ul li button {
+#mainPage #tutorial .content .tab-content li button,
+#mainPage #tutorial .content .tab-content li a.button {
   margin: 0 auto;
-}
-#mainPage #tutorial .content .tab-content ul li.active {
-  display: flex;
+  width: auto;
 }
 #mainPage #tutorial .content .tab-content::before {
   position: absolute;
@@ -2230,13 +2240,13 @@ body {
     padding: 1.6666666667svw;
     gap: 0.5555555556svw;
   }
-  #mainPage #tutorial .content .tab-content ul li {
+  #mainPage #tutorial .content .tab-content li {
     padding: 1.9444444444svw;
   }
-  #mainPage #tutorial .content .tab-content ul li img {
+  #mainPage #tutorial .content .tab-content li img {
     margin-bottom: 2.2222222222svw;
   }
-  #mainPage #tutorial .content .tab-content ul li p {
+  #mainPage #tutorial .content .tab-content li p {
     margin: 0.5555555556svw auto 2.2222222222svw;
   }
   #mainPage #tutorial .content .tab-content::before {
@@ -2293,15 +2303,13 @@ body {
     content: "";
   }
 }
-@media (max-width: 1024px) and (max-width: 768px) {
+@media (max-width: 768px) {
   #mainPage #tutorial .title {
     width: calc(100svw - 8rem);
   }
   #mainPage #tutorial .mask {
     width: 4.25rem;
   }
-}
-@media (max-width: 768px) {
   #mainPage #tutorial .content .tab {
     margin-bottom: 1rem;
   }
@@ -2813,9 +2821,6 @@ body {
   }
 }
 @media (max-width: 768px) {
-  #mainPage #shop {
-    background-image: url(../img/bg/inner-bg-m.jpg);
-  }
   #mainPage #shop .product-list li {
     flex-wrap: wrap;
     gap: 1rem;
@@ -2864,8 +2869,17 @@ body {
   #mainPage #shop .product-detail .content .purchase .price {
     flex: 100%;
   }
-  #mainPage #shop .product-detail .content button {
+  #mainPage #shop .product-detail .content .purchase .btns {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #mainPage #shop .product-detail .content .purchase .btns > * {
     flex: 100%;
+    max-width: 100%;
+  }
+  #mainPage #shop .product-detail .content .purchase .btns .btn-tertiary {
+    order: 2;
   }
   #mainPage #shop .product-detail.step2 .img, #mainPage #shop .product-detail.step3 .img {
     flex: 100%;
@@ -3809,25 +3823,10 @@ body {
 #mainPage #personal .zkz .card-content .content .accumulation .btn button {
   margin-bottom: 1.25rem;
 }
-#mainPage #personal .record {
+#mainPage #personal #record {
   flex: 100%;
 }
-#mainPage #personal .record-price div {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-#mainPage #personal .record-price div img {
-  width: 1.25rem;
-}
-#mainPage #personal .record-status span {
-  display: flex;
-  gap: 0 0.5rem;
-}
-#mainPage #personal .record-view {
-  min-width: 7.75rem;
-}
-#mainPage #personal .record .filter {
+#mainPage #personal #record .filter {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -3837,24 +3836,24 @@ body {
   margin: 1rem 0;
 }
 @media (max-width: 1024px) {
-  #mainPage #personal .record .filter {
+  #mainPage #personal #record .filter {
     font-size: 0.8125rem;
   }
 }
-#mainPage #personal .record .filter .days,
-#mainPage #personal .record .filter .pages {
+#mainPage #personal #record .filter .days,
+#mainPage #personal #record .filter .pages {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-#mainPage #personal .record .filter .days span,
-#mainPage #personal .record .filter .pages span {
+#mainPage #personal #record .filter .days span,
+#mainPage #personal #record .filter .pages span {
   color: #757575;
 }
-#mainPage #personal .record .filter .dropdown {
+#mainPage #personal #record .filter .dropdown {
   position: relative;
 }
-#mainPage #personal .record .filter .dropdown button {
+#mainPage #personal #record .filter .dropdown button {
   font-size: 1.125rem;
   line-height: 1.5;
   background-color: transparent;
@@ -3865,16 +3864,16 @@ body {
   transition-property: color;
 }
 @media (max-width: 1024px) {
-  #mainPage #personal .record .filter .dropdown button {
+  #mainPage #personal #record .filter .dropdown button {
     font-size: 0.9375rem;
   }
 }
 @media (hover: hover) {
-  #mainPage #personal .record .filter .dropdown button:hover {
+  #mainPage #personal #record .filter .dropdown button:hover {
     color: lightgray;
   }
 }
-#mainPage #personal .record .filter .dropdown .dropdown-content {
+#mainPage #personal #record .filter .dropdown .dropdown-content {
   top: calc(100% + 0.5rem);
   left: auto;
   transform: none;
@@ -3884,43 +3883,59 @@ body {
   background-color: #1d1d1d;
   box-shadow: 0 0 0.625rem #585858;
 }
-#mainPage #personal .record .filter .dropdown .dropdown-content ul {
+#mainPage #personal #record .filter .dropdown .dropdown-content ul {
   padding-right: 0.5rem;
 }
 @media (hover: hover) {
-  #mainPage #personal .record .filter .dropdown .dropdown-content ul > li:hover > a {
+  #mainPage #personal #record .filter .dropdown .dropdown-content ul > li:hover > a {
     background-color: #3a3a3a;
   }
 }
-#mainPage #personal .record .filter .dropdown .dropdown-content ul > li.active > a {
+#mainPage #personal #record .filter .dropdown .dropdown-content ul > li.active > a {
   background-color: #3a3a3a;
 }
-#mainPage #personal .record .filter .dropdown.active .dropdown-content {
+#mainPage #personal #record .filter .dropdown.active .dropdown-content {
   padding: 1rem 0.5rem 1rem 1rem;
 }
-#mainPage #personal .record .filter .dropdown.active .dropdown-content ul {
+#mainPage #personal #record .filter .dropdown.active .dropdown-content ul {
   overflow-y: auto;
   max-height: 9.375rem;
 }
-#mainPage #personal .record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar {
+#mainPage #personal #record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar {
   width: 0.25rem;
   background-color: transparent;
 }
-#mainPage #personal .record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar-thumb {
+#mainPage #personal #record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar-thumb {
   background-color: #3a3a3a;
 }
-#mainPage #personal .record .no-record {
+#mainPage #personal #record .record-price div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#mainPage #personal #record .record-price div img {
+  width: 1.25rem;
+}
+#mainPage #personal #record .record-status span {
+  display: flex;
+  gap: 0 0.5rem;
+}
+#mainPage #personal #record .record-view .button {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+#mainPage #personal #record .no-record {
   padding: 1.25rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-#mainPage #personal .record .no-record img {
+#mainPage #personal #record .no-record img {
   max-width: 12.5rem;
   margin-bottom: 2rem;
 }
-#mainPage #personal .record .no-record button {
+#mainPage #personal #record .no-record button {
   margin: 1.25rem auto;
 }
 #mainPage #personal::before, #mainPage #personal::after {
@@ -3944,22 +3959,22 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  #mainPage #personal .record .filter {
+  #mainPage #personal #record .filter {
     justify-content: flex-start;
     margin-bottom: 2rem;
   }
-  #mainPage #personal .record .filter .dropdown .dropdown-content {
+  #mainPage #personal #record .filter .dropdown .dropdown-content {
     left: -2.5rem;
     right: auto;
   }
-  #mainPage #personal .record table tbody tr {
+  #mainPage #personal #record table tbody tr {
     gap: 1rem;
   }
-  #mainPage #personal .record table tbody tr td.record-time {
+  #mainPage #personal #record table tbody tr td.record-time {
     flex: calc(60% - 0.625rem);
     color: #757575;
   }
-  #mainPage #personal .record table tbody tr td.record-status {
+  #mainPage #personal #record table tbody tr td.record-status {
     flex: calc(40% - 0.625rem);
     align-self: flex-start;
     display: flex;
@@ -3967,36 +3982,36 @@ body {
     justify-content: flex-end;
     order: 2;
   }
-  #mainPage #personal .record table tbody tr td.record-trackno {
+  #mainPage #personal #record table tbody tr td.record-trackno {
     border-top: 0.0625rem solid #3a3a3a;
     padding-top: 1rem !important;
   }
-  #mainPage #personal .record table tbody tr td.record-trackno, #mainPage #personal .record table tbody tr td.record-price {
+  #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     flex: 100%;
     order: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  #mainPage #personal .record table tbody tr td.record-trackno span, #mainPage #personal .record table tbody tr td.record-price span {
+  #mainPage #personal #record table tbody tr td.record-time, #mainPage #personal #record table tbody tr td.record-status, #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     font-size: 0.9375rem;
     line-height: 1.5;
   }
 }
 @media (max-width: 1024px) and (max-width: 1024px) {
-  #mainPage #personal .record table tbody tr td.record-trackno span, #mainPage #personal .record table tbody tr td.record-price span {
+  #mainPage #personal #record table tbody tr td.record-time, #mainPage #personal #record table tbody tr td.record-status, #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     font-size: 0.8125rem;
   }
 }
 @media (max-width: 1024px) {
-  #mainPage #personal .record table tbody tr td.record-view {
+  #mainPage #personal #record table tbody tr td.record-view {
     flex: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     order: 3;
   }
-  #mainPage #personal .record table tbody tr td.record-view button {
+  #mainPage #personal #record table tbody tr td.record-view .button {
     flex: 100%;
   }
 }

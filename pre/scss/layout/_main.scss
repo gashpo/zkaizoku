@@ -731,37 +731,34 @@ main {
             background-color: black;
             position: relative;
 
-            ul {
-                width: 300%;
+            li {
                 display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: size(28);
 
-                li {
-                    flex: 1;
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    padding: size(28);
+                img {
+                    margin-bottom: size(32);
+                    max-width: size(240);
+                    @include radius(15);
+                }
 
-                    img {
-                        margin-bottom: size(32);
-                        max-width: size(240);
-                        @include radius(15);
-                    }
+                p {
+                    margin: size(8) auto size(32);
+                    @include body-1;
+                }
 
-                    p {
-                        margin: size(8) auto size(32);
-                        @include body-1;
-                    }
-
-                    button {
-                        margin: 0 auto;
-                    }
-
-                    &.active {
-                        display: flex;
-                    }
+                button,
+                a.button {
+                    margin: 0 auto;
+                    width: auto;
                 }
             }
 
@@ -822,18 +819,15 @@ main {
             }
 
             .tab-content {
-                ul {
+                li {
+                    padding: svw(28);
 
-                    li {
-                        padding: svw(28);
+                    img {
+                        margin-bottom: svw(32);
+                    }
 
-                        img {
-                            margin-bottom: svw(32);
-                        }
-
-                        p {
-                            margin: svw(8) auto svw(32);
-                        }
+                    p {
+                        margin: svw(8) auto svw(32);
                     }
                 }
 
@@ -874,23 +868,19 @@ main {
                 content: '';
             }
         }
-
-
-        // small-pad ~ 768
-        @include max-to(small-pad) {
-            .title {
-                width: calc(100svw - size(128));
-            }
-
-            .mask {
-                width: size(68);
-            }
-        }
     }
 
 
     // small-pad ~ 768
     @include max-to(small-pad) {
+        .title {
+            width: calc(100svw - size(128));
+        }
+
+        .mask {
+            width: size(68);
+        }
+
         .content {
             .tab {
                 margin-bottom: size(16);

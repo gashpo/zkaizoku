@@ -82,12 +82,18 @@ table {
                 display: flex;
                 flex-wrap: wrap;
                 gap: size(12) size(20);
-                border-radius: size(12);
+                background-color: color(gray-9);
+                border-radius: size(15);
 
                 td {
                     align-items: center;
                     height: auto;
                     padding: 0 !important;
+                }
+
+                &:first-child {
+                    padding: 0;
+                    margin: 0;
                 }
             }
         }

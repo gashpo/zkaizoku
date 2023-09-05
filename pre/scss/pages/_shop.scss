@@ -340,8 +340,6 @@
 
     // small-pad ~ 768
     @include max-to(small-pad) {
-        background-image: url(../img/bg/inner-bg-m.jpg);
-
         .product-list {
             li {
                 flex-wrap: wrap;
@@ -408,10 +406,21 @@
                     .price {
                         flex: 100%;
                     }
-                }
 
-                button {
-                    flex: 100%;
+                    .btns {
+                        width: 100%;
+                        flex-wrap: wrap;
+                        gap: size(16);
+
+                        >* {
+                            flex: 100%;
+                            max-width: 100%;
+                        }
+
+                        .btn-tertiary {
+                            order: 2;
+                        }
+                    }
                 }
             }
 

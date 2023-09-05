@@ -39,7 +39,7 @@ $('#withdraw .submit').click(function () {
             $('.popUp').hide()
             $('body').css('overflow-y', 'auto')
 
-            var recordOffset = $('.record').offset().top
+            var recordOffset = $('#record').offset().top
             $('html,body').animate({ scrollTop: recordOffset - 120 }, 100)
         })
     }
@@ -55,5 +55,5 @@ if (mediaPad.matches) {
         });
     });
 
-    $('.record-view button').html($('.record-view button').html() + $('.record table th:last-child').html())
+    $('.record-view .button').html($('.record-view .button').html() + $('#record table th:last-child').html())
 }

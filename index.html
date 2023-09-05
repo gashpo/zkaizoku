@@ -418,31 +418,30 @@
 									<h4>Step 5</h4>
 								</li> -->
 							</ul>
-							<div class="tab-content">
-								<ul>
-									<li class="active">
-										<div>
-											<h2>連結區塊鏈錢包</h2>
-											<p>請將頁面滑至首頁最上方，點選右上角連結你的加密貨幣錢包</p>
-											<button class="popUp--open" for="login">Connect Wallet</button>
-										</div>
-									</li>
-									<li>
-										<div>
-											<h2>透過交互獲得$ZKZ</h2>
-											<p>遊玩平台上的遊戲，透過智能合約中的交互獲得$ZKZ。（待補一條公式）</p>
-											<a href="game.html" class="button">開始遊戲</a>
-										</div>
-									</li>
-									<li>
-										<div>
-											<img src="img/coin.gif">
-											<h2>累積$ZKZ迎接未來</h2>
-											<p>未來我們將開放使用$ZKZ升級dNFT，以此為依據進行來自開發者份額的$ZKS空投。空投份額規劃詳情請見此處。</p>
-											<button id="go-zkz">立刻查看</button>
-										</div>
-									</li>
-									<!-- <li>
+							<ul class="tab-content">
+								<li class="active">
+									<div>
+										<h2>連結區塊鏈錢包</h2>
+										<p>請將頁面滑至首頁最上方，點選右上角連結你的加密貨幣錢包</p>
+										<button class="popUp--open" for="login">Connect Wallet</button>
+									</div>
+								</li>
+								<li>
+									<div>
+										<h2>透過交互獲得$ZKZ</h2>
+										<p>遊玩平台上的遊戲，透過智能合約中的交互獲得$ZKZ。（待補一條公式）</p>
+										<a href="game.html" class="button">開始遊戲</a>
+									</div>
+								</li>
+								<li>
+									<div>
+										<img src="img/coin.gif">
+										<h2>累積$ZKZ迎接未來</h2>
+										<p>未來我們將開放使用$ZKZ升級dNFT，以此為依據進行來自開發者份額的$ZKS空投。空投份額規劃詳情請見此處。</p>
+										<button id="go-zkz">立刻查看</button>
+									</div>
+								</li>
+								<!-- <li>
 										<div>
 											<h2>Upgrade ZKaizoku License to gain additional multiplier effects</h2>
 											<p>
@@ -467,8 +466,7 @@
 											</p>
 										</div>
 									</li> -->
-								</ul>
-							</div>
+							</ul>
 						</div>
 					</div>
 				</section>
@@ -577,21 +575,21 @@
 		var mediaMobile = window.matchMedia('(max-width: 516px)')
 		var mediaSmallMobile = window.matchMedia('(max-width: 320px)')
 
-		$('#go-zkz').click(function () {
-			$('html,body').animate({ scrollTop: $('#zkz').offset().top - 50 }, 100)
-		})
-
-		var tutorialTab = $('#tutorial .tab-content ul')
-		$('#tutorial .tab li').click(function () {
+		// 教學區塊內文高度
+		var maxHeight = 0;
+		$('#tutorial .tab-content li > div').each(function () {
 			setTimeout(() => {
-				if (tutorialTab.find('li:nth-child(1)').hasClass('active')) {
-					tutorialTab.css('transform', 'translate(0,0)')
-				} else if (tutorialTab.find('li:nth-child(2)').hasClass('active')) {
-					tutorialTab.css('transform', 'translate(-33.33%,0)')
-				} else if (tutorialTab.find('li:nth-child(3)').hasClass('active')) {
-					tutorialTab.css('transform', 'translate(-66.66%,0)')
+				var liHeight = $(this).innerHeight();
+				if (liHeight > maxHeight) {
+					maxHeight = liHeight;
+					$('#tutorial .tab-content').css('height', Math.ceil(maxHeight) + 56 + 'px')
 				}
 			}, 1);
+		});
+
+		// 教學區塊按鈕 (前往$ZKZ區塊)
+		$('#go-zkz').click(function () {
+			$('html,body').animate({ scrollTop: $('#zkz').offset().top - 50 }, 100)
 		})
 	</script>
 
