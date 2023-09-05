@@ -3051,7 +3051,7 @@ body {
   font-size: 1rem;
 }
 #mainPage #game .game-detail .content .awards .louder i {
-  animation: shake 3.4s infinite linear;
+  animation: shake 3.3s infinite linear;
 }
 @keyframes shake {
   0% {
@@ -3291,8 +3291,10 @@ body {
     border-radius: 0.9375rem;
   }
 }
-#mainPage .game-zone .default img {
-  margin-bottom: -0.5rem;
+#mainPage .game-zone .default {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 #mainPage .game-zone .default .game-title {
   position: absolute;

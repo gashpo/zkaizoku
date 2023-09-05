@@ -10,9 +10,9 @@
     // (container - card padding) * game-zone flex * height ratio
 
     .default {
-        img {
-            margin-bottom: size(-8);
-        }
+        height: 100%;
+        background-position: center;
+        background-size: cover;
 
         .game-title {
             position: absolute;
