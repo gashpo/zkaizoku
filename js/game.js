@@ -12,13 +12,15 @@ $('.game-zone .default button').click(function () {
 gameSelection.find('.play').click(function () {
     // 賭本必須為正整數
     var isPositiveInteger = /^[1-9]\d*$/.test(betsInput.val())
+
+    // 必須選擇賭注
     var selectedRadio = gameSelection.find('input[type=radio]:checked')
 
     if (selectedRadio.length > 0 && isPositiveInteger && parseInt(betsInput.val()) < 301) {
         betsInput.parent().removeClass('alert')
 
-        // 骰子開始滾動
-        gameResult.addClass('dicing')
+        // 開始遊戲
+        // gameResult.addClass('playing')
         var imagePath = gameResult.find('img').attr('src')
         var newImagePath = imagePath.replace('png', 'gif')
         gameResult.find('img').attr('src', newImagePath)
@@ -28,14 +30,14 @@ gameSelection.find('.play').click(function () {
         // 遊戲進行中禁用網頁所有操作
         $('.full-page').addClass('active')
 
-        // 隨機產生三個結果
+        // 隨機產生結果
         var dicePaths = [
-            'img/game/dice/dice01.png',
-            'img/game/dice/dice02.png',
-            'img/game/dice/dice03.png',
-            'img/game/dice/dice04.png',
-            'img/game/dice/dice05.png',
-            'img/game/dice/dice06.png'
+            'img/game/guess-the-number/card1.png',
+            'img/game/guess-the-number/card2.png',
+            'img/game/guess-the-number/card3.png',
+            'img/game/guess-the-number/card4.png',
+            'img/game/guess-the-number/card5.png',
+            'img/game/guess-the-number/card6.png'
         ];
         var selectedDicePaths = [];
         while (selectedDicePaths.length < 3) {
@@ -46,7 +48,7 @@ gameSelection.find('.play').click(function () {
         }
         // 摋動2秒後出現結果
         setTimeout(() => {
-            gameResult.removeClass('dicing')
+            gameResult.removeClass('playing')
             gameResult.addClass('show')
             gameResult.find('img').each(function (index) {
                 $(this).attr('src', selectedDicePaths[index])
@@ -70,7 +72,7 @@ gameSelection.find('.play').click(function () {
             }, 3000);
         }
 
-        // 沒填賭本時跳提醒
+        // 沒填賭本或賭本填錯時跳提醒
         if (betsInput.val() === '') {
             $('#no-value').addClass('active')
             setTimeout(() => {
@@ -113,8 +115,6 @@ $('.replay').click(function () {
     $('.popUp').removeClass('active')
     gameSelection.find('input[type="radio"]').prop('checked', false)
     gameResult.removeClass('show')
-    gameResult.find('img:nth-child(1)').attr('src', 'img/game/dice/dice01.png')
-    gameResult.find('img:nth-child(2)').attr('src', 'img/game/dice/dice02.png')
-    gameResult.find('img:nth-child(3)').attr('src', 'img/game/dice/dice03.png')
+    gameResult.find('img').attr('src', 'img/game/guess-the-number/card.png')
     betsInput.removeAttr('disabled')
 })

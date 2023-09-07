@@ -3167,6 +3167,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  max-height: 3.5rem;
 }
 #mainPage #game .game-detail .content .count button {
   padding: 0.625rem;
@@ -3344,9 +3345,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  transform: rotate(-10deg);
 }
 #mainPage .game-zone .play-game .game-content .result img {
-  max-width: 5rem;
+  max-width: 12.5rem;
   animation: 3s infinite forwards;
 }
 #mainPage .game-zone .play-game .game-content .result img:nth-child(1) {
@@ -3360,8 +3362,8 @@ body {
 #mainPage .game-zone .play-game .game-content .result img:nth-child(3) {
   animation-name: float-3;
 }
-#mainPage .game-zone .play-game .game-content .result.dicing img {
-  animation-duration: 0.5s;
+#mainPage .game-zone .play-game .game-content .result.playing img {
+  animation: fliping 4s infinite linear;
 }
 #mainPage .game-zone .play-game .game-content .result.show img {
   animation-play-state: paused;
@@ -3403,6 +3405,7 @@ body {
 #mainPage .game-zone .play-game .game-content .selection div label img {
   max-width: 100%;
   max-height: 100%;
+  transform: rotate(-10deg);
 }
 #mainPage .game-zone .play-game .game-content .selection div label img.bg {
   position: absolute;
@@ -3460,7 +3463,7 @@ body {
   min-width: 25.95rem;
 }
 #mainPage .game-zone.guess-the-number .play-game .game-content .selection div label, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label {
-  padding: 0 0.5rem;
+  padding: 0 1rem;
 }
 #mainPage .game-zone.guess-the-number .play-game .game-content .selection div label img.bg, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label img.bg {
   filter: grayscale(100%);
@@ -3536,13 +3539,13 @@ body {
 }
 @keyframes float-1 {
   0% {
-    transform: translate(0, 1.25rem);
+    transform: translate(0, 0rem);
   }
   50% {
     transform: translate(0, -1.25rem);
   }
   100% {
-    transform: translate(0, 1.25rem);
+    transform: translate(0, 0rem);
   }
 }
 @keyframes float-2 {
@@ -3553,7 +3556,7 @@ body {
     transform: translate(0, -1.25rem);
   }
   75% {
-    transform: translate(0, 1.25rem);
+    transform: translate(0, 0rem);
   }
   100% {
     transform: translate(0, 0);
@@ -3564,7 +3567,7 @@ body {
     transform: translate(0, -1.25rem);
   }
   50% {
-    transform: translate(0, 1.25rem);
+    transform: translate(0, 0rem);
   }
   100% {
     transform: translate(0, -1.25rem);
@@ -3585,6 +3588,23 @@ body {
   }
   100% {
     background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes fliping {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(360deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
   }
 }
 #mainPage .full-page {
