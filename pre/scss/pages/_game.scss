@@ -263,6 +263,7 @@
                 display: flex;
                 align-items: center;
                 gap: size(8);
+                max-height: size(44);
 
                 button {
                     padding: size(10);

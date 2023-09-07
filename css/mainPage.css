@@ -3167,6 +3167,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  max-height: 2.75rem;
 }
 #mainPage #game .game-detail .content .count button {
   padding: 0.625rem;
