@@ -108,9 +108,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- <li>
-                            <a href="https://twitter.com/ZKaizoku_" target="_blank"><i class="icon-Twitter"></i> Twitter</a>
-                        </li> -->
+                        <li>
+                            <a href="https://twitter.com/ZKaizoku_" target="_blank">
+                                <i class="icon-Twitter"></i> Twitter
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -133,59 +135,104 @@
             <ul class="breadcrumb">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="game.html">Game</a></li>
-                <li>Odd/Even Betting</li>
+                <li>Match the Pirate</li>
             </ul>
 
             <section id="game">
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone odd-even-betting">
-                                <div class="default">
-                                    <img src="img/game/odd-even-betting/cover.jpg">
+                            <div class="game-zone match-the-pirate">
+                                <div class="default"
+                                    style="background-image: url(img/game/match-the-pirate/cover.jpg);">
                                     <div class="game-title">
-                                        <h3>Odd/Even Betting</h3>
+                                        <h3>Match the Pirate</h3>
+                                        <!-- ↓若還沒連結錢包則先跳出連結錢包的彈窗 -->
                                         <button>Start to play</button>
                                     </div>
                                 </div>
 
                                 <div class="play-game">
-                                    <video autoplay muted loop poster="img/game/odd-even-betting/bg.jpg">
-                                        <source src="img/game/odd-even-betting/bg.mp4" type="video/mp4">
+                                    <video autoplay muted loop poster="img/game/match-the-pirate/bg.jpg">
+                                        <source src="img/game/match-the-pirate/bg.mp4" type="video/mp4">
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
-                                            <img src="img/game/dice/dice01.png">
-                                            <img src="img/game/dice/dice02.png">
-                                            <img src="img/game/dice/dice03.png">
+                                            <img src="img/game/match-the-pirate/card.png">
                                         </div>
 
                                         <div class="selection">
                                             <div>
-                                                <input id="big" type="radio" name="bet" value="big">
-                                                <label for="big">
-                                                    <img class="bg" src="img/game/odd-even-betting/btn-bg.png">
-                                                    <img class="item" src="img/game/odd-even-betting/item-odd.png">
+                                                <input id="dice01" type="radio" name="dice" value="dice01">
+                                                <label for="dice01">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/match-the-pirate/card1.png">
+                                                </label>
+
+                                                <input id="dice02" type="radio" name="dice" value="dice02">
+                                                <label for="dice02">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/match-the-pirate/card2.png">
+                                                </label>
+
+                                                <input id="dice03" type="radio" name="dice" value="dice03">
+                                                <label for="dice03">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/match-the-pirate/card3.png">
+                                                </label>
+
+                                                <input id="dice04" type="radio" name="dice" value="dice04">
+                                                <label for="dice04">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/match-the-pirate/card4.png">
+                                                </label>
+
+                                                <input id="dice05" type="radio" name="dice" value="dice05">
+                                                <label for="dice05">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/match-the-pirate/card5.png">
+                                                </label>
+
+                                                <input id="dice06" type="radio" name="dice" value="dice06">
+                                                <label for="dice06">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/match-the-pirate/card6.png">
                                                 </label>
                                             </div>
 
                                             <button class="play"><img src="img/game/btn-play.png"></button>
-                                            <div>
-                                                <input id="small" type="radio" name="bet" value="small">
-                                                <label for="small">
-                                                    <img class="bg" src="img/game/odd-even-betting/btn-bg.png">
-                                                    <img class="item" src="img/game/odd-even-betting/item-even.png">
-                                                </label>
-                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- toast -->
+                                    <div class="toast-container">
+                                        <!-- 未選擇賭注 -->
+                                        <div id="no-select" class="toast warning">
+                                            Please select any wager.
+                                        </div>
+
+                                        <!-- 未輸入賭本 -->
+                                        <div id="no-value" class="toast warning">
+                                            Please enter the bets.
+                                        </div>
+
+                                        <!-- 未輸入正整數 -->
+                                        <div id="wrong-value" class="toast warning">
+                                            Please enter a positive integer.
+                                        </div>
+
+                                        <!-- 超過可提領額度 -->
+                                        <div id="exceed" class="toast warning">
+                                            Insufficient balance.
                                         </div>
                                     </div>
                                 </div>
 
                                 <div id="game-notice" class="popUp">
                                     <div class="popUp--container">
-                                        <h3>Game Result</h3>
+                                        <h3>Win</h3>
                                         <div class="popUp--content">
-                                            <p>文字文字文字</p>
+                                            <p>Earn Points：10</p>
                                         </div>
                                         <div class="popUp--btns">
                                             <button class="submit replay">Replay</button>
@@ -195,7 +242,7 @@
                             </div>
 
                             <div class="content">
-                                <h3>Odd/Even Betting</h3>
+                                <h3>Match the Pirate</h3>
                                 <div class="desc">
                                     <p>
                                         This is a probability game involving dice rolling. Should the number on your
@@ -205,19 +252,35 @@
                                         computer's, the system shall seize your wager.
                                     </p>
                                 </div>
-                                <div class="input-group">
-                                    <label for="odds">
-                                        Odds
-                                        <i class="icon-InfoCircle popUp--open" for="info"></i>
-                                    </label>
-                                    <input name="odds" type="text" value="xN.NN" disabled>
+                                <!-- <div class="awards">
+                                    <div class="louder"><i class="icon-Loudspeaker"></i></div>
+                                    <div class="swiper award-list">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">“0x610...e258a”winning 243 $ZKZ！</div>
+                                            <div class="swiper-slide">“0x482...s100d”winning 123 $ZKZ！</div>
+                                            <div class="swiper-slide">“0x889...v207m”winning 63 $ZKZ！</div>
+                                            <div class="swiper-slide">"0x8e2...e2c3w”winning 60 $ZKZ！</div>
+                                            <div class="swiper-slide">"0xe21...rjs14”winning 50 $ZKZ！</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="odd-n-bet">
+                                    <div class="odds">
+                                        <label>
+                                            Odds
+                                            <i class="icon-InfoCircle popUp--open" for="odds"></i>
+                                        </label>
+                                        <h3>xN.NN</h3>
+                                    </div>
+                                    <div class="bets">
+                                        <label for="bets">Bets</label>
+                                        <input name="bets" type="number" placeholder="Enter your Bets" required>
+                                        <span class="helper">$ZKZ數量為 300</span>
+                                    </div>
                                 </div>
-                                <div class="input-group">
-                                    <label for="bets">Bets</label>
-                                    <input name="bets" type="text" placeholder="enter your bets" required>
-                                </div>
-                                <div>
-                                    <i class="icon-Change"></i> 累積交互次數：5 次
+                                <div class="count">
+                                    累積交互次數：5 次
+                                    <button class="btn-tertiary"><i class="icon-Change"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -228,16 +291,42 @@
 
         <footer>
             <div class="mask"></div>
-            <ul class="sns">
+            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
+            <!-- <ul class="sns">
                 <li>
-                    <button class="btn-rounded"><i class="icon-Twitter"></i></button>
+                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+                        <i class="icon-Twitter"></i>
+                    </button>
                 </li>
-            </ul>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul> -->
         </footer>
 
 
 
 
+
+        <!-- 預設 pop up -->
+        <div id="info" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>這是一個預設彈窗</h3>
+                <div class="popUp--content">
+                    <p>彈窗的內文放這裡</p>
+                    <ol>
+                        <li>也可以條列式</li>
+                        <li>放置內文</li>
+                        <li>或是<a href="">超連結</a></li>
+                    </ol>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary close">取消</button>
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
 
         <!-- pop up 連接錢包 -->
         <div id="login" class="popUp">
@@ -265,27 +354,22 @@
             </div>
         </div>
 
-        <!-- 預設 pop up -->
-        <div id="info" class="popUp">
+        <!-- pop up Odds -->
+        <div id="odds" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>這是一個預設彈窗</h3>
+                <h3>Odds information</h3>
                 <div class="popUp--content">
-                    <p>彈窗的內文放這裡</p>
-                    <ol>
-                        <li>也可以條列式</li>
-                        <li>放置內文</li>
-                        <li>或是<a href="">超連結</a></li>
-                    </ol>
+                    <p>This odds already include a 3% House Edge.</p>
                 </div>
-                <div class="popUp--btns">
+                <!-- <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>
                     <button class="submit">確認</button>
-                </div>
+                </div> -->
             </div>
         </div>
 
-        <!-- 遊戲蓋版 -->
+        <!-- 遊戲中蓋版 (禁止操作網頁) -->
         <div class="full-page"></div>
     </div>
 
@@ -311,6 +395,36 @@
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
     <script src="js/game.js"></script>
+    <script src="js/match-the-pirate.js"></script>
+
+    <!-- Swiper 套件 -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".award-list", {
+            direction: "vertical",
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 8,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            on: {
+                touchMove: function (e) {
+                    e.preventDefault();
+                },
+            },
+            breakpoints: {
+                1025: {
+                    slidesPerView: 2,
+                },
+                1281: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
