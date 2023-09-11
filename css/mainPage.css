@@ -3344,26 +3344,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  transform: rotate(-10deg);
+  gap: 2rem;
 }
 #mainPage .game-zone .play-game .game-content .result img {
   max-width: 12.5rem;
-  animation: 3s infinite forwards;
-}
-#mainPage .game-zone .play-game .game-content .result img:nth-child(1) {
-  animation-name: float-1;
-  animation-timing-function: linear;
-}
-#mainPage .game-zone .play-game .game-content .result img:nth-child(2) {
-  animation-name: float-2;
-  animation-timing-function: linear;
-}
-#mainPage .game-zone .play-game .game-content .result img:nth-child(3) {
-  animation-name: float-3;
-}
-#mainPage .game-zone .play-game .game-content .result.playing img {
-  animation: fliping 4s infinite linear;
+  animation: float 3s infinite forwards linear;
 }
 #mainPage .game-zone .play-game .game-content .result.show img {
   animation-play-state: paused;
@@ -3458,28 +3443,71 @@ body {
 #mainPage .game-zone .popUp {
   position: absolute;
 }
-#mainPage .game-zone .popUp .popUp--content {
+#mainPage .game-zone .popUp .popUp--container .popUp--content {
   text-align: center;
   min-width: 25.95rem;
 }
-#mainPage .game-zone.guess-the-number .play-game .game-content .selection div label, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label {
+#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
   padding: 0 1rem;
 }
-#mainPage .game-zone.guess-the-number .play-game .game-content .selection div label img.bg, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label img.bg {
+#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.bg {
   filter: grayscale(100%);
   transition-property: filter;
 }
-#mainPage .game-zone.guess-the-number .play-game .game-content .selection div label img.item, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label img.item {
+#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.item {
   transition-property: transform;
 }
-#mainPage .game-zone.guess-the-number .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div input:checked + label img.bg {
+#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.bg {
   filter: grayscale(0);
 }
-#mainPage .game-zone.guess-the-number .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div input:checked + label img.item {
+#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.item {
   transform: scale(1.1);
 }
-#mainPage .game-zone.guess-the-number .play-game .game-content .selection button img, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection button img {
+#mainPage .game-zone.match-the-pirate .play-game .game-content .selection button img, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button img {
   max-height: 3.5rem;
+}
+#mainPage .game-zone.match-the-pirate .play-game .game-content .result {
+  transform: rotate(-10deg);
+}
+#mainPage .game-zone.paper-scissors-stone .play-game .game-content .result {
+  transform: translate(-0.625rem, -0.625rem);
+}
+#mainPage .game-zone.paper-scissors-stone .play-game .game-content .result.playing img {
+  animation: shaking 1s infinite;
+}
+#mainPage .game-zone.interstellar-connection .play-game .game-content .result .swiper {
+  margin: 0;
+  max-width: 12.5rem;
+  height: 100%;
+}
+#mainPage .game-zone.interstellar-connection .play-game .game-content .result .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+}
+#mainPage .game-zone.interstellar-connection .play-game .game-content .result::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/game/interstellar-connection/frame.png);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+#mainPage .game-zone.interstellar-connection .play-game .game-content .selection::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 9.375rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 0;
+}
+#mainPage .game-zone.interstellar-connection .play-game .game-content .selection .play {
+  z-index: 1;
 }
 #mainPage .game-zone.bet-big-small .play-game .game-content .selection div label img.bg, #mainPage .game-zone.odd-even-betting .play-game .game-content .selection div label img.bg {
   opacity: 0.3;
@@ -3495,7 +3523,7 @@ body {
 }
 @media (max-width: 1024px) {
   #mainPage .game-zone {
-    height: auto;
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6);
   }
   #mainPage .game-zone .default .game-title {
     padding: 1rem;
@@ -3519,14 +3547,27 @@ body {
   #mainPage .game-zone .popUp .popUp--container {
     width: calc(100% - 2rem);
   }
-  #mainPage .game-zone.guess-the-number .play-game .game-content .selection div, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div {
+  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection div, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div {
     gap: 0.25rem;
   }
-  #mainPage .game-zone.guess-the-number .play-game .game-content .selection div label, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection div label {
+  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
     padding: 0;
   }
-  #mainPage .game-zone.guess-the-number .play-game .game-content .selection button, #mainPage .game-zone.higher-number-wins .play-game .game-content .selection button {
+  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection button, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button {
     max-width: 9rem;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage .game-zone {
+    height: calc((100svw - 2rem - 2rem) * 0.6);
+  }
+}
+@media (max-width: 516px) {
+  #mainPage .game-zone .default .game-title h3 {
+    font-size: 0.9375rem;
+  }
+  #mainPage .game-zone .popUp .popUp--container .popUp--content {
+    min-width: auto;
   }
 }
 @keyframes fade-in {
@@ -3537,15 +3578,15 @@ body {
     opacity: 1;
   }
 }
-@keyframes float-1 {
+@keyframes float {
   0% {
-    transform: translate(0, 0rem);
+    transform: translate(0, -5%);
   }
   50% {
-    transform: translate(0, -1.25rem);
+    transform: translate(0, -15%);
   }
   100% {
-    transform: translate(0, 0rem);
+    transform: translate(0, -5%);
   }
 }
 @keyframes float-2 {
@@ -3590,21 +3631,21 @@ body {
     background-color: rgba(255, 255, 255, 0);
   }
 }
-@keyframes fliping {
+@keyframes shaking {
   0% {
-    transform: rotateY(0deg);
+    transform: rotate(10deg) translate(0, -20%);
   }
   25% {
-    transform: rotateY(360deg);
+    transform: rotate(-15deg) translate(0, 0rem);
   }
   50% {
-    transform: rotateY(0deg);
+    transform: rotate(10deg) translate(0, -20%);
   }
   75% {
-    transform: rotateY(360deg);
+    transform: rotate(-15deg) translate(0, 0rem);
   }
   100% {
-    transform: rotateY(0deg);
+    transform: rotate(10deg) translate(0, -20%);
   }
 }
 #mainPage .full-page {
