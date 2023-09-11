@@ -135,71 +135,53 @@
             <ul class="breadcrumb">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="game.html">Game</a></li>
-                <li>Interstellar Connection</li>
+                <li>Mysterious Compass</li>
             </ul>
 
             <section id="game">
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone interstellar-connection">
+                            <div class="game-zone mysterious-compass">
                                 <div class="default"
-                                    style="background-image: url(img/game/interstellar-connection/cover.jpg);">
+                                    style="background-image: url(img/game/mysterious-compass/cover.jpg);">
                                     <div class="game-title">
-                                        <h3>Interstellar Connection</h3>
+                                        <h3>Mysterious Compass</h3>
                                         <!-- ↓若還沒連結錢包則先跳出連結錢包的彈窗 -->
                                         <button>Start to play</button>
                                     </div>
                                 </div>
 
                                 <div class="play-game">
-                                    <video autoplay muted loop poster="img/game/interstellar-connection/bg.jpg">
-                                        <!-- <source src="img/game/interstellar-connection/bg.mp4" type="video/mp4"> -->
+                                    <video autoplay muted loop poster="img/game/mysterious-compass/bg.jpg">
+                                        <source src="img/game/mysterious-compass/bg.mp4" type="video/mp4">
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
-                                            <div class="swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/star.png">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/coin.png">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/crown.png">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/coin.png">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/crown.png">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/star.png">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/crown.png">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/star.png">
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <img src="img/game/interstellar-connection/coin.png">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <img src="img/game/mysterious-compass/stone.png">
                                         </div>
 
                                         <div class="selection">
+                                            <div>
+                                                <input id="dice01" type="radio" name="dice" value="dice01">
+                                                <label for="dice01">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/mysterious-compass/scissors-s.png">
+                                                </label>
+
+                                                <input id="dice02" type="radio" name="dice" value="dice02">
+                                                <label for="dice02">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/mysterious-compass/stone-s.png">
+                                                </label>
+
+                                                <input id="dice03" type="radio" name="dice" value="dice03">
+                                                <label for="dice03">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/mysterious-compass/paper-s.png">
+                                                </label>
+                                            </div>
+
                                             <button class="play"><img src="img/game/btn-play.png"></button>
                                         </div>
                                     </div>
@@ -242,7 +224,7 @@
                             </div>
 
                             <div class="content">
-                                <h3>Interstellar Connection</h3>
+                                <h3>Mysterious Compass</h3>
                                 <div class="desc">
                                     <p>
                                         This is a probability game involving dice rolling. Should the number on your
@@ -395,21 +377,12 @@
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
     <script src="js/game.js"></script>
-    <script src="js/interstellar-connection.js"></script>
+    <script src="js/mysterious-compass.js"></script>
 
     <!-- Swiper 套件 -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script>
-        var swiperSlot = new Swiper(".result .swiper", {
-            direction: "vertical",
-            loop: true,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
-        });
-
-        var swiperAward = new Swiper(".award-list", {
+        var swiper = new Swiper(".award-list", {
             direction: "vertical",
             slidesPerView: 3,
             slidesPerGroup: 1,

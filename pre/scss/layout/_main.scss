@@ -48,6 +48,38 @@ main {
         }
     }
 
+    img[for=mission] {
+        position: fixed;
+        right: size(32);
+        bottom: size(68);
+        width: size(150);
+        z-index: 6;
+        cursor: pointer;
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+        animation: btn-float 5s infinite;
+
+        @media (hover: hover) {
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    @keyframes btn-float {
+        0% {
+            transform: translate(0, size(-4));
+        }
+
+        50% {
+            transform: translate(0, size(4));
+        }
+
+        100% {
+            transform: translate(0, size(-4));
+        }
+    }
+
 
     // PC ~ 1440
     @include max-to(pc) {
@@ -62,6 +94,10 @@ main {
         &.innerPage {
             background-image: url(../img/bg/inner-bg-m.jpg);
         }
+
+        img[for=mission] {
+            right: size(20);
+        }
     }
 
 
@@ -69,6 +105,10 @@ main {
     @include max-to(mobile) {
         margin-top: size(60);
         padding-top: 0;
+
+        img[for=mission] {
+            width: size(120);
+        }
     }
 }
 

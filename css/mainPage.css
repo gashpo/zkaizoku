@@ -1510,6 +1510,33 @@ body {
   max-width: 90rem;
   margin: 0 auto;
 }
+#mainPage main img[for=mission] {
+  position: fixed;
+  right: 2rem;
+  bottom: 4.25rem;
+  width: 9.375rem;
+  z-index: 6;
+  cursor: pointer;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  animation: btn-float 5s infinite;
+}
+@media (hover: hover) {
+  #mainPage main img[for=mission]:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes btn-float {
+  0% {
+    transform: translate(0, -0.25rem);
+  }
+  50% {
+    transform: translate(0, 0.25rem);
+  }
+  100% {
+    transform: translate(0, -0.25rem);
+  }
+}
 @media (max-width: 1440px) {
   #mainPage main section {
     padding: 1.25rem;
@@ -1519,11 +1546,17 @@ body {
   #mainPage main.innerPage {
     background-image: url(../img/bg/inner-bg-m.jpg);
   }
+  #mainPage main img[for=mission] {
+    right: 1.25rem;
+  }
 }
 @media (max-width: 516px) {
   #mainPage main {
     margin-top: 3.75rem;
     padding-top: 0;
+  }
+  #mainPage main img[for=mission] {
+    width: 7.5rem;
   }
 }
 #mainPage #keyvision {
@@ -2418,44 +2451,9 @@ body {
   font-size: 1.25rem;
   padding: 0.6875rem;
 }
-#mainPage footer img {
-  position: fixed;
-  right: 2rem;
-  bottom: 4.25rem;
-  width: 9.375rem;
-  z-index: 6;
-  cursor: pointer;
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
-  animation: btn-float 5s infinite;
-}
-@media (hover: hover) {
-  #mainPage footer img:hover {
-    animation-play-state: paused;
-  }
-}
-@keyframes btn-float {
-  0% {
-    transform: translate(0, -0.25rem);
-  }
-  50% {
-    transform: translate(0, 0.25rem);
-  }
-  100% {
-    transform: translate(0, -0.25rem);
-  }
-}
-@media (max-width: 768px) {
-  #mainPage footer img {
-    right: 1.25rem;
-  }
-}
 @media (max-width: 516px) {
   #mainPage footer .mask {
     left: calc(100svw - 34.7222222222svw);
-  }
-  #mainPage footer img {
-    width: 7.5rem;
   }
 }
 #mainPage #shop {
