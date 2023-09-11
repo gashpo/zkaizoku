@@ -108,9 +108,11 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- <li>
-                            <a href="https://twitter.com/ZKaizoku_" target="_blank"><i class="icon-Twitter"></i> Twitter</a>
-                        </li> -->
+                        <li>
+                            <a href="https://twitter.com/ZKaizoku_" target="_blank">
+                                <i class="icon-Twitter"></i> Twitter
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -133,50 +135,55 @@
             <ul class="breadcrumb">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="game.html">Game</a></li>
-                <li>Bet Big/Small</li>
+                <li>Paper, Scissors, Stone</li>
             </ul>
 
             <section id="game">
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone bet-big-small">
-                                <div class="default">
-                                    <img src="img/game/bet-big-small/cover.jpg">
+                            <div class="game-zone paper-scissors-stone">
+                                <div class="default"
+                                    style="background-image: url(img/game/paper-scissors-stone/cover.jpg);">
                                     <div class="game-title">
-                                        <h3>Bet Big/Small</h3>
+                                        <h3>Paper, Scissors, Stone</h3>
+                                        <!-- ↓若還沒連結錢包則先跳出連結錢包的彈窗 -->
                                         <button>Start to play</button>
                                     </div>
                                 </div>
 
                                 <div class="play-game">
-                                    <video autoplay muted loop poster="img/game/bet-big-small/bg.jpg">
-                                        <source src="img/game/bet-big-small/bg.mp4" type="video/mp4">
+                                    <video autoplay muted loop poster="img/game/paper-scissors-stone/bg.jpg">
+                                        <source src="img/game/paper-scissors-stone/bg.mp4" type="video/mp4">
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
-                                            <img src="img/game/dice/dice01.png">
-                                            <img src="img/game/dice/dice02.png">
-                                            <img src="img/game/dice/dice03.png">
+                                            <img src="img/game/paper-scissors-stone/stone.png">
                                         </div>
 
                                         <div class="selection">
                                             <div>
-                                                <input id="big" type="radio" name="bet" value="big">
-                                                <label for="big">
-                                                    <img class="bg" src="img/game/bet-big-small/btn-bg.png">
-                                                    <img class="item" src="img/game/bet-big-small/item-big.png">
+                                                <input id="dice01" type="radio" name="dice" value="dice01">
+                                                <label for="dice01">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item"
+                                                        src="img/game/paper-scissors-stone/scissors-s.png">
+                                                </label>
+
+                                                <input id="dice02" type="radio" name="dice" value="dice02">
+                                                <label for="dice02">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/paper-scissors-stone/stone-s.png">
+                                                </label>
+
+                                                <input id="dice03" type="radio" name="dice" value="dice03">
+                                                <label for="dice03">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/paper-scissors-stone/paper-s.png">
                                                 </label>
                                             </div>
 
                                             <button class="play"><img src="img/game/btn-play.png"></button>
-                                            <div>
-                                                <input id="small" type="radio" name="bet" value="small">
-                                                <label for="small">
-                                                    <img class="bg" src="img/game/bet-big-small/btn-bg.png">
-                                                    <img class="item" src="img/game/bet-big-small/item-small.png">
-                                                </label>
-                                            </div>
                                         </div>
                                     </div>
 
@@ -184,31 +191,31 @@
                                     <div class="toast-container">
                                         <!-- 未選擇賭注 -->
                                         <div id="no-select" class="toast warning">
-                                            請選擇賭注
+                                            Please select any wager.
                                         </div>
 
                                         <!-- 未輸入賭本 -->
                                         <div id="no-value" class="toast warning">
-                                            請輸入賭本
+                                            Please enter the bets.
                                         </div>
 
                                         <!-- 未輸入正整數 -->
                                         <div id="wrong-value" class="toast warning">
-                                            請輸入正整數
+                                            Please enter a positive integer.
                                         </div>
 
                                         <!-- 超過可提領額度 -->
                                         <div id="exceed" class="toast warning">
-                                            餘額不足
+                                            Insufficient balance.
                                         </div>
                                     </div>
                                 </div>
 
                                 <div id="game-notice" class="popUp">
                                     <div class="popUp--container">
-                                        <h3>Game Result</h3>
+                                        <h3>Win</h3>
                                         <div class="popUp--content">
-                                            <p>文字文字文字</p>
+                                            <p>Earn Points：10</p>
                                         </div>
                                         <div class="popUp--btns">
                                             <button class="submit replay">Replay</button>
@@ -218,7 +225,7 @@
                             </div>
 
                             <div class="content">
-                                <h3>Guess the Number</h3>
+                                <h3>Paper, Scissors, Stone</h3>
                                 <div class="desc">
                                     <p>
                                         This is a probability game involving dice rolling. Should the number on your
@@ -244,7 +251,7 @@
                                     <div class="odds">
                                         <label>
                                             Odds
-                                            <i class="icon-InfoCircle popUp--open" for="info"></i>
+                                            <i class="icon-InfoCircle popUp--open" for="odds"></i>
                                         </label>
                                         <h3>xN.NN</h3>
                                     </div>
@@ -267,16 +274,42 @@
 
         <footer>
             <div class="mask"></div>
-            <ul class="sns">
+            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
+            <!-- <ul class="sns">
                 <li>
-                    <button class="btn-rounded"><i class="icon-Twitter"></i></button>
+                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+                        <i class="icon-Twitter"></i>
+                    </button>
                 </li>
-            </ul>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul> -->
         </footer>
 
 
 
 
+
+        <!-- 預設 pop up -->
+        <div id="info" class="popUp">
+            <div class="popUp--container">
+                <button class="popUp--close"><i class="icon-Close"></i></button>
+                <h3>這是一個預設彈窗</h3>
+                <div class="popUp--content">
+                    <p>彈窗的內文放這裡</p>
+                    <ol>
+                        <li>也可以條列式</li>
+                        <li>放置內文</li>
+                        <li>或是<a href="">超連結</a></li>
+                    </ol>
+                </div>
+                <div class="popUp--btns">
+                    <button class="btn-tertiary close">取消</button>
+                    <button class="submit">確認</button>
+                </div>
+            </div>
+        </div>
 
         <!-- pop up 連接錢包 -->
         <div id="login" class="popUp">
@@ -304,27 +337,22 @@
             </div>
         </div>
 
-        <!-- 預設 pop up -->
-        <div id="info" class="popUp">
+        <!-- pop up Odds -->
+        <div id="odds" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>這是一個預設彈窗</h3>
+                <h3>Odds information</h3>
                 <div class="popUp--content">
-                    <p>彈窗的內文放這裡</p>
-                    <ol>
-                        <li>也可以條列式</li>
-                        <li>放置內文</li>
-                        <li>或是<a href="">超連結</a></li>
-                    </ol>
+                    <p>This odds already include a 3% House Edge.</p>
                 </div>
-                <div class="popUp--btns">
+                <!-- <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>
                     <button class="submit">確認</button>
-                </div>
+                </div> -->
             </div>
         </div>
 
-        <!-- 遊戲蓋版 -->
+        <!-- 遊戲中蓋版 (禁止操作網頁) -->
         <div class="full-page"></div>
     </div>
 
@@ -350,6 +378,7 @@
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
     <script src="js/game.js"></script>
+    <script src="js/paper-scissors-stone.js"></script>
 
     <!-- Swiper 套件 -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
