@@ -3449,26 +3449,26 @@ body {
   text-align: center;
   min-width: 25.95rem;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
   padding: 0 1rem;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.bg {
   filter: grayscale(100%);
   transition-property: filter;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.item {
   transition-property: transform;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.bg {
   filter: grayscale(0);
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.item {
   transform: scale(1.1);
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection button img, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button img {
+#mainPage .game-zone.MTP .play-game .game-content .selection button img, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button img {
   max-height: 3.5rem;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .result {
+#mainPage .game-zone.MTP .play-game .game-content .result {
   transform: rotate(-10deg);
 }
 #mainPage .game-zone.paper-scissors-stone .play-game .game-content .result {
@@ -3549,13 +3549,13 @@ body {
   #mainPage .game-zone .popUp .popUp--container {
     width: calc(100% - 2rem);
   }
-  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection div, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div {
     gap: 0.25rem;
   }
-  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
     padding: 0;
   }
-  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection button, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button {
+  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button {
     max-width: 9rem;
   }
 }
