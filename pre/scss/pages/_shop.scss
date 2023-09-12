@@ -179,7 +179,7 @@
         background-color: black;
         @include radius;
         padding: size(40);
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         gap: size(40);
 
@@ -282,6 +282,10 @@
                     background-color: rgba(white, .3);
                 }
             }
+        }
+
+        &.active {
+            display: flex;
         }
     }
 

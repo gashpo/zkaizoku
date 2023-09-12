@@ -21,6 +21,9 @@
     <meta property="og:image" content="https://gashpo.github.io/zkaizoku/img/og-image.png" />
     <link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
 
+    <!-- Swiper 套件 -->
+    <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
+
     <!-- Custom Icons -->
     <link rel="stylesheet" href="vendor/icomoon/style.css">
 
@@ -131,69 +134,33 @@
         <main class="innerPage">
             <ul class="breadcrumb">
                 <li><a href="index.html">首頁</a></li>
-                <li>Game</li>
+                <li>商城</li>
             </ul>
 
-            <section id="game">
+            <section id="shop">
                 <div class="container">
-                    <h3>Game</h3>
-                    <ul class="game-list">
+                    <h3>商城</h3>
+                    <ul class="product-list">
                         <li>
-                            <a href="MTP.html">
-                                <div class="img">
-                                    <img src="img/game/MTP/thumb.jpg">
-                                </div>
-                                <h4>默契海盜</h4>
-                                <ul class="tags">
-                                    <li>角色</li>
-                                    <li>卡牌</li>
-                                    <li>&lt;3分鐘</li>
-                                </ul>
-                                <div class="btn"><button class="btn-tertiary">查看遊戲介紹</button></div>
-                            </a>
+                            <div class="img">
+                                <img src="img/product01.jpg">
+                            </div>
+                            <div class="content">
+                                <h3>白單/公售 dNFT</h3>
+                                <p>商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品</p>
+                                <button onclick="location='shop-detail.html'">查看商品</button>
+                            </div>
                         </li>
-                        <li>
-                            <a href="PSS.html">
-                                <div class="img">
-                                    <img src="img/game/PSS/thumb.jpg">
-                                </div>
-                                <h4>剪刀石頭布</h4>
-                                <ul class="tags">
-                                    <li>科幻</li>
-                                    <li>休閒</li>
-                                    <li>&lt;3分鐘</li>
-                                </ul>
-                                <div class="btn"><button class="btn-tertiary">查看遊戲介紹</button></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="IC.html">
-                                <div class="img">
-                                    <img src="img/game/IC/thumb.jpg">
-                                </div>
-                                <h4>星際連線</h4>
-                                <ul class="tags">
-                                    <li>科幻</li>
-                                    <li>休閒</li>
-                                    <li>&lt;3分鐘</li>
-                                </ul>
-                                <div class="btn"><button class="btn-tertiary">查看遊戲介紹</button></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="MC.html">
-                                <div class="img">
-                                    <img src="img/game/MC/thumb.jpg">
-                                </div>
-                                <h4>神秘輪盤</h4>
-                                <ul class="tags">
-                                    <li>海盜</li>
-                                    <li>命運</li>
-                                    <li>&lt;3分鐘</li>
-                                </ul>
-                                <div class="btn"><button class="btn-tertiary">查看遊戲介紹</button></div>
-                            </a>
-                        </li>
+                        <!-- <li>
+                            <div class="img">
+                                <img src="img/product02.jpg">
+                            </div>
+                            <div class="content">
+                                <h3>盲盒 dNFT</h3>
+                                <p>商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品商品說明商品說明商品</p>
+                                <button onclick="location='shop-detail.html'">查看商品</button>
+                            </div>
+                        </li> -->
                     </ul>
                 </div>
             </section>
@@ -201,8 +168,18 @@
 
         <footer>
             <div class="mask"></div>
+            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
+            <!-- <ul class="sns">
+                <li>
+                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
+                        <i class="icon-Twitter"></i>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
+                </li>
+            </ul> -->
         </footer>
-
 
 
 
@@ -250,7 +227,6 @@
 
     <!-- Custom settings -->
     <script src="js/navigation.js"></script>
-    <script src="js/menu.js"></script>
     <script src="js/dropdown.js"></script>
     <script src="js/fulldown.js"></script>
     <script src="js/tab.js"></script>

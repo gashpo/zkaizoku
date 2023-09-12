@@ -2655,7 +2655,7 @@ body {
   background-color: black;
   border-radius: 1.875rem;
   padding: 2.5rem;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   gap: 2.5rem;
 }
@@ -2784,6 +2784,9 @@ body {
 }
 #mainPage #shop .product-detail.step2 .desc::-webkit-scrollbar-thumb, #mainPage #shop .product-detail.step3 .desc::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
+}
+#mainPage #shop .product-detail.active {
+  display: flex;
 }
 @media (max-width: 1280px) {
   #mainPage #shop .product-list li {
