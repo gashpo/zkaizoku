@@ -199,8 +199,8 @@
         }
     }
 
-    &.match-the-pirate,
-    &.paper-scissors-stone {
+    &.MTP,
+    &.PSS {
         .play-game {
             .game-content {
                 .selection {
@@ -247,7 +247,7 @@
         }
     }
 
-    &.match-the-pirate {
+    &.MTP {
         .play-game {
             .game-content {
                 .result {
@@ -257,7 +257,7 @@
         }
     }
 
-    &.paper-scissors-stone {
+    &.PSS {
         .play-game {
             .game-content {
                 .result {
@@ -273,7 +273,7 @@
         }
     }
 
-    &.interstellar-connection {
+    &.IC {
         .play-game {
             .game-content {
                 .result {
@@ -297,7 +297,7 @@
                         left: 0;
                         right: 0;
                         bottom: 0;
-                        background-image: url(../img/game/interstellar-connection/frame.png);
+                        background-image: url(../img/game/IC/frame.png);
                         background-size: cover;
                         background-position: center;
                         z-index: 1;
@@ -318,38 +318,6 @@
 
                     .play {
                         z-index: 1;
-                    }
-                }
-            }
-        }
-    }
-
-    &.bet-big-small,
-    &.odd-even-betting {
-        .play-game {
-            .game-content {
-                .selection {
-                    div {
-                        label {
-                            img {
-                                &.bg {
-                                    opacity: .3;
-                                    transition-property: opacity;
-                                }
-                            }
-                        }
-
-                        input {
-                            &:checked {
-                                &+label {
-                                    img {
-                                        &.bg {
-                                            opacity: .7;
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -407,8 +375,8 @@
         }
 
 
-        &.match-the-pirate,
-        &.paper-scissors-stone {
+        &.MTP,
+        &.PSS {
             .play-game {
                 .game-content {
                     .selection {

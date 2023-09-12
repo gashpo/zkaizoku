@@ -3165,11 +3165,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-<<<<<<< HEAD
-  max-height: 2.75rem;
-=======
   max-height: 3.5rem;
->>>>>>> card-game
 }
 #mainPage #game .game-detail .content .count button {
   padding: 0.625rem;
@@ -3449,56 +3445,56 @@ body {
   text-align: center;
   min-width: 25.95rem;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label {
   padding: 0 1rem;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.bg {
   filter: grayscale(100%);
   transition-property: filter;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.item {
   transition-property: transform;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.bg {
   filter: grayscale(0);
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div input:checked + label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.item {
   transform: scale(1.1);
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .selection button img, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button img {
+#mainPage .game-zone.MTP .play-game .game-content .selection button img, #mainPage .game-zone.PSS .play-game .game-content .selection button img {
   max-height: 3.5rem;
 }
-#mainPage .game-zone.match-the-pirate .play-game .game-content .result {
+#mainPage .game-zone.MTP .play-game .game-content .result {
   transform: rotate(-10deg);
 }
-#mainPage .game-zone.paper-scissors-stone .play-game .game-content .result {
+#mainPage .game-zone.PSS .play-game .game-content .result {
   transform: translate(-0.625rem, -0.625rem);
 }
-#mainPage .game-zone.paper-scissors-stone .play-game .game-content .result.playing img {
+#mainPage .game-zone.PSS .play-game .game-content .result.playing img {
   animation: shaking 1s infinite;
 }
-#mainPage .game-zone.interstellar-connection .play-game .game-content .result .swiper {
+#mainPage .game-zone.IC .play-game .game-content .result .swiper {
   margin: 0;
   max-width: 12.5rem;
   height: 100%;
 }
-#mainPage .game-zone.interstellar-connection .play-game .game-content .result .swiper .swiper-wrapper .swiper-slide {
+#mainPage .game-zone.IC .play-game .game-content .result .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   align-items: center;
 }
-#mainPage .game-zone.interstellar-connection .play-game .game-content .result::after {
+#mainPage .game-zone.IC .play-game .game-content .result::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../img/game/interstellar-connection/frame.png);
+  background-image: url(../img/game/IC/frame.png);
   background-size: cover;
   background-position: center;
   z-index: 1;
 }
-#mainPage .game-zone.interstellar-connection .play-game .game-content .selection::before {
+#mainPage .game-zone.IC .play-game .game-content .selection::before {
   content: "";
   position: absolute;
   left: 0;
@@ -3508,15 +3504,8 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 0;
 }
-#mainPage .game-zone.interstellar-connection .play-game .game-content .selection .play {
+#mainPage .game-zone.IC .play-game .game-content .selection .play {
   z-index: 1;
-}
-#mainPage .game-zone.bet-big-small .play-game .game-content .selection div label img.bg, #mainPage .game-zone.odd-even-betting .play-game .game-content .selection div label img.bg {
-  opacity: 0.3;
-  transition-property: opacity;
-}
-#mainPage .game-zone.bet-big-small .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.odd-even-betting .play-game .game-content .selection div input:checked + label img.bg {
-  opacity: 0.7;
 }
 @media (max-width: 1440px) {
   #mainPage .game-zone {
@@ -3549,13 +3538,13 @@ body {
   #mainPage .game-zone .popUp .popUp--container {
     width: calc(100% - 2rem);
   }
-  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection div, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.PSS .play-game .game-content .selection div {
     gap: 0.25rem;
   }
-  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection div label, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection div label {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label {
     padding: 0;
   }
-  #mainPage .game-zone.match-the-pirate .play-game .game-content .selection button, #mainPage .game-zone.paper-scissors-stone .play-game .game-content .selection button {
+  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.PSS .play-game .game-content .selection button {
     max-width: 9rem;
   }
 }

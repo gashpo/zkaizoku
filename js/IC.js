@@ -1,6 +1,6 @@
 // 遊玩過程
-var gameSelection = $('.interstellar-connection .play-game .selection')
-var gameResult = $('.interstellar-connection .play-game .result')
+var gameSelection = $('.IC .play-game .selection')
+var gameResult = $('.IC .play-game .result')
 
 gameSelection.find('.play').click(function () {
     // 賭本必須為正整數

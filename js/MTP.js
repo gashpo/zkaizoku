@@ -1,6 +1,6 @@
 // 遊玩過程
-var gameSelection = $('.match-the-pirate .play-game .selection')
-var gameResult = $('.match-the-pirate .play-game .result')
+var gameSelection = $('.MTP .play-game .selection')
+var gameResult = $('.MTP .play-game .result')
 
 gameSelection.find('.play').click(function () {
     // 賭本必須為正整數
@@ -24,12 +24,12 @@ gameSelection.find('.play').click(function () {
 
         // 隨機產生結果
         var dicePaths = [
-            'img/game/match-the-pirate/card1.png',
-            'img/game/match-the-pirate/card2.png',
-            'img/game/match-the-pirate/card3.png',
-            'img/game/match-the-pirate/card4.png',
-            'img/game/match-the-pirate/card5.png',
-            'img/game/match-the-pirate/card6.png'
+            'img/game/MTP/card1.png',
+            'img/game/MTP/card2.png',
+            'img/game/MTP/card3.png',
+            'img/game/MTP/card4.png',
+            'img/game/MTP/card5.png',
+            'img/game/MTP/card6.png'
         ];
         var selectedDicePaths = [];
         while (selectedDicePaths.length < 3) {
@@ -107,6 +107,6 @@ $('.replay').click(function () {
     $('.popUp').removeClass('active')
     gameSelection.find('input[type="radio"]').prop('checked', false)
     gameResult.removeClass('show')
-    gameResult.find('img').attr('src', 'img/game/match-the-pirate/card.png')
+    gameResult.find('img').attr('src', 'img/game/MTP/card.png')
     betsInput.removeAttr('disabled')
 })

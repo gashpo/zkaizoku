@@ -68,7 +68,6 @@
                 <button class="menu"></button>
                 <div class="nav">
                     <ul>
-                        <li><a href="shop.html">商城</a></li>
                         <li><a href="game.html">Game</a></li>
                         <li><a href="index.html#nft-idx">NFT</a></li>
                         <li><a href="index.html#tutorial">教學</a></li>
@@ -135,30 +134,29 @@
             <ul class="breadcrumb">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="game.html">Game</a></li>
-                <li>Paper, Scissors, Stone</li>
+                <li>默契海盜</li>
             </ul>
 
             <section id="game">
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone paper-scissors-stone">
-                                <div class="default"
-                                    style="background-image: url(img/game/paper-scissors-stone/cover.jpg);">
+                            <div class="game-zone MTP">
+                                <div class="default" style="background-image: url(img/game/MTP/cover.jpg);">
                                     <div class="game-title">
-                                        <h3>Paper, Scissors, Stone</h3>
+                                        <h3>默契海盜</h3>
                                         <!-- ↓若還沒連結錢包則先跳出連結錢包的彈窗 -->
-                                        <button>Start to play</button>
+                                        <button>立即遊玩</button>
                                     </div>
                                 </div>
 
                                 <div class="play-game">
-                                    <video autoplay muted loop poster="img/game/paper-scissors-stone/bg.jpg">
-                                        <source src="img/game/paper-scissors-stone/bg.mp4" type="video/mp4">
+                                    <video autoplay muted loop poster="img/game/MTP/bg.jpg">
+                                        <source src="img/game/MTP/bg.mp4" type="video/mp4">
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
-                                            <img src="img/game/paper-scissors-stone/stone.png">
+                                            <img src="img/game/MTP/card.png">
                                         </div>
 
                                         <div class="selection">
@@ -166,20 +164,37 @@
                                                 <input id="dice01" type="radio" name="dice" value="dice01">
                                                 <label for="dice01">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item"
-                                                        src="img/game/paper-scissors-stone/scissors-s.png">
+                                                    <img class="item" src="img/game/MTP/card1.png">
                                                 </label>
 
                                                 <input id="dice02" type="radio" name="dice" value="dice02">
                                                 <label for="dice02">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/paper-scissors-stone/stone-s.png">
+                                                    <img class="item" src="img/game/MTP/card2.png">
                                                 </label>
 
                                                 <input id="dice03" type="radio" name="dice" value="dice03">
                                                 <label for="dice03">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/paper-scissors-stone/paper-s.png">
+                                                    <img class="item" src="img/game/MTP/card3.png">
+                                                </label>
+
+                                                <input id="dice04" type="radio" name="dice" value="dice04">
+                                                <label for="dice04">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/MTP/card4.png">
+                                                </label>
+
+                                                <input id="dice05" type="radio" name="dice" value="dice05">
+                                                <label for="dice05">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/MTP/card5.png">
+                                                </label>
+
+                                                <input id="dice06" type="radio" name="dice" value="dice06">
+                                                <label for="dice06">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/MTP/card6.png">
                                                 </label>
                                             </div>
 
@@ -225,14 +240,10 @@
                             </div>
 
                             <div class="content">
-                                <h3>Paper, Scissors, Stone</h3>
+                                <h3>默契海盜</h3>
                                 <div class="desc">
                                     <p>
-                                        This is a probability game involving dice rolling. Should the number on your
-                                        rolled dice match that of the computer's, you will be able to receive the reward
-                                        amount, which is the result of multiplying your wager by the payout odds.
-                                        Conversely, if the number on your rolled dice differs from that of the
-                                        computer's, the system shall seize your wager.
+                                        若你隨機派出的海盜跟對手相同，你將獲得賭本乘上賠率的獎勵金額；如果你跟對手派出的海盜不同，系統將沒收你的賭本。
                                     </p>
                                 </div>
                                 <div class="awards">
@@ -250,14 +261,14 @@
                                 <div class="odd-n-bet">
                                     <div class="odds">
                                         <label>
-                                            Odds
+                                            賠率
                                             <i class="icon-InfoCircle popUp--open" for="odds"></i>
                                         </label>
                                         <h3>xN.NN</h3>
                                     </div>
                                     <div class="bets">
-                                        <label for="bets">Bets</label>
-                                        <input name="bets" type="number" placeholder="Enter your Bets" required>
+                                        <label for="bets">賭本</label>
+                                        <input name="bets" type="number" placeholder="請輸入賭本" required>
                                         <span class="helper">$ZKZ數量為 300</span>
                                     </div>
                                 </div>
@@ -274,17 +285,6 @@
 
         <footer>
             <div class="mask"></div>
-            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
-            <!-- <ul class="sns">
-                <li>
-                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
-                        <i class="icon-Twitter"></i>
-                    </button>
-                </li>
-                <li>
-                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
-                </li>
-            </ul> -->
         </footer>
 
 
@@ -341,9 +341,9 @@
         <div id="odds" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>Odds information</h3>
+                <h3>小提醒</h3>
                 <div class="popUp--content">
-                    <p>This odds already include a 3% House Edge.</p>
+                    <p class="text-center">此賠率已包含3%莊家優勢。</p>
                 </div>
                 <!-- <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>
@@ -378,7 +378,7 @@
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
     <script src="js/game.js"></script>
-    <script src="js/paper-scissors-stone.js"></script>
+    <script src="js/MTP.js"></script>
 
     <!-- Swiper 套件 -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>

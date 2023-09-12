@@ -1,6 +1,6 @@
 // 遊玩過程
-var gameSelection = $('.paper-scissors-stone .play-game .selection')
-var gameResult = $('.paper-scissors-stone .play-game .result')
+var gameSelection = $('.PSS .play-game .selection')
+var gameResult = $('.PSS .play-game .result')
 
 gameSelection.find('.play').click(function () {
     // 賭本必須為正整數
@@ -21,16 +21,16 @@ gameSelection.find('.play').click(function () {
         $('.full-page').addClass('active')
 
         // 隨機產生結果
-        var dicePaths = [
-            'img/game/paper-scissors-stone/scissors.png',
-            'img/game/paper-scissors-stone/stone.png',
-            'img/game/paper-scissors-stone/paper.png'
+        var itemPaths = [
+            'img/game/PSS/scissors.png',
+            'img/game/PSS/stone.png',
+            'img/game/PSS/paper.png'
         ];
-        var selectedDicePaths = [];
-        while (selectedDicePaths.length < 3) {
-            var randomIndex = Math.floor(Math.random() * dicePaths.length);
-            if (!selectedDicePaths.includes(dicePaths[randomIndex])) {
-                selectedDicePaths.push(dicePaths[randomIndex])
+        var selecteditemPaths = [];
+        while (selecteditemPaths.length < 3) {
+            var randomIndex = Math.floor(Math.random() * itemPaths.length);
+            if (!selecteditemPaths.includes(itemPaths[randomIndex])) {
+                selecteditemPaths.push(itemPaths[randomIndex])
             }
         }
         // 摋動2秒後出現結果
@@ -38,7 +38,7 @@ gameSelection.find('.play').click(function () {
             gameResult.removeClass('playing')
             gameResult.addClass('show')
             gameResult.find('img').each(function (index) {
-                $(this).attr('src', selectedDicePaths[index])
+                $(this).attr('src', selecteditemPaths[index])
             })
         }, 4000);
 
@@ -102,6 +102,6 @@ $('.replay').click(function () {
     $('.popUp').removeClass('active')
     gameSelection.find('input[type="radio"]').prop('checked', false)
     gameResult.removeClass('show')
-    gameResult.find('img').attr('src', 'img/game/paper-scissors-stone/stone.png')
+    gameResult.find('img').attr('src', 'img/game/PSS/stone.png')
     betsInput.removeAttr('disabled')
 })

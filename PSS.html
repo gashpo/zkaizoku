@@ -68,7 +68,6 @@
                 <button class="menu"></button>
                 <div class="nav">
                     <ul>
-                        <li><a href="shop.html">商城</a></li>
                         <li><a href="game.html">Game</a></li>
                         <li><a href="index.html#nft-idx">NFT</a></li>
                         <li><a href="index.html#tutorial">教學</a></li>
@@ -135,50 +134,49 @@
             <ul class="breadcrumb">
                 <li><a href="index.html">首頁</a></li>
                 <li><a href="game.html">Game</a></li>
-                <li>Mysterious Compass</li>
+                <li>剪刀石頭布</li>
             </ul>
 
             <section id="game">
                 <div class="container">
                     <div class="game-detail card">
                         <div class="card-content">
-                            <div class="game-zone mysterious-compass">
-                                <div class="default"
-                                    style="background-image: url(img/game/mysterious-compass/cover.jpg);">
+                            <div class="game-zone PSS">
+                                <div class="default" style="background-image: url(img/game/PSS/cover.jpg);">
                                     <div class="game-title">
-                                        <h3>Mysterious Compass</h3>
+                                        <h3>剪刀石頭布</h3>
                                         <!-- ↓若還沒連結錢包則先跳出連結錢包的彈窗 -->
-                                        <button>Start to play</button>
+                                        <button>開始遊玩</button>
                                     </div>
                                 </div>
 
                                 <div class="play-game">
-                                    <video autoplay muted loop poster="img/game/mysterious-compass/bg.jpg">
-                                        <source src="img/game/mysterious-compass/bg.mp4" type="video/mp4">
+                                    <video autoplay muted loop poster="img/game/PSS/bg.jpg">
+                                        <source src="img/game/PSS/bg.mp4" type="video/mp4">
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
-                                            <img src="img/game/mysterious-compass/stone.png">
+                                            <img src="img/game/PSS/stone.png">
                                         </div>
 
                                         <div class="selection">
                                             <div>
-                                                <input id="dice01" type="radio" name="dice" value="dice01">
-                                                <label for="dice01">
+                                                <input id="item01" type="radio" name="item" value="item01">
+                                                <label for="item01">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/mysterious-compass/scissors-s.png">
+                                                    <img class="item" src="img/game/PSS/scissors-s.png">
                                                 </label>
 
-                                                <input id="dice02" type="radio" name="dice" value="dice02">
-                                                <label for="dice02">
+                                                <input id="item02" type="radio" name="item" value="item02">
+                                                <label for="item02">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/mysterious-compass/stone-s.png">
+                                                    <img class="item" src="img/game/PSS/stone-s.png">
                                                 </label>
 
-                                                <input id="dice03" type="radio" name="dice" value="dice03">
-                                                <label for="dice03">
+                                                <input id="item03" type="radio" name="item" value="item03">
+                                                <label for="item03">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/mysterious-compass/paper-s.png">
+                                                    <img class="item" src="img/game/PSS/paper-s.png">
                                                 </label>
                                             </div>
 
@@ -224,14 +222,10 @@
                             </div>
 
                             <div class="content">
-                                <h3>Mysterious Compass</h3>
+                                <h3>剪刀石頭布</h3>
                                 <div class="desc">
                                     <p>
-                                        This is a probability game involving dice rolling. Should the number on your
-                                        rolled dice match that of the computer's, you will be able to receive the reward
-                                        amount, which is the result of multiplying your wager by the payout odds.
-                                        Conversely, if the number on your rolled dice differs from that of the
-                                        computer's, the system shall seize your wager.
+                                        剪刀贏過布、布贏過石頭、石頭贏過剪刀。如果你贏了對手，你將獲得賭本乘上賠率的獎勵金額；如果你跟對手平手或輸給他，系統將沒收你的賭本。
                                     </p>
                                 </div>
                                 <div class="awards">
@@ -249,14 +243,14 @@
                                 <div class="odd-n-bet">
                                     <div class="odds">
                                         <label>
-                                            Odds
+                                            賠率
                                             <i class="icon-InfoCircle popUp--open" for="odds"></i>
                                         </label>
                                         <h3>xN.NN</h3>
                                     </div>
                                     <div class="bets">
-                                        <label for="bets">Bets</label>
-                                        <input name="bets" type="number" placeholder="Enter your Bets" required>
+                                        <label for="bets">賭本</label>
+                                        <input name="bets" type="number" placeholder="請輸入賭本" required>
                                         <span class="helper">$ZKZ數量為 300</span>
                                     </div>
                                 </div>
@@ -273,17 +267,6 @@
 
         <footer>
             <div class="mask"></div>
-            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
-            <!-- <ul class="sns">
-                <li>
-                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
-                        <i class="icon-Twitter"></i>
-                    </button>
-                </li>
-                <li>
-                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
-                </li>
-            </ul> -->
         </footer>
 
 
@@ -340,9 +323,9 @@
         <div id="odds" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>Odds information</h3>
+                <h3>小提醒</h3>
                 <div class="popUp--content">
-                    <p>This odds already include a 3% House Edge.</p>
+                    <p class="text-center">此賠率已包含3%莊家優勢。</p>
                 </div>
                 <!-- <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>
@@ -377,7 +360,7 @@
     <script src="js/popUp.js"></script>
     <script src="js/connect-wallet.js"></script>
     <script src="js/game.js"></script>
-    <script src="js/mysterious-compass.js"></script>
+    <script src="js/PSS.js"></script>
 
     <!-- Swiper 套件 -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
