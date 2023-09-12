@@ -200,7 +200,7 @@
     }
 
     &.MTP,
-    &.paper-scissors-stone {
+    &.PSS {
         .play-game {
             .game-content {
                 .selection {
@@ -257,7 +257,7 @@
         }
     }
 
-    &.paper-scissors-stone {
+    &.PSS {
         .play-game {
             .game-content {
                 .result {
@@ -273,7 +273,7 @@
         }
     }
 
-    &.interstellar-connection {
+    &.IC {
         .play-game {
             .game-content {
                 .result {
@@ -297,7 +297,7 @@
                         left: 0;
                         right: 0;
                         bottom: 0;
-                        background-image: url(../img/game/interstellar-connection/frame.png);
+                        background-image: url(../img/game/IC/frame.png);
                         background-size: cover;
                         background-position: center;
                         z-index: 1;
@@ -408,7 +408,7 @@
 
 
         &.MTP,
-        &.paper-scissors-stone {
+        &.PSS {
             .play-game {
                 .game-content {
                     .selection {
