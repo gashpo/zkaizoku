@@ -3127,72 +3127,70 @@ body {
   max-width: 25%;
   border-radius: 1.875rem;
   overflow: hidden;
-}
-@media (max-width: 1440px) {
-  #mainPage #game .game-list > li {
-    border-radius: 2.0833333333svw;
-  }
-}
-@media (max-width: 768px) {
-  #mainPage #game .game-list > li {
-    border-radius: 0.9375rem;
-  }
-}
-#mainPage #game .game-list > li > a {
   padding: 1.75rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: rgba(0, 0, 0, 0);
   transition-property: background-color;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
-#mainPage #game .game-list > li > a .img {
+@media (max-width: 1440px) {
+  #mainPage #game .game-list > li {
+    border-radius: 2.0833333333svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #game .game-list > li {
+    border-radius: 0.9375rem;
+  }
+}
+#mainPage #game .game-list > li .img {
   margin-bottom: 1.25rem;
   border-radius: 1.875rem;
   overflow: hidden;
 }
 @media (max-width: 1440px) {
-  #mainPage #game .game-list > li > a .img {
+  #mainPage #game .game-list > li .img {
     border-radius: 2.0833333333svw;
   }
 }
 @media (max-width: 768px) {
-  #mainPage #game .game-list > li > a .img {
+  #mainPage #game .game-list > li .img {
     border-radius: 0.9375rem;
   }
 }
-#mainPage #game .game-list > li > a .img img {
+#mainPage #game .game-list > li .img img {
   margin-bottom: -0.1875rem;
   border-radius: 1.875rem;
   transition-property: transform;
   transition-duration: 0.3s;
 }
 @media (max-width: 1440px) {
-  #mainPage #game .game-list > li > a .img img {
+  #mainPage #game .game-list > li .img img {
     border-radius: 2.0833333333svw;
   }
 }
 @media (max-width: 768px) {
-  #mainPage #game .game-list > li > a .img img {
+  #mainPage #game .game-list > li .img img {
     border-radius: 0.9375rem;
   }
 }
-#mainPage #game .game-list > li > a .tags {
+#mainPage #game .game-list > li .tags {
   margin: 1rem 0 2.5rem;
 }
-#mainPage #game .game-list > li > a .btn {
+#mainPage #game .game-list > li .btn {
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
 }
 @media (hover: hover) {
-  #mainPage #game .game-list > li > a:hover {
+  #mainPage #game .game-list > li:hover {
     background-color: black;
     transition-duration: 0.7s;
   }
-  #mainPage #game .game-list > li > a:hover .img img {
+  #mainPage #game .game-list > li:hover .img img {
     transform: scale(1.1);
   }
 }

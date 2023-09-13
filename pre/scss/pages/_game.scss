@@ -18,49 +18,46 @@
             max-width: 25%;
             @include radius;
             overflow: hidden;
+            padding: size(28);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: rgba(black, 0);
+            transition-property: background-color;
+            transition-duration: .3s;
+            cursor: pointer;
 
-            >a {
-                padding: size(28);
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background-color: rgba(black, 0);
-                transition-property: background-color;
-                transition-duration: .3s;
+            .img {
+                margin-bottom: size(20);
+                @include radius;
+                overflow: hidden;
 
-                .img {
-                    margin-bottom: size(20);
+                img {
+                    margin-bottom: size(-3);
                     @include radius;
-                    overflow: hidden;
-
-                    img {
-                        margin-bottom: size(-3);
-                        @include radius;
-                        transition-property: transform;
-                        transition-duration: .3s;
-                    }
+                    transition-property: transform;
+                    transition-duration: .3s;
                 }
+            }
 
-                .tags {
-                    margin: size(16) 0 size(40);
-                }
+            .tags {
+                margin: size(16) 0 size(40);
+            }
 
-                .btn {
-                    flex-grow: 1;
-                    display: flex;
-                    align-items: flex-end;
-                }
+            .btn {
+                flex-grow: 1;
+                display: flex;
+                align-items: flex-end;
+            }
 
-                @media (hover: hover) {
-                    &:hover {
-                        background-color: rgba(black, 1);
-                        transition-duration: .7s;
+            @media (hover: hover) {
+                &:hover {
+                    background-color: rgba(black, 1);
+                    transition-duration: .7s;
 
-                        .img {
-                            img {
-                                transform: scale(1.1);
-                            }
+                    .img {
+                        img {
+                            transform: scale(1.1);
                         }
                     }
                 }
