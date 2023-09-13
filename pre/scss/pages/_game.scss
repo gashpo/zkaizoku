@@ -193,9 +193,10 @@
                     label {
                         display: flex;
                         align-items: flex-start;
+                        @include body-1;
 
                         i {
-                            transform: translate(0, size(6));
+                            transform: translate(0, size(4));
                         }
                     }
 
@@ -440,12 +441,6 @@
 
                     .odds {
                         order: 2;
-
-                        label {
-                            i {
-                                transform: translate(0, size(2));
-                            }
-                        }
                     }
                 }
 
