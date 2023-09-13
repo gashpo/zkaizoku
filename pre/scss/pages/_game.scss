@@ -192,7 +192,11 @@
 
                     label {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
+
+                        i {
+                            transform: translate(0, size(6));
+                        }
                     }
 
                     h3 {
@@ -424,6 +428,27 @@
             }
 
             .content {
+                .odd-n-bet {
+                    gap: size(16);
+                    flex-wrap: wrap;
+
+                    .odds,
+                    .bets {
+                        flex: 100%;
+                        max-width: 100%;
+                    }
+
+                    .odds {
+                        order: 2;
+
+                        label {
+                            i {
+                                transform: translate(0, size(2));
+                            }
+                        }
+                    }
+                }
+
                 .desc {
                     order: 2;
                 }

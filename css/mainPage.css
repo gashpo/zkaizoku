@@ -217,22 +217,28 @@ body {
   #mainPage .title-xl {
     font-size: 1.875rem;
   }
-  #mainPage h1 {
+  #mainPage h1,
+  #mainPage .h1 {
     font-size: 1.5rem;
   }
-  #mainPage h2 {
+  #mainPage h2,
+  #mainPage .h2 {
     font-size: 1.25rem;
   }
-  #mainPage h3 {
+  #mainPage h3,
+  #mainPage .h3 {
     font-size: 1.125rem;
   }
-  #mainPage h4 {
+  #mainPage h4,
+  #mainPage .h4 {
     font-size: 1rem;
   }
-  #mainPage h5 {
+  #mainPage h5,
+  #mainPage .h5 {
     font-size: 0.9375rem;
   }
-  #mainPage h6 {
+  #mainPage h6,
+  #mainPage .h6 {
     font-size: 0.875rem;
   }
   #mainPage .body-1 {
@@ -774,7 +780,6 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   color: white;
-  width: 30rem;
 }
 #mainPage #login ul li {
   flex: 100%;
@@ -2418,7 +2423,7 @@ body {
   padding: 7.5rem 3.75rem;
 }
 #mainPage #character .bg::before {
-  content: url(../img/bg/zkz-mask-top.png);
+  content: url(../img/bg/charactors-mask-top.png);
 }
 #mainPage #character .bg::after {
   content: url(../img/bg/zkz-mask-bottom.png);
@@ -2577,6 +2582,7 @@ body {
 @media (max-width: 768px) {
   #mainPage #character {
     background-image: url(../img/bg/character-bg-m.jpg);
+    background-size: 100%;
   }
   #mainPage #character .container > ul {
     gap: 2rem 1rem;
@@ -2593,9 +2599,12 @@ body {
   }
 }
 @media (max-width: 516px) {
+  #mainPage #character .container > ul {
+    margin-top: 3.75rem;
+  }
   #mainPage #character .container > ul > li {
     padding: 0.75rem;
-    padding-top: calc(((100% - 1rem) / 2 - 1.5rem) * 0.4 + 1.25rem);
+    padding-top: calc(((100% - 1rem) / 2 - 3rem) * 0.4 + 1rem);
   }
   #mainPage #character .container > ul > li img {
     max-width: calc(100% - 1.5rem);
@@ -3303,7 +3312,10 @@ body {
 }
 #mainPage #game .game-detail .content .odd-n-bet .odds label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+#mainPage #game .game-detail .content .odd-n-bet .odds label i {
+  transform: translate(0, 0.375rem);
 }
 #mainPage #game .game-detail .content .odd-n-bet .odds h3 {
   margin: 1.5rem 0;
@@ -3463,6 +3475,21 @@ body {
   #mainPage #game .game-detail .img {
     flex: 100%;
     max-width: 100%;
+  }
+  #mainPage #game .game-detail .content .odd-n-bet {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  #mainPage #game .game-detail .content .odd-n-bet .odds,
+  #mainPage #game .game-detail .content .odd-n-bet .bets {
+    flex: 100%;
+    max-width: 100%;
+  }
+  #mainPage #game .game-detail .content .odd-n-bet .odds {
+    order: 2;
+  }
+  #mainPage #game .game-detail .content .odd-n-bet .odds label i {
+    transform: translate(0, 0.125rem);
   }
   #mainPage #game .game-detail .content .desc {
     order: 2;

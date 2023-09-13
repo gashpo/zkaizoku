@@ -1030,7 +1030,7 @@ main {
 
     .bg {
         &::before {
-            content: url(../img/bg/zkz-mask-top.png);
+            content: url(../img/bg/charactors-mask-top.png);
         }
 
         &::after {
@@ -1210,6 +1210,7 @@ main {
     // small-pad ~ 768
     @include max-to(small-pad) {
         background-image: url(../img/bg/character-bg-m.jpg);
+        background-size: 100%;
 
         .container {
             >ul {
@@ -1238,10 +1239,12 @@ main {
     @include max-to(mobile) {
         .container {
             >ul {
+                margin-top: size(60);
+
                 >li {
                     padding: size(12);
-                    padding-top: calc((((100% - size(16)) / 2 - size(12) * 2) * .4) + size(20));
-                    // img寬度(flex寬度 - padding * 2) 的40% + 20px
+                    padding-top: calc((((100% - size(16)) / 2 - size(24) * 2) * .4) + size(16));
+                    // img寬度(flex寬度 - padding * 2) 的40% + 16px
 
                     img {
                         max-width: calc(100% - size(12) * 2);
