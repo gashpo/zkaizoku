@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* reset css */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Noto+Sans+SC:wght@500;700;900&family=Noto+Sans+TC:wght@500;700;900&display=swap");
-
 * {
   box-sizing: border-box;
 }
@@ -143,7 +142,6 @@ body {
   color: white;
   overflow-x: hidden;
 }
-
 @media (max-width: 1280px) {
   body {
     font-size: 0.9375rem;
@@ -155,7 +153,6 @@ body {
   background-color: black;
   /* -- Global.scss -- */
 }
-
 #mainPage .title-xl,
 #mainPage h1,
 #mainPage h2,
@@ -165,107 +162,89 @@ body {
 #mainPage h6 {
   font-weight: 700;
 }
-
 #mainPage .title-xl {
   font-size: 3.75rem;
 }
-
-#mainPage h1 {
+#mainPage h1,
+#mainPage .h1 {
   font-size: 2.5rem;
 }
-
-#mainPage h2 {
+#mainPage h2,
+#mainPage .h2 {
   font-size: 2.125rem;
 }
-
-#mainPage h3 {
+#mainPage h3,
+#mainPage .h3 {
   font-size: 1.5rem;
 }
-
-#mainPage h4 {
+#mainPage h4,
+#mainPage .h4 {
   font-size: 1.25rem;
 }
-
-#mainPage h5 {
+#mainPage h5,
+#mainPage .h5 {
   font-size: 1.125rem;
 }
-
-#mainPage h6 {
+#mainPage h6,
+#mainPage .h6 {
   font-size: 1rem;
 }
-
 #mainPage .body-1 {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 #mainPage .body-2 {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 #mainPage .capital {
   font-size: 0.875rem;
 }
-
 #mainPage a {
   color: white;
   transition-property: color;
   text-decoration: none;
 }
-
 @media (hover: hover) {
   #mainPage a:hover {
     color: lightgray;
   }
 }
-
 #mainPage .text-center {
   text-align: center;
 }
-
 @media (max-width: 1024px) {
   #mainPage .title-xl {
     font-size: 1.875rem;
   }
-
   #mainPage h1 {
     font-size: 1.5rem;
   }
-
   #mainPage h2 {
     font-size: 1.25rem;
   }
-
   #mainPage h3 {
     font-size: 1.125rem;
   }
-
   #mainPage h4 {
     font-size: 1rem;
   }
-
   #mainPage h5 {
     font-size: 0.9375rem;
   }
-
   #mainPage h6 {
     font-size: 0.875rem;
   }
-
   #mainPage .body-1 {
     font-size: 0.9375rem;
   }
-
   #mainPage .body-2 {
     font-size: 0.8125rem;
   }
-
   #mainPage .capital {
     font-size: 0.75rem;
   }
 }
-
 #mainPage button,
 #mainPage input[type=button],
 #mainPage input[type=submit],
@@ -284,9 +263,7 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
-
   #mainPage button,
   #mainPage input[type=button],
   #mainPage input[type=submit],
@@ -294,30 +271,25 @@ body {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage button:hover,
 #mainPage input[type=button]:hover,
 #mainPage input[type=submit]:hover,
 #mainPage a.button:hover {
   background-color: #6c1619;
 }
-
 #mainPage button[disabled],
 #mainPage input[type=button][disabled],
 #mainPage input[type=submit][disabled],
 #mainPage a.button[disabled] {
-  cursor: not-allowed;
   background-color: #3a3a3a;
   color: #757575;
 }
-
 #mainPage button.btn-s,
 #mainPage input[type=button].btn-s,
 #mainPage input[type=submit].btn-s,
 #mainPage a.button.btn-s {
   padding: 0.59375rem 1.25rem;
 }
-
 #mainPage button.btn-secondary,
 #mainPage input[type=button].btn-secondary,
 #mainPage input[type=submit].btn-secondary,
@@ -325,21 +297,18 @@ body {
   background-color: black;
   border: 0.125rem solid transparent;
 }
-
 #mainPage button.btn-secondary:hover,
 #mainPage input[type=button].btn-secondary:hover,
 #mainPage input[type=submit].btn-secondary:hover,
 #mainPage a.button.btn-secondary:hover {
   background-color: #1d1d1d;
 }
-
 #mainPage button.btn-secondary:focus,
 #mainPage input[type=button].btn-secondary:focus,
 #mainPage input[type=submit].btn-secondary:focus,
 #mainPage a.button.btn-secondary:focus {
   border: 0.125rem solid #c4c4c4;
 }
-
 #mainPage button.btn-secondary[disabled],
 #mainPage input[type=button].btn-secondary[disabled],
 #mainPage input[type=submit].btn-secondary[disabled],
@@ -347,9 +316,7 @@ body {
   color: #757575;
   background-color: #3a3a3a;
 }
-
-#mainPage button.btn-tertiary,
-#mainPage button.btn-rounded,
+#mainPage button.btn-tertiary, #mainPage button.btn-rounded,
 #mainPage input[type=button].btn-tertiary,
 #mainPage input[type=button].btn-rounded,
 #mainPage input[type=submit].btn-tertiary,
@@ -359,9 +326,7 @@ body {
   border: 0.0625rem solid white;
   background-color: transparent;
 }
-
-#mainPage button.btn-tertiary:hover,
-#mainPage button.btn-rounded:hover,
+#mainPage button.btn-tertiary:hover, #mainPage button.btn-rounded:hover,
 #mainPage input[type=button].btn-tertiary:hover,
 #mainPage input[type=button].btn-rounded:hover,
 #mainPage input[type=submit].btn-tertiary:hover,
@@ -370,20 +335,17 @@ body {
 #mainPage a.button.btn-rounded:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
-#mainPage button.btn-tertiary[disabled],
-#mainPage button.btn-rounded[disabled],
+#mainPage button.btn-tertiary[disabled], #mainPage button.btn-rounded[disabled],
 #mainPage input[type=button].btn-tertiary[disabled],
 #mainPage input[type=button].btn-rounded[disabled],
 #mainPage input[type=submit].btn-tertiary[disabled],
 #mainPage input[type=submit].btn-rounded[disabled],
 #mainPage a.button.btn-tertiary[disabled],
 #mainPage a.button.btn-rounded[disabled] {
-  border-color: #757575;
-  color: #757575;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
-
 #mainPage button.btn-rounded,
 #mainPage input[type=button].btn-rounded,
 #mainPage input[type=submit].btn-rounded,
@@ -391,11 +353,9 @@ body {
   border-radius: 6.25rem;
   padding: 0.75rem;
 }
-
 #mainPage .dropdown {
   position: relative;
 }
-
 #mainPage .dropdown button {
   display: flex;
   align-items: center;
@@ -406,22 +366,18 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage .dropdown button {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage .dropdown button:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
 #mainPage .dropdown button::after {
   font-family: "Icomoon";
   content: "\e900";
 }
-
 #mainPage .dropdown .dropdown-content {
   position: absolute;
   top: calc(100% + 1.75rem);
@@ -440,53 +396,44 @@ body {
   opacity: 0;
   transition-property: max-height, padding, opacity;
 }
-
 @media (max-width: 1024px) {
   #mainPage .dropdown .dropdown-content {
     font-size: 0.8125rem;
   }
 }
-
-#mainPage .dropdown .dropdown-content>ul {
+#mainPage .dropdown .dropdown-content > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
 }
-
-#mainPage .dropdown .dropdown-content>ul>li {
+#mainPage .dropdown .dropdown-content > ul > li {
   flex: 100%;
   text-align: center;
 }
-
-#mainPage .dropdown .dropdown-content>ul>li>a {
+#mainPage .dropdown .dropdown-content > ul > li > a {
   display: block;
   color: white;
   border-radius: 0.625rem;
   transition-property: background-color;
   padding: 0.5rem 1.5rem;
 }
-
 @media (hover: hover) {
-  #mainPage .dropdown .dropdown-content>ul>li:hover>a {
+  #mainPage .dropdown .dropdown-content > ul > li:hover > a {
     background-color: #9d4043;
   }
 }
-
-#mainPage .dropdown .dropdown-content>ul>li.active>a {
+#mainPage .dropdown .dropdown-content > ul > li.active > a {
   background-color: #9d4043;
 }
-
 #mainPage .dropdown.active button::after {
   content: "\e903";
 }
-
 #mainPage .dropdown.active .dropdown-content {
   padding: 1.75rem 1.25rem;
   max-height: 18.75rem;
   opacity: 1;
 }
-
 @media (max-width: 1280px) {
   #mainPage .fulldown .fulldown-content {
     position: fixed;
@@ -502,8 +449,7 @@ body {
     border-radius: 0;
     transition-property: max-height;
   }
-
-  #mainPage .fulldown .fulldown-content>ul {
+  #mainPage .fulldown .fulldown-content > ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -511,13 +457,11 @@ body {
     justify-content: center;
     gap: 1.25rem;
   }
-
-  #mainPage .fulldown .fulldown-content>ul>li {
+  #mainPage .fulldown .fulldown-content > ul > li {
     flex: 100%;
     text-align: center;
   }
-
-  #mainPage .fulldown .fulldown-content>ul>li>a {
+  #mainPage .fulldown .fulldown-content > ul > li > a {
     width: 100%;
     display: block;
     padding: 0.625rem 1.5rem;
@@ -527,18 +471,15 @@ body {
     color: white;
   }
 }
-
 @media (max-width: 1280px) and (hover: hover) {
-  #mainPage .fulldown .fulldown-content>ul>li:hover>a {
+  #mainPage .fulldown .fulldown-content > ul > li:hover > a {
     background-color: #9d4043;
   }
 }
-
 @media (max-width: 1280px) {
-  #mainPage .fulldown .fulldown-content>ul>li .active>a {
+  #mainPage .fulldown .fulldown-content > ul > li .active > a {
     background-color: #9d4043;
   }
-
   #mainPage .fulldown.active .fulldown-content {
     max-height: 100lvh;
     bottom: 0;
@@ -546,13 +487,11 @@ body {
     z-index: 10;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage .fulldown .fulldown-content {
     top: 3.75rem;
   }
 }
-
 #mainPage .card {
   border-radius: 1.875rem;
   background-color: black;
@@ -560,19 +499,16 @@ body {
   overflow: hidden;
   position: relative;
 }
-
 @media (max-width: 1440px) {
   #mainPage .card {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage .card {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage .card::before {
   position: absolute;
   content: "";
@@ -584,50 +520,42 @@ body {
   transform: rotate(-45deg);
   z-index: 1;
 }
-
 #mainPage .card-content {
   position: inherit;
   z-index: 2;
 }
-
 @media (max-width: 768px) {
   #mainPage .card {
     padding: 1rem;
   }
 }
-
 #mainPage .tags {
   margin: 1.25rem 0 2.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-
 #mainPage .tags li {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   font-size: 0.875rem;
 }
-
 @media (max-width: 1024px) {
   #mainPage .tags li {
     font-size: 0.75rem;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage .tags {
     margin: 0.5rem 0 1.25rem;
   }
 }
-
 #mainPage .tab {
   margin: 2.5rem 0;
   width: 100%;
   border-bottom: 0.125rem solid #757575;
 }
-
 #mainPage .tab li {
   display: inline-block;
   padding: 0.625rem 2rem;
@@ -638,129 +566,105 @@ body {
   margin-bottom: -0.125rem;
   border-bottom: 0.125rem solid transparent;
 }
-
 @media (max-width: 1024px) {
   #mainPage .tab li {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage .tab li.active {
   color: white;
   cursor: default;
   border-color: white;
 }
-
 #mainPage .tab-content li {
   opacity: 0;
   display: none;
 }
-
 #mainPage .tab-content li.active {
   opacity: 1;
   display: inherit;
   animation: fade-in 0.5s;
   z-index: 2;
 }
-
 @keyframes fade-in {
   0% {
     transform: translateY(3.125rem);
   }
-
   100% {
     transform: translateY(0);
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage .tab {
     margin: 1rem 0 1.25rem;
   }
 }
-
 #mainPage table {
   width: 100%;
 }
-
 #mainPage table thead {
   margin-bottom: 1rem;
 }
-
 #mainPage table thead tr {
   background-color: #1d1d1d;
   color: #757575;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage table thead tr {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage table thead tr th {
   padding: 0.5rem 1rem;
   text-align: left;
 }
-
 #mainPage table thead tr th:first-child {
   border-radius: 0.75rem 0 0 0.75rem;
   padding-left: 2rem;
 }
-
 #mainPage table thead tr th:last-child {
   border-radius: 0 0.75rem 0.75rem 0;
   padding-right: 2rem;
 }
-
 #mainPage table tbody {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage table tbody {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage table tbody tr td {
   padding: 1rem;
 }
-
 #mainPage table tbody tr td:first-child {
   padding-left: 2rem;
   border-radius: 0.75rem 0 0 0.75rem;
 }
-
 #mainPage table tbody tr td:last-child {
   padding-right: 2rem;
   border-radius: 0 0.75rem 0.75rem 0;
 }
-
 @media (hover: hover) {
   #mainPage table tbody tr:hover td {
     background-color: #1d1d1d;
   }
 }
-
 #mainPage table tbody tr:first-child td {
   padding: 1.125rem;
 }
-
 @media (hover: hover) {
   #mainPage table tbody tr:first-child:hover td {
     background-color: transparent;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage table thead {
     display: none;
   }
-
   #mainPage table tbody tr {
     margin: 0 0 1rem;
     padding: 1rem;
@@ -770,25 +674,21 @@ body {
     background-color: #1d1d1d;
     border-radius: 0.9375rem;
   }
-
   #mainPage table tbody tr td {
     align-items: center;
     height: auto;
     padding: 0 !important;
   }
-
   #mainPage table tbody tr:first-child {
     padding: 0;
     margin: 0;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage table tbody tr {
     gap: 0.25rem 0.75rem;
   }
 }
-
 #mainPage .popUp {
   display: none;
   position: fixed;
@@ -799,7 +699,6 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 8;
 }
-
 #mainPage .popUp .popUp--container {
   position: absolute;
   top: 50%;
@@ -813,7 +712,6 @@ body {
   max-height: 80svh;
   box-shadow: 0 0 2.5rem 0 rgba(157, 64, 67, 0.56);
 }
-
 #mainPage .popUp .popUp--container .popUp--close {
   position: absolute;
   top: 1.25rem;
@@ -826,16 +724,13 @@ body {
   text-align: center;
   transition-property: background-color;
 }
-
 #mainPage .popUp .popUp--container .popUp--close:hover {
   background-color: #3a3a3a;
 }
-
 #mainPage .popUp .popUp--container h3 {
   text-align: center;
   padding: 0 3.5rem;
 }
-
 #mainPage .popUp .popUp--container .popUp--content {
   overflow-y: auto;
   margin: 1.75rem -1.5rem 1.75rem 0;
@@ -847,41 +742,33 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage .popUp .popUp--container .popUp--content {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage .popUp .popUp--container:has(.popUp--btns) .popUp--content {
   max-height: calc(80svh - 11.625rem);
 }
-
 #mainPage .popUp .popUp--container .popUp--btns {
   display: flex;
   gap: 1.25rem;
 }
-
 #mainPage .popUp .popUp--container .popUp--btns button {
   flex: 1;
 }
-
 #mainPage .popUp.active {
   display: block;
 }
-
 @media (max-width: 1024px) {
   #mainPage .popUp .popUp--container {
     width: calc(100svw - 2rem);
     min-width: auto;
   }
-
   #mainPage .popUp .popUp--container .popUp--content {
     min-width: auto;
   }
 }
-
 #mainPage #login ul {
   display: flex;
   flex-wrap: wrap;
@@ -889,7 +776,6 @@ body {
   color: white;
   width: 30rem;
 }
-
 #mainPage #login ul li {
   flex: 100%;
   display: flex;
@@ -904,92 +790,74 @@ body {
   cursor: pointer;
   transition-property: background-color;
 }
-
 @media (max-width: 1024px) {
   #mainPage #login ul li {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #login ul li span {
   flex-grow: 1;
 }
-
 #mainPage #login ul li:hover {
   background-color: #3a3a3a;
 }
-
 #mainPage #withdraw .popUp--container .popUp--content {
   display: flex;
   gap: 1.25rem;
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .img,
 #mainPage #withdraw .popUp--container .popUp--content .content {
   flex: calc((100% - 1.25rem) / 2);
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .img img {
   border-radius: 0.625rem;
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .content {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   color: white;
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .content .input-group {
   width: 100%;
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .content .input-group label {
   text-align: right;
   font-size: 0.9375rem;
   line-height: 1.5;
   color: #757575;
 }
-
 @media (max-width: 1024px) {
   #mainPage #withdraw .popUp--container .popUp--content .content .input-group label {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .content .input-group label span {
   margin-left: 0.25rem;
 }
-
 #mainPage #withdraw .popUp--container .popUp--content .content textarea {
   width: 100%;
   resize: none;
 }
-
 @media (max-width: 516px) {
   #mainPage #withdraw .popUp--container {
     max-height: 90svh;
   }
-
   #mainPage #withdraw .popUp--container .popUp--content {
     max-height: calc(90svh - 7.25rem);
     flex-wrap: wrap;
   }
-
   #mainPage #withdraw .popUp--container .popUp--content .img,
   #mainPage #withdraw .popUp--container .popUp--content .content {
     flex: 100%;
   }
-
   #mainPage #withdraw .popUp--container .popUp--content .img {
     text-align: center;
   }
-
   #mainPage #withdraw .popUp--container .popUp--content .content textarea {
     height: 3.3625rem;
   }
 }
-
 #mainPage .toast-container {
   z-index: 9;
   position: fixed;
@@ -997,13 +865,11 @@ body {
   left: 50%;
   font-size: 0.875rem;
 }
-
 @media (max-width: 1024px) {
   #mainPage .toast-container {
     font-size: 0.75rem;
   }
 }
-
 #mainPage .toast-container .toast {
   display: none;
   color: white;
@@ -1016,50 +882,40 @@ body {
   border: 0.0625rem solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 0.25rem rgba(157, 64, 67, 0.4);
 }
-
 #mainPage .toast-container .toast::before {
   font-family: "icomoon";
 }
-
 #mainPage .toast-container .toast.warning {
   background-color: rgba(135, 27, 31, 0.8);
 }
-
 #mainPage .toast-container .toast.warning::before {
   content: "\e918";
 }
-
 #mainPage .toast-container .toast.success {
   background-color: rgba(77, 157, 64, 0.8);
 }
-
 #mainPage .toast-container .toast.success::before {
   content: "\e91a";
 }
-
 #mainPage .toast-container .toast.active {
   display: table;
   animation: toast-show 0.5s forwards;
 }
-
 @keyframes toast-show {
   0% {
     opacity: 0;
     transform: translate(-50%, -1.25rem);
   }
-
   100% {
     opacity: 1;
     transform: translate(-50%, 0);
   }
 }
-
 @media (max-width: 768px) {
   #mainPage .toast-container {
     top: 2.25rem;
   }
 }
-
 #mainPage input,
 #mainPage textarea {
   background-color: #1d1d1d;
@@ -1070,94 +926,75 @@ body {
   color: white;
   border: none;
 }
-
 @media (max-width: 1024px) {
-
   #mainPage input,
   #mainPage textarea {
     font-size: 0.8125rem;
   }
 }
-
-#mainPage input::-moz-placeholder,
-#mainPage textarea::-moz-placeholder {
+#mainPage input::-moz-placeholder, #mainPage textarea::-moz-placeholder {
   color: #757575;
 }
-
 #mainPage input::placeholder,
 #mainPage textarea::placeholder {
   color: #757575;
 }
-
-#mainPage input+.helper,
-#mainPage textarea+.helper {
+#mainPage input + .helper,
+#mainPage textarea + .helper {
   display: block;
   font-size: 0.875rem;
   color: #757575;
 }
-
 @media (max-width: 1024px) {
-
-  #mainPage input+.helper,
-  #mainPage textarea+.helper {
+  #mainPage input + .helper,
+  #mainPage textarea + .helper {
     font-size: 0.75rem;
   }
 }
-
 #mainPage input[disabled],
 #mainPage textarea[disabled] {
   color: #585858;
 }
-
 #mainPage .input-group {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
-#mainPage .input-group>label,
-#mainPage .input-group>input {
+#mainPage .input-group > label,
+#mainPage .input-group > input {
   flex: 1;
 }
-
-#mainPage .input-group>label {
+#mainPage .input-group > label {
   word-break: keep-all;
   flex-grow: 0;
   display: flex;
   align-items: center;
 }
-
-#mainPage .input-group+.helper {
+#mainPage .input-group + .helper {
   display: block;
   font-size: 0.875rem;
   color: #757575;
 }
-
 @media (max-width: 1024px) {
-  #mainPage .input-group+.helper {
+  #mainPage .input-group + .helper {
     font-size: 0.75rem;
   }
 }
-
 #mainPage .input-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-
-#mainPage .input-wrap>input {
+#mainPage .input-wrap > input {
   flex: 100%;
   width: 100%;
 }
-
 #mainPage .input-btn {
   position: relative;
 }
-
 #mainPage .input-btn input {
   width: 100%;
 }
-
 #mainPage .input-btn button {
   background-color: transparent;
   position: absolute;
@@ -1168,9 +1005,7 @@ body {
   right: 1.5rem;
   transform: translateY(-50%);
 }
-
-#mainPage .swiper-button-prev,
-#mainPage .swiper-button-next {
+#mainPage .swiper-button-prev, #mainPage .swiper-button-next {
   position: absolute;
   width: 3.75rem;
   height: 3.75rem;
@@ -1183,61 +1018,41 @@ body {
   border-radius: 6.25rem;
   color: white;
 }
-
-#mainPage .swiper-button-prev:hover,
-#mainPage .swiper-button-next:hover {
+#mainPage .swiper-button-prev:hover, #mainPage .swiper-button-next:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
-#mainPage .swiper-button-prev[disabled],
-#mainPage .swiper-button-prev.slick-disabled,
-#mainPage .swiper-button-next[disabled],
-#mainPage .swiper-button-next.slick-disabled {
+#mainPage .swiper-button-prev[disabled], #mainPage .swiper-button-prev.slick-disabled, #mainPage .swiper-button-next[disabled], #mainPage .swiper-button-next.slick-disabled {
   color: #3a3a3a;
   cursor: default;
 }
-
-#mainPage .swiper-button-prev[disabled]:hover,
-#mainPage .swiper-button-prev.slick-disabled:hover,
-#mainPage .swiper-button-next[disabled]:hover,
-#mainPage .swiper-button-next.slick-disabled:hover {
+#mainPage .swiper-button-prev[disabled]:hover, #mainPage .swiper-button-prev.slick-disabled:hover, #mainPage .swiper-button-next[disabled]:hover, #mainPage .swiper-button-next.slick-disabled:hover {
   background-color: transparent;
 }
-
-#mainPage .swiper-button-prev::after,
-#mainPage .swiper-button-next::after {
+#mainPage .swiper-button-prev::after, #mainPage .swiper-button-next::after {
   font-family: "Icomoon";
   font-size: 2.625rem;
   font-weight: 500;
 }
-
 #mainPage .swiper-button-prev {
   right: 7.5rem;
 }
-
 #mainPage .swiper-button-prev::after {
   content: "\e904";
 }
-
 #mainPage .swiper-button-next {
   right: 2.5rem;
 }
-
 #mainPage .swiper-button-next::after {
   content: "\e905";
 }
-
-#mainPage .swiper-pagination,
-#mainPage .swiper-pagination-bullets {
+#mainPage .swiper-pagination, #mainPage .swiper-pagination-bullets {
   z-index: 3 !important;
   bottom: auto !important;
   top: 50%;
   right: 2.5rem;
   transform: translate(50%, 0) rotate(90deg) !important;
 }
-
-#mainPage .swiper-pagination .swiper-pagination-bullet,
-#mainPage .swiper-pagination-bullets .swiper-pagination-bullet {
+#mainPage .swiper-pagination .swiper-pagination-bullet, #mainPage .swiper-pagination-bullets .swiper-pagination-bullet {
   width: 0.375rem;
   height: 0.375rem;
   transition-property: width;
@@ -1246,31 +1061,24 @@ body {
   opacity: 1;
   margin: 0 0.375rem !important;
 }
-
-#mainPage .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
-#mainPage .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+#mainPage .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, #mainPage .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 3.5rem;
   background-color: white;
 }
-
 #mainPage .carousel.dark .swiper-button-prev,
 #mainPage .carousel.dark .swiper-button-next {
   color: black;
 }
-
 #mainPage .carousel.dark .swiper-button-prev:hover,
 #mainPage .carousel.dark .swiper-button-next:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
 #mainPage .carousel.dark .swiper-pagination-bullets .swiper-pagination-bullet {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 #mainPage .carousel.dark .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: black;
 }
-
 #mainPage .loading {
   top: 0;
   left: 0;
@@ -1282,17 +1090,14 @@ body {
   align-items: center;
   z-index: 8;
 }
-
 #mainPage .loading-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 #mainPage .loading-spinner {
   position: relative;
 }
-
 #mainPage .loading-spinner span {
   display: block;
   width: 6.25rem;
@@ -1302,7 +1107,6 @@ body {
   border-radius: 50%;
   animation: spin 1s ease-in-out infinite;
 }
-
 #mainPage .loading-spinner img {
   position: absolute;
   top: 50%;
@@ -1310,7 +1114,6 @@ body {
   transform: translate(-50%, -50%);
   width: 3.75rem;
 }
-
 #mainPage .loading-title {
   flex: 100%;
   font-size: 1.125rem;
@@ -1318,48 +1121,38 @@ body {
   text-align: center;
   margin-top: 0.5rem;
 }
-
 @media (max-width: 1024px) {
   #mainPage .loading-title {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage .loading.full {
   position: fixed;
 }
-
 #mainPage .loading.section {
   position: absolute;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(45deg);
   }
-
   100% {
     transform: rotate(405deg);
   }
 }
-
 #mainPage #app {
   background-color: #871B1F;
 }
-
 #mainPage img {
   max-width: 100%;
 }
-
-#mainPage p+p {
+#mainPage p + p {
   margin-top: 1rem;
 }
-
 #mainPage ol {
   list-style-type: decimal;
   padding-left: 1.75rem;
 }
-
 #mainPage i.icon-InfoCircle {
   cursor: pointer;
   color: #757575;
@@ -1367,25 +1160,20 @@ body {
   text-decoration: none;
   margin-left: 0.5rem;
 }
-
 @media (hover: hover) {
   #mainPage i.icon-InfoCircle:hover {
     color: #828282;
   }
 }
-
 #mainPage i.success {
   color: #4D9D40;
 }
-
 #mainPage i.warning {
   color: #D49519;
 }
-
 #mainPage i.error {
   color: #9d4043;
 }
-
 #mainPage .bg {
   position: absolute;
   top: 0;
@@ -1394,40 +1182,31 @@ body {
   bottom: 0;
   z-index: 0;
 }
-
 #mainPage .bg video {
   width: 100%;
 }
-
 #mainPage .bg video.bg-mobile {
   display: none;
 }
-
-#mainPage .bg::before,
-#mainPage .bg::after {
+#mainPage .bg::before, #mainPage .bg::after {
   position: absolute;
   left: 0;
   right: 0;
 }
-
 #mainPage .bg::before {
   top: 0;
 }
-
 #mainPage .bg::after {
   bottom: -0.5rem;
 }
-
 @media (max-width: 1024px) {
   #mainPage .bg video.bg-desktop {
     display: none;
   }
-
   #mainPage .bg video.bg-mobile {
     display: block;
   }
 }
-
 #mainPage header {
   position: fixed;
   top: 0;
@@ -1444,25 +1223,21 @@ body {
   line-height: 1.5;
   transition-property: border-radius, top, left, right;
 }
-
 @media (max-width: 1024px) {
   #mainPage header {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage header .main-logo {
   flex: 11.25rem;
   max-width: 11.25rem;
 }
-
 #mainPage header .options {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
 #mainPage header .options .menu {
   display: none;
   width: 2.25rem;
@@ -1474,11 +1249,9 @@ body {
   border-radius: 6.25rem;
   position: relative;
 }
-
 #mainPage header .options .menu:hover {
   background-color: #1d1d1d;
 }
-
 #mainPage header .options .menu::before {
   position: absolute;
   top: 50%;
@@ -1487,19 +1260,16 @@ body {
   font-family: "Icomoon";
   content: "\e90d";
 }
-
-#mainPage header .options .nav>ul {
+#mainPage header .options .nav > ul {
   display: flex;
   gap: 0.5rem;
 }
-
-#mainPage header .options .nav>ul>li {
+#mainPage header .options .nav > ul > li {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-#mainPage header .options .nav>ul>li>a {
+#mainPage header .options .nav > ul > li > a {
   padding: 0.625rem 1.5rem;
   color: white;
   border-radius: 0.625rem;
@@ -1509,162 +1279,131 @@ body {
   justify-content: center;
   gap: 0.25rem;
 }
-
 @media (max-width: 1440px) {
-  #mainPage header .options .nav>ul>li>a {
+  #mainPage header .options .nav > ul > li > a {
     border-radius: 0.6944444444svw;
   }
 }
-
 @media (max-width: 768px) {
-  #mainPage header .options .nav>ul>li>a {
+  #mainPage header .options .nav > ul > li > a {
     border-radius: 0.625rem;
   }
 }
-
 @media (hover: hover) {
-  #mainPage header .options .nav>ul>li>a:hover {
+  #mainPage header .options .nav > ul > li > a:hover {
     background-color: rgba(255, 255, 255, 0.15);
   }
 }
-
-#mainPage header .options .nav>ul>li[for=bridge] button::after {
+#mainPage header .options .nav > ul > li[for=bridge] button::after {
   display: none;
 }
-
-#mainPage header .options .nav>ul>li[for=bridge] .dropdown-content {
+#mainPage header .options .nav > ul > li[for=bridge] .dropdown-content {
   min-width: 12.5rem;
 }
-
-#mainPage header .options .nav>ul>li[for=language] button::before {
+#mainPage header .options .nav > ul > li[for=language] button::before {
   font-family: "Icomoon";
   content: "\e90a";
 }
-
 #mainPage header .options.active .menu::before {
   content: "\e907";
 }
-
 #mainPage header .login button {
   background-color: black;
   border: 0.125rem solid transparent;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 #mainPage header .login button:hover {
   background-color: #1d1d1d;
 }
-
 #mainPage header .login button:focus {
   border: 0.125rem solid #c4c4c4;
 }
-
 #mainPage header .login button[disabled] {
   color: #757575;
   background-color: #3a3a3a;
 }
-
 @media (max-width: 1024px) {
   #mainPage header .login button {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage header .login .admin button::after {
   font-family: "Icomoon";
   content: "\e900";
 }
-
 #mainPage header .login .admin.active button::after {
   font-family: "Icomoon";
   content: "\e903";
 }
-
 #mainPage header.fixed {
   border-radius: 6.25rem;
   top: 1.25rem;
   left: 3.75rem;
   right: 3.75rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage header {
     padding: 1.3888888889svw 3.6111111111svw;
     gap: 1.3888888889svw;
   }
-
   #mainPage header .main-logo {
     flex: 12.5svw;
     min-width: 10rem;
   }
-
   #mainPage header .options {
     gap: 1.3888888889svw;
   }
-
-  #mainPage header .options .nav>ul {
+  #mainPage header .options .nav > ul {
     gap: 0.8333333333svw;
   }
-
-  #mainPage header .options .nav>ul>li>a {
+  #mainPage header .options .nav > ul > li > a {
     padding: 0.6944444444svw 1.3888888889svw;
   }
-
   #mainPage header.fixed {
     top: 1.25rem;
     left: 2.5rem;
     right: 2.5rem;
   }
 }
-
 @media (max-width: 1280px) {
   #mainPage header {
     padding: 0.75rem 1rem;
   }
-
   #mainPage header .options {
     order: 3;
     flex-grow: 0;
   }
-
   #mainPage header .options .menu {
     display: flex;
   }
-
   #mainPage header .options .nav {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
-  #mainPage header .options .nav>ul {
+  #mainPage header .options .nav > ul {
     width: calc(100svw - 2rem);
     transform: translate(0, -6.25rem);
     gap: 1.25rem;
   }
-
-  #mainPage header .options .nav>ul>li>a {
+  #mainPage header .options .nav > ul > li > a {
     padding: 0.625rem 1.5rem;
   }
-
   #mainPage header .login {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-
   #mainPage header .login button {
     padding: 0.625rem 1.25rem;
     border: none !important;
     line-height: 1 !important;
   }
-
   #mainPage header .dropdown button {
     width: 100%;
   }
-
   #mainPage header .dropdown .dropdown-content {
     z-index: 1;
     width: 100%;
@@ -1673,89 +1412,74 @@ body {
     box-shadow: none;
     background-color: #9d4043;
   }
-
   #mainPage header .dropdown .dropdown-content ul {
     gap: 0.5rem;
   }
-
-  #mainPage header .dropdown .dropdown-content ul>li>a {
+  #mainPage header .dropdown .dropdown-content ul > li > a {
     padding: 0.5rem 1.5rem !important;
   }
 }
-
 @media (max-width: 1280px) and (hover: hover) {
-  #mainPage header .dropdown .dropdown-content ul>li:hover>a {
+  #mainPage header .dropdown .dropdown-content ul > li:hover > a {
     background-color: #b36568;
   }
 }
-
 @media (max-width: 1280px) {
-  #mainPage header .dropdown .dropdown-content ul>li.active>a {
+  #mainPage header .dropdown .dropdown-content ul > li.active > a {
     background-color: #b36568;
   }
-
   #mainPage header .dropdown.active .dropdown-content {
     padding: 0.5rem;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage header .main-logo {
     max-width: 8.75rem;
     min-width: 7.5rem;
   }
 }
-
 #mainPage .breadcrumb {
   margin-bottom: 2.5rem;
   padding: 0 3.75rem;
   position: inherit;
   z-index: 1;
 }
-
 #mainPage .breadcrumb li {
   display: inline-block;
   font-size: 0.875rem;
   color: #ca898c;
 }
-
 @media (max-width: 1024px) {
   #mainPage .breadcrumb li {
     font-size: 0.75rem;
   }
 }
-
-#mainPage .breadcrumb li>a {
+#mainPage .breadcrumb li > a {
   color: #ca898c;
   transition-property: color;
   text-decoration: none;
 }
-
 @media (hover: hover) {
-  #mainPage .breadcrumb li>a:hover {
+  #mainPage .breadcrumb li > a:hover {
     color: #d29b9d;
   }
 }
-
 #mainPage .breadcrumb li:not(:last-child)::after {
   font-family: "Icomoon";
   content: "\e902";
-  padding-left: 0.25rem;
+  padding: 0 0.25rem;
 }
-
 @media (max-width: 516px) {
   #mainPage .breadcrumb {
     padding: 1.25rem 1rem 1rem;
   }
 }
-
 #mainPage main {
   margin-top: 5.5rem;
   background-color: #871B1F;
   border-bottom-left-radius: 1.875rem;
   padding: 2.5rem 0;
 }
-
 #mainPage main.innerPage {
   background-image: url(../img/bg/inner-bg-gradient.jpg);
   background-size: 100%;
@@ -1765,40 +1489,32 @@ body {
   overflow: hidden;
   min-height: calc(100svh - 5.5rem - 7.5rem);
 }
-
 #mainPage main.innerPage section {
   position: inherit;
   z-index: 1;
 }
-
-#mainPage main.innerPage::before,
-#mainPage main.innerPage::after {
+#mainPage main.innerPage::before, #mainPage main.innerPage::after {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 0;
 }
-
 #mainPage main.innerPage::before {
   content: url(../img/bg/inner-mask-top.png);
   top: 0;
 }
-
 #mainPage main.innerPage::after {
   content: url(../img/bg/inner-mask-bottom.png);
   bottom: -0.5rem;
 }
-
 #mainPage main section {
   overflow: hidden;
   padding: 1.25rem calc((100svw - 90rem) / 2);
 }
-
 #mainPage main section .container {
   max-width: 90rem;
   margin: 0 auto;
 }
-
 #mainPage main img[for=mission] {
   position: fixed;
   right: 2rem;
@@ -1810,79 +1526,63 @@ body {
   transition-timing-function: ease-in-out;
   animation: btn-float 5s infinite;
 }
-
 @media (hover: hover) {
   #mainPage main img[for=mission]:hover {
     animation-play-state: paused;
   }
 }
-
 @keyframes btn-float {
   0% {
     transform: translate(0, -0.25rem);
   }
-
   50% {
     transform: translate(0, 0.25rem);
   }
-
   100% {
     transform: translate(0, -0.25rem);
   }
 }
-
 @media (max-width: 1440px) {
   #mainPage main section {
     padding: 1.25rem;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage main.innerPage {
     background-image: url(../img/bg/inner-bg-m.jpg);
   }
-
   #mainPage main img[for=mission] {
     right: 1.25rem;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage main {
     margin-top: 3.75rem;
     padding-top: 0;
   }
-
   #mainPage main img[for=mission] {
     width: 7.5rem;
   }
 }
-
 #mainPage #keyvision {
   margin: -2.5rem auto 0;
   padding: 0 1.25rem;
   max-width: 90rem;
   position: relative;
 }
-
 #mainPage #keyvision .swiper {
   border-radius: 1.875rem 1.875rem 1.875rem 0;
 }
-
 #mainPage #keyvision .swiper-wrapper {
   margin-bottom: -0.5rem;
   position: relative;
 }
-
-#mainPage #keyvision .swiper-button-prev,
-#mainPage #keyvision .swiper-button-next {
+#mainPage #keyvision .swiper-button-prev, #mainPage #keyvision .swiper-button-next {
   bottom: 1.25rem;
 }
-
 #mainPage #keyvision .swiper-pagination-bullets {
   left: -2.5rem !important;
 }
-
 #mainPage #keyvision .mask {
   position: absolute;
   left: 4.9375rem;
@@ -1892,16 +1592,13 @@ body {
   background-color: #871B1F;
   z-index: 1;
 }
-
-#mainPage #keyvision .mask::before,
-#mainPage #keyvision .mask::after {
+#mainPage #keyvision .mask::before, #mainPage #keyvision .mask::after {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
   background-size: contain;
   bottom: 0;
 }
-
 #mainPage #keyvision .mask::before {
   right: calc(100% - 0.0625rem);
   background-image: url(../img/maskbar-before-out.svg);
@@ -1909,7 +1606,6 @@ body {
   width: 3.75rem;
   height: 5.625rem;
 }
-
 #mainPage #keyvision .mask::after {
   left: calc(100% - 0.0625rem);
   background-image: url(../img/maskbar-after.svg);
@@ -1917,7 +1613,6 @@ body {
   width: 5rem;
   height: 3.75rem;
 }
-
 #mainPage #keyvision .captions {
   position: absolute;
   left: 4.5rem;
@@ -1929,7 +1624,6 @@ body {
   gap: 1.25rem;
   z-index: 2;
 }
-
 #mainPage #keyvision .captions div {
   position: absolute;
   left: 2rem;
@@ -1938,39 +1632,32 @@ body {
   opacity: 0;
   transition-property: opacity;
 }
-
 #mainPage #keyvision .captions div p {
   flex: 100%;
 }
-
 #mainPage #keyvision .captions div.active {
   opacity: 1;
   transition-duration: 1.5s;
   animation: cap-move 1s;
 }
-
 @keyframes cap-move {
   0% {
     transform: translateY(2rem);
   }
-
   100% {
     transform: translateY(0);
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #keyvision {
     margin: 3.75rem auto;
     padding: 0 1rem;
   }
-
   #mainPage #keyvision .mask {
     left: 4.625rem;
     bottom: auto;
     top: calc((100svw - 2rem) * 0.47 - 3.75rem + 0.0625rem);
   }
-
   #mainPage #keyvision .captions {
     margin-top: 2rem;
     position: initial;
@@ -1978,57 +1665,46 @@ body {
     height: 18.75rem;
     padding: 0 0 5.625rem;
   }
-
   #mainPage #keyvision .captions div {
     bottom: auto;
     left: 1rem;
     right: 1rem;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #keyvision .swiper-pagination-bullets {
     left: -1rem !important;
   }
-
   #mainPage #keyvision .mask {
     top: calc((100svw - 2rem) * 0.936 - 3.25rem + 0.0625rem);
   }
-
   #mainPage #keyvision .captions {
     height: 12.5rem;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage #keyvision .swiper-button-next {
     right: 1rem;
   }
-
   #mainPage #keyvision .swiper-button-prev {
     right: 6rem;
   }
-
   #mainPage #keyvision .mask {
     top: calc((100svw - 2rem) * 0.949 - 3.75rem + 0.0625rem);
   }
 }
-
 #mainPage #game-idx {
   background-image: url(../img/bg/game-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
-
 #mainPage #game-idx .bg::before {
   content: url(../img/bg/game-mask-top.png);
 }
-
 #mainPage #game-idx .bg::after {
   content: url(../img/bg/game-mask-bottom.png);
 }
-
 #mainPage #game-idx .container {
   min-height: 50svw;
   padding: 9.375rem 3.75rem 3.125rem;
@@ -2038,94 +1714,76 @@ body {
   position: inherit;
   z-index: 2;
 }
-
 #mainPage #game-idx .desc {
   flex: 25%;
   min-width: 18.75rem;
   flex-grow: 0;
 }
-
 #mainPage #game-idx .desc p.title-xl {
   margin-bottom: 0.5rem;
 }
-
 #mainPage #game-idx .desc p.body-1 {
   margin-top: 0;
   margin-bottom: 2.5rem;
 }
-
 #mainPage #game-idx .carousel {
   flex: 1;
   max-width: calc(75% - 1.25rem);
   padding-right: 3.625rem;
   position: relative;
 }
-
 #mainPage #game-idx .swiper {
   border-radius: 1.875rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #game-idx .swiper {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #game-idx .swiper {
     border-radius: 0.9375rem;
   }
 }
-
-#mainPage #game-idx .swiper-button-prev,
-#mainPage #game-idx .swiper-button-next {
+#mainPage #game-idx .swiper-button-prev, #mainPage #game-idx .swiper-button-next {
   top: calc(100% + 2.5rem);
 }
-
 #mainPage #game-idx .swiper-button-prev {
   right: 5rem;
 }
-
 #mainPage #game-idx .swiper-button-next {
   right: 0;
 }
-
 #mainPage #game-idx .swiper-slide {
   overflow: hidden;
   border-radius: 1.875rem;
   cursor: pointer;
   position: relative;
 }
-
 @media (max-width: 1440px) {
   #mainPage #game-idx .swiper-slide {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #game-idx .swiper-slide {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #game-idx .swiper-slide img {
   border-radius: 1.875rem;
   margin-bottom: -0.5rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #game-idx .swiper-slide img {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #game-idx .swiper-slide img {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #game-idx .swiper-slide .hover {
   position: absolute;
   top: 50%;
@@ -2138,7 +1796,6 @@ body {
   transition-delay: 0.1s;
   z-index: 1;
 }
-
 #mainPage #game-idx .swiper-slide::before {
   position: absolute;
   content: "";
@@ -2149,7 +1806,6 @@ body {
   background-color: transparent;
   transition: background-color 0.2s;
 }
-
 #mainPage #game-idx .swiper-slide::after {
   content: "";
   position: absolute;
@@ -2160,75 +1816,62 @@ body {
   transform: rotate(45deg);
   transition: background-color 0.2s, left 0.3s, right 0.3s;
 }
-
 @media (hover: hover) {
   #mainPage #game-idx .swiper-slide:hover .hover {
     opacity: 1;
   }
-
   #mainPage #game-idx .swiper-slide:hover::before {
     background-color: rgba(0, 0, 0, 0.2);
   }
-
   #mainPage #game-idx .swiper-slide:hover::after {
     left: 0;
     right: 0;
     background-color: black;
   }
 }
-
 @media (max-width: 1440px) {
   #mainPage #game-idx .container {
     padding: 10.4166666667svw 4.1666666667svw 3.4722222222svw;
   }
-
   #mainPage #game-idx .desc {
     min-width: 20.8333333333svw;
   }
 }
-
 @media (max-width: 1440px) and (hover: hover) {
   #mainPage #game-idx .swiper-slide:hover::after {
     left: -0.75rem;
     right: -0.75rem;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #game-idx .container {
     flex-wrap: wrap;
     height: auto;
     gap: 3.75rem;
   }
-
   #mainPage #game-idx .desc,
   #mainPage #game-idx .carousel {
     flex: 100%;
     max-width: 100%;
   }
-
   #mainPage #game-idx .carousel {
     padding-right: 1.5rem;
     margin-bottom: 1.25rem;
   }
-
   #mainPage #game-idx .swiper-slide {
     border-radius: 0rem;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 1440px) {
   #mainPage #game-idx .swiper-slide {
     border-radius: 0svw;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 768px) {
   #mainPage #game-idx .swiper-slide {
     border-radius: 0rem;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #game-idx .swiper-slide .hover {
     position: initial;
@@ -2236,51 +1879,40 @@ body {
     opacity: 1;
     padding: 1rem 0;
   }
-
   #mainPage #game-idx .swiper-slide .hover button {
     padding: 0.59375rem 1.25rem;
   }
 }
-
 @media (max-width: 1024px) and (hover: hover) {
-
-  #mainPage #game-idx .swiper-slide:hover::before,
-  #mainPage #game-idx .swiper-slide:hover::after {
+  #mainPage #game-idx .swiper-slide:hover::before, #mainPage #game-idx .swiper-slide:hover::after {
     background-color: transparent;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #game-idx {
     background-image: url(../img/bg/game-bg-m.jpg);
     background-size: cover;
   }
-
   #mainPage #game-idx .container {
     margin-bottom: 5.75rem;
   }
-
   #mainPage #game-idx .swiper {
     border-radius: 0.9375rem 0.9375rem 0 0;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage #game-idx {
     padding: 1rem;
   }
-
   #mainPage #game-idx .container {
     padding: 0;
   }
 }
-
 #mainPage #nft-idx {
   position: relative;
   padding: 3.75rem 3.75rem 3.75rem 0;
   overflow: hidden;
 }
-
 #mainPage #nft-idx .container {
   display: flex;
   gap: 3.75rem;
@@ -2288,17 +1920,14 @@ body {
   max-width: none;
   position: relative;
 }
-
 #mainPage #nft-idx .carousel {
   flex: 1;
   overflow: hidden;
   padding: 1.25rem 0;
 }
-
 #mainPage #nft-idx .carousel .swiper {
   overflow: visible;
 }
-
 #mainPage #nft-idx .carousel .swiper-slide {
   border-radius: 1.875rem;
   overflow: hidden;
@@ -2309,96 +1938,77 @@ body {
   position: relative;
   transform: scale(0.7) !important;
 }
-
 @media (max-width: 1440px) {
   #mainPage #nft-idx .carousel .swiper-slide {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #nft-idx .carousel .swiper-slide {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #nft-idx .carousel .swiper-slide .content {
   opacity: 0;
   transition-property: opacity;
   text-align: left;
   background-color: #1d1d1d;
 }
-
 #mainPage #nft-idx .carousel .swiper-slide .content .caption {
   padding: 1.25rem 1.25rem 1.875rem;
 }
-
 #mainPage #nft-idx .carousel .swiper-slide .content .caption p {
   margin-top: 0.5rem;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #nft-idx .carousel .swiper-slide .content .caption p {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage #nft-idx .carousel .swiper-slide .content .caption .tags {
   margin-top: 1rem;
   flex-direction: row-reverse;
 }
-
 #mainPage #nft-idx .carousel .swiper-slide .content .caption button {
   width: 100%;
 }
-
-#mainPage #nft-idx .carousel .swiper-slide-next,
-#mainPage #nft-idx .carousel .swiper-slide-active {
+#mainPage #nft-idx .carousel .swiper-slide-next, #mainPage #nft-idx .carousel .swiper-slide-active {
   transition-duration: 0.3s !important;
   box-shadow: -0.75rem 0.5rem 1.5rem rgba(0, 0, 0, 0.6);
 }
-
 #mainPage #nft-idx .carousel .swiper-slide-next {
   transform: scale(0.85) !important;
   z-index: 2 !important;
 }
-
 #mainPage #nft-idx .carousel .swiper-slide-active {
   transform: scale(1) !important;
   z-index: 3 !important;
   cursor: pointer;
 }
-
 #mainPage #nft-idx .carousel .swiper-slide-active .content {
   opacity: 1;
 }
-
 #mainPage #nft-idx .carousel .swiper.coming-soon .swiper-slide {
   background-image: none !important;
 }
-
 #mainPage #nft-idx .carousel .swiper.coming-soon .swiper-slide .content {
   opacity: 0;
 }
-
 #mainPage #nft-idx .carousel .swiper.coming-soon .swiper-slide-active {
   background-image: url(../img/nft/nft-comingSoon.jpg) !important;
   cursor: default;
 }
-
 #mainPage #nft-idx .desc {
   z-index: 1;
   flex: 35%;
   flex-grow: 0;
   padding-right: 3.625rem;
 }
-
 #mainPage #nft-idx .desc p.body-1 {
   margin: 0.5rem 0 2.5rem;
 }
-
 #mainPage #nft-idx::before {
   content: "";
   position: absolute;
@@ -2409,59 +2019,48 @@ body {
   z-index: 0;
   background-color: black;
   -webkit-clip-path: polygon(0 6.25rem, 100% 14.375rem, 100% 100%, 0% 100%);
-  clip-path: polygon(0 6.25rem, 100% 14.375rem, 100% 100%, 0% 100%);
+          clip-path: polygon(0 6.25rem, 100% 14.375rem, 100% 100%, 0% 100%);
 }
-
 @media (max-width: 1440px) {
   #mainPage #nft-idx {
     padding: 4.1666666667svw 4.1666666667svw 4.1666666667svw 0;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #nft-idx {
     padding: 3.75rem 1rem 0 0;
   }
-
   #mainPage #nft-idx .container {
     flex-wrap: wrap;
   }
-
   #mainPage #nft-idx .carousel,
   #mainPage #nft-idx .desc {
     flex: 100%;
   }
-
   #mainPage #nft-idx .carousel {
     order: 2;
     padding: 0 0 3.75rem;
     position: relative;
   }
-
   #mainPage #nft-idx .carousel .swiper {
     margin-right: 2.25rem;
     padding: 1.75rem 0;
     overflow: hidden;
   }
-
   #mainPage #nft-idx .carousel .swiper-button-prev {
     right: 5rem;
   }
-
   #mainPage #nft-idx .carousel .swiper-button-next {
     right: 0;
   }
-
   #mainPage #nft-idx .desc {
     padding-left: 1rem;
   }
-
   #mainPage #nft-idx::before {
     -webkit-clip-path: polygon(0 0, 100% 2.125rem, 100% 100%, 0% 100%);
-    clip-path: polygon(0 0, 100% 2.125rem, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 2.125rem, 100% 100%, 0% 100%);
   }
 }
-
 #mainPage #tutorial {
   position: relative;
   margin: 0 auto;
@@ -2471,15 +2070,12 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
-
 #mainPage #tutorial .title {
   width: 26.875rem;
 }
-
-#mainPage #tutorial .title .title-xl+p {
+#mainPage #tutorial .title .title-xl + p {
   margin-top: 0.5rem;
 }
-
 #mainPage #tutorial .content {
   margin-top: 2.5rem;
   padding: 7rem 7rem 0;
@@ -2487,7 +2083,6 @@ body {
   border-top-left-radius: 1.875rem;
   position: relative;
 }
-
 #mainPage #tutorial .content .tab {
   display: flex;
   background-color: #6c1619;
@@ -2495,19 +2090,16 @@ body {
   border: none;
   margin-bottom: 1rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #tutorial .content .tab {
     border-radius: 6.9444444444svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #tutorial .content .tab {
     border-radius: 6.25rem;
   }
 }
-
 #mainPage #tutorial .content .tab li {
   flex: 1;
   cursor: pointer;
@@ -2522,19 +2114,16 @@ body {
   gap: 0.5rem;
   transition: none;
 }
-
 @media (max-width: 1440px) {
   #mainPage #tutorial .content .tab li {
     border-radius: 6.9444444444svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #tutorial .content .tab li {
     border-radius: 6.25rem;
   }
 }
-
 #mainPage #tutorial .content .tab li h5 {
   width: 1.625rem;
   height: 1.625rem;
@@ -2548,65 +2137,54 @@ body {
   font-weight: 700;
   border-radius: 6.25rem;
 }
-
 @media (max-width: 1024px) {
   #mainPage #tutorial .content .tab li h5 {
     font-size: 0.9375rem;
   }
 }
-
 @media (max-width: 1440px) {
   #mainPage #tutorial .content .tab li h5 {
     border-radius: 6.9444444444svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #tutorial .content .tab li h5 {
     border-radius: 6.25rem;
   }
 }
-
 @media (hover: hover) {
   #mainPage #tutorial .content .tab li:hover {
     color: #9d4043;
   }
-
   #mainPage #tutorial .content .tab li:hover h5 {
     background-color: #9d4043;
   }
 }
-
 #mainPage #tutorial .content .tab li.active {
   background-color: black;
   color: white;
   cursor: default;
 }
-
 #mainPage #tutorial .content .tab li.active h5 {
   background-color: white;
   color: black;
 }
-
 #mainPage #tutorial .content .tab-content {
   overflow: hidden;
   border-radius: 1.875rem;
   background-color: black;
   position: relative;
 }
-
 @media (max-width: 1440px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #tutorial .content .tab-content li {
   display: flex;
   flex-wrap: wrap;
@@ -2620,43 +2198,36 @@ body {
   bottom: 0;
   padding: 1.75rem;
 }
-
 #mainPage #tutorial .content .tab-content li img {
   margin-bottom: 2rem;
   max-width: 15rem;
   border-radius: 0.9375rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #tutorial .content .tab-content li img {
     border-radius: 1.0416666667svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #tutorial .content .tab-content li img {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #tutorial .content .tab-content li p {
   margin: 0.5rem auto 2rem;
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #tutorial .content .tab-content li p {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #tutorial .content .tab-content li button,
 #mainPage #tutorial .content .tab-content li a.button {
   margin: 0 auto;
   width: auto;
 }
-
 #mainPage #tutorial .content .tab-content::before {
   position: absolute;
   content: "";
@@ -2668,7 +2239,6 @@ body {
   transform: rotate(-45deg);
   z-index: 1;
 }
-
 #mainPage #tutorial .mask {
   position: absolute;
   bottom: 100%;
@@ -2677,7 +2247,6 @@ body {
   width: 23.4375rem;
   background-color: #871B1F;
 }
-
 #mainPage #tutorial .mask::before {
   content: url(../img/maskbar-before-in.svg);
   height: 3.75rem;
@@ -2685,7 +2254,6 @@ body {
   left: calc(100% - 0.0625rem);
   transform: rotateX(180deg);
 }
-
 #mainPage #tutorial .mask::after {
   content: url(../img/maskbar-after.svg);
   height: 3.75rem;
@@ -2693,37 +2261,29 @@ body {
   right: calc(100% - 0.0625rem);
   transform: rotateY(180deg);
 }
-
 @media (max-width: 1440px) {
   #mainPage #tutorial {
     padding: 15.2777777778svw 4.1666666667svw 4.1666666667svw;
   }
-
   #mainPage #tutorial .content {
     padding: 7.7777777778svw 7.7777777778svw 0;
   }
-
   #mainPage #tutorial .content .tab {
     margin-bottom: 1.1111111111svw;
   }
-
   #mainPage #tutorial .content .tab li {
     padding: 1.6666666667svw;
     gap: 0.5555555556svw;
   }
-
   #mainPage #tutorial .content .tab-content li {
     padding: 1.9444444444svw;
   }
-
   #mainPage #tutorial .content .tab-content li img {
     margin-bottom: 2.2222222222svw;
   }
-
   #mainPage #tutorial .content .tab-content li p {
     margin: 0.5555555556svw auto 2.2222222222svw;
   }
-
   #mainPage #tutorial .content .tab-content::before {
     top: -1.3888888889svw;
     left: -6.9444444444svw;
@@ -2731,94 +2291,76 @@ body {
     bottom: -1.3888888889svw;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #tutorial {
     padding: 1.25rem 0;
   }
-
   #mainPage #tutorial .title {
     padding: 0 1rem;
     width: calc(100svw - 15.5rem);
   }
-
   #mainPage #tutorial .content {
     border-radius: 0rem;
     padding: 2rem 1rem;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 1440px) {
   #mainPage #tutorial .content {
     border-radius: 0svw;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 768px) {
   #mainPage #tutorial .content {
     border-radius: 0rem;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 1.875rem;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 1440px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 768px) {
   #mainPage #tutorial .content .tab-content {
     border-radius: 0.9375rem;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #tutorial .mask {
     right: 0;
     width: 10.5rem;
   }
-
   #mainPage #tutorial .mask::before {
     content: "";
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #tutorial .title {
     width: calc(100svw - 8rem);
   }
-
   #mainPage #tutorial .mask {
     width: 4.25rem;
   }
-
   #mainPage #tutorial .content .tab {
     margin-bottom: 1rem;
   }
-
   #mainPage #tutorial .content .tab li {
     padding: 0.75rem;
   }
-
   #mainPage #tutorial .content .tab li h5 {
     width: 1.3125rem;
     height: 1.3125rem;
   }
-
   #mainPage #tutorial .content .tab li h4 {
     display: none;
   }
-
   #mainPage #tutorial .content .tab-content li {
     padding: 2rem;
   }
-
   #mainPage #tutorial .content .tab-content::before {
     top: 7.5rem;
     left: -7.5rem;
@@ -2826,27 +2368,22 @@ body {
     bottom: 7.5rem;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage #tutorial .content .tab-content ul li img {
     max-width: 100%;
   }
 }
-
 #mainPage #zkz {
   height: 46svw;
   position: relative;
   padding: 1.25rem;
 }
-
 #mainPage #zkz .bg::before {
   content: url(../img/bg/zkz-mask-top.png);
 }
-
 #mainPage #zkz .bg::after {
   content: url(../img/bg/zkz-mask-bottom.png);
 }
-
 #mainPage #zkz .container {
   max-width: none;
   display: flex;
@@ -2855,33 +2392,220 @@ body {
   position: inherit;
   z-index: 1;
 }
-
 #mainPage #zkz img {
   max-height: 46svw;
 }
-
 @media (max-width: 1024px) {
   #mainPage #zkz {
     margin-bottom: 2rem;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #zkz .bg::before {
     height: 6.25rem;
   }
-
   #mainPage #zkz .bg::after {
     height: 8.75rem;
   }
 }
-
+#mainPage #character {
+  background-image: url(../img/bg/character-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding: 7.5rem 3.75rem;
+}
+#mainPage #character .bg::before {
+  content: url(../img/bg/zkz-mask-top.png);
+}
+#mainPage #character .bg::after {
+  content: url(../img/bg/zkz-mask-bottom.png);
+}
+#mainPage #character .container {
+  position: inherit;
+  z-index: 2;
+}
+#mainPage #character .container .h1 {
+  color: #e9e9e9;
+}
+#mainPage #character .container > ul {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 3.5rem;
+}
+#mainPage #character .container > ul > li {
+  flex: calc((100% - 14rem) / 5);
+  max-width: calc((100% - 14rem) / 5);
+  margin-top: calc(((100% - 14rem) / 5 - 3.75rem) * 0.6);
+  padding: 2rem;
+  padding-top: calc(((100% - 14rem) / 5 - 3.75rem) * 0.4 + 1.25rem);
+  background-color: black;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1440px) {
+  #mainPage #character .container > ul > li {
+    border-radius: 1.1111111111svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #character .container > ul > li {
+    border-radius: 0.875rem;
+  }
+}
+#mainPage #character .container > ul > li img {
+  position: absolute;
+  width: calc(100% - 3.75rem);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  border-radius: 18.75rem;
+}
+@media (max-width: 1440px) {
+  #mainPage #character .container > ul > li img {
+    border-radius: 20.8333333333svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #character .container > ul > li img {
+    border-radius: 18.75rem;
+  }
+}
+#mainPage #character .container > ul > li h4 {
+  margin-bottom: 1.25rem;
+}
+#mainPage #character .container > ul > li h4 span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #871B1F;
+  border-radius: 0.375rem;
+}
+@media (max-width: 1440px) {
+  #mainPage #character .container > ul > li h4 span {
+    border-radius: 0.4166666667svw;
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #character .container > ul > li h4 span {
+    border-radius: 0.375rem;
+  }
+}
+#mainPage #character .container > ul > li dl {
+  width: 100%;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 0;
+}
+@media (max-width: 1024px) {
+  #mainPage #character .container > ul > li dl {
+    font-size: 0.8125rem;
+  }
+}
+#mainPage #character .container > ul > li dl dt {
+  display: inline-block;
+  flex: 45%;
+}
+#mainPage #character .container > ul > li dl dd {
+  text-align: right;
+  flex: 55%;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+#mainPage #character .container > ul > li.protoss dl dd {
+  color: #D49519;
+}
+#mainPage #character .container > ul > li.demigod dl dd {
+  color: #b36568;
+}
+#mainPage #character .container > ul > li.terran dl dd {
+  color: #4D9D40;
+}
+@media (max-width: 1440px) {
+  #mainPage #character .container > ul {
+    gap: 3rem 2.25rem;
+  }
+  #mainPage #character .container > ul > li {
+    flex: calc((100% - 9rem) / 5);
+    max-width: calc((100% - 9rem) / 5);
+    margin-top: calc(((100% - 9rem) / 5 - 3.75rem) * 0.6);
+    padding: 1.25rem;
+    padding-top: calc(((100% - 9rem) / 5 - 3.75rem) * 0.4 + 1.25rem);
+  }
+}
+@media (max-width: 1280px) {
+  #mainPage #character .container > ul {
+    gap: 3rem 2.25rem;
+  }
+  #mainPage #character .container > ul > li {
+    flex: calc((100% - 6.75rem) / 4);
+    max-width: calc((100% - 6.75rem) / 4);
+    margin-top: calc(((100% - 6.75rem) / 4 - 3.75rem) * 0.6);
+    padding-top: calc(((100% - 6.75rem) / 4 - 3.75rem) * 0.4 + 1.25rem);
+  }
+}
+@media (max-width: 1024px) {
+  #mainPage #character {
+    padding: 3.75rem 1rem;
+  }
+  #mainPage #character .container {
+    margin-top: 3.75rem;
+  }
+  #mainPage #character .container > ul {
+    gap: 3rem 2.25rem;
+  }
+  #mainPage #character .container > ul > li {
+    flex: calc((100% - 4.5rem) / 3);
+    max-width: calc((100% - 4.5rem) / 3);
+    margin-top: calc(((100% - 4.5rem) / 3 - 3.75rem) * 0.6);
+    padding: 1.75rem;
+    padding-top: calc(((100% - 4.5rem) / 3 - 3.75rem) * 0.4 + 1.25rem);
+  }
+}
+@media (max-width: 768px) {
+  #mainPage #character {
+    background-image: url(../img/bg/character-bg-m.jpg);
+  }
+  #mainPage #character .container > ul {
+    gap: 2rem 1rem;
+  }
+  #mainPage #character .container > ul > li {
+    flex: calc((100% - 1rem) / 2);
+    max-width: calc((100% - 1rem) / 2);
+    margin-top: calc(((100% - 1rem) / 2 - 3rem) * 0.6);
+    padding: 1.5rem;
+    padding-top: calc(((100% - 1rem) / 2 - 3rem) * 0.4 + 1.25rem);
+  }
+  #mainPage #character .container > ul > li img {
+    max-width: calc(100% - 3rem);
+  }
+}
+@media (max-width: 516px) {
+  #mainPage #character .container > ul > li {
+    padding: 0.75rem;
+    padding-top: calc(((100% - 1rem) / 2 - 1.5rem) * 0.4 + 1.25rem);
+  }
+  #mainPage #character .container > ul > li img {
+    max-width: calc(100% - 1.5rem);
+  }
+}
 #mainPage footer {
   background-color: black;
   height: 7.5rem;
   position: relative;
 }
-
 #mainPage footer .mask {
   position: absolute;
   top: -0.0625rem;
@@ -2891,9 +2615,7 @@ body {
   background-color: #871B1F;
   z-index: 0;
 }
-
-#mainPage footer .mask::before,
-#mainPage footer .mask::after {
+#mainPage footer .mask::before, #mainPage footer .mask::after {
   content: "";
   position: absolute;
   top: 0;
@@ -2901,7 +2623,6 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-
 #mainPage footer .mask::before {
   right: calc(100% - 0.0625rem);
   background-image: url(../img/maskbar-after.svg);
@@ -2909,14 +2630,12 @@ body {
   width: 5rem;
   transform: rotate(180deg);
 }
-
 #mainPage footer .mask::after {
   left: calc(100% - 0.0625rem);
   background-image: url(../img/maskbar-before-in.svg);
   background-position: bottom right;
   width: 2rem;
 }
-
 #mainPage footer .sns {
   position: inherit;
   width: 100svw;
@@ -2926,27 +2645,22 @@ body {
   gap: 1.25rem;
   z-index: 1;
 }
-
 #mainPage footer .sns li button {
   font-size: 1.25rem;
   padding: 0.6875rem;
 }
-
 @media (max-width: 516px) {
   #mainPage footer .mask {
     left: calc(100svw - 34.7222222222svw);
   }
 }
-
 #mainPage #shop {
   min-height: 45svw;
 }
-
 #mainPage #shop .container {
   position: inherit;
   z-index: 1;
 }
-
 #mainPage #shop .product-list {
   display: flex;
   gap: 1.25rem;
@@ -2954,7 +2668,6 @@ body {
   justify-content: space-between;
   margin: 1.25rem auto;
 }
-
 #mainPage #shop .product-list li {
   flex: calc(50% - 0.625rem);
   max-width: calc(50% - 0.625rem);
@@ -2964,40 +2677,33 @@ body {
   display: flex;
   gap: 2.5rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #shop .product-list li {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .product-list li {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-list li .img {
   flex: 12.5rem;
   max-width: 12.5rem;
 }
-
 #mainPage #shop .product-list li .img img {
   border-radius: 1.875rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #shop .product-list li .img img {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .product-list li .img img {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-list li .content {
   flex: 1;
   display: flex;
@@ -3005,36 +2711,30 @@ body {
   justify-content: space-between;
   gap: 1.25rem;
 }
-
 #mainPage #shop .product-list li .content p {
   font-size: 1.125rem;
   line-height: 1.5;
   color: #a8a8a8;
   flex-grow: 1;
 }
-
 @media (max-width: 1024px) {
   #mainPage #shop .product-list li .content p {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-list li .content button {
   border: 0.0625rem solid white;
   background-color: transparent;
   align-self: flex-end;
 }
-
 #mainPage #shop .product-list li .content button:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
-
 #mainPage #shop .product-list li .content button[disabled] {
   border-color: #757575;
   color: #757575;
   background-color: transparent;
 }
-
 #mainPage #shop .progress {
   width: 40.625rem;
   margin: 0 auto;
@@ -3042,7 +2742,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 #mainPage #shop .progress li {
   display: flex;
   align-items: center;
@@ -3054,19 +2753,16 @@ body {
   background-color: #6c1619;
   color: #9d4043;
 }
-
 @media (max-width: 1440px) {
   #mainPage #shop .progress li {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .progress li {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #shop .progress li span {
   word-break: keep-all;
   position: absolute;
@@ -3075,13 +2771,11 @@ body {
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #shop .progress li span {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage #shop .progress li:not(:first-child)::before {
   content: "";
   position: absolute;
@@ -3093,7 +2787,6 @@ body {
   background-color: #6c1619;
   z-index: -1;
 }
-
 #mainPage #shop .progress li::after {
   content: "";
   position: absolute;
@@ -3103,75 +2796,58 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   z-index: -1;
 }
-
 @media (max-width: 1440px) {
   #mainPage #shop .progress li::after {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .progress li::after {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #shop .progress.step1 li:first-child {
   background-color: black;
   color: white;
 }
-
 #mainPage #shop .progress.step1 li:first-child span {
   color: black;
 }
-
 #mainPage #shop .progress.step1 li:first-child::after {
   width: 2.375rem;
   height: 2.375rem;
   z-index: 1;
 }
-
-#mainPage #shop .progress.step2 li:first-child,
-#mainPage #shop .progress.step2 li:nth-child(2) {
+#mainPage #shop .progress.step2 li:first-child, #mainPage #shop .progress.step2 li:nth-child(2) {
   background-color: black;
   color: white;
 }
-
-#mainPage #shop .progress.step2 li:first-child span,
-#mainPage #shop .progress.step2 li:nth-child(2) span {
+#mainPage #shop .progress.step2 li:first-child span, #mainPage #shop .progress.step2 li:nth-child(2) span {
   color: black;
 }
-
-#mainPage #shop .progress.step2 li:first-child:before,
-#mainPage #shop .progress.step2 li:nth-child(2):before {
+#mainPage #shop .progress.step2 li:first-child:before, #mainPage #shop .progress.step2 li:nth-child(2):before {
   background-color: black;
 }
-
 #mainPage #shop .progress.step2 li:nth-child(2)::after {
   width: 2.375rem;
   height: 2.375rem;
   z-index: 1;
 }
-
 #mainPage #shop .progress.step3 li {
   background-color: black;
   color: white;
 }
-
 #mainPage #shop .progress.step3 li span {
   color: black;
 }
-
 #mainPage #shop .progress.step3 li:before {
   background-color: black;
 }
-
 #mainPage #shop .progress.step3 li:last-child::after {
   width: 2.375rem;
   height: 2.375rem;
   z-index: 1;
 }
-
 #mainPage #shop .product-detail {
   margin-top: 2.5rem;
   background-color: black;
@@ -3181,87 +2857,72 @@ body {
   flex-wrap: wrap;
   gap: 2.5rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #shop .product-detail {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .product-detail {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-detail .title {
   flex: 100%;
   text-align: center;
   padding-bottom: 1.25rem;
   border-bottom: 0.0625rem solid white;
 }
-
 #mainPage #shop .product-detail .img {
   flex: 19.6875rem;
   max-width: 19.6875rem;
 }
-
 #mainPage #shop .product-detail .img img {
   max-width: 19.6875rem;
   border-radius: 1.875rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #shop .product-detail .img img {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .product-detail .img img {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-detail .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-
 #mainPage #shop .product-detail .content .statement {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #shop .product-detail .content .statement {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-detail .content .statement li {
   display: flex;
   justify-content: space-between;
 }
-
 #mainPage #shop .product-detail .content .statement li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
-
 #mainPage #shop .product-detail .content .statement a {
   color: #a8a8a8;
   transition-property: color;
   text-decoration: none;
 }
-
 @media (hover: hover) {
   #mainPage #shop .product-detail .content .statement a:hover {
     color: #b5b5b5;
   }
 }
-
 #mainPage #shop .product-detail .content .desc {
   background-color: #1d1d1d;
   border-radius: 0.625rem;
@@ -3270,13 +2931,11 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #shop .product-detail .content .desc {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-detail .content .purchase {
   display: flex;
   justify-content: space-between;
@@ -3284,223 +2943,169 @@ body {
   font-size: 1.125rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #shop .product-detail .content .purchase {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #shop .product-detail .content .purchase .price {
   flex-grow: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
 #mainPage #shop .product-detail .content .purchase .price h2 {
   display: inline-block;
 }
-
 #mainPage #shop .product-detail .content .purchase .btns {
   display: flex;
   align-items: center;
   gap: 1.25rem;
 }
-
-#mainPage #shop .product-detail.step2,
-#mainPage #shop .product-detail.step3 {
+#mainPage #shop .product-detail.step2, #mainPage #shop .product-detail.step3 {
   max-width: 55rem;
   margin: 2.5rem auto 0;
 }
-
-#mainPage #shop .product-detail.step2 .img,
-#mainPage #shop .product-detail.step3 .img {
+#mainPage #shop .product-detail.step2 .img, #mainPage #shop .product-detail.step3 .img {
   flex: 12.5rem;
   max-width: 12.5rem;
 }
-
-#mainPage #shop .product-detail.step2 .img img,
-#mainPage #shop .product-detail.step3 .img img {
+#mainPage #shop .product-detail.step2 .img img, #mainPage #shop .product-detail.step3 .img img {
   max-width: 12.5rem;
 }
-
-#mainPage #shop .product-detail.step2 .desc,
-#mainPage #shop .product-detail.step3 .desc {
+#mainPage #shop .product-detail.step2 .desc, #mainPage #shop .product-detail.step3 .desc {
   max-height: 11.25rem;
   overflow-y: auto;
 }
-
-#mainPage #shop .product-detail.step2 .desc::-webkit-scrollbar,
-#mainPage #shop .product-detail.step3 .desc::-webkit-scrollbar {
+#mainPage #shop .product-detail.step2 .desc::-webkit-scrollbar, #mainPage #shop .product-detail.step3 .desc::-webkit-scrollbar {
   background-color: transparent;
 }
-
-#mainPage #shop .product-detail.step2 .desc::-webkit-scrollbar-thumb,
-#mainPage #shop .product-detail.step3 .desc::-webkit-scrollbar-thumb {
+#mainPage #shop .product-detail.step2 .desc::-webkit-scrollbar-thumb, #mainPage #shop .product-detail.step3 .desc::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
 }
-
 @media (max-width: 1280px) {
   #mainPage #shop .product-list li {
     flex: 100%;
     max-width: 100%;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #shop .progress {
     width: 90svw;
   }
-
   #mainPage #shop .progress li:not(:first-child)::before {
     width: calc((90svw - 5.625rem) / 2 + 0.25rem);
   }
-
   #mainPage #shop .product-detail .img {
     flex: 30%;
     max-width: 30%;
   }
-
   #mainPage #shop .product-detail .img img {
     max-width: 100%;
   }
-
   #mainPage #shop .product-detail .content .purchase {
     flex-wrap: wrap;
   }
-
   #mainPage #shop .product-detail .content .purchase .input-group {
     flex: 100%;
   }
-
   #mainPage #shop .product-detail .content .purchase .input-group input {
     flex: 1;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #shop .product-list li {
     flex-wrap: wrap;
     gap: 1rem;
   }
-
   #mainPage #shop .product-list li .img {
     flex: 100%;
     max-width: 100%;
     text-align: center;
   }
-
   #mainPage #shop .product-list li .img img {
     max-width: 12.5rem;
   }
-
   #mainPage #shop .product-list li .content {
     gap: 1rem;
   }
-
   #mainPage #shop .product-list li .content button {
     align-self: stretch;
   }
-
   #mainPage #shop .progress {
     width: 70svw;
   }
-
   #mainPage #shop .progress li span {
     bottom: calc(100% + 0.5rem);
   }
-
   #mainPage #shop .progress li:not(:first-child)::before {
     width: calc((70svw - 5.625rem) / 2 + 0.25rem);
   }
-
   #mainPage #shop .product-detail {
     gap: 1rem;
     padding: 2rem 1rem;
   }
-
   #mainPage #shop .product-detail .img {
     flex: 100%;
     max-width: 100%;
     text-align: center;
   }
-
   #mainPage #shop .product-detail .img img {
     max-width: 12.5rem;
   }
-
   #mainPage #shop .product-detail .content .desc {
     order: 3;
   }
-
   #mainPage #shop .product-detail .content .purchase {
     gap: 0.75rem;
   }
-
   #mainPage #shop .product-detail .content .purchase .price {
     flex: 100%;
   }
-
   #mainPage #shop .product-detail .content .purchase .btns {
     width: 100%;
     flex-wrap: wrap;
     gap: 1rem;
   }
-
-  #mainPage #shop .product-detail .content .purchase .btns>* {
+  #mainPage #shop .product-detail .content .purchase .btns > * {
     flex: 100%;
     max-width: 100%;
   }
-
   #mainPage #shop .product-detail .content .purchase .btns .btn-tertiary {
     order: 2;
   }
-
-  #mainPage #shop .product-detail.step2 .img,
-  #mainPage #shop .product-detail.step3 .img {
+  #mainPage #shop .product-detail.step2 .img, #mainPage #shop .product-detail.step3 .img {
     flex: 100%;
     max-width: 100%;
   }
-
-  #mainPage #shop .product-detail.step2 .img img,
-  #mainPage #shop .product-detail.step3 .img img {
+  #mainPage #shop .product-detail.step2 .img img, #mainPage #shop .product-detail.step3 .img img {
     max-width: 12.5rem;
   }
-
-  #mainPage #shop .product-detail.step2 .desc,
-  #mainPage #shop .product-detail.step3 .desc {
+  #mainPage #shop .product-detail.step2 .desc, #mainPage #shop .product-detail.step3 .desc {
     max-height: none;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage #shop {
     padding: 0 1rem;
   }
-
   #mainPage #shop .container {
     padding: 0;
   }
-
   #mainPage #shop .product-list li {
     padding: 2rem 1rem;
   }
-
   #mainPage #shop .progress {
     padding-top: 2rem;
   }
 }
-
 #mainPage #game {
   padding: 0 3.75rem;
 }
-
 #mainPage #game .container {
   position: inherit;
   z-index: 1;
 }
-
 #mainPage #game .game-list {
   margin-top: 1.25rem;
   display: flex;
@@ -3508,27 +3113,23 @@ body {
   gap: 2.25rem 0;
   align-items: stretch;
 }
-
-#mainPage #game .game-list>li {
+#mainPage #game .game-list > li {
   flex: 25%;
   max-width: 25%;
   border-radius: 1.875rem;
   overflow: hidden;
 }
-
 @media (max-width: 1440px) {
-  #mainPage #game .game-list>li {
+  #mainPage #game .game-list > li {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
-  #mainPage #game .game-list>li {
+  #mainPage #game .game-list > li {
     border-radius: 0.9375rem;
   }
 }
-
-#mainPage #game .game-list>li>a {
+#mainPage #game .game-list > li > a {
   padding: 1.75rem;
   height: 100%;
   display: flex;
@@ -3538,71 +3139,59 @@ body {
   transition-property: background-color;
   transition-duration: 0.3s;
 }
-
-#mainPage #game .game-list>li>a .img {
+#mainPage #game .game-list > li > a .img {
   margin-bottom: 1.25rem;
   border-radius: 1.875rem;
   overflow: hidden;
 }
-
 @media (max-width: 1440px) {
-  #mainPage #game .game-list>li>a .img {
+  #mainPage #game .game-list > li > a .img {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
-  #mainPage #game .game-list>li>a .img {
+  #mainPage #game .game-list > li > a .img {
     border-radius: 0.9375rem;
   }
 }
-
-#mainPage #game .game-list>li>a .img img {
+#mainPage #game .game-list > li > a .img img {
   margin-bottom: -0.1875rem;
   border-radius: 1.875rem;
   transition-property: transform;
   transition-duration: 0.3s;
 }
-
 @media (max-width: 1440px) {
-  #mainPage #game .game-list>li>a .img img {
+  #mainPage #game .game-list > li > a .img img {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
-  #mainPage #game .game-list>li>a .img img {
+  #mainPage #game .game-list > li > a .img img {
     border-radius: 0.9375rem;
   }
 }
-
-#mainPage #game .game-list>li>a .tags {
+#mainPage #game .game-list > li > a .tags {
   margin: 1rem 0 2.5rem;
 }
-
-#mainPage #game .game-list>li>a .btn {
+#mainPage #game .game-list > li > a .btn {
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
 }
-
 @media (hover: hover) {
-  #mainPage #game .game-list>li>a:hover {
+  #mainPage #game .game-list > li > a:hover {
     background-color: black;
     transition-duration: 0.7s;
   }
-
-  #mainPage #game .game-list>li>a:hover .img img {
+  #mainPage #game .game-list > li > a:hover .img img {
     transform: scale(1.1);
   }
 }
-
 #mainPage #game .game-detail .card-content {
   display: flex;
   gap: 2.5rem;
   position: relative;
 }
-
 #mainPage #game .game-detail .content {
   flex: 1;
   display: flex;
@@ -3611,7 +3200,6 @@ body {
   height: 31.14rem;
   overflow: hidden;
 }
-
 #mainPage #game .game-detail .content .desc {
   flex: 100%;
   padding: 1rem;
@@ -3622,21 +3210,17 @@ body {
   line-height: 1.5;
   overflow-y: auto;
 }
-
 @media (max-width: 1024px) {
   #mainPage #game .game-detail .content .desc {
     font-size: 0.9375rem;
   }
 }
-
 #mainPage #game .game-detail .content .desc::-webkit-scrollbar {
   background-color: transparent;
 }
-
 #mainPage #game .game-detail .content .desc::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
 }
-
 #mainPage #game .game-detail .content .awards {
   flex: 100%;
   display: flex;
@@ -3645,13 +3229,11 @@ body {
   color: #ca898c;
   font-size: 0.875rem;
 }
-
 @media (max-width: 1024px) {
   #mainPage #game .game-detail .content .awards {
     font-size: 0.75rem;
   }
 }
-
 #mainPage #game .game-detail .content .awards .louder {
   flex: 1.625rem;
   max-width: 1.625rem;
@@ -3664,41 +3246,32 @@ body {
   height: 1.625rem;
   font-size: 1rem;
 }
-
 #mainPage #game .game-detail .content .awards .louder i {
   animation: shake 3.3s infinite linear;
 }
-
 @keyframes shake {
   0% {
     transform: rotate(-15deg);
   }
-
   5% {
     transform: rotate(-15deg);
   }
-
   20% {
     transform: rotate(10deg);
   }
-
   35% {
     transform: rotate(-15deg);
   }
-
   50% {
     transform: rotate(10deg);
   }
-
   65% {
     transform: rotate(-15deg);
   }
-
   100% {
     transform: rotate(-15deg);
   }
 }
-
 #mainPage #game .game-detail .content .awards .award-list {
   flex: calc(100% - 1.625rem - 0.5rem);
   max-width: calc(100% - 1.625rem - 0.5rem);
@@ -3706,20 +3279,17 @@ body {
   min-height: 5.875rem;
   overflow: hidden;
 }
-
 #mainPage #game .game-detail .content .awards .award-list .swiper-slide {
   background-color: #1d1d1d;
   border-radius: 3.125rem;
   padding: 0.25rem 0.5rem;
   height: 1.625rem !important;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet {
   flex: 100%;
   display: flex;
   gap: 1.25rem;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .odds,
 #mainPage #game .game-detail .content .odd-n-bet .bets {
   flex: calc(50% - 0.625rem);
@@ -3728,29 +3298,23 @@ body {
   border-radius: 0.625rem;
   border: 0.1875rem solid transparent;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .odds {
   background-color: #1d1d1d;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .odds label {
   display: flex;
   align-items: center;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .odds h3 {
   margin: 1.5rem 0;
   text-align: center;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .bets {
   background-color: #871B1F;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .bets label {
   display: block;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .bets input {
   margin: 1.125rem 0 0.25rem 0;
   font-size: 0.9375rem;
@@ -3759,193 +3323,151 @@ body {
   max-width: 100%;
   min-width: 100%;
 }
-
 @media (max-width: 1024px) {
   #mainPage #game .game-detail .content .odd-n-bet .bets input {
     font-size: 0.8125rem;
   }
 }
-
-#mainPage #game .game-detail .content .odd-n-bet .bets input::-webkit-inner-spin-button,
-#mainPage #game .game-detail .content .odd-n-bet .bets input::-webkit-outer-spin-button {
+#mainPage #game .game-detail .content .odd-n-bet .bets input::-webkit-inner-spin-button, #mainPage #game .game-detail .content .odd-n-bet .bets input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .bets .helper {
   color: rgba(255, 255, 255, 0.3);
 }
-
 #mainPage #game .game-detail .content .odd-n-bet .bets.alert {
   animation: betsAlert 1s forwards;
 }
-
 @keyframes betsAlert {
   0% {
     border-color: rgba(255, 255, 255, 0);
   }
-
   25% {
     border-color: rgba(255, 255, 255, 0.3);
   }
-
   50% {
     border-color: rgba(255, 255, 255, 0);
   }
-
   75% {
     border-color: rgba(255, 255, 255, 0.3);
   }
-
   99% {
     border-color: rgba(255, 255, 255, 0);
   }
-
   100% {
     border-color: rgba(255, 255, 255, 0.3);
   }
 }
-
 #mainPage #game .game-detail .content .count {
   flex: 100%;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  <<<<<<< HEAD max-height: 2.75rem;
-  =======max-height: 3.5rem;
-  >>>>>>>card-game
+  max-height: 3.5rem;
 }
-
 #mainPage #game .game-detail .content .count button {
   padding: 0.625rem;
   font-size: 0.875rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage #game .game-detail .content {
     height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6 + 2.5rem);
   }
 }
-
 @media (max-width: 1280px) {
   #mainPage #game .game-detail .content .awards .award-list {
     height: 3.75rem;
     min-height: 3.75rem;
   }
-
   #mainPage #game .game-detail .content .odd-n-bet .odds h3 {
     margin: 1.25rem 0;
   }
-
   #mainPage #game .game-detail .content .odd-n-bet .bets input {
     margin: 0.5rem 0 0.25rem 0;
   }
 }
-
 @media (max-width: 1024px) {
-  #mainPage #game .game-list>li {
+  #mainPage #game .game-list > li {
     flex: 33.33%;
     max-width: 33.33%;
   }
-
-  #mainPage #game .game-list>li>a {
+  #mainPage #game .game-list > li > a {
     padding: 0.75rem;
   }
-
-  #mainPage #game .game-list>li>a:hover {
+  #mainPage #game .game-list > li > a:hover {
     background-color: transparent;
   }
-
   #mainPage #game .game-detail .card-content {
     flex-wrap: wrap;
   }
-
   #mainPage #game .game-detail .card-content .game-zone {
     flex: 100%;
     max-width: 100%;
   }
-
   #mainPage #game .game-detail .card-content .content {
     flex: 100%;
     height: auto;
   }
-
   #mainPage #game .game-detail .card-content .content .desc {
     order: 4;
     max-height: 7.5rem;
   }
-
   #mainPage #game .game-detail .card-content .content .awards {
     order: 3;
   }
-
   #mainPage #game .game-detail .card-content .content .awards .award-list {
     height: 5.875rem;
     min-height: 5.875rem;
   }
-
   #mainPage #game .game-detail .card-content .content .odd-n-bet .odds h3 {
     margin: 1.5rem 0;
   }
-
   #mainPage #game .game-detail .card-content .content .odd-n-bet .bets input {
     margin: 1.125rem 0 0.25rem 0;
   }
-
   #mainPage #game .game-detail .card-content .content .count {
     order: 2;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #game {
     margin-top: -1rem;
     padding: 0 1rem;
   }
-
   #mainPage #game .game-list {
     gap: 2rem 1rem;
   }
-
-  #mainPage #game .game-list>li {
+  #mainPage #game .game-list > li {
     flex: calc(50% - 0.5rem);
     max-width: calc(50% - 0.5rem);
     padding: 0;
     border-radius: 0;
     align-items: stretch;
   }
-
-  #mainPage #game .game-list>li>a {
+  #mainPage #game .game-list > li > a {
     padding: 0;
   }
-
-  #mainPage #game .game-list>li>a .img {
+  #mainPage #game .game-list > li > a .img {
     margin-bottom: 1rem;
   }
-
-  #mainPage #game .game-list>li>a .tags {
+  #mainPage #game .game-list > li > a .tags {
     margin: 0.5rem 0 1.25rem;
   }
-
   #mainPage #game .game-detail {
     padding: 2rem 1rem;
   }
-
   #mainPage #game .game-detail .card-content {
     flex-wrap: wrap;
     gap: 1rem;
   }
-
   #mainPage #game .game-detail .img {
     flex: 100%;
     max-width: 100%;
   }
-
   #mainPage #game .game-detail .content .desc {
     order: 2;
   }
 }
-
 #mainPage .game-zone {
   flex: 60%;
   max-width: 60%;
@@ -3956,25 +3478,21 @@ body {
   position: relative;
   height: 31.14rem;
 }
-
 @media (max-width: 1440px) {
   #mainPage .game-zone {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage .game-zone {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage .game-zone .default {
   height: 100%;
   background-position: center;
   background-size: cover;
 }
-
 #mainPage .game-zone .default .game-title {
   position: absolute;
   left: 0;
@@ -3986,7 +3504,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 #mainPage .game-zone .default .game-title::before {
   content: "";
   position: absolute;
@@ -3997,7 +3514,6 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: -1;
 }
-
 #mainPage .game-zone .play-game {
   margin-bottom: -0.5rem;
   display: none;
@@ -4005,13 +3521,11 @@ body {
   position: inherit;
   height: 100%;
 }
-
 #mainPage .game-zone .play-game video {
   width: 100%;
   min-height: 100%;
   z-index: 0;
 }
-
 #mainPage .game-zone .play-game .game-content {
   position: absolute;
   height: 100%;
@@ -4021,7 +3535,6 @@ body {
   bottom: 0;
   z-index: 1;
 }
-
 #mainPage .game-zone .play-game .game-content .result {
   height: 100%;
   display: flex;
@@ -4029,16 +3542,13 @@ body {
   justify-content: center;
   gap: 2rem;
 }
-
 #mainPage .game-zone .play-game .game-content .result img {
   max-width: 12.5rem;
   animation: float 3s infinite forwards linear;
 }
-
 #mainPage .game-zone .play-game .game-content .result.show img {
   animation-play-state: paused;
 }
-
 #mainPage .game-zone .play-game .game-content .selection {
   position: absolute;
   left: 0;
@@ -4051,7 +3561,6 @@ body {
   gap: 0.5rem;
   z-index: 1;
 }
-
 #mainPage .game-zone .play-game .game-content .selection div {
   display: flex;
   align-items: center;
@@ -4061,15 +3570,12 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-
 #mainPage .game-zone .play-game .game-content .selection div input {
   display: none;
 }
-
-#mainPage .game-zone .play-game .game-content .selection div input[disabled]+label {
+#mainPage .game-zone .play-game .game-content .selection div input[disabled] + label {
   cursor: not-allowed;
 }
-
 #mainPage .game-zone .play-game .game-content .selection div label {
   position: relative;
   cursor: pointer;
@@ -4077,13 +3583,11 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 #mainPage .game-zone .play-game .game-content .selection div label img {
   max-width: 100%;
   max-height: 100%;
   transform: rotate(-10deg);
 }
-
 #mainPage .game-zone .play-game .game-content .selection div label img.bg {
   position: absolute;
   top: 50%;
@@ -4095,27 +3599,22 @@ body {
   z-index: -1;
   transition-property: filter;
 }
-
 #mainPage .game-zone .play-game .game-content .selection div label img.item {
   max-height: 3.5rem;
   transition-property: transform;
 }
-
 #mainPage .game-zone .play-game .game-content .selection div.alert {
   animation: warning 1s forwards;
 }
-
 #mainPage .game-zone .play-game .game-content .selection button {
   background-color: transparent;
   padding: 0;
   flex-grow: 0;
 }
-
 #mainPage .game-zone .play-game .game-content .selection button img {
   max-width: 100%;
   max-height: 3.5rem;
 }
-
 #mainPage .game-zone .play-game::before {
   content: "";
   position: absolute;
@@ -4126,84 +3625,61 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 1;
 }
-
 #mainPage .game-zone .play-game .toast-container {
   position: absolute;
   top: 1rem;
 }
-
 #mainPage .game-zone.play .default {
   display: none;
 }
-
 #mainPage .game-zone.play .play-game {
   display: block;
   animation: fade-in 1s forwards;
 }
-
 #mainPage .game-zone .popUp {
   position: absolute;
 }
-
 #mainPage .game-zone .popUp .popUp--container .popUp--content {
   text-align: center;
   min-width: 25.95rem;
 }
-
-#mainPage .game-zone.MTP .play-game .game-content .selection div label,
-#mainPage .game-zone.PSS .play-game .game-content .selection div label {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label {
   padding: 0 1rem;
 }
-
-#mainPage .game-zone.MTP .play-game .game-content .selection div label img.bg,
-#mainPage .game-zone.PSS .play-game .game-content .selection div label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.bg {
   filter: grayscale(100%);
   transition-property: filter;
 }
-
-#mainPage .game-zone.MTP .play-game .game-content .selection div label img.item,
-#mainPage .game-zone.PSS .play-game .game-content .selection div label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.item {
   transition-property: transform;
 }
-
-#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked+label img.bg,
-#mainPage .game-zone.PSS .play-game .game-content .selection div input:checked+label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.bg {
   filter: grayscale(0);
 }
-
-#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked+label img.item,
-#mainPage .game-zone.PSS .play-game .game-content .selection div input:checked+label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.item {
   transform: scale(1.1);
 }
-
-#mainPage .game-zone.MTP .play-game .game-content .selection button img,
-#mainPage .game-zone.PSS .play-game .game-content .selection button img {
+#mainPage .game-zone.MTP .play-game .game-content .selection button img, #mainPage .game-zone.PSS .play-game .game-content .selection button img {
   max-height: 3.5rem;
 }
-
 #mainPage .game-zone.MTP .play-game .game-content .result {
   transform: rotate(-10deg);
 }
-
 #mainPage .game-zone.PSS .play-game .game-content .result {
   transform: translate(-0.625rem, -0.625rem);
 }
-
 #mainPage .game-zone.PSS .play-game .game-content .result.playing img {
   animation: shaking 1s infinite;
 }
-
 #mainPage .game-zone.IC .play-game .game-content .result .swiper {
   margin: 0;
   max-width: 12.5rem;
   height: 100%;
 }
-
 #mainPage .game-zone.IC .play-game .game-content .result .swiper .swiper-wrapper .swiper-slide {
   display: flex;
   align-items: center;
 }
-
 #mainPage .game-zone.IC .play-game .game-content .result::after {
   content: "";
   position: absolute;
@@ -4216,7 +3692,6 @@ body {
   background-position: center;
   z-index: 1;
 }
-
 #mainPage .game-zone.IC .play-game .game-content .selection::before {
   content: "";
   position: absolute;
@@ -4227,194 +3702,148 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 0;
 }
-
 #mainPage .game-zone.IC .play-game .game-content .selection .play {
   z-index: 1;
 }
-
-#mainPage .game-zone.bet-big-small .play-game .game-content .selection div label img.bg,
-#mainPage .game-zone.odd-even-betting .play-game .game-content .selection div label img.bg {
+#mainPage .game-zone.bet-big-small .play-game .game-content .selection div label img.bg, #mainPage .game-zone.odd-even-betting .play-game .game-content .selection div label img.bg {
   opacity: 0.3;
   transition-property: opacity;
 }
-
-#mainPage .game-zone.bet-big-small .play-game .game-content .selection div input:checked+label img.bg,
-#mainPage .game-zone.odd-even-betting .play-game .game-content .selection div input:checked+label img.bg {
+#mainPage .game-zone.bet-big-small .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.odd-even-betting .play-game .game-content .selection div input:checked + label img.bg {
   opacity: 0.7;
 }
-
 @media (max-width: 1440px) {
   #mainPage .game-zone {
     height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6);
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage .game-zone {
     height: calc((100svw - 7.5rem - 3.5rem) * 0.6);
   }
-
   #mainPage .game-zone .default .game-title {
     padding: 1rem;
   }
-
   #mainPage .game-zone .default .game-title button {
     padding: 0.59375rem 1.25rem;
   }
-
   #mainPage .game-zone .play-game .game-content .result {
     transform: translate(0, -0.625rem);
   }
-
   #mainPage .game-zone .play-game .game-content .result img {
     max-width: 15svw;
   }
-
   #mainPage .game-zone .play-game .game-content .selection {
     padding: 0.75rem 0.5rem;
   }
-
   #mainPage .game-zone .play-game .game-content .selection div {
     padding: 0.25rem;
     border-radius: 0.25rem;
   }
-
   #mainPage .game-zone .popUp .popUp--container {
     width: calc(100% - 2rem);
   }
-
-  #mainPage .game-zone.MTP .play-game .game-content .selection div,
-  #mainPage .game-zone.PSS .play-game .game-content .selection div {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.PSS .play-game .game-content .selection div {
     gap: 0.25rem;
   }
-
-  #mainPage .game-zone.MTP .play-game .game-content .selection div label,
-  #mainPage .game-zone.PSS .play-game .game-content .selection div label {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label {
     padding: 0;
   }
-
-  #mainPage .game-zone.MTP .play-game .game-content .selection button,
-  #mainPage .game-zone.PSS .play-game .game-content .selection button {
+  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.PSS .play-game .game-content .selection button {
     max-width: 9rem;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage .game-zone {
     height: calc((100svw - 2rem - 2rem) * 0.6);
   }
 }
-
 @media (max-width: 516px) {
   #mainPage .game-zone .default .game-title h3 {
     font-size: 0.9375rem;
   }
-
   #mainPage .game-zone .popUp .popUp--container .popUp--content {
     min-width: auto;
   }
 }
-
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
 @keyframes float {
   0% {
     transform: translate(0, -5%);
   }
-
   50% {
     transform: translate(0, -15%);
   }
-
   100% {
     transform: translate(0, -5%);
   }
 }
-
 @keyframes float-2 {
   0% {
     transform: translate(0, 0);
   }
-
   25% {
     transform: translate(0, -1.25rem);
   }
-
   75% {
     transform: translate(0, 0rem);
   }
-
   100% {
     transform: translate(0, 0);
   }
 }
-
 @keyframes float-3 {
   0% {
     transform: translate(0, -1.25rem);
   }
-
   50% {
     transform: translate(0, 0rem);
   }
-
   100% {
     transform: translate(0, -1.25rem);
   }
 }
-
 @keyframes warning {
   0% {
     background-color: rgba(255, 255, 255, 0);
   }
-
   25% {
     background-color: rgba(255, 255, 255, 0.3);
   }
-
   50% {
     background-color: rgba(255, 255, 255, 0);
   }
-
   75% {
     background-color: rgba(255, 255, 255, 0.3);
   }
-
   100% {
     background-color: rgba(255, 255, 255, 0);
   }
 }
-
 @keyframes shaking {
   0% {
     transform: rotate(10deg) translate(0, -20%);
   }
-
   25% {
     transform: rotate(-15deg) translate(0, 0rem);
   }
-
   50% {
     transform: rotate(10deg) translate(0, -20%);
   }
-
   75% {
     transform: rotate(-15deg) translate(0, 0rem);
   }
-
   100% {
     transform: rotate(10deg) translate(0, -20%);
   }
 }
-
 #mainPage .full-page {
   cursor: not-allowed;
   display: none;
@@ -4425,15 +3854,12 @@ body {
   bottom: 0;
   z-index: 8;
 }
-
 #mainPage .full-page.active {
   display: block;
 }
-
 #mainPage #personal {
   padding: 0 3.75rem;
 }
-
 #mainPage #personal .container {
   position: inherit;
   z-index: 1;
@@ -4441,38 +3867,31 @@ body {
   flex-wrap: wrap;
   gap: 1.25rem;
 }
-
-#mainPage #personal .container>h3 {
+#mainPage #personal .container > h3 {
   margin-bottom: 1.25rem;
   flex: 100%;
 }
-
 #mainPage #personal .license {
   flex: 55%;
   flex-grow: 0;
 }
-
 #mainPage #personal .license h3 {
   margin-bottom: 2.5rem;
 }
-
 #mainPage #personal .license .carousel {
   padding: 0 4.5rem;
   position: relative;
 }
-
 #mainPage #personal .license .carousel .swiper-slide {
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .img {
   flex: 13.25rem;
   max-width: 13.25rem;
   position: relative;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .img .button {
   position: absolute;
   left: 1.25rem;
@@ -4484,25 +3903,21 @@ body {
   color: #bebebe;
   padding: 0;
 }
-
 @media (max-width: 1440px) {
   #mainPage #personal .license .carousel .swiper-slide .img .button {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #personal .license .carousel .swiper-slide .img .button {
     border-radius: 0.9375rem;
   }
 }
-
 @media (hover: hover) {
   #mainPage #personal .license .carousel .swiper-slide .img .button:hover {
     color: white;
   }
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc {
   flex: calc(100% - 1.25rem - 13.25rem);
   display: flex;
@@ -4510,67 +3925,52 @@ body {
   gap: 1rem;
   flex-grow: 0;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc label {
   display: flex;
   align-items: center;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-group {
   flex: 100%;
   width: 100%;
   justify-content: space-between;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-group label {
   word-break: keep-all;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-group input {
   flex: 6.75rem;
   max-width: 6.75rem;
   text-align: center;
   padding: 0.625rem;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-group input[disabled] {
   color: white;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-wrap {
   flex: 100%;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-wrap input[disabled] {
   color: #585858;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc .input-wrap .input-btn {
   flex: 100%;
 }
-
 #mainPage #personal .license .carousel .swiper-slide .desc button {
   flex: 100%;
 }
-
-#mainPage #personal .license .carousel .swiper-button-prev,
-#mainPage #personal .license .carousel .swiper-button-next {
+#mainPage #personal .license .carousel .swiper-button-prev, #mainPage #personal .license .carousel .swiper-button-next {
   top: 50%;
   transform: translateY(-50%);
 }
-
 #mainPage #personal .license .carousel .swiper-button-prev {
   left: 0;
 }
-
 #mainPage #personal .license .carousel .swiper-button-next {
   right: 0;
 }
-
 #mainPage #personal .license.coming-soon {
   position: relative;
 }
-
 #mainPage #personal .license.coming-soon::after {
   position: absolute;
   content: "";
@@ -4585,54 +3985,45 @@ body {
   bottom: 0;
   z-index: 3;
 }
-
 #mainPage #personal .zkz {
   flex: 1;
 }
-
 #mainPage #personal .zkz .card-content {
   height: 100%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-
 #mainPage #personal .zkz .card-content .title {
   flex: 1;
   display: flex;
 }
-
 #mainPage #personal .zkz .card-content .title h3 {
   flex: 60%;
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
-
 #mainPage #personal .zkz .card-content .title h3 i {
   font-size: 1.25rem;
 }
-
 #mainPage #personal .zkz .card-content .title button {
   flex: 1;
   min-width: 7rem;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
-
 @media (max-width: 1024px) {
   #mainPage #personal .zkz .card-content .title button {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage #personal .zkz .card-content .content {
   flex: 100%;
   display: flex;
   gap: 1.25rem;
   align-items: stretch;
 }
-
 #mainPage #personal .zkz .card-content .content .now,
 #mainPage #personal .zkz .card-content .content .accumulation {
   flex: calc(50% - 1rem);
@@ -4643,23 +4034,18 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
 @media (max-width: 1440px) {
-
   #mainPage #personal .zkz .card-content .content .now,
   #mainPage #personal .zkz .card-content .content .accumulation {
     border-radius: 2.0833333333svw;
   }
 }
-
 @media (max-width: 768px) {
-
   #mainPage #personal .zkz .card-content .content .now,
   #mainPage #personal .zkz .card-content .content .accumulation {
     border-radius: 0.9375rem;
   }
 }
-
 #mainPage #personal .zkz .card-content .content .now h6,
 #mainPage #personal .zkz .card-content .content .accumulation h6 {
   flex: 1;
@@ -4669,7 +4055,6 @@ body {
   border-bottom: 0.125rem solid #3a3a3a;
   width: 100%;
 }
-
 #mainPage #personal .zkz .card-content .content .now .value,
 #mainPage #personal .zkz .card-content .content .accumulation .value {
   flex: 1;
@@ -4682,26 +4067,21 @@ body {
   gap: 0.5rem;
   padding: 1.75rem 1.25rem;
 }
-
 #mainPage #personal .zkz .card-content .content .now .value img,
 #mainPage #personal .zkz .card-content .content .accumulation .value img {
   width: 1.5rem;
 }
-
 #mainPage #personal .zkz .card-content .content .now .btn,
 #mainPage #personal .zkz .card-content .content .accumulation .btn {
   min-height: 4rem;
 }
-
 #mainPage #personal .zkz .card-content .content .now .btn button,
 #mainPage #personal .zkz .card-content .content .accumulation .btn button {
   margin-bottom: 1.25rem;
 }
-
 #mainPage #personal #record {
   flex: 100%;
 }
-
 #mainPage #personal #record .filter {
   display: flex;
   justify-content: flex-end;
@@ -4711,29 +4091,24 @@ body {
   line-height: 1.5;
   margin: 1rem 0;
 }
-
 @media (max-width: 1024px) {
   #mainPage #personal #record .filter {
     font-size: 0.8125rem;
   }
 }
-
 #mainPage #personal #record .filter .days,
 #mainPage #personal #record .filter .pages {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-
 #mainPage #personal #record .filter .days span,
 #mainPage #personal #record .filter .pages span {
   color: #757575;
 }
-
 #mainPage #personal #record .filter .dropdown {
   position: relative;
 }
-
 #mainPage #personal #record .filter .dropdown button {
   font-size: 1.125rem;
   line-height: 1.5;
@@ -4744,19 +4119,16 @@ body {
   text-decoration: none;
   transition-property: color;
 }
-
 @media (max-width: 1024px) {
   #mainPage #personal #record .filter .dropdown button {
     font-size: 0.9375rem;
   }
 }
-
 @media (hover: hover) {
   #mainPage #personal #record .filter .dropdown button:hover {
     color: lightgray;
   }
 }
-
 #mainPage #personal #record .filter .dropdown .dropdown-content {
   top: calc(100% + 0.5rem);
   left: auto;
@@ -4767,59 +4139,47 @@ body {
   background-color: #1d1d1d;
   box-shadow: 0 0 0.625rem #585858;
 }
-
 #mainPage #personal #record .filter .dropdown .dropdown-content ul {
   padding-right: 0.5rem;
 }
-
 @media (hover: hover) {
-  #mainPage #personal #record .filter .dropdown .dropdown-content ul>li:hover>a {
+  #mainPage #personal #record .filter .dropdown .dropdown-content ul > li:hover > a {
     background-color: #3a3a3a;
   }
 }
-
-#mainPage #personal #record .filter .dropdown .dropdown-content ul>li.active>a {
+#mainPage #personal #record .filter .dropdown .dropdown-content ul > li.active > a {
   background-color: #3a3a3a;
 }
-
 #mainPage #personal #record .filter .dropdown.active .dropdown-content {
   padding: 1rem 0.5rem 1rem 1rem;
 }
-
 #mainPage #personal #record .filter .dropdown.active .dropdown-content ul {
   overflow-y: auto;
   max-height: 9.375rem;
 }
-
 #mainPage #personal #record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar {
   width: 0.25rem;
   background-color: transparent;
 }
-
 #mainPage #personal #record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar-thumb {
   background-color: #3a3a3a;
 }
-
 #mainPage #personal #record .record-price div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-
 #mainPage #personal #record .record-price div img {
   width: 1.25rem;
 }
-
 #mainPage #personal #record .record-status span {
   display: flex;
   gap: 0 0.5rem;
 }
-
 #mainPage #personal #record .record-view .button {
   min-width: -moz-max-content;
   min-width: max-content;
 }
-
 #mainPage #personal #record .no-record {
   padding: 1.25rem 0;
   display: flex;
@@ -4827,62 +4187,49 @@ body {
   justify-content: center;
   text-align: center;
 }
-
 #mainPage #personal #record .no-record img {
   max-width: 12.5rem;
   margin-bottom: 2rem;
 }
-
 #mainPage #personal #record .no-record button {
   margin: 1.25rem auto;
 }
-
-#mainPage #personal::before,
-#mainPage #personal::after {
+#mainPage #personal::before, #mainPage #personal::after {
   position: absolute;
   left: 0;
   right: 0;
   z-index: 0;
 }
-
 #mainPage #personal::before {
   content: url(../img/bg/inner-mask-top.png);
   top: 0;
 }
-
 #mainPage #personal::after {
   content: url(../img/bg/inner-mask-bottom.png);
   bottom: -0.5rem;
 }
-
 @media (max-width: 1280px) {
-
   #mainPage #personal .license,
   #mainPage #personal .zkz {
     flex: 100%;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #personal #record .filter {
     justify-content: flex-start;
     margin-bottom: 2rem;
   }
-
   #mainPage #personal #record .filter .dropdown .dropdown-content {
     left: -2.5rem;
     right: auto;
   }
-
   #mainPage #personal #record table tbody tr {
     gap: 1rem;
   }
-
   #mainPage #personal #record table tbody tr td.record-time {
     flex: calc(60% - 0.625rem);
     color: #757575;
   }
-
   #mainPage #personal #record table tbody tr td.record-status {
     flex: calc(40% - 0.625rem);
     align-self: flex-start;
@@ -4891,40 +4238,27 @@ body {
     justify-content: flex-end;
     order: 2;
   }
-
   #mainPage #personal #record table tbody tr td.record-trackno {
     border-top: 0.0625rem solid #3a3a3a;
     padding-top: 1rem !important;
   }
-
-  #mainPage #personal #record table tbody tr td.record-trackno,
-  #mainPage #personal #record table tbody tr td.record-price {
+  #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     flex: 100%;
     order: 3;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  #mainPage #personal #record table tbody tr td.record-time,
-  #mainPage #personal #record table tbody tr td.record-status,
-  #mainPage #personal #record table tbody tr td.record-trackno,
-  #mainPage #personal #record table tbody tr td.record-price {
+  #mainPage #personal #record table tbody tr td.record-time, #mainPage #personal #record table tbody tr td.record-status, #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     font-size: 0.9375rem;
     line-height: 1.5;
   }
 }
-
 @media (max-width: 1024px) and (max-width: 1024px) {
-
-  #mainPage #personal #record table tbody tr td.record-time,
-  #mainPage #personal #record table tbody tr td.record-status,
-  #mainPage #personal #record table tbody tr td.record-trackno,
-  #mainPage #personal #record table tbody tr td.record-price {
+  #mainPage #personal #record table tbody tr td.record-time, #mainPage #personal #record table tbody tr td.record-status, #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     font-size: 0.8125rem;
   }
 }
-
 @media (max-width: 1024px) {
   #mainPage #personal #record table tbody tr td.record-view {
     flex: 100%;
@@ -4933,79 +4267,62 @@ body {
     justify-content: center;
     order: 3;
   }
-
   #mainPage #personal #record table tbody tr td.record-view .button {
     flex: 100%;
   }
 }
-
 @media (max-width: 768px) {
   #mainPage #personal {
     background-image: url(../img/bg/inner-bg-m.jpg);
     padding: 0 1rem;
   }
-
   #mainPage #personal .license .carousel {
     padding: 0 4.25rem 1rem;
   }
-
   #mainPage #personal .license .carousel .swiper-slide {
     flex-wrap: wrap;
   }
-
   #mainPage #personal .license .carousel .swiper-slide .img {
     flex: 100%;
     max-width: 100%;
     text-align: center;
   }
-
   #mainPage #personal .license .carousel .swiper-slide .img img {
     max-width: 12.5rem;
   }
-
   #mainPage #personal .license .carousel .swiper-slide .img button {
     left: calc(50% - 6.25rem + 1.25rem);
   }
-
   #mainPage #personal .license .carousel .swiper-slide .desc {
     flex: 100%;
   }
-
   #mainPage #personal .license.coming-soon::after {
     background-size: 200%;
   }
-
   #mainPage #personal .zkz .card-content .content {
     flex-wrap: wrap;
   }
-
   #mainPage #personal .zkz .card-content .content .now,
   #mainPage #personal .zkz .card-content .content .accumulation {
     flex: 100%;
   }
-
   #mainPage #personal .zkz .card-content .content .now .btn,
   #mainPage #personal .zkz .card-content .content .accumulation .btn {
     min-height: auto;
   }
 }
-
 @media (max-width: 516px) {
   #mainPage #personal .license .carousel {
     padding: 0 3.5rem 1rem;
   }
-
   #mainPage #personal .license .carousel .swiper-slide .img img {
     max-width: 9.375rem;
   }
-
   #mainPage #personal .license .carousel .swiper-slide .desc .input-group input {
     flex: 4.5rem;
     max-width: 4.5rem;
   }
-
-  #mainPage #personal .license .carousel .swiper-button-prev,
-  #mainPage #personal .license .carousel .swiper-button-next {
+  #mainPage #personal .license .carousel .swiper-button-prev, #mainPage #personal .license .carousel .swiper-button-next {
     width: 3rem;
     height: 3rem;
   }
