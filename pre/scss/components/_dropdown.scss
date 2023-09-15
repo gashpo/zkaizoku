@@ -20,9 +20,9 @@
         }
     }
 
-    .dropdown-content {
+    &-content {
         position: absolute;
-        top: calc(100% + size(28));
+        // top: calc(100% + size(28));
         left: 50%;
         transform: translateX(-50%);
         width: size(160);
@@ -72,17 +72,48 @@
         }
     }
 
-    &.active {
-        button {
-            &::after {
-                content: '\e903';
-            }
+    @media (min-width:1281px) {
+        &-padding {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: size(160);
+            z-index: 2;
         }
 
-        .dropdown-content {
-            padding: size(28) size(20);
-            max-height: size(300);
-            opacity: 1;
+        &:hover {
+            button {
+                &::after {
+                    content: '\e903';
+                }
+            }
+
+            .dropdown-padding {
+                padding-top: size(28);
+            }
+
+            .dropdown-content {
+                padding: size(28) size(20);
+                max-height: size(300);
+                opacity: 1;
+            }
+        }
+    }
+
+    @include max-to(laptop) {
+        &.active {
+            button {
+                &::after {
+                    content: '\e903';
+                }
+            }
+
+            .dropdown-content {
+                padding: size(28) size(20);
+                max-height: size(300);
+                opacity: 1;
+            }
         }
     }
 }

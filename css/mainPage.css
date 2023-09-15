@@ -384,9 +384,8 @@ body {
   font-family: "Icomoon";
   content: "\e900";
 }
-#mainPage .dropdown .dropdown-content {
+#mainPage .dropdown-content {
   position: absolute;
-  top: calc(100% + 1.75rem);
   left: 50%;
   transform: translateX(-50%);
   width: 10rem;
@@ -403,21 +402,21 @@ body {
   transition-property: max-height, padding, opacity;
 }
 @media (max-width: 1024px) {
-  #mainPage .dropdown .dropdown-content {
+  #mainPage .dropdown-content {
     font-size: 0.8125rem;
   }
 }
-#mainPage .dropdown .dropdown-content > ul {
+#mainPage .dropdown-content > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
 }
-#mainPage .dropdown .dropdown-content > ul > li {
+#mainPage .dropdown-content > ul > li {
   flex: 100%;
   text-align: center;
 }
-#mainPage .dropdown .dropdown-content > ul > li > a {
+#mainPage .dropdown-content > ul > li > a {
   display: block;
   color: white;
   border-radius: 0.625rem;
@@ -425,20 +424,43 @@ body {
   padding: 0.5rem 1.5rem;
 }
 @media (hover: hover) {
-  #mainPage .dropdown .dropdown-content > ul > li:hover > a {
+  #mainPage .dropdown-content > ul > li:hover > a {
     background-color: #9d4043;
   }
 }
-#mainPage .dropdown .dropdown-content > ul > li.active > a {
+#mainPage .dropdown-content > ul > li.active > a {
   background-color: #9d4043;
 }
-#mainPage .dropdown.active button::after {
-  content: "\e903";
+@media (min-width: 1281px) {
+  #mainPage .dropdown-padding {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    z-index: 2;
+  }
+  #mainPage .dropdown:hover button::after {
+    content: "\e903";
+  }
+  #mainPage .dropdown:hover .dropdown-padding {
+    padding-top: 1.75rem;
+  }
+  #mainPage .dropdown:hover .dropdown-content {
+    padding: 1.75rem 1.25rem;
+    max-height: 18.75rem;
+    opacity: 1;
+  }
 }
-#mainPage .dropdown.active .dropdown-content {
-  padding: 1.75rem 1.25rem;
-  max-height: 18.75rem;
-  opacity: 1;
+@media (max-width: 1280px) {
+  #mainPage .dropdown.active button::after {
+    content: "\e903";
+  }
+  #mainPage .dropdown.active .dropdown-content {
+    padding: 1.75rem 1.25rem;
+    max-height: 18.75rem;
+    opacity: 1;
+  }
 }
 @media (max-width: 1280px) {
   #mainPage .fulldown .fulldown-content {
@@ -1337,10 +1359,6 @@ body {
   font-family: "Icomoon";
   content: "\e900";
 }
-#mainPage header .login .admin.active button::after {
-  font-family: "Icomoon";
-  content: "\e903";
-}
 #mainPage header.fixed {
   border-radius: 6.25rem;
   top: 1.25rem;
@@ -1369,6 +1387,11 @@ body {
     top: 1.25rem;
     left: 2.5rem;
     right: 2.5rem;
+  }
+}
+@media (min-width: 1281px) {
+  #mainPage header .login .admin:hover button::after {
+    content: "\e903";
   }
 }
 @media (max-width: 1280px) {
@@ -1405,6 +1428,10 @@ body {
     padding: 0.625rem 1.25rem;
     border: none !important;
     line-height: 1 !important;
+  }
+  #mainPage header .login .admin.active button::after {
+    font-family: "Icomoon";
+    content: "\e903";
   }
   #mainPage header .dropdown button {
     width: 100%;
