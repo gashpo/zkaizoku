@@ -122,7 +122,7 @@ main {
         border-radius: size(30) size(30) size(30) 0;
 
         &-wrapper {
-            margin-bottom: size(-8);
+            margin-bottom: size(-4);
             position: relative;
         }
 
@@ -1030,11 +1030,26 @@ main {
 
     .bg {
         &::before {
-            content: url(../img/bg/charactors-mask-top.png);
+            top: 0;
+            background-image: url(../img/bg/charactors-mask-top.png);
+            background-position: top center;
         }
 
         &::after {
-            content: url(../img/bg/zkz-mask-bottom.png);
+            bottom: 0;
+            background-image: url(../img/bg/zkz-mask-bottom.png);
+            background-position: bottom center;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
     }
 
