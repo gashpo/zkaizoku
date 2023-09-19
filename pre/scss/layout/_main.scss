@@ -122,7 +122,7 @@ main {
         border-radius: size(30) size(30) size(30) 0;
 
         &-wrapper {
-            margin-bottom: size(-8);
+            margin-bottom: size(-4);
             position: relative;
         }
 
@@ -1014,6 +1014,257 @@ main {
 
             &::after {
                 height: size(140);
+            }
+        }
+    }
+}
+
+#character {
+    background-image: url(../img/bg/character-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: size(120) size(60);
+
+    .bg {
+        &::before {
+            top: 0;
+            background-image: url(../img/bg/charactors-mask-top.png);
+            background-position: top center;
+        }
+
+        &::after {
+            bottom: 0;
+            background-image: url(../img/bg/zkz-mask-bottom.png);
+            background-position: bottom center;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .container {
+        position: inherit;
+        z-index: 2;
+
+        .h1 {
+            color: color(gray-1);
+        }
+
+        >ul {
+            margin-top: size(80);
+            display: flex;
+            flex-wrap: wrap;
+            gap: size(48) size(56);
+
+            >li {
+                flex: calc((100% - size(56) * 4) / 5);
+                max-width: calc((100% - size(56) * 4) / 5);
+                // (ul寬度 - 4個gap) / 5個item
+                margin-top: calc(((100% - size(56) * 4) / 5 - size(60)) * .6);
+                // img寬度(flex寬度 - 60px) 往上推 60%
+                padding: size(32);
+                padding-top: calc((((100% - size(56) * 4) / 5 - size(60)) * .4) + size(20));
+                // img寬度(flex寬度 - 60px) 的40% + 20px
+                background-color: black;
+                @include radius(16, 14);
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    position: absolute;
+                    width: calc(100% - size(60));
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -60%);
+                    @include radius(300, 300);
+                }
+
+                h4 {
+                    margin-bottom: size(20);
+
+                    span {
+                        display: inline-block;
+                        padding: size(8) size(16);
+                        background-color: color(primary);
+                        @include radius(6, 6);
+                    }
+                }
+
+                dl {
+                    width: 100%;
+                    @include body-2;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: size(8) 0;
+
+                    dt {
+                        display: inline-block;
+                        flex: 45%;
+                    }
+
+                    dd {
+                        text-align: right;
+                        flex: 55%;
+                        display: flex;
+                        gap: size(4);
+                        align-items: center;
+                        justify-content: flex-end;
+                    }
+                }
+
+                &.protoss {
+                    dl {
+                        dd {
+                            color: color(warning);
+                        }
+                    }
+                }
+
+                &.demigod {
+                    dl {
+                        dd {
+                            color: color(primary-3);
+                        }
+                    }
+                }
+
+                &.terran {
+                    dl {
+                        dd {
+                            color: color(success);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // pc ~ 1440
+    @include max-to(pc) {
+        .container {
+            >ul {
+                gap: size(48) size(36);
+
+                >li {
+                    flex: calc((100% - size(36) * 4) / 5);
+                    max-width: calc((100% - size(36) * 4) / 5);
+                    // (ul寬度 - 4個gap) / 5個item
+                    margin-top: calc(((100% - size(36) * 4) / 5 - size(60)) * .6);
+                    // img寬度(flex寬度 - 60px) 往上推 60%
+                    padding: size(20);
+                    padding-top: calc((((100% - size(36) * 4) / 5 - size(60)) * .4) + size(20));
+                    // img寬度(flex寬度 - 60px) 的40% + 20px
+                }
+            }
+        }
+    }
+
+
+    // laptop ~ 1280
+    @include max-to(laptop) {
+        .container {
+            >ul {
+                gap: size(48) size(36);
+
+                >li {
+                    flex: calc((100% - size(36) * 3) / 4);
+                    max-width: calc((100% - size(36) * 3) / 4);
+                    // (ul寬度 - 4個gap) / 5個item
+                    margin-top: calc(((100% - size(36) * 3) / 4 - size(60)) * .6);
+                    // img寬度(flex寬度 - 60px) 往上推 60%
+                    padding-top: calc((((100% - size(36) * 3) / 4 - size(60)) * .4) + size(20));
+                    // img寬度(flex寬度 - 60px) 的40% + 20px
+                }
+            }
+        }
+    }
+
+
+    // pad ~ 1024
+    @include max-to(pad) {
+        padding: size(60) size(16);
+
+        .container {
+            margin-top: size(60);
+
+            >ul {
+                gap: size(48) size(36);
+
+                >li {
+                    flex: calc((100% - size(36) * 2) / 3);
+                    max-width: calc((100% - size(36) * 2) / 3);
+                    // (ul寬度 - 4個gap) / 5個item
+                    margin-top: calc(((100% - size(36) * 2) / 3 - size(60)) * .6);
+                    // img寬度(flex寬度 - 60px) 往上推 60%
+                    padding: size(28);
+                    padding-top: calc((((100% - size(36) * 2) / 3 - size(60)) * .4) + size(20));
+                    // img寬度(flex寬度 - 60px) 的40% + 20px
+                }
+            }
+        }
+    }
+
+
+    // small-pad ~ 768
+    @include max-to(small-pad) {
+        background-image: url(../img/bg/character-bg-m.jpg);
+        background-size: 100%;
+
+        .container {
+            >ul {
+                gap: size(32) size(16);
+
+                >li {
+                    flex: calc((100% - size(16)) / 2);
+                    max-width: calc((100% - size(16)) / 2);
+                    // (ul寬度 - 4個gap) / 5個item
+                    margin-top: calc(((100% - size(16)) / 2 - size(48)) * .6);
+                    // img寬度(flex寬度 - 48px) 往上推 60%
+                    padding: size(24);
+                    padding-top: calc((((100% - size(16)) / 2 - size(48)) * .4) + size(20));
+                    // img寬度(flex寬度 - 48px) 的40% + 20px
+
+                    img {
+                        max-width: calc(100% - size(48));
+                    }
+                }
+            }
+        }
+    }
+
+
+    // mobile ~ 516
+    @include max-to(mobile) {
+        .container {
+            >ul {
+                margin-top: size(60);
+
+                >li {
+                    padding: size(12);
+                    padding-top: calc((((100% - size(16)) / 2 - size(24) * 2) * .4) + size(16));
+                    // img寬度(flex寬度 - padding * 2) 的40% + 16px
+
+                    img {
+                        max-width: calc(100% - size(12) * 2);
+                    }
+                }
             }
         }
     }

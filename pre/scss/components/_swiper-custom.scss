@@ -13,14 +13,21 @@
         z-index: 2;
         border-radius: size(100);
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: size(-22);
+        cursor: pointer;
 
         &:hover {
             background-color: rgba(white, .15);
         }
 
         &[disabled],
-        &.slick-disabled {
-            color: color(gray-8);
+        &.slick-disabled,
+        &.swiper-button-disabled {
+            opacity: .35;
+            pointer-events: none;
             cursor: default;
 
             &:hover {
