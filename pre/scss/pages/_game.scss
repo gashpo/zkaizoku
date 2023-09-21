@@ -78,7 +78,7 @@
             flex-direction: column;
             gap: size(20);
             height: calc((size(1440) - size(28)*2) * .6 * .6);
-            // (container - card padding) * game-zone flex * height ratio
+            // 算式：(container - card padding) * game-zone flex * height ratio
             overflow: hidden;
 
             .desc {

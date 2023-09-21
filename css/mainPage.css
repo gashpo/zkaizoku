@@ -3718,23 +3718,23 @@ body {
   text-align: center;
   min-width: 25.95rem;
 }
-#mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label, #mainPage .game-zone.MC .play-game .game-content .selection div label {
   padding: 0 1rem;
 }
-#mainPage .game-zone.MTP .play-game .game-content .selection div label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.bg, #mainPage .game-zone.MC .play-game .game-content .selection div label img.bg {
   filter: grayscale(100%);
   transition-property: filter;
 }
-#mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.item, #mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
   transition-property: transform;
 }
-#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.bg {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.bg, #mainPage .game-zone.MC .play-game .game-content .selection div input:checked + label img.bg {
   filter: grayscale(0);
 }
-#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.item {
+#mainPage .game-zone.MTP .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div input:checked + label img.item, #mainPage .game-zone.MC .play-game .game-content .selection div input:checked + label img.item {
   transform: scale(1.1);
 }
-#mainPage .game-zone.MTP .play-game .game-content .selection button img, #mainPage .game-zone.PSS .play-game .game-content .selection button img {
+#mainPage .game-zone.MTP .play-game .game-content .selection button img, #mainPage .game-zone.PSS .play-game .game-content .selection button img, #mainPage .game-zone.MC .play-game .game-content .selection button img {
   max-height: 3.5rem;
 }
 #mainPage .game-zone.MTP .play-game .game-content .result {
@@ -3780,9 +3780,142 @@ body {
 #mainPage .game-zone.IC .play-game .game-content .selection .play {
   z-index: 1;
 }
+#mainPage .game-zone.MC .play-game .game-content .result {
+  position: relative;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheel {
+  width: 20.76rem;
+  height: 20.76rem;
+  position: absolute;
+  top: 2.25rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .hand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 3s;
+  border-radius: 50%;
+  z-index: 8;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .hand img {
+  position: absolute;
+  top: -70%;
+  left: -7.5%;
+  width: 125%;
+  transform: rotate(190deg);
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .pattern .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transform-origin: right center;
+  background-image: url(../img/game/MC/pattern1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .pattern.picked .inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: flash 1s linear 0.5s forwards;
+  opacity: 0.5;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .pattern:nth-child(2n) .inner {
+  background-image: url(../img/game/MC/pattern2.jpg);
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelBody .pattern:nth-child(2n) .inner::after {
+  opacity: 1;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 100%;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelContent .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelContent .inner img {
+  max-width: 15%;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheelContent .inner.picked img {
+  animation: bounce 1s linear 0.5s forwards;
+}
+#mainPage .game-zone.MC .play-game .game-content .result .wheel::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  right: -25%;
+  bottom: -25%;
+  background-image: url(../img/game/MC/wheelFrame.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#mainPage .game-zone.MC .play-game .game-content .result img {
+  animation: none;
+}
+#mainPage .game-zone.MC .play-game .game-content .selection {
+  padding: 1.25rem 1.5rem;
+}
+#mainPage .game-zone.MC .play-game .game-content .selection div {
+  padding: 0.25rem 0.5rem;
+}
+#mainPage .game-zone.MC .play-game .game-content .selection div label {
+  padding: 0.25rem 1rem;
+}
+#mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
+  max-height: 3.25rem;
+}
 @media (max-width: 1440px) {
   #mainPage .game-zone {
     height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6);
+  }
+  #mainPage .game-zone.MC .play-game .game-content .result .wheel {
+    width: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.4);
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.4);
   }
 }
 @media (max-width: 1024px) {
@@ -3811,19 +3944,33 @@ body {
   #mainPage .game-zone .popUp .popUp--container {
     width: calc(100% - 2rem);
   }
-  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.PSS .play-game .game-content .selection div {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.PSS .play-game .game-content .selection div, #mainPage .game-zone.MC .play-game .game-content .selection div {
     gap: 0.25rem;
   }
-  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label {
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label, #mainPage .game-zone.MC .play-game .game-content .selection div label {
     padding: 0;
   }
-  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.PSS .play-game .game-content .selection button {
+  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.PSS .play-game .game-content .selection button, #mainPage .game-zone.MC .play-game .game-content .selection button {
     max-width: 9rem;
+  }
+  #mainPage .game-zone.MC .play-game .game-content .result .wheel {
+    width: calc((100svw - 7.5rem - 3.5rem) * 0.4);
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.4);
+  }
+  #mainPage .game-zone.MC .play-game .game-content .selection div label {
+    padding: 0.25rem 1rem;
+  }
+  #mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
+    max-height: 2.5rem;
   }
 }
 @media (max-width: 768px) {
   #mainPage .game-zone {
     height: calc((100svw - 2rem - 2rem) * 0.6);
+  }
+  #mainPage .game-zone.MC .play-game .game-content .result .wheel {
+    width: calc((100svw - 2rem - 2rem) * 0.4);
+    height: calc((100svw - 2rem - 2rem) * 0.4);
   }
 }
 @media (max-width: 516px) {
@@ -3832,6 +3979,29 @@ body {
   }
   #mainPage .game-zone .popUp .popUp--container .popUp--content {
     min-width: auto;
+  }
+  #mainPage .game-zone .play-game .game-content .selection {
+    padding: 0.5rem !important;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.PSS .play-game .game-content .selection div, #mainPage .game-zone.MC .play-game .game-content .selection div {
+    gap: 0.25rem;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label, #mainPage .game-zone.MC .play-game .game-content .selection div label {
+    padding: 0.5rem;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.item, #mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
+    max-height: 1.5rem;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.PSS .play-game .game-content .selection button, #mainPage .game-zone.MC .play-game .game-content .selection button {
+    max-width: 6.25rem;
+  }
+  #mainPage .game-zone.IC .play-game .game-content .selection button {
+    max-width: 8.75rem;
+  }
+  #mainPage .game-zone.MC .play-game .game-content .result .wheel {
+    top: 2rem;
+    width: calc((100svw - 2rem - 2rem) * 0.35);
+    height: calc((100svw - 2rem - 2rem) * 0.35);
   }
 }
 @keyframes fade-in {
@@ -3853,29 +4023,21 @@ body {
     transform: translate(0, -5%);
   }
 }
-@keyframes float-2 {
+@keyframes bounce {
   0% {
-    transform: translate(0, 0);
+    transform: scale(1);
   }
   25% {
-    transform: translate(0, -1.25rem);
-  }
-  75% {
-    transform: translate(0, 0rem);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes float-3 {
-  0% {
-    transform: translate(0, -1.25rem);
+    transform: scale(1.2);
   }
   50% {
-    transform: translate(0, 0rem);
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(1.3);
   }
   100% {
-    transform: translate(0, -1.25rem);
+    transform: scale(1.2);
   }
 }
 @keyframes warning {
@@ -3890,6 +4052,23 @@ body {
   }
   75% {
     background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes flash {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.7);
   }
   100% {
     background-color: rgba(255, 255, 255, 0);
