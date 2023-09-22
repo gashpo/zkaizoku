@@ -3232,11 +3232,11 @@ body {
   align-items: flex-end;
 }
 @media (hover: hover) {
-  #mainPage #game .game-list > li .img:hover {
+  #mainPage #game .game-list > li:hover {
     background-color: black;
     transition-duration: 0.7s;
   }
-  #mainPage #game .game-list > li .img:hover .img img {
+  #mainPage #game .game-list > li:hover .img img {
     transform: scale(1.1);
   }
 }
