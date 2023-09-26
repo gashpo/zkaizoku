@@ -1,0 +1,34 @@
+[
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item1.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item3.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item2.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item4.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item3.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item1.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item4.png'>"
+  },
+  {
+    "num": 100,
+    "img": "<img src='img/game/MC/item2.png'>"
+  }
+]

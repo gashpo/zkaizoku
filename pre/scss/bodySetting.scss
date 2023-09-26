@@ -3,12 +3,12 @@
 
 /* 反白選取樣式 */
 ::-moz-selection {
-    background-color: color(gray-1);
+    background-color: rgba(white, .8);
     color: rgba(color(primary-6), 1);
 }
 
 ::selection {
-    background-color: color(gray-1);
+    background-color: rgba(white, .8);
     color: rgba(color(primary-6), 1);
 }
 

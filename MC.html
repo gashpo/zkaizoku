@@ -75,37 +75,41 @@
                         <li><a href="index.html#zkz">$ZKZ</a></li>
                         <li for="bridge" class="dropdown">
                             <button>Bridge</button>
-                            <div class="dropdown-content">
-                                <ul>
-                                    <li>
-                                        <a href="https://cbridge.celer.network/1/56/USDC" target="_blank">Celer
-                                            Network</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://router.via.exchange/zksync%20era/ETH/polygon/MATIC"
-                                            target="_blank">Via exchange</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.orbiter.finance/?source=Ethereum&dest=Arbitrum"
-                                            target="_blank">Orbiter Finance</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://bridge.poly.network/" target="_blank">Poly Network</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://app.multichain.org/#/router" target="_blank">Multichain</a>
-                                    </li>
-                                </ul>
+                            <div class="dropdown-padding">
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li>
+                                            <a href="https://cbridge.celer.network/1/56/USDC" target="_blank">Celer
+                                                Network</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://router.via.exchange/zksync%20era/ETH/polygon/MATIC"
+                                                target="_blank">Via exchange</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.orbiter.finance/?source=Ethereum&dest=Arbitrum"
+                                                target="_blank">Orbiter Finance</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://bridge.poly.network/" target="_blank">Poly Network</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://app.multichain.org/#/router" target="_blank">Multichain</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                         <li for="language" class="language dropdown">
                             <button>繁體中文</button>
-                            <div class="dropdown-content">
-                                <ul>
-                                    <li class="active"><a href="javascript:void()">繁體中文</a></li>
-                                    <li><a href="javascript:void()">English</a></li>
-                                    <li><a href="javascript:void()">日本語</a></li>
-                                </ul>
+                            <div class="dropdown-padding">
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li class="active"><a href="javascript:void()">繁體中文</a></li>
+                                        <li><a href="javascript:void()">English</a></li>
+                                        <li><a href="javascript:void()">日本語</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -121,11 +125,13 @@
                 <button class="wallet popUp--open" for="login">連接錢包</button>
                 <div class="admin dropdown" style="display: none;">
                     <button>0x130...123DxA</button>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="personal.html">個人資訊</a></li>
-                            <li><a href="javascript:void()">登出</a></li>
-                        </ul>
+                    <div class="dropdown-padding">
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="personal.html">個人資產</a></li>
+                                <li><a href="javascript:void()">登出</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,7 +163,10 @@
                                     </video>
                                     <div class="game-content">
                                         <div class="result">
-                                            <img src="img/game/MC/stone.png">
+                                            <div class="wheel">
+                                                <div class="wheelBody"></div>
+                                                <div class="wheelContent"></div>
+                                            </div>
                                         </div>
 
                                         <div class="selection">
@@ -165,19 +174,25 @@
                                                 <input id="item01" type="radio" name="item" value="item01">
                                                 <label for="item01">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/MC/scissors-s.png">
+                                                    <img class="item" src="img/game/MC/item1.png">
                                                 </label>
 
                                                 <input id="item02" type="radio" name="item" value="item02">
                                                 <label for="item02">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/MC/stone-s.png">
+                                                    <img class="item" src="img/game/MC/item2.png">
                                                 </label>
 
                                                 <input id="item03" type="radio" name="item" value="item03">
                                                 <label for="item03">
                                                     <img class="bg" src="img/game/btn-bg.png">
-                                                    <img class="item" src="img/game/MC/paper-s.png">
+                                                    <img class="item" src="img/game/MC/item3.png">
+                                                </label>
+
+                                                <input id="item04" type="radio" name="item" value="item04">
+                                                <label for="item04">
+                                                    <img class="bg" src="img/game/btn-bg.png">
+                                                    <img class="item" src="img/game/MC/item4.png">
                                                 </label>
                                             </div>
 
@@ -189,12 +204,12 @@
                                     <div class="toast-container">
                                         <!-- 未選擇賭注 -->
                                         <div id="no-select" class="toast warning">
-                                            Please select any wager.
+                                            Please select any $ZKZ.
                                         </div>
 
                                         <!-- 未輸入賭本 -->
                                         <div id="no-value" class="toast warning">
-                                            Please enter the bets.
+                                            Please enter the Invest $ZKZ
                                         </div>
 
                                         <!-- 未輸入正整數 -->
@@ -211,12 +226,12 @@
 
                                 <div id="game-notice" class="popUp">
                                     <div class="popUp--container">
-                                        <h3>Win</h3>
+                                        <h3>遊戲結果</h3>
                                         <div class="popUp--content">
-                                            <p>Earn Points：10</p>
+                                            <p>回報海盜積分(ZKZ)</p>
                                         </div>
                                         <div class="popUp--btns">
-                                            <button class="submit replay">Replay</button>
+                                            <button class="submit replay">再玩一次</button>
                                         </div>
                                     </div>
                                 </div>
@@ -226,7 +241,7 @@
                                 <h3>神秘輪盤</h3>
                                 <div class="desc">
                                     <p>
-                                        這是一款猜測海上輪盤指向何種元素的遊戲。若你猜對，你將獲得賭本乘上賠率的獎勵金額；如果你猜錯，系統將沒收你的賭本。
+                                        這是一款猜測海上輪盤指向何種元素的遊戲。若你猜對，你將獲得$ZKZ乘上倍數的獎勵金額；如果你猜錯，系統將沒收你的$ZKZ。
                                     </p>
                                 </div>
                                 <div class="awards">
@@ -244,14 +259,14 @@
                                 <div class="odd-n-bet">
                                     <div class="odds">
                                         <label>
-                                            賠率
+                                            任務成功回報率
                                             <i class="icon-InfoCircle popUp--open" for="odds"></i>
                                         </label>
-                                        <h3>xN.NN</h3>
+                                        <h3>3.88</h3>
                                     </div>
                                     <div class="bets">
-                                        <label for="bets">賭本</label>
-                                        <input name="bets" type="number" placeholder="請輸入賭本" required>
+                                        <label for="bets">投入海盜積分(ZKZ)</label>
+                                        <input name="bets" type="number" placeholder="請輸入$ZKZ" required>
                                         <span class="helper">$ZKZ數量為 300</span>
                                     </div>
                                 </div>
@@ -268,17 +283,6 @@
 
         <footer>
             <div class="mask"></div>
-            <!-- <img class="popUp--open" for="mission" src="img/daily-mission.png"> -->
-            <!-- <ul class="sns">
-                <li>
-                    <button class="btn-rounded" onclick="window.open('https://twitter.com/ZKaizoku_')">
-                        <i class="icon-Twitter"></i>
-                    </button>
-                </li>
-                <li>
-                    <button class="btn-rounded"><i class="icon-Telegram"></i></button>
-                </li>
-            </ul> -->
         </footer>
 
 
@@ -335,9 +339,9 @@
         <div id="odds" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>小提醒</h3>
+                <h3>Reminder</h3>
                 <div class="popUp--content">
-                    <p class="text-center">此賠率已包含3%莊家優勢。</p>
+                    <p class="text-center">There is profit and loss in investment...</p>
                 </div>
                 <!-- <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>

@@ -27,6 +27,6 @@ $('.main-logo').click(function () {
 if (mediaLaptop.matches) {
 	$('.admin').removeClass('dropdown')
 	$('.admin, .options').addClass('fulldown')
-	$('.admin > .dropdown-content, .options > .nav').addClass('fulldown-content')
-	$('.admin > .fulldown-content').removeClass('dropdown-content')
+	$('.admin .dropdown-content, .options > .nav').addClass('fulldown-content')
+	$('.admin .fulldown-content').removeClass('dropdown-content')
 }

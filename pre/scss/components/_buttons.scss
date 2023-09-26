@@ -20,13 +20,14 @@ a.button {
     }
 
     &[disabled] {
-        cursor: not-allowed;
+        // cursor: not-allowed;
         background-color: color(gray-8);
         color: color(gray-6);
     }
 
     &.btn-s {
         padding: size(9.5) size(20);
+        font-size: size(13);
     }
 
     // 深色按鈕
@@ -59,8 +60,8 @@ a.button {
         }
 
         &[disabled] {
-            border-color: color(gray-6);
-            color: color(gray-6);
+            border-color: rgba(white, .3);
+            color: rgba(white, .3);
             background-color: transparent;
         }
     }
