@@ -295,6 +295,7 @@ body {
 #mainPage input[type=submit].btn-s,
 #mainPage a.button.btn-s {
   padding: 0.59375rem 1.25rem;
+  font-size: 0.8125rem;
 }
 #mainPage button.btn-secondary,
 #mainPage input[type=button].btn-secondary,
@@ -4257,13 +4258,6 @@ body {
 #mainPage #personal .zkz .card-content .title button {
   flex: 1;
   min-width: 7rem;
-  font-size: 0.9375rem;
-  line-height: 1.5;
-}
-@media (max-width: 1024px) {
-  #mainPage #personal .zkz .card-content .title button {
-    font-size: 0.8125rem;
-  }
 }
 #mainPage #personal .zkz .card-content .content {
   flex: 100%;
