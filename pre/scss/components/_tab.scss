@@ -1,21 +1,36 @@
 .tab {
-    margin: size(40) 0;
     width: 100%;
-    border-bottom: size(2) solid color(gray-6);
+    overflow-x: auto;
 
-    li {
-        display: inline-block;
-        padding: size(10) size(32);
-        @include body-1;
-        color: color(gray-6);
-        cursor: pointer;
-        margin-bottom: size(-2);
-        border-bottom: size(2) solid transparent;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
-        &.active {
-            color: white;
-            cursor: default;
-            border-color: white;
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+
+    ul {
+        display: inline-flex;
+        min-width: max-content;
+        margin: size(40) 0;
+        border-bottom: size(2) solid color(gray-6);
+
+        li {
+            display: inline-block;
+            min-width: max-content;
+            padding: size(10) size(32);
+            @include body-1;
+            color: color(gray-6);
+            cursor: pointer;
+            margin-bottom: size(-2);
+            border-bottom: size(2) solid transparent;
+
+            &.active {
+                color: white;
+                cursor: default;
+                border-color: white;
+            }
         }
     }
 }
@@ -48,6 +63,8 @@
 // pad ~ 1024
 @include max-to(pad) {
     .tab {
-        margin: size(16) 0 size(20);
+        ul {
+            margin: size(16) 0 size(20);
+        }
     }
 }

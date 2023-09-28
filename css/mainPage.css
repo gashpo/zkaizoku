@@ -581,12 +581,26 @@ body {
   }
 }
 #mainPage .tab {
-  margin: 2.5rem 0;
   width: 100%;
+  overflow-x: auto;
+}
+#mainPage .tab::-webkit-scrollbar {
+  display: none;
+}
+#mainPage .tab::-webkit-scrollbar-thumb {
+  display: none;
+}
+#mainPage .tab ul {
+  display: inline-flex;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  margin: 2.5rem 0;
   border-bottom: 0.125rem solid #757575;
 }
-#mainPage .tab li {
+#mainPage .tab ul li {
   display: inline-block;
+  min-width: -moz-max-content;
+  min-width: max-content;
   padding: 0.625rem 2rem;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -596,11 +610,11 @@ body {
   border-bottom: 0.125rem solid transparent;
 }
 @media (max-width: 1024px) {
-  #mainPage .tab li {
+  #mainPage .tab ul li {
     font-size: 0.9375rem;
   }
 }
-#mainPage .tab li.active {
+#mainPage .tab ul li.active {
   color: white;
   cursor: default;
   border-color: white;
@@ -624,7 +638,7 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  #mainPage .tab {
+  #mainPage .tab ul {
     margin: 1rem 0 1.25rem;
   }
 }
@@ -1586,6 +1600,11 @@ body {
     padding: 1.25rem;
   }
 }
+@media (max-width: 1024px) {
+  #mainPage main {
+    margin-top: 4rem;
+  }
+}
 @media (max-width: 768px) {
   #mainPage main.innerPage {
     background-image: url(../img/bg/inner-bg-m.jpg);
@@ -1695,7 +1714,7 @@ body {
   #mainPage #keyvision .mask {
     left: 4.625rem;
     bottom: auto;
-    top: calc((100svw - 2rem) * 0.47 - 3.75rem + 0.0625rem);
+    top: calc((100svw - 2rem) * 0.48 - 3.75rem + 0.0625rem);
   }
   #mainPage #keyvision .captions {
     margin-top: 2rem;
@@ -2413,12 +2432,12 @@ body {
   }
 }
 #mainPage #zkz {
-  height: 46svw;
   position: relative;
   padding: 1.25rem;
 }
 #mainPage #zkz .bg::before {
   content: url(../img/bg/zkz-mask-top.png);
+  z-index: 2;
 }
 #mainPage #zkz .bg::after {
   content: url(../img/bg/zkz-mask-bottom.png);
@@ -2440,11 +2459,19 @@ body {
   }
 }
 @media (max-width: 768px) {
+  #mainPage #zkz .bg video {
+    transform: scale(1.2);
+  }
   #mainPage #zkz .bg::before {
     height: 6.25rem;
   }
   #mainPage #zkz .bg::after {
     height: 8.75rem;
+    top: 14svw;
+    bottom: auto;
+  }
+  #mainPage #zkz .container img {
+    transform: scale(1.2);
   }
 }
 #mainPage #character {
