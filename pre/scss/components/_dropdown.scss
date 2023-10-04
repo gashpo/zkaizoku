@@ -22,7 +22,6 @@
 
     &-content {
         position: absolute;
-        // top: calc(100% + size(28));
         left: 50%;
         transform: translateX(-50%);
         width: size(160);
@@ -42,6 +41,20 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: size(8);
+            max-height: size(200);
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: size(4);
+                background-color: color(gray-8);
+                border-radius: size(4);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: size(4);
+                background-color: color(gray-7);
+                border-radius: size(4);
+            }
 
             >li {
                 flex: 100%;
