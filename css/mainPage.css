@@ -287,6 +287,7 @@ body {
 #mainPage input[type=button][disabled],
 #mainPage input[type=submit][disabled],
 #mainPage a.button[disabled] {
+  cursor: default;
   background-color: #3a3a3a;
   color: #757575;
 }
@@ -581,12 +582,25 @@ body {
   }
 }
 #mainPage .tab {
-  margin: 2.5rem 0;
   width: 100%;
+  overflow-x: auto;
+}
+#mainPage .tab::-webkit-scrollbar {
+  display: none;
+}
+#mainPage .tab::-webkit-scrollbar-thumb {
+  display: none;
+}
+#mainPage .tab ul {
+  display: inline-flex;
+  width: 100%;
+  margin: 2.5rem 0;
   border-bottom: 0.125rem solid #757575;
 }
-#mainPage .tab li {
+#mainPage .tab ul li {
   display: inline-block;
+  min-width: -moz-max-content;
+  min-width: max-content;
   padding: 0.625rem 2rem;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -596,11 +610,11 @@ body {
   border-bottom: 0.125rem solid transparent;
 }
 @media (max-width: 1024px) {
-  #mainPage .tab li {
+  #mainPage .tab ul li {
     font-size: 0.9375rem;
   }
 }
-#mainPage .tab li.active {
+#mainPage .tab ul li.active {
   color: white;
   cursor: default;
   border-color: white;
@@ -624,7 +638,7 @@ body {
   }
 }
 @media (max-width: 1024px) {
-  #mainPage .tab {
+  #mainPage .tab ul {
     margin: 1rem 0 1.25rem;
   }
 }
@@ -1586,6 +1600,11 @@ body {
     padding: 1.25rem;
   }
 }
+@media (max-width: 1024px) {
+  #mainPage main {
+    margin-top: 4rem;
+  }
+}
 @media (max-width: 768px) {
   #mainPage main.innerPage {
     background-image: url(../img/bg/inner-bg-m.jpg);
@@ -1695,7 +1714,7 @@ body {
   #mainPage #keyvision .mask {
     left: 4.625rem;
     bottom: auto;
-    top: calc((100svw - 2rem) * 0.47 - 3.75rem + 0.0625rem);
+    top: calc((100svw - 2rem) * 0.48 - 3.75rem + 0.0625rem);
   }
   #mainPage #keyvision .captions {
     margin-top: 2rem;
@@ -2413,12 +2432,12 @@ body {
   }
 }
 #mainPage #zkz {
-  height: 46svw;
   position: relative;
   padding: 1.25rem;
 }
 #mainPage #zkz .bg::before {
   content: url(../img/bg/zkz-mask-top.png);
+  z-index: 2;
 }
 #mainPage #zkz .bg::after {
   content: url(../img/bg/zkz-mask-bottom.png);
@@ -2440,11 +2459,19 @@ body {
   }
 }
 @media (max-width: 768px) {
+  #mainPage #zkz .bg video {
+    transform: scale(1.2);
+  }
   #mainPage #zkz .bg::before {
     height: 6.25rem;
   }
   #mainPage #zkz .bg::after {
     height: 8.75rem;
+    top: 14svw;
+    bottom: auto;
+  }
+  #mainPage #zkz .container img {
+    transform: scale(1.2);
   }
 }
 #mainPage #character {
@@ -3913,6 +3940,168 @@ body {
 #mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
   max-height: 3.25rem;
 }
+#mainPage .game-zone.HOTP {
+  height: auto;
+}
+#mainPage .game-zone.HOTP .play-game {
+  background-image: url(../img/game/HOTP/bg.jpg);
+  background-size: cover;
+}
+#mainPage .game-zone.HOTP .play-game .game-content {
+  padding: 7.5rem 5.5rem 5.5rem;
+  position: inherit;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .title {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  width: 7.5rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame {
+  position: relative;
+  background-image: url(../img/game/HOTP/frame-strech.png);
+  background-size: 100%;
+  padding-left: 1.552rem;
+  padding-right: 1.552rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame > span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame::before, #mainPage .game-zone.HOTP .play-game .game-content .frame::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame::before {
+  background-image: url(../img/game/HOTP/frame-top.png);
+  background-position: top center;
+  top: -2.045rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame::after {
+  background-image: url(../img/game/HOTP/frame-bottom.png);
+  background-position: bottom center;
+  bottom: -1.4315rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content {
+  background-color: rgba(29, 29, 29, 0.8);
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: calc(30% - 0.5rem) calc(70% - 0.5rem);
+  grid-template-rows: 4.25rem auto 1fr auto;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content > * {
+  position: inherit;
+  z-index: 3;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  position: relative;
+  padding: 0.4441221rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .img h6 {
+  position: absolute;
+  right: 0.4441221rem;
+  bottom: 0.6941221rem;
+  padding: 0.375rem 1rem 0.375rem 1.25rem;
+  border-top-left-radius: 1.875rem;
+  background: linear-gradient(296deg, #D4951A 27.32%, #F3D99C 66.63%);
+  color: black;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0.25rem;
+  background-image: url(../img/game/HOTP/border.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare {
+  grid-column: -2/-1;
+  grid-row: 1/2;
+  display: flex;
+  gap: 1rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div {
+  flex: calc((100% - 1rem) / 2);
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 4.25rem 1fr;
+  gap: 0 0.5rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div img {
+  grid-row: 1/-1;
+  grid-column: 1/2;
+  border-radius: 6.25rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div h6 {
+  grid-row: 1/2;
+  grid-column: -2/-1;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.25rem 0;
+  border-bottom: 0.0625rem solid #a8a8a8;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div span {
+  grid-row: -2/-1;
+  grid-column: -2/-1;
+  font-size: 0.875rem;
+  padding: 0.25rem 0;
+}
+@media (max-width: 1024px) {
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div span {
+    font-size: 0.75rem;
+  }
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .desc {
+  grid-column: -2/-1;
+  grid-row: 2/-2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .desc p {
+  font-size: 0.875rem;
+  color: #a8a8a8;
+}
+@media (max-width: 1024px) {
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .desc p {
+    font-size: 0.75rem;
+  }
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .btns {
+  grid-column: 1/-1;
+  grid-row: -2/-1;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .btns {
+    font-size: 0.9375rem;
+  }
+}
+#mainPage .game-zone.HOTP .play-game .game-content .frame-content .btns div {
+  display: flex;
+  gap: 1rem;
+}
 @media (max-width: 1440px) {
   #mainPage .game-zone {
     height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.6);
@@ -3920,6 +4109,109 @@ body {
   #mainPage .game-zone.MC .play-game .game-content .result .wheel {
     width: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.4);
     height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.4);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content {
+    padding: 7.5rem 4.25rem 4.25rem;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame {
+    padding-left: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.04);
+    padding-right: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.04);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame::before {
+    top: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * -0.05);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame::after {
+    bottom: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * -0.035);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content {
+    padding: 1.25rem 1rem;
+    gap: 1rem 0.75rem;
+    grid-template-columns: calc(40% - 0.375rem) calc(60% - 0.375rem);
+    grid-template-rows: 9.25rem auto 1fr auto;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .img {
+    padding: calc(((((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.894 - 2rem) * 0.4 - 0.5rem) * 0.045);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .img h6 {
+    right: calc(((((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.894 - 2rem) * 0.4 - 0.5rem) * 0.045);
+    bottom: calc(((((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.894 - 2rem) * 0.4 - 0.5rem) * 0.045 + 0.25rem);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .btns div {
+    gap: 0.5rem;
+  }
+  #mainPage .game-zone.HOTP + .content {
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 * 0.75 + 2.5rem) !important;
+  }
+}
+@media (max-width: 1280px) {
+  #mainPage .game-zone.HOTP .play-game .game-content {
+    padding: 7.5rem 1.75rem 3.75rem;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame {
+    padding-left: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.053);
+    padding-right: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.053);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame::before {
+    top: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * -0.068);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame::after {
+    bottom: calc(((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * -0.05);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content {
+    grid-template-columns: calc(55% - 0.5rem) calc(45% - 0.5rem);
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: calc(((((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.894 - 2rem) * 0.55 - 0.5rem) * 0.045);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .img h6 {
+    right: calc(((((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.894 - 2rem) * 0.55 - 0.5rem) * 0.045);
+    bottom: calc(((((100svw - 7.5rem - 3.5rem) * 0.6 - 11rem) * 0.894 - 2rem) * 0.55 - 0.5rem) * 0.045 + 0.25rem);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare {
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div img {
+    flex: 4.5rem;
+    max-height: 4.5rem;
+    margin: 0.125rem auto;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div h6 {
+    padding: 0.125rem 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .compare div span {
+    padding: 0.125rem 0;
+    display: block;
+    text-align: center;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .desc {
+    grid-column: 1/-1;
+    grid-row: 2/-2;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .btns {
+    grid-column: 1/-1;
+    grid-row: -2/-1;
+  }
+  #mainPage .game-zone.HOTP + .content {
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6 + 2.5rem) !important;
   }
 }
 @media (max-width: 1024px) {
@@ -3966,6 +4258,29 @@ body {
   }
   #mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
     max-height: 2.5rem;
+  }
+  #mainPage .game-zone.HOTP {
+    height: calc((100svw - 7.5rem - 3.5rem) * 0.6);
+  }
+  #mainPage .game-zone.HOTP.play {
+    height: auto;
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame {
+    padding-left: calc((100svw - 7.5rem - 3.5rem - 11rem) * 0.05);
+    padding-right: calc((100svw - 7.5rem - 3.5rem - 11rem) * 0.05);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame::before {
+    top: calc((100svw - 7.5rem - 3.5rem - 11rem) * -0.065);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame::after {
+    bottom: calc((100svw - 7.5rem - 3.5rem - 11rem) * -0.05);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .img {
+    padding: calc((((100svw - 7.5rem - 3.5rem - 11rem) * 0.894 - 2rem) * 0.55 - 0.5rem) * 0.045);
+  }
+  #mainPage .game-zone.HOTP .play-game .game-content .frame-content .img h6 {
+    right: calc((((100svw - 7.5rem - 3.5rem - 11rem) * 0.894 - 2rem) * 0.55 - 0.5rem) * 0.045);
+    bottom: calc((((100svw - 7.5rem - 3.5rem - 11rem) * 0.894 - 2rem) * 0.55 - 0.5rem) * 0.045 + 0.25rem);
   }
 }
 @media (max-width: 768px) {

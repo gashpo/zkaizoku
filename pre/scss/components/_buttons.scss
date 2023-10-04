@@ -20,7 +20,7 @@ a.button {
     }
 
     &[disabled] {
-        // cursor: not-allowed;
+        cursor: default;
         background-color: color(gray-8);
         color: color(gray-6);
     }

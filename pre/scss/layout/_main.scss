@@ -89,6 +89,12 @@ main {
     }
 
 
+    // pad ~ 1024
+    @include max-to(pad) {
+        margin-top: size(64);
+    }
+
+
     // small-pad ~ 768
     @include max-to(small-pad) {
         &.innerPage {
@@ -222,7 +228,7 @@ main {
         .mask {
             left: calc(size(16) + size(60) - size(2));
             bottom: auto;
-            top: calc(((100svw - size(32)) * .47) - size(60) + size(1));
+            top: calc(((100svw - size(32)) * .48) - size(60) + size(1));
         }
 
         .captions {
@@ -971,13 +977,13 @@ main {
 }
 
 #zkz {
-    height: 46svw;
     position: relative;
     padding: size(20);
 
     .bg {
         &::before {
             content: url(../img/bg/zkz-mask-top.png);
+            z-index: 2;
         }
 
         &::after {
@@ -1008,12 +1014,24 @@ main {
     // small-pad ~ 768
     @include max-to(small-pad) {
         .bg {
+            video {
+                transform: scale(1.2);
+            }
+            
             &::before {
                 height: size(100);
             }
 
             &::after {
                 height: size(140);
+                top: 14svw;
+                bottom: auto;
+            }
+        }
+
+        .container {
+            img {
+                transform: scale(1.2);
             }
         }
     }
