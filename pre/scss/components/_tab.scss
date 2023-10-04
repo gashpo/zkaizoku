@@ -1,6 +1,7 @@
 .tab {
     width: 100%;
     overflow-x: auto;
+    margin: size(40) 0;
 
     &::-webkit-scrollbar {
         display: none;
@@ -13,7 +14,7 @@
     ul {
         display: inline-flex;
         min-width: max-content;
-        margin: size(40) 0;
+        width: 100%;
         border-bottom: size(2) solid color(gray-6);
 
         li {
