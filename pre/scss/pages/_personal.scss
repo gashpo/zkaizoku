@@ -237,7 +237,7 @@
             align-items: center;
             gap: size(36);
             @include body-2;
-            margin: size(16) 0;
+            margin-bottom: size(20);
 
             .days,
             .pages {
@@ -261,7 +261,7 @@
                     transition-property: color;
                 }
 
-                .dropdown-content {
+                &-content {
                     top: calc(100% + size(8));
                     left: auto;
                     transform: none;
@@ -273,6 +273,7 @@
 
                     ul {
                         padding-right: size(8);
+                        margin: size(16) 0;
 
                         >li {
 
@@ -316,29 +317,47 @@
             }
         }
 
-        .record- {
-            &price {
-                div {
-                    display: flex;
-                    align-items: center;
-                    gap: size(8);
+        table {
+            tr {
+                td {
+                    &.record- {
+                        &time {
+                            width: size(220);
+                        }
 
-                    img {
-                        width: size(20);
+                        &trackno {
+                            word-break: break-all;
+                        }
+
+                        &price {
+                            width: size(300);
+
+                            div {
+                                display: flex;
+                                align-items: center;
+                                gap: size(8);
+
+                                img {
+                                    width: size(20);
+                                }
+                            }
+                        }
+
+                        &status {
+                            width: size(180);
+
+                            span {
+                                display: flex;
+                                gap: 0 size(8);
+                            }
+                        }
+
+                        &view {
+                            .button {
+                                min-width: max-content;
+                            }
+                        }
                     }
-                }
-            }
-
-            &status {
-                span {
-                    display: flex;
-                    gap: 0 size(8);
-                }
-            }
-
-            &view {
-                .button {
-                    min-width: max-content;
                 }
             }
         }
@@ -418,7 +437,7 @@
                                 }
 
                                 &status {
-                                    flex: calc(40% - size(10));
+                                    flex: calc(20% - size(10));
                                     align-self: flex-start;
                                     display: flex;
                                     align-items: center;
@@ -436,8 +455,13 @@
                                     flex: 100%;
                                     order: 3;
                                     display: flex;
-                                    align-items: center;
+                                    align-items: flex-start;
                                     justify-content: space-between;
+
+                                    span {
+                                        word-break: keep-all;
+                                        padding-right: size(8);
+                                    }
                                 }
 
                                 &time,

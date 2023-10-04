@@ -453,6 +453,34 @@
                 }
             }
         }
+
+        &.MTP,
+        &.PSS,
+        &.MC {
+            .play-game {
+                .game-content {
+                    .selection {
+                        div {
+                            gap: size(4);
+
+                            label {
+                                padding: size(8);
+
+                                img {
+                                    &.item {
+                                        max-height: size(24);
+                                    }
+                                }
+                            }
+                        }
+
+                        button {
+                            max-width: size(100);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -411,6 +411,18 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
+  max-height: 12.5rem;
+  overflow-y: auto;
+}
+#mainPage .dropdown-content > ul::-webkit-scrollbar {
+  width: 0.25rem;
+  background-color: #3a3a3a;
+  border-radius: 0.25rem;
+}
+#mainPage .dropdown-content > ul::-webkit-scrollbar-thumb {
+  width: 0.25rem;
+  background-color: #585858;
+  border-radius: 0.25rem;
 }
 #mainPage .dropdown-content > ul > li {
   flex: 100%;
@@ -582,6 +594,7 @@ body {
 #mainPage .tab {
   width: 100%;
   overflow-x: auto;
+  margin: 2.5rem 0;
 }
 #mainPage .tab::-webkit-scrollbar {
   display: none;
@@ -593,7 +606,7 @@ body {
   display: inline-flex;
   min-width: -moz-max-content;
   min-width: max-content;
-  margin: 2.5rem 0;
+  width: 100%;
   border-bottom: 0.125rem solid #757575;
 }
 #mainPage .tab ul li {
@@ -3868,6 +3881,18 @@ body {
   #mainPage .game-zone .popUp .popUp--container .popUp--content {
     min-width: auto;
   }
+  #mainPage .game-zone.MTP .play-game .game-content .selection div, #mainPage .game-zone.PSS .play-game .game-content .selection div, #mainPage .game-zone.MC .play-game .game-content .selection div {
+    gap: 0.25rem;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label, #mainPage .game-zone.PSS .play-game .game-content .selection div label, #mainPage .game-zone.MC .play-game .game-content .selection div label {
+    padding: 0.5rem;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection div label img.item, #mainPage .game-zone.PSS .play-game .game-content .selection div label img.item, #mainPage .game-zone.MC .play-game .game-content .selection div label img.item {
+    max-height: 1.5rem;
+  }
+  #mainPage .game-zone.MTP .play-game .game-content .selection button, #mainPage .game-zone.PSS .play-game .game-content .selection button, #mainPage .game-zone.MC .play-game .game-content .selection button {
+    max-width: 6.25rem;
+  }
 }
 @keyframes fade-in {
   0% {
@@ -4192,7 +4217,7 @@ body {
   gap: 2.25rem;
   font-size: 0.9375rem;
   line-height: 1.5;
-  margin: 1rem 0;
+  margin-bottom: 1.25rem;
 }
 @media (max-width: 1024px) {
   #mainPage #personal #record .filter {
@@ -4232,7 +4257,7 @@ body {
     color: lightgray;
   }
 }
-#mainPage #personal #record .filter .dropdown .dropdown-content {
+#mainPage #personal #record .filter .dropdown-content {
   top: calc(100% + 0.5rem);
   left: auto;
   transform: none;
@@ -4242,15 +4267,16 @@ body {
   background-color: #1d1d1d;
   box-shadow: 0 0 0.625rem #585858;
 }
-#mainPage #personal #record .filter .dropdown .dropdown-content ul {
+#mainPage #personal #record .filter .dropdown-content ul {
   padding-right: 0.5rem;
+  margin: 1rem 0;
 }
 @media (hover: hover) {
-  #mainPage #personal #record .filter .dropdown .dropdown-content ul > li:hover > a {
+  #mainPage #personal #record .filter .dropdown-content ul > li:hover > a {
     background-color: #3a3a3a;
   }
 }
-#mainPage #personal #record .filter .dropdown .dropdown-content ul > li.active > a {
+#mainPage #personal #record .filter .dropdown-content ul > li.active > a {
   background-color: #3a3a3a;
 }
 #mainPage #personal #record .filter .dropdown.active .dropdown-content {
@@ -4267,19 +4293,31 @@ body {
 #mainPage #personal #record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar-thumb {
   background-color: #3a3a3a;
 }
-#mainPage #personal #record .record-price div {
+#mainPage #personal #record table tr td.record-time {
+  width: 13.75rem;
+}
+#mainPage #personal #record table tr td.record-trackno {
+  word-break: break-all;
+}
+#mainPage #personal #record table tr td.record-price {
+  width: 18.75rem;
+}
+#mainPage #personal #record table tr td.record-price div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-#mainPage #personal #record .record-price div img {
+#mainPage #personal #record table tr td.record-price div img {
   width: 1.25rem;
 }
-#mainPage #personal #record .record-status span {
+#mainPage #personal #record table tr td.record-status {
+  width: 11.25rem;
+}
+#mainPage #personal #record table tr td.record-status span {
   display: flex;
   gap: 0 0.5rem;
 }
-#mainPage #personal #record .record-view .button {
+#mainPage #personal #record table tr td.record-view .button {
   min-width: -moz-max-content;
   min-width: max-content;
 }
@@ -4334,7 +4372,7 @@ body {
     color: #757575;
   }
   #mainPage #personal #record table tbody tr td.record-status {
-    flex: calc(40% - 0.625rem);
+    flex: calc(20% - 0.625rem);
     align-self: flex-start;
     display: flex;
     align-items: center;
@@ -4349,8 +4387,12 @@ body {
     flex: 100%;
     order: 3;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+  }
+  #mainPage #personal #record table tbody tr td.record-trackno span, #mainPage #personal #record table tbody tr td.record-price span {
+    word-break: keep-all;
+    padding-right: 0.5rem;
   }
   #mainPage #personal #record table tbody tr td.record-time, #mainPage #personal #record table tbody tr td.record-status, #mainPage #personal #record table tbody tr td.record-trackno, #mainPage #personal #record table tbody tr td.record-price {
     font-size: 0.9375rem;
