@@ -319,7 +319,7 @@
         table {
             tr {
                 td {
-                    .record- {
+                    &.record- {
                         &time {
                             width: size(220);
                         }
@@ -352,6 +352,8 @@
                         }
 
                         &view {
+                            width: size(140);
+
                             .button {
                                 min-width: max-content;
                             }

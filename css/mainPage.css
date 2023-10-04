@@ -4446,31 +4446,34 @@ body {
 #mainPage #personal #record .filter .dropdown.active .dropdown-content ul::-webkit-scrollbar-thumb {
   background-color: #3a3a3a;
 }
-#mainPage #personal #record table tr td .record-time {
+#mainPage #personal #record table tr td.record-time {
   width: 13.75rem;
 }
-#mainPage #personal #record table tr td .record-trackno {
+#mainPage #personal #record table tr td.record-trackno {
   word-break: break-all;
 }
-#mainPage #personal #record table tr td .record-price {
+#mainPage #personal #record table tr td.record-price {
   width: 18.75rem;
 }
-#mainPage #personal #record table tr td .record-price div {
+#mainPage #personal #record table tr td.record-price div {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-#mainPage #personal #record table tr td .record-price div img {
+#mainPage #personal #record table tr td.record-price div img {
   width: 1.25rem;
 }
-#mainPage #personal #record table tr td .record-status {
+#mainPage #personal #record table tr td.record-status {
   width: 11.25rem;
 }
-#mainPage #personal #record table tr td .record-status span {
+#mainPage #personal #record table tr td.record-status span {
   display: flex;
   gap: 0 0.5rem;
 }
-#mainPage #personal #record table tr td .record-view .button {
+#mainPage #personal #record table tr td.record-view {
+  width: 8.75rem;
+}
+#mainPage #personal #record table tr td.record-view .button {
   min-width: -moz-max-content;
   min-width: max-content;
 }
