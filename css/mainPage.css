@@ -413,7 +413,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  max-height: 12.5rem;
+  max-height: 13.75rem;
   overflow-y: auto;
 }
 #mainPage .dropdown-content > ul::-webkit-scrollbar {
@@ -462,7 +462,7 @@ body {
   }
   #mainPage .dropdown:hover .dropdown-content {
     padding: 1.75rem 1.25rem;
-    max-height: 18.75rem;
+    max-height: 17.5rem;
     opacity: 1;
   }
 }
