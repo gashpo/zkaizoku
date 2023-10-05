@@ -40,7 +40,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: size(8);max-height: size(200);
+            gap: size(8);
+            max-height: size(220);
             overflow-y: auto;
 
             &::-webkit-scrollbar {
@@ -107,7 +108,7 @@
 
             .dropdown-content {
                 padding: size(28) size(20);
-                max-height: size(300);
+                max-height: size(280);
                 opacity: 1;
             }
         }
