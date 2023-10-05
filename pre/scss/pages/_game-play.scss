@@ -1,4 +1,7 @@
 .game-zone {
+    $gamezone-width: calc((size(1440) - size(28)*2) * .6);
+    // 算式：(container - card padding) * game-zone flex
+
     flex: 60%;
     max-width: 60%;
     @include radius;
@@ -6,8 +9,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    height: calc((size(1440) - size(28)*2) * .6 * .6);
-    // 算式：(container - card padding) * game-zone flex * height ratio
+    height: calc($gamezone-width * .6); // 寬高比 60%
 
     .default {
         height: 100%;
@@ -193,8 +195,7 @@
         .popUp--container {
             .popUp--content {
                 text-align: center;
-                min-width: calc((size(1440) - size(28) * 2) * .6 * .5);
-                // 算式：(container - card padding) * game-zone flex * 50%
+                min-width: calc($gamezone-width * .5);
             }
         }
     }
@@ -332,9 +333,8 @@
                     position: relative;
 
                     .wheel {
-                        width: calc(((size(1440) - size(28) * 2) * .6 * (.6 - .2)));
-                        height: calc(((size(1440) - size(28) * 2) * .6 * (.6 - .2)));
-                        // 算式：(container - card padding) * game-zone flex * (height ratio - selection)
+                        width: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
+                        height: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
                         position: absolute;
                         top: size(36);
                         left: 50%;
@@ -509,13 +509,14 @@
                 }
 
                 .frame {
+                    $frame-width: ($gamezone-width - (size(88) * 2));
+                    // 算式：gamezone-width - 左右 padding 各 88px
+
                     position: relative;
                     background-image: url(../img/game/HOTP/frame-strech.png);
                     background-size: 100%;
-                    padding-left: calc(((((size(1440) - size(28)*2) - size(28)*2) * .6) - (size(88) * 2)) * .04);
-                    // 算式：((container - card padding) * game-zone flex) - (左右 padding)) * 左邊框4%
-                    padding-right: calc(((((size(1440) - size(28)*2) - size(28)*2) * .6) - (size(88) * 2)) * .04);
-                    // 算式：((container - card padding) * game-zone flex) - (左右 padding)) * 右邊框4%
+                    padding-left: calc($frame-width * .04); // 左邊框 4%
+                    padding-right: calc($frame-width * .04); // 右邊框 4%
 
                     >span {
                         position: absolute;
@@ -540,18 +541,16 @@
                     &::before {
                         background-image: url(../img/game/HOTP/frame-top.png);
                         background-position: top center;
-                        top: calc((((size(1440) - size(28)*2) * .6) - (size(88) * 2)) * -.05);
-                        // 算式：((container - card padding) * game-zone flex) - (左右 padding)) * 上邊框5%
+                        top: calc($frame-width * -.05); // 上邊框 5%
                     }
 
                     &::after {
                         background-image: url(../img/game/HOTP/frame-bottom.png);
                         background-position: bottom center;
-                        bottom: calc((((size(1440) - size(28)*2) * .6) - (size(88) * 2)) * -.035);
-                        // 算式：((container - card padding) * game-zone flex) - (左右 padding)) * 下邊框3.5%
+                        bottom: calc($frame-width * -.035); // 下邊框 3.5%
                     }
 
-                    &-content {
+                    &-result {
                         background-color: rgba(color(gray-9), .8);
                         padding: size(20);
                         display: grid;
@@ -565,18 +564,18 @@
                         }
 
                         .img {
+                            $img-width: calc(((($frame-width * .894) - (size(16) * 2)) * .3) - size(8));
+                            // 算式：((frame-width * [100% - (左右邊框 5.3% * 2) = 89.4%] - 左右 padding) * .img flex) - gap/2)
+
                             grid-column: 1/2;
                             grid-row: 1/3;
                             position: relative;
-                            padding: calc((((((((size(1440) - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .3) - size(8)) * .045);
-                            // 算式：(((((container - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex 30%) - gap/2) * .img 邊框
+                            padding: calc($img-width * .045); // .img 邊框 4.5%
 
                             h6 {
                                 position: absolute;
-                                right: calc((((((((size(1440) - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .3) - size(8)) * .045);
-                                // 算式：(((((container - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex 30%) - gap/2) * .img 邊框
-                                bottom: calc(((((((((size(1440) - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .3) - size(8)) * .045) + size(4));
-                                // 算式：(((((container - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex 30%) - gap/2) * .img 邊框 + 4px
+                                right: calc($img-width * .045); // .img 邊框 4.5%
+                                bottom: calc(($img-width * .045) + size(4)); // .img 邊框 4.5% + bottom 位移 4px
                                 padding: size(6) size(16) size(6) size(20);
                                 border-top-left-radius: size(30);
                                 background: linear-gradient(296deg, #D4951A 27.32%, #F3D99C 66.63%);
@@ -670,17 +669,18 @@
 
     // pc ~ 1440
     @include max-to(pc) {
-        height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .6);
-        // 算式：(window width - section padding - card padding) * game-zone flex * height ratio
+        $gamezone-width: calc((100svw - size(60)*2 - size(28)*2) * .6);
+        // 算式：(window width - section padding - card padding) * game-zone flex
+
+        height: calc($gamezone-width * .6); // 寬高比 60%
 
         &.MC {
             .play-game {
                 .game-content {
                     .result {
                         .wheel {
-                            width: calc(((100svw - size(60)*2 - size(28) * 2) * .6 * (.6 - .2)));
-                            height: calc(((100svw - size(60)*2 - size(28) * 2) * .6 * (.6 - .2)));
-                            // 算式：(window width - section padding - card padding) * game-zone flex * (height ratio - selection)
+                            width: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
+                            height: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
                         }
                     }
                 }
@@ -693,22 +693,21 @@
                     padding: size(120) size(68) size(68);
 
                     .frame {
-                        padding-left: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .04);
-                        // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 左邊框4%
-                        padding-right: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .04);
-                        // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 右邊框4%
+                        $frame-width: calc($gamezone-width - (size(88) * 2));
+                        // 算式：gamezone width - 左右 padding 各 88px
+
+                        padding-left: calc($frame-width * .04); // 左邊框 4%
+                        padding-right: calc($frame-width * .04); // 右邊框 4%
 
                         &::before {
-                            top: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * -.05);
-                            // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 上邊框5%
+                            top: calc($frame-width * -.05); // 上邊框 5%
                         }
 
                         &::after {
-                            bottom: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * -.035);
-                            // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 下邊框3.5%
+                            bottom: calc($frame-width * -.035); // 下邊框 3.5%
                         }
 
-                        &-content {
+                        &-result {
                             padding: size(20) size(16);
                             gap: size(16) size(12);
                             grid-template-columns: calc(40% - size(6)) calc(60% - size(6));
@@ -716,14 +715,14 @@
                             // 說明：calc(換行*2 + gap)
 
                             .img {
-                                padding: calc((((((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .4) - size(8)) * .045);
-                                // 算式：(((((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex 40%) - gap/2) * .img 邊框
+                                $img-width: calc((($frame-width * .894 - (size(16) * 2)) * .4) - size(8));
+                                // 算式：((frame width * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding 各 16px) * .img flex 40%)) - gap/2)
+
+                                padding: calc($img-width * .045); // .img 邊框 4.5%
 
                                 h6 {
-                                    right: calc((((((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .4) - size(8)) * .045);
-                                    // 算式：(((((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex 40%) - gap/2) * .img 邊框
-                                    bottom: calc(((((((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .4) - size(8)) * .045) + size(4));
-                                    // 算式：(((((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex 40%) - gap/2) * .img 邊框 + 4px
+                                    right: calc($img-width * .045); // .img 邊框 4.5%
+                                    bottom: calc(($img-width * .045) + size(4)); // .img 邊框 4.5% + 4px
                                 }
                             }
 
@@ -743,8 +742,7 @@
             }
 
             &+.content {
-                height: calc((100svw - size(60)*2 - size(28)*2) * .6 * .75 + size(40)) !important;
-                // (window width - section padding - card padding) * game-zone flex * 比例3/4 + 40px
+                height: calc($gamezone-width * .7 + size(40)) !important; // gamezone width * 寬高比 70% + 40px
             }
         }
     }
@@ -758,37 +756,36 @@
                     padding: size(120) size(28) size(60);
 
                     .frame {
-                        padding-left: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .053);
-                        // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 左邊框5.3%
-                        padding-right: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .053);
-                        // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 右邊框5.3%
+                        $frame-width: calc($gamezone-width - (size(88) * 2));
+                        // 算式：gamezone width - 左右 padding 各 88px
+
+                        padding-left: calc($frame-width * .053); // 左邊框 5.3%
+                        padding-right: calc($frame-width * .053); // 右邊框 5.3%
 
                         &::before {
-                            top: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * -.068);
-                            // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 上邊框6.8%
+                            top: calc($frame-width * -.068); // 上邊框 6.8%
                         }
 
                         &::after {
-                            bottom: calc((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * -.05);
-                            // 算式：(((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * 下邊框5%
+                            bottom: calc($frame-width * -.05); // 下邊框 5%
                         }
 
-                        &-content {
+                        &-result {
                             grid-template-columns: calc(55% - size(8)) calc(45% - size(8));
                             grid-template-rows: auto 1fr auto;
                             gap: size(16);
 
                             .img {
+                                $img-width: calc(((($frame-width * .894) - (size(16) * 2)) * .55) - size(8));
+                                // 算式：(frame width * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2)
+
                                 grid-column: 1/2;
                                 grid-row: 1/2;
-                                padding: calc((((((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .55) - size(8)) * .045);
-                                // 算式：(((((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2) * .img 邊框
+                                padding: calc($img-width * .045); // .img 邊框 4.5%
 
                                 h6 {
-                                    right: calc((((((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .55) - size(8)) * .045);
-                                    // 算式：(((((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2) * .img 邊框
-                                    bottom: calc(((((((((100svw - size(60)*2 - size(28)*2) * .6) - (size(88) * 2)) * .894) - (size(16) * 2)) * .55) - size(8)) * .045) + size(4));
-                                    // 算式：(((((window width - section padding - card padding) * game-zone flex) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2) * .img 邊框 + 4px
+                                    right: calc($img-width * .045); // .img 邊框 4.5%
+                                    bottom: calc(($img-width * .045) + size(4)); // .img 邊框 4.5% + bottom 位移 4px
                                 }
                             }
 
@@ -839,8 +836,7 @@
             }
 
             &+.content {
-                height: calc((100svw - size(60)*2 - size(28)*2) * .6 + size(40)) !important;
-                // (window width - section padding - card padding) * game-zone flex + 40px
+                height: calc($gamezone-width * .7 + size(40)) !important; // gamezone width * 寬高比 70% + 40px
             }
         }
     }
@@ -848,8 +844,10 @@
 
     // pad ~ 1024
     @include max-to(pad) {
-        height: calc((100svw - size(120) - size(56)) * .6);
-        // 算式：(window width - section padding - card padding) * height ratio
+        $gamezone-width: calc(100svw - size(60)*2 - size(28)*2);
+        // 算式：window width - section padding - card padding
+
+        height: calc($gamezone-width * .6); // 寬高比 60%
 
         .default {
             .game-title {
@@ -915,9 +913,8 @@
                 .game-content {
                     .result {
                         .wheel {
-                            width: calc((100svw - size(120) - size(56)) * (.6 - .2));
-                            height: calc((100svw - size(120) - size(56)) * (.6 - .2));
-                            // 算式：(window width - section padding - card padding) * (height ratio - selection)
+                            width: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
+                            height: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
                         }
                     }
 
@@ -939,7 +936,7 @@
         }
 
         &.HOTP {
-            height: calc((100svw - 7.5rem - 3.5rem) * 0.6);
+            height: calc($gamezone-width * 0.6); // 寬高比 60%
 
             &.play {
                 height: auto;
@@ -948,31 +945,176 @@
             .play-game {
                 .game-content {
                     .frame {
-                        padding-left: calc(((100svw - size(60)*2 - size(28)*2) - (size(88) * 2)) * .05);
-                        // 算式：(((window width - section padding - card padding) - (左右 padding)) * 左邊框5%
-                        padding-right: calc(((100svw - size(60)*2 - size(28)*2) - (size(88) * 2)) * .05);
-                        // 算式：(((window width - section padding - card padding) - (左右 padding)) * 右邊框5%
+                        $frame-width: calc($gamezone-width - (size(88) * 2));
+                        // 算式：gamezone width - 左右 padding 各 88px
+
+                        padding-left: calc($frame-width * .05); // 左邊框 5%
+                        padding-right: calc($frame-width * .05); // 右邊框 5%
 
                         &::before {
-                            top: calc((((100svw - size(60)*2 - size(28)*2)) - (size(88) * 2)) * -.065);
-                            // 算式：(((window width - section padding - card padding) - (左右 padding)) * 上邊框6.5%
+                            top: calc($frame-width * -.065); // 上邊框 6.5%
                         }
 
                         &::after {
-                            bottom: calc((((100svw - size(60)*2 - size(28)*2)) - (size(88) * 2)) * -.05);
-                            // 算式：(((window width - section padding - card padding) - (左右 padding)) * 下邊框5%
+                            bottom: calc($frame-width * -.05); // 下邊框 5%
                         }
 
-                        &-content {
+                        &-result {
+                            grid-template-columns: calc(30% - size(8)) calc(70% - size(8));
+                            grid-template-rows: size(68) auto 1fr auto;
+                            gap: 0 size(16);
+
                             .img {
-                                padding: calc(((((((100svw - size(60)*2 - size(28)*2) - (size(88) * 2)) * .894) - (size(16) * 2)) * .55) - size(8)) * .045);
-                                // 算式：((((window width - section padding - card padding) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2) * .img 邊框
+                                $img-width: calc(((($frame-width * .894) - (size(16) * 2)) * .3) - size(8));
+                                // 算式：((frame-width * [100% - (左右邊框 5.3% * 2) = 89.4%] - 左右 padding) * .img flex) - gap/2)
+
+                                grid-row: 1/3;
+                                padding: calc($img-width * .045); // .img 邊框 4.5%
 
                                 h6 {
-                                    right: calc(((((((100svw - size(60)*2 - size(28)*2) - (size(88) * 2)) * .894) - (size(16) * 2)) * .55) - size(8)) * .045);
-                                    // 算式：((((window width - section padding - card padding) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2) * .img 邊框
-                                    bottom: calc((((((((100svw - size(60)*2 - size(28)*2) - (size(88) * 2)) * .894) - (size(16) * 2)) * .55) - size(8)) * .045) + size(4));
-                                    // 算式：((((window width - section padding - card padding) - (左右 padding)) * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2) * .img 邊框 + 4px
+                                    right: calc($img-width * .045); // .img 邊框 4.5%
+                                    bottom: calc(($img-width * .045) + size(4)); // .img 邊框 4.5% + bottom 位移 4px
+                                }
+                            }
+
+                            .compare {
+                                div {
+                                    display: grid;
+                                    grid-template-rows: 50% 50%;
+                                    grid-template-columns: size(68) 1fr;
+                                    gap: 0 size(8);
+
+                                    img {
+                                        grid-row: 1/-1;
+                                        grid-column: 1/2;
+                                    }
+
+                                    h6 {
+                                        grid-row: 1/2;
+                                        grid-column: -2/-1;
+                                    }
+
+                                    span {
+                                        grid-row: -2/-1;
+                                        grid-column: -2/-1;
+                                    }
+                                }
+                            }
+
+                            .desc {
+                                grid-column: -2/-1;
+                                grid-row: 2/-2;
+                                margin: size(16) 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &+.content {
+                height: auto !important;
+            }
+        }
+    }
+
+
+    // small-pad ~ 768
+    @include max-to(small-pad) {
+        $gamezone-width: calc(100svw - size(16)*2 - size(16)*2);
+        // 算式：window width - section padding - card padding
+
+        height: calc($gamezone-width * .6); // 寬高比 60%
+
+        &.MC {
+            .play-game {
+                .game-content {
+                    .result {
+                        .wheel {
+                            width: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
+                            height: calc($gamezone-width * (.6 - .2)); // 寬高比 60% - selection 20%
+                        }
+                    }
+                }
+            }
+        }
+
+        &.HOTP {
+            height: calc($gamezone-width * .65) !important; // 寬高比 65%
+
+            .default {
+                .game-title {
+                    &::before {
+                        height: size(80);
+                    }
+                }
+            }
+
+            &.play {
+                height: auto !important;
+            }
+
+            .play-game {
+                .game-content {
+                    .frame {
+                        $frame-width: calc($gamezone-width - (size(28) * 2));
+                        // 算式：gamezone width - 左右 padding 各 28px
+
+                        padding-left: calc($frame-width * .05); // 左邊框 5%
+                        padding-right: calc($frame-width * .05); // 右邊框 5%
+
+                        &-result {
+                            grid-template-columns: calc(55% - size(8)) calc(45% - size(8));
+                            grid-template-rows: auto 1fr auto;
+                            gap: size(12);
+
+                            .img {
+                                $img-width: calc(((($frame-width * .894) - (size(16) * 2)) * .55) - size(8));
+                                // 算式：(frame width * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2)
+
+                                grid-column: 1/2;
+                                grid-row: 1/2;
+                                padding: calc($img-width * .045); // .img 邊框 4.5%
+
+                                h6 {
+                                    right: calc($img-width * .045); // .img 邊框 4.5%
+                                    bottom: calc(($img-width * .045) + size(2)); // .img 邊框 4.5% + bottom 位移 2px
+                                }
+                            }
+
+                            .compare {
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+
+                                    img {
+                                        flex: size(48);
+                                        max-height: size(48);
+                                    }
+                                }
+                            }
+
+                            .desc {
+                                grid-column: 1/-1;
+                                grid-row: 2/-2;
+                                margin: 0;
+                            }
+
+                            .btns {
+                                flex-wrap: wrap;
+                                gap: size(8);
+
+                                >* {
+                                    flex: 100%;
+                                }
+
+                                >div {
+                                    flex-wrap: wrap;
+                                    gap: size(12);
+
+                                    button {
+                                        flex: 100%;
+                                    }
                                 }
                             }
                         }
@@ -983,29 +1125,11 @@
     }
 
 
-    // small-pad ~ 768
-    @include max-to(small-pad) {
-        height: calc((100svw - size(32) - size(32)) * .6);
-        // 算式：(window width - section padding - card padding) * height ratio
-
-        &.MC {
-            .play-game {
-                .game-content {
-                    .result {
-                        .wheel {
-                            width: calc((100svw - size(32) - size(32)) * (.6 - .2));
-                            height: calc((100svw - size(32) - size(32)) * (.6 - .2));
-                            // 算式：(window width - section padding - card padding) * (height ratio - selection)
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
     // mobile ~ 516
     @include max-to(mobile) {
+        $gamezone-width: calc(100svw - size(16)*2 - size(16)*2);
+        // 算式：window width - section padding - card padding
+
         .default {
             .game-title {
                 h3 {
@@ -1079,6 +1203,59 @@
                             width: calc((100svw - size(32) - size(32)) * (.6 - .25));
                             height: calc((100svw - size(32) - size(32)) * (.6 - .25));
                             // 算式：(window width - section padding - card padding) * (height ratio - selection)
+                        }
+                    }
+                }
+            }
+        }
+
+        &.HOTP {
+            height: calc($gamezone-width * .65) !important; // 寬高比 65%
+
+            .default {
+                .game-title {
+                    &::before {
+                        height: size(80);
+                    }
+                }
+            }
+
+            &.play {
+                height: auto !important;
+            }
+
+            .play-game {
+                .game-content {
+                    padding: size(108) size(4) size(28);
+
+                    .frame {
+                        $frame-width: calc($gamezone-width - (size(4) * 2));
+                        // 算式：gamezone width - 左右 padding 各 4px
+
+                        padding-left: calc($frame-width * .04); // 左邊框 4%
+                        padding-right: calc($frame-width * .04); // 右邊框 4%
+
+                        &::before {
+                            top: calc($frame-width * -.05); // 上邊框 5%
+                        }
+
+                        &::after {
+                            bottom: calc($frame-width * -.035); // 下邊框 3.5%
+                        }
+
+                        &-result {
+                            grid-template-columns: calc(65% - size(8)) calc(35% - size(8));
+                            gap: size(16) size(12);
+
+                            .img {
+                                $img-width: calc(((($frame-width * .894) - (size(16) * 2)) * .55) - size(8));
+                                // 算式：(frame width * [100% - (左右邊框 5.3% * 2) = .894] - 左右 padding * .img flex) - gap/2)
+
+                                h6 {
+                                    right: calc($img-width * .045); // .img 邊框 4.5%
+                                    bottom: calc(($img-width * .045) + size(4)); // .img 邊框 4.5% + bottom 位移 4px
+                                }
+                            }
                         }
                     }
                 }
