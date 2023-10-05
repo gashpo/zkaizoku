@@ -134,6 +134,17 @@ header {
     }
 
 
+    @media (min-width:1281px) {
+        .login {
+            .admin:hover {
+                button::after {
+                    content: '\e903';
+                }
+            }
+        }
+    }
+
+
     // pc ~ 1440
     @include max-to(pc) {
         padding: svw(20) svw(52);
@@ -168,17 +179,6 @@ header {
     }
 
 
-    @media (min-width:1281px) {
-        .login {
-            .admin:hover {
-                button::after {
-                    content: '\e903';
-                }
-            }
-        }
-    }
-
-
     // laptop ~ 1280
     @include max-to(laptop) {
         padding: size(12) size(16);
@@ -192,13 +192,8 @@ header {
             }
 
             .nav {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
                 >ul {
                     width: calc(100svw - size(32));
-                    transform: translate(0, size(-100));
                     gap: size(20);
 
                     >li {
