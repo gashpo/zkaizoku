@@ -1,0 +1,50 @@
+#slider-range-max {
+    width: 100%;
+    position: relative;
+    height: size(8);
+    background-color: color(primary);
+    margin-top: size(14);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: size(12);
+        height: size(12);
+        background-color: color(primary);
+        @include radius;
+    }
+}
+
+.ui-state-default {
+    position: absolute;
+    background-color: color(primary);
+    width: size(20);
+    height: size(20);
+    @include radius;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.ui-slider-range-max {
+    height: size(8);
+    background-color: color(gray);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -50%);
+        width: size(12);
+        height: size(12);
+        background-color: color(gray);
+        @include radius;
+    }
+}

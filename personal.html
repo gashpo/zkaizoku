@@ -144,7 +144,7 @@
             <section id="personal">
                 <div class="container">
                     <h3>個人資產</h3>
-                    <div class="license card coming-soon">
+                    <div class="license card">
                         <div class="card-content">
                             <h3>我的 ZKaizoku License</h3>
                             <div class="carousel">
@@ -540,13 +540,36 @@
         <div id="upgrade" class="popUp">
             <div class="popUp--container">
                 <button class="popUp--close"><i class="icon-Close"></i></button>
-                <h3>升級 dNFT</h3>
+                <h3>升級 ZKaizoku License</h3>
                 <div class="popUp--content">
-                    <p>升級 dNFT 功能暫不製作，保留此區塊</p>
+                    <img src="img/license/license01.png">
+                    <div class="func">
+                        <div class="nowInfo">
+                            <div class="input-wrap">
+                                <label for="nowLv">當前等級</label>
+                                <input name="nowLv" type="text" value="Lv. 5" disabled>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="nowZKZ">當前積分幣數量</label>
+                                <input name="nowZKZ" type="text" value="300" disabled>
+                            </div>
+                        </div>
+                        <div class="upgradeBar">
+                            <label>
+                                欲升級的等級：Lv. <span id="target">6</span>
+                                <span class="max"> / Lv.10</span>
+                            </label>
+                            <div id="slider-range-max"></div>
+                        </div>
+                        <div class="input-group costZKZ">
+                            <label for="costZKZ">需消耗積分幣數量</label>
+                            <input id="costZKZ" name="costZKZ" type="text" value="0">
+                        </div>
+                    </div>
                 </div>
                 <div class="popUp--btns">
                     <button class="btn-tertiary close">取消</button>
-                    <button class="submit">確認</button>
+                    <button class="submit">升級</button>
                 </div>
             </div>
         </div>
@@ -598,6 +621,7 @@
 
     <!-- jQuery -->
     <script src="vendor/jquery.min.js"></script>
+    <script src='https://code.jquery.com/ui/1.12.1/jquery-ui.js'></script>
     <script type="text/javascript">
         var mediaPC = window.matchMedia('(max-width: 1440px)')
         var mediaLaptop = window.matchMedia('(max-width: 1280px)')
@@ -616,6 +640,7 @@
     <script src="js/connect-wallet.js"></script>
     <script src="js/personal.js"></script>
     <script src="js/buttons.js"></script>
+    <script src="js/volume.js"></script>
 
     <!-- Fancybox 套件 -->
     <script src="vendor/fancybox/fancybox.js"></script>

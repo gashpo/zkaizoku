@@ -191,3 +191,57 @@
         }
     }
 }
+
+#upgrade {
+    .popUp--container {
+        .popUp--content {
+            display: flex;
+            gap: size(20);
+
+            img {
+                flex: calc(40% - size(10));
+                max-width: calc(40% - size(10));
+            }
+
+            .func {
+                flex: calc(60% - size(10));
+                max-width: calc(60% - size(10));
+
+                .nowInfo {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    gap: size(28) size(20);
+
+                    .input-wrap {
+                        flex: calc(50% - size(10));
+                        max-width: calc(50% - size(10));
+                    }
+                }
+
+                .upgradeBar {
+                    margin: size(28) 0 size(32);
+
+                    label {
+                        span {
+                            &.max {
+                                @include capital;
+                                color: color(gray-6);
+                            }
+                        }
+                    }
+                }
+
+                .needZKZ {
+                    gap: size(20);
+
+                    label,
+                    input {
+                        flex: calc(50% - size(10));
+                        max-width: calc(50% - size(10));
+                    }
+                }
+            }
+        }
+    }
+}
