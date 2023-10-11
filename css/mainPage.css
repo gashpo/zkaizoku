@@ -4124,6 +4124,7 @@ body {
 }
 #mainPage .game-zone.HOTP .play-game .game-content .frame-result {
   background-color: rgba(29, 29, 29, 0.8);
+  background-image: radial-gradient(ellipse at 50% 0, rgba(255, 255, 255, 0.15) 0.625rem, rgba(255, 255, 255, 0.08) 3.75rem, transparent 12.5rem);
   padding: 1.25rem;
   display: grid;
   gap: 1rem;
