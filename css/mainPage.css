@@ -287,6 +287,7 @@ body {
 #mainPage input[type=button][disabled],
 #mainPage input[type=submit][disabled],
 #mainPage a.button[disabled] {
+  cursor: default;
   background-color: #3a3a3a;
   color: #757575;
 }
@@ -938,6 +939,7 @@ body {
 }
 #mainPage .toast-container .toast::before {
   font-family: "icomoon";
+  margin-right: 0.25rem;
 }
 #mainPage .toast-container .toast.warning {
   background-color: rgba(135, 27, 31, 0.8);
@@ -1575,6 +1577,9 @@ body {
   max-width: 90rem;
   margin: 0 auto;
 }
+#mainPage main section .container .h1 + p {
+  margin-top: 0.5rem;
+}
 #mainPage main img[for=mission] {
   position: fixed;
   right: 2rem;
@@ -1715,7 +1720,7 @@ body {
 }
 @media (max-width: 1024px) {
   #mainPage #keyvision {
-    margin: 3.75rem auto;
+    margin: 0 auto;
     padding: 0 1rem;
   }
   #mainPage #keyvision .mask {
@@ -1727,7 +1732,7 @@ body {
     margin-top: 2rem;
     position: initial;
     width: 100%;
-    height: 18.75rem;
+    height: 12.5rem;
     padding: 0 0 5.625rem;
   }
   #mainPage #keyvision .captions div {
@@ -1784,11 +1789,7 @@ body {
   min-width: 18.75rem;
   flex-grow: 0;
 }
-#mainPage #game-idx .desc p.title-xl {
-  margin-bottom: 0.5rem;
-}
-#mainPage #game-idx .desc p.body-1 {
-  margin-top: 0;
+#mainPage #game-idx .desc.body-1 {
   margin-bottom: 2.5rem;
 }
 #mainPage #game-idx .carousel {
@@ -1913,6 +1914,7 @@ body {
     flex-wrap: wrap;
     height: auto;
     gap: 3.75rem;
+    padding: 0;
   }
   #mainPage #game-idx .desc,
   #mainPage #game-idx .carousel {
@@ -3489,9 +3491,6 @@ body {
     flex: 33.33%;
     max-width: 33.33%;
   }
-  #mainPage #game .game-list > li > a {
-    padding: 0.75rem;
-  }
   #mainPage #game .game-list > li > a:hover {
     background-color: transparent;
   }
@@ -3508,7 +3507,8 @@ body {
   }
   #mainPage #game .game-detail .card-content .content .desc {
     order: 4;
-    max-height: 7.5rem;
+    max-height: 10rem;
+    min-height: 8rem;
   }
   #mainPage #game .game-detail .card-content .content .awards {
     order: 3;
